@@ -1,0 +1,514 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 100%;
+  background-color: white;
+  font-family: "Quicksand", sans-serif;
+}
+
+header .mensaje_inicial {
+  height: 18px;
+  font-size: 70%;
+  font-weight: bold;
+  display: inline-block;
+  animation: desplazar 25s linear infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+@keyframes desplazar {
+  0% {
+    transform: translateX(40%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+header .menu_navegacion {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(17, 57, 70);
+}
+header .menu_navegacion .espacioMarca {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .menu_navegacion .espacioMarca .tittleMarca h2 {
+  font-family: "Ubuntu", sans-serif;
+  color: rgb(234, 215, 187);
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
+  padding-top: 10px;
+  margin: 15px;
+}
+header .menu_navegacion .espacioMarca .tittleMarca h2:hover {
+  color: white;
+}
+header .menu_navegacion .espacioMarca .logoMarca img {
+  width: 18%;
+  height: auto;
+  border-radius: 50%;
+  margin: 10px 0px 0px 0px;
+}
+header .menu_navegacion .navbar .navbar-nav a {
+  color: rgb(188, 163, 127);
+}
+header .menu_navegacion .navbar .navbar-nav li a:hover {
+  color: white;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: rgb(188, 163, 127);
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 5px;
+  justify-content: space-between;
+  position: relative;
+}
+.footer .itemFooter {
+  align-items: center;
+  width: 20vw;
+}
+.footer .itemFooter h2 {
+  align-items: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+.footer .itemFooter p {
+  line-height: 0.4;
+  font-size: 0.4rem;
+  text-decoration: none;
+}
+.footer .itemFooter .iconoRedesSociales {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+}
+.footer .itemFooter .iconoRedesSociales li {
+  margin-right: 10px;
+}
+.footer .itemFooter .iconoRedesSociales li img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+/* <---Página Inicio---> */
+@media screen and (min-width: 480px) {
+  .imgSupFondo {
+    background-image: url(https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+    text-align: center;
+    align-content: center;
+    height: 100px;
+    margin: 5px auto;
+  }
+  .imgSupFondo h3 {
+    margin: 15px;
+  }
+  .imgBotonesArriba {
+    background-image: url(https://images.pexels.com/photos/235525/pexels-photo-235525.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+    height: auto;
+    min-height: 200px;
+    object-fit: cover;
+    border-radius: 2%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    opacity: 0.8;
+  }
+  .imgBotonesArriba button {
+    color: white;
+    font-size: 1.7rem;
+    width: 250px;
+  }
+  .imgBotonesArriba button:hover {
+    color: rgb(188, 163, 127);
+  }
+  .carrete_prendas {
+    margin: 5px auto;
+  }
+  .carrete_prendas img {
+    border-radius: 1%;
+    min-height: fit-content;
+  }
+  .imgsPagPPal {
+    align-items: center;
+    align-content: center;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 0.9fr 1fr 0.9fr;
+    grid-template-rows: 0.5fr 0.5fr;
+    grid-gap: 5px;
+    grid-template-areas: "img1__pagPpal img2__pagPpal img4__pagPpal" "img1__pagPpal img3__pagPpal img4__pagPpal";
+  }
+  .imgsPagPPal .img1__pagPpal {
+    grid-area: img1__pagPpal;
+    width: 100%;
+    max-width: 100%;
+  }
+  .imgsPagPPal .img1__pagPpal img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 2%;
+  }
+  .imgsPagPPal .img2__pagPpal {
+    grid-area: img2__pagPpal;
+    width: 100%;
+    max-width: 100%;
+  }
+  .imgsPagPPal .img2__pagPpal img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10%;
+    object-fit: cover;
+    margin-top: 90px;
+  }
+  .imgsPagPPal .img3__pagPpal {
+    grid-area: img3__pagPpal;
+    width: 100%;
+    max-width: 100%;
+  }
+  .imgsPagPPal .img3__pagPpal img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10%;
+    object-fit: cover;
+    margin-bottom: 90px;
+  }
+  .imgsPagPPal .img4__pagPpal {
+    grid-area: img4__pagPpal;
+    width: 100%;
+    max-width: 100%;
+  }
+  .imgsPagPPal .img4__pagPpal img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 2%;
+    object-fit: cover;
+  }
+  .divider {
+    width: 100vw;
+    pad: 0px;
+  }
+  .divider .imgDivider img {
+    align-content: end;
+    width: 100%;
+    height: auto;
+  }
+  .carrete_recomendados {
+    background-color: rgb(255, 242, 216);
+    display: flex;
+    justify-content: space-between;
+    /* Se ubica este hover en este punto ya que al ponerlo arriba aplicaba el sombreado independientemente a cada elemento de la card */
+  }
+  .carrete_recomendados .card {
+    width: 20%;
+    border-radius: 5%;
+    padding: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+  }
+  .carrete_recomendados .card .card-body {
+    display: inline;
+    justify-content: space-between;
+    width: auto;
+    align-content: center;
+    max-width: 100%;
+  }
+  .carrete_recomendados .card .card-body .card-title {
+    text-decoration: none;
+    font-size: 0.8rem;
+    max-width: 100%;
+  }
+  .carrete_recomendados .card .card-body h6 {
+    color: orangered;
+    font-size: 0.8rem;
+    max-width: 100%;
+  }
+  .carrete_recomendados .card .card-body .card-text {
+    text-decoration: none;
+    font-size: 0.6em;
+  }
+  .carrete_recomendados .card .card-body .seccionPrecios {
+    display: flex;
+    text-align: left;
+    justify-content: space-evenly;
+    width: 100vw;
+    max-width: 100%;
+  }
+  .carrete_recomendados .card .card-body .seccionPrecios .textoTachado {
+    text-decoration: line-through;
+    font-size: 0.7rem;
+  }
+  .carrete_recomendados .card .card-body .seccionPrecios .card-textPrice {
+    color: orangered;
+    font-size: 0.7rem;
+  }
+  .carrete_recomendados .card .card-body .seccionPrecios p {
+    font-size: 0.8rem;
+  }
+  .carrete_recomendados .card .card-body .btn {
+    width: 100%;
+    min-width: 70px;
+    font-size: 0.5em;
+    background-color: rgb(17, 57, 70);
+    align-items: center;
+    align-content: center;
+    margin: 2px auto;
+  }
+  .carrete_recomendados .card:hover {
+    box-shadow: 0 8px 16px rgb(17, 57, 70);
+  }
+}
+@media screen and (min-width: 768px) {
+  .carrete_recomendados .card .card-body .card-title {
+    text-decoration: none;
+    font-size: 0.9rem;
+    max-width: 100%;
+  }
+  .carrete_recomendados .card .card-body h6 {
+    color: orangered;
+    font-size: 0.9rem;
+    max-width: 100%;
+  }
+  .carrete_recomendados .card .card-body .card-text {
+    text-decoration: none;
+    font-size: 0.8em;
+  }
+  .carrete_recomendados .card .card-body .seccionPrecios .textoTachado {
+    text-decoration: line-through;
+    font-size: 0.9rem;
+  }
+  .carrete_recomendados .card .card-body .seccionPrecios .card-textPrice {
+    color: orangered;
+    font-size: 0.9rem;
+  }
+  .carrete_recomendados .card .card-body .seccionPrecios p {
+    font-size: 0.9rem;
+  }
+  .carrete_recomendados .card .card-body .btn {
+    width: 100%;
+    min-width: 70px;
+    font-size: 0.7em;
+    background-color: rgb(17, 57, 70);
+    align-items: center;
+    margin: 5px 0px 0px 0px;
+  }
+  .footer .itemFooter {
+    align-items: center;
+    width: 20vw;
+  }
+  .footer .itemFooter h2 {
+    align-items: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+  .footer .itemFooter p {
+    line-height: 0.4;
+    font-size: 0.5rem;
+    text-decoration: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .imgBotonesArriba {
+    height: auto;
+    object-fit: cover;
+  }
+  .carrete_recomendados .card .card-body .card-title {
+    text-decoration: none;
+    font-size: 1rem;
+    max-width: 100%;
+  }
+  .carrete_recomendados .card .card-body h6 {
+    color: orangered;
+    font-size: 1.2rem;
+    max-width: 100%;
+  }
+  .carrete_recomendados .card .card-body .card-text {
+    text-decoration: none;
+    font-size: 0.9em;
+  }
+  .carrete_recomendados .card .card-body .seccionPrecios {
+    display: flex;
+    text-align: left;
+    justify-content: space-evenly;
+    width: 100vw;
+    max-width: 100%;
+  }
+  .carrete_recomendados .card .card-body .seccionPrecios .textoTachado {
+    text-decoration: line-through;
+    font-size: 0.9rem;
+  }
+  .carrete_recomendados .card .card-body .seccionPrecios .card-textPrice {
+    color: orangered;
+    font-size: 0.9rem;
+  }
+  .carrete_recomendados .card .card-body .seccionPrecios p {
+    font-size: 0.9rem;
+  }
+  .carrete_recomendados .card .card-body .btn {
+    width: 100%;
+    min-width: 70px;
+    font-size: 0.8em;
+    background-color: rgb(17, 57, 70);
+    align-items: center;
+    margin: 5px 0px 0px 0px;
+  }
+  .footer .itemFooter h2 {
+    align-items: center;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 10px 0px;
+  }
+  .footer .itemFooter p {
+    line-height: 0.4;
+    font-size: 0.7rem;
+    text-decoration: none;
+  }
+}
+/* <---Guias y tallas---> */
+@media screen and (min-width: 480px) {
+  .Titulo_parrafoUno h1 {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 35px;
+  }
+  .section_parrafoUno .subTitulo_parrafoUno h3 {
+    font-size: 1.1em;
+  }
+  .section_parrafoUno .parrafoUno p {
+    font-size: 12px;
+  }
+  .videoYt iframe {
+    width: 420px;
+    height: 255px;
+    margin-left: 15px;
+  }
+  .parrafoDos p {
+    font-size: 12px;
+  }
+  .parrafoDos .tablaMujeres h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(17, 57, 70);
+  }
+  .parrafoDos table {
+    font-size: 12px;
+  }
+  .tablaHombres h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(17, 57, 70);
+  }
+  .tablaHombres table {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .Titulo_parrafoUno h1 {
+    font-size: 1.6em;
+    margin: 35px;
+  }
+  .section_parrafoUno .subTitulo_parrafoUno h3 {
+    font-size: 1.2em;
+  }
+  .section_parrafoUno .parrafoUno p {
+    font-size: 13px;
+  }
+  .videoYt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .videoYt iframe {
+    width: 550px;
+    height: 305px;
+    margin: 5px auto;
+  }
+  .parrafoDos p {
+    font-size: 13px;
+  }
+  .parrafoDos .tablaMujeres h2 {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .parrafoDos table {
+    font-size: 13px;
+  }
+  .tablaHombres h2 {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .tablaHombres table {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .Titulo_parrafoUno h1 {
+    text-align: center;
+    font-size: 1.7em;
+  }
+  .section_parrafoUno .subTitulo_parrafoUno h3 {
+    font-size: 1.3em;
+  }
+  .section_parrafoUno .parrafoUno p {
+    font-size: 14px;
+  }
+  .videoYt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .videoYt iframe {
+    width: 550px;
+    height: 305px;
+    margin-left: 15px;
+  }
+  .parrafoDos p {
+    font-size: 15px;
+  }
+  .parrafoDos .tablaMujeres h2 {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .parrafoDos table {
+    font-size: 14px;
+  }
+  .tablaHombres {
+    margin-top: 60px;
+    padding-top: 45px;
+  }
+  .tablaHombres h2 {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .tablaHombres table {
+    font-size: 14px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

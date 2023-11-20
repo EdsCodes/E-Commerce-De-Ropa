@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prendas deportivas y casuales - Me Lo LLevo Store</title>
+    <link rel="apple-touch-icon" sizes="192x192" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./multi/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@300&family=Oswald&family=Poppins:wght@500&family=Quicksand:wght@600&family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+<body> 
+    <header class="header">
+        <div class="mensaje_inicial">
+            <p>Bienvenid@ a Me Lo Llevo Store, tu tienda de ropa casual y deportiva, recuerda que tenemos ENVIOS GRATIS a todo Colombia por compras mayores a $200.000 - *No aplica para pagos contraentrega - aplican T&C*</p>
+        </div>
+        <nav class="menu_navegacion">
+            <div class="espacioMarca">
+                <div class="tittleMarca">
+                    <h2>Me lo llevo Store</h2>
+                </div>
+                <div class="logoMarca">
+                    <a class="logoMarca" href="index.html">
+                        <img src="../multi/favicon_io/android-chrome-192x192.png" alt="Logo de Me lo llevo Store">
+                    </a>
+                </div>
+            </div>
+            <div class="navbar navbar-expand-lg ms-auto">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./guiatallas.html">Guía de tallas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./nosotros.html">Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./sesionregis.html">Inicia sesión</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pagcompras.html">Compras</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+  <main>
+      <div class="columnaGestionUsuario">
+        <h2 class="TituloRegistro">Registrate aqui y recibe el 10% de descuento en tu primera compra</h2>
+        <div>
+          <form class="formularioRegistro">
+            <div>
+              <label for="name"></label>
+              <input type="text" name="name" placeholder="Nombre" required>
+            </div>
+            <br>
+            <div>
+              <label for="mail"></label>
+              <input type="email" name="email" placeholder="Email" required>
+            </div>
+            <br>
+            <div>
+              <label for="phone"></label>
+              <input type="tel" id="phone" name="phone" pattern="[0-9]{12}" placeholder="Tel.(Indic. pais+10 digitos)" required/>
+            </div>
+            <br>
+            <div>
+              <label for="sex">Genero</label>
+              <input type="radio" name="sex" value="muj" required> Mujer
+              <input type="radio" name="sex" value="hom" required> Hombre
+              <input type="radio" name="sex" value="noespec" required> No especifica
+            </div>
+            <br>
+            <div>
+              <label for="nac">Fecha de nacimiento</label>
+              <input type="date" name="nac" required>
+            </div>
+            <br>
+            <div class="selectPais">
+              <label for="pais">Pais</label>
+                <select name="pais" id="">
+                  <option value="mex">Mexico</option>
+                  <option value="col">Colombia</option>
+                  <option value="bra">Brasil</option>
+                  <option value="arg">Argentina</option>
+                  <option value="chi">Chile</option>
+                  <option value="uy">Uruguay</option>
+                  <option value="par">Paraguay</option>
+                  <option value="per">Perú</option>
+                </select>
+            </div>
+            <br>
+            <div>
+              <input type="checkbox" name="terminos" required>
+              <label for="terminos">Acepto politica de privacidad y tratam. de datos</label>
+            </div>
+            <br>
+            <div class="botones_registro">
+              <input type="submit" value="Recibe tu descuento">
+              <input type="reset" value="borrar datos">
+            </div>
+            <br>
+          </form>
+        <div class="columnasSesionReg">
+          <div class="formularioIngreso">
+            <form>
+              <h2 class="tituloIngSesion">Ingresa aqui</h2>
+              <input type="email" class="email" placeholder="Email"/>
+              <div class="ingContrasenaIngreso">
+                <input type="password" class="password" placeholder="Contraseña" />
+              </div>
+              <div class="gestionDatosUsuario">
+                <div class="checboxIngSesion">
+                  <input type="checkbox" name="checkbox" id="checkbox" />
+                  <label for="">Recordar mis datos</label>
+                </div>
+                <div class="olvidoContrasena">
+                  <a href="###">Olvidé mi contraseña</a>
+                </div>
+              </div>
+              <div class="botonLogin">
+                <button type="submit" value="submit">Login</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="imgSesionReg">
+        <img src="../multi/pexels-maksim-goncharenok-4380970.jpg" alt="imagen sesion y registro">
+      </div>
+  </main>
+  <footer class="footer">
+    <div class="itemFooter">
+      <h2>Acerca de nosotros</h2>
+      <br>
+      <p>T&C de envio</p>
+      <p>T&C de devoluciones</p>
+    </div>
+    <br>
+    <div class="itemFooter">
+      <h2>Contactanos</h2>
+      <br>
+      <p>E-mail:contacto@melollevostore.com</p>
+      <p>WhatsApp: (+57) 320 555 5555</p>
+    </div>
+    <br>
+    <div class="itemFooter">
+      <h2>Te ayudamos</h2>
+      <br>
+      <p>Guia de tallas y medidas</p>
+      <p>¿Donde está mi pedido?</p>
+      <p>Quejas, reclamos y sugerencias</p>
+    </div>
+    <br>
+    <div class="itemFooter">
+      <h2>Conoce nuestras tiendas fisicas</h2>
+      <br>
+      <p>Cali</p>
+      <p>Bogota</p>
+      <p>Pereira</p>
+    </div>
+    <div class="itemFooter">
+      <h2>Siguenos en</h2>
+      <ul class="iconoRedesSociales">
+        <li><a href="http://www.instagram.com" target="_blank"><img src="../multi/social_instagram_43.ico" alt="icono instagram"></a></li>
+        <li><a href="http://www.facebook.com" target="_blank"><img src="../multi/social_facebook_fb_75.ico" alt="icono facebook"></a></li>
+        <li><a href="http://www.youtube.com" target="_blank"><img src="../multi/social_youtube_63.ico" alt="icono youtube"></a></li>
+        <li><a href="http://www.twitter.com" target="_blank"><img src="../multi/social_Twitter_78.ico" alt="icono x"></a></li>
+      </ul>
+    </div>
+  </footer>
+</body> 
+</html>
