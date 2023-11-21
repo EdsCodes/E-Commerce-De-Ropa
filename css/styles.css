@@ -221,7 +221,7 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
   }
   .carrete_recomendados .card {
     width: 20%;
-    border-radius: 5%;
+    border-radius: 1.5%;
     padding: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease-in-out;
@@ -276,6 +276,7 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
     align-items: center;
     align-content: center;
     margin: 2px auto;
+    margin-left: -11px;
   }
   .carrete_recomendados .card:hover {
     box-shadow: 0 8px 16px rgb(17, 57, 70);
@@ -359,11 +360,11 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
   }
   .carrete_recomendados .card .card-body .seccionPrecios .textoTachado {
     text-decoration: line-through;
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .carrete_recomendados .card .card-body .seccionPrecios .card-textPrice {
     color: orangered;
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .carrete_recomendados .card .card-body .seccionPrecios p {
     font-size: 0.9rem;
@@ -385,7 +386,10 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
   .footer .itemFooter p {
     line-height: 0.4;
     font-size: 0.7rem;
+  }
+  .footer .itemFooter a {
     text-decoration: none;
+    color: inherit;
   }
 }
 /* <---Guias y tallas---> */
