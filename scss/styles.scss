@@ -1,3 +1,9 @@
+$lightbeige: #FFF2D8;
+$beige: #EAD7BB;
+$brown: #BCA37F;
+$blueking: #113946;
+$orangered: #ff4500;
+
 * {
   margin: 0;
   padding: 0;
@@ -45,7 +51,7 @@ body {
     }
 
     button:hover {
-      color: rgb(188, 163, 127);
+      color: $brown;
     }
   }
   .carrete_prendas {
@@ -128,7 +134,7 @@ body {
     }
   }
   .carrete_recomendados {
-    background-color: rgb(255, 242, 216);
+    background-color: $lightbeige;
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
@@ -312,7 +318,7 @@ body {
           }
 
           .card-textPrice {
-            color: orangered;
+            color: #ff4500;
             font-size: 1rem;
           }
 
@@ -358,6 +364,7 @@ body {
     text-align: center;
     font-size: 1.5em;
     margin: 35px;
+    color: $blueking;
   }
   .section_parrafoUno {
     .subTitulo_parrafoUno h3{
@@ -366,11 +373,9 @@ body {
   .parrafoUno {
     p{
       font-size: 12px;
+      text-wrap: pretty;
     }
   }
-  }
-  
-  .parrafoUno_continuacion {
   }
   .videoYt {
     iframe {
@@ -387,25 +392,25 @@ body {
       h2 {
         text-align: center;
         margin-top: 20px;
-        color: rgb(17, 57, 70);
+        color: $brown;
       }
     }
     table {
       font-size: 12px;
     }
   }
-    
   .tablaHombres {
     h2 {
       text-align: center;
       margin-top: 20px;
-      color: rgb(17, 57, 70);
+      color: $brown;
     }
     table {
       font-size: 12px;
     }
   }
 }
+
 @media screen and (min-width: 768px) {
   .Titulo_parrafoUno h1{
     font-size: 1.6em;
@@ -421,16 +426,14 @@ body {
     }
   }
   }
-  .parrafoUno_continuacion {
-  }
   .videoYt {
     display: flex;
     align-items: center;
     justify-content: center;
     align-items: center;
     iframe {
-      width: 550px;
-      height: 305px;
+      width: 600px;
+      height: 355px;
       margin: 5px auto;
     }
   }
@@ -448,7 +451,6 @@ body {
       font-size: 13px;
     }
   }
-    
   .tablaHombres {
     h2 {
       text-align: center;
@@ -459,38 +461,37 @@ body {
     }
   }
 }
+
 @media screen and (min-width: 1024px) {
   .Titulo_parrafoUno h1{
     text-align: center;
-    font-size: 1.7em;
+    font-size: 2em;
   }
   .section_parrafoUno {
     .subTitulo_parrafoUno h3{
       font-size: 1.3em;
     }
-  .parrafoUno {
-    p{
-      font-size: 14px;
+    .parrafoUno {
+      p{
+        font-size: 14px;
+      }
     }
-  }
-  }
-  
-  .parrafoUno_continuacion {
-  }
-  .videoYt {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-items: center;
-    iframe {
-      width: 550px;
-      height: 305px;
-      margin-left: 15px;
+    .videoYt {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      iframe {
+        width: 600px;
+        height: 355px;
+        margin: 5px auto;
+      }
     }
   }
   .parrafoDos {
+    margin-top: 60px;
     p {
-      font-size: 15px;
+      font-size: 14px;
     }
     .tablaMujeres {
       h2 {
@@ -502,21 +503,19 @@ body {
       font-size: 14px;
     }
   }
-    
   .tablaHombres {
-    margin-top: 60px;
-    padding-top: 45px;
     h2 {
       text-align: center;
       margin-top: 20px;
     }
     table {
+      width: 100%;
       font-size: 14px;
     }
   }
 }
+
 /* <---Nosotros---> */
 @media screen and (min-width: 480px) {
-  
   
 }
