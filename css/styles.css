@@ -11,6 +11,9 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 
+header {
+  margin-bottom: 5px;
+}
 header .mensaje_inicial {
   height: 18px;
   font-size: 70%;
@@ -109,13 +112,13 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
   .imgSupFondo {
     background-image: url(https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     background-size: cover;
-    text-align: center;
-    align-content: center;
     height: 100px;
     margin: 5px auto;
   }
   .imgSupFondo h3 {
-    margin: 15px;
+    margin-top: 30px;
+    text-align: center;
+    align-content: center;
   }
   .imgBotonesArriba {
     background-image: url(https://images.pexels.com/photos/235525/pexels-photo-235525.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
@@ -123,11 +126,12 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
     height: auto;
     min-height: 200px;
     object-fit: cover;
-    border-radius: 2%;
+    border-radius: 5px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     opacity: 0.8;
+    margin-bottom: 5px;
   }
   .imgBotonesArriba button {
     color: white;
@@ -141,7 +145,7 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
     margin: 5px auto;
   }
   .carrete_prendas img {
-    border-radius: 1%;
+    border-radius: 5px;
     min-height: fit-content;
   }
   .imgsPagPPal {
@@ -206,22 +210,23 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
   }
   .divider {
     width: 100vw;
-    pad: 0px;
   }
   .divider .imgDivider img {
     align-content: end;
     width: 100%;
     height: auto;
+    object-fit: cover;
   }
   .carrete_recomendados {
     background-color: rgb(255, 242, 216);
     display: flex;
     justify-content: space-between;
+    margin-bottom: 5px;
     /* Se ubica este hover en este punto ya que al ponerlo arriba aplicaba el sombreado independientemente a cada elemento de la card */
   }
   .carrete_recomendados .card {
     width: 20%;
-    border-radius: 1.5%;
+    border-radius: 5px;
     padding: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease-in-out;
@@ -514,5 +519,6 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
     font-size: 14px;
   }
 }
+/* <---Nosotros---> */
 
 /*# sourceMappingURL=styles.css.map */

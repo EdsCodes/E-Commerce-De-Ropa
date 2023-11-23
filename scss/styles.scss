@@ -17,13 +17,12 @@ body {
   .imgSupFondo {
     background-image: url(https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     background-size: cover;
-    text-align: center;
-    align-content: center;
     height: 100px;
     margin: 5px auto;
-
     h3 {
-      margin: 15px;
+      margin-top: 30px;
+      text-align: center;
+      align-content: center;
     }
   }
 
@@ -33,12 +32,12 @@ body {
     height: auto;
     min-height: 200px;
     object-fit: cover;
-    border-radius: 2%;
+    border-radius: 5px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     opacity: 0.8;
-
+    margin-bottom: 5px;
     button {
       color: white;
       font-size: 1.7rem;
@@ -52,7 +51,7 @@ body {
   .carrete_prendas {
     margin: 5px auto;
     img {
-      border-radius: 1%;
+      border-radius: 5px;
       min-height: fit-content;
     }
   }
@@ -74,20 +73,17 @@ body {
       width: 100%;
       max-width: 100%;
     }
-
     .img1__pagPpal img {
       width: 100%;
       height: auto;
       display: block;
       border-radius: 2%;
     }
-
     .img2__pagPpal {
       grid-area: img2__pagPpal;
       width: 100%;
       max-width: 100%;
     }
-
     .img2__pagPpal img {
       width: 100%;
       height: auto;
@@ -96,13 +92,11 @@ body {
       object-fit: cover;
       margin-top: 90px;
     }
-
     .img3__pagPpal {
       grid-area: img3__pagPpal;
       width: 100%;
       max-width: 100%;
     }
-
     .img3__pagPpal img {
       width: 100%;
       height: auto;
@@ -111,13 +105,11 @@ body {
       object-fit: cover;
       margin-bottom: 90px;
     }
-
     .img4__pagPpal {
       grid-area: img4__pagPpal;
       width: 100%;
       max-width: 100%;
     }
-
     .img4__pagPpal img {
       width: 100%;
       height: auto;
@@ -126,26 +118,23 @@ body {
       object-fit: cover;
     }
   }
-
   .divider {
     width: 100vw;
-    pad: 0px;
-
     .imgDivider img {
       align-content: end;
       width: 100%;
       height: auto;
+      object-fit: cover;
     }
   }
-
   .carrete_recomendados {
     background-color: rgb(255, 242, 216);
     display: flex;
     justify-content: space-between;
-
+    margin-bottom: 5px;
     .card {
       width: 20%;
-      border-radius: 1.5%;
+      border-radius: 5px;
       padding: 5px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       transition: box-shadow 0.3s ease-in-out;
@@ -525,4 +514,9 @@ body {
       font-size: 14px;
     }
   }
+}
+/* <---Nosotros---> */
+@media screen and (min-width: 480px) {
+  
+  
 }
