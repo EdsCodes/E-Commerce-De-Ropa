@@ -90,18 +90,21 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
 .footer .itemFooter p {
   line-height: 0.4;
   font-size: 0.4rem;
-  text-decoration: none;
 }
-.footer .itemFooter .iconoRedesSociales {
+.footer .itemFooter a {
+  text-decoration: none;
+  color: inherit;
+}
+.footer .iconoRedesSociales {
   display: flex;
   flex-direction: row;
   list-style: none;
   padding: 0;
 }
-.footer .itemFooter .iconoRedesSociales li {
+.footer .iconoRedesSociales li {
   margin-right: 10px;
 }
-.footer .itemFooter .iconoRedesSociales li img {
+.footer .iconoRedesSociales li img {
   width: 100%;
   height: auto;
   margin: 0;
@@ -247,7 +250,7 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
     max-width: 100%;
   }
   .carrete_recomendados .card .card-body h6 {
-    color: orangered;
+    color: #ff4500;
     font-size: 0.8rem;
     max-width: 100%;
   }
@@ -267,7 +270,7 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
     font-size: 0.7rem;
   }
   .carrete_recomendados .card .card-body .seccionPrecios .card-textPrice {
-    color: orangered;
+    color: #ff4500;
     font-size: 0.7rem;
   }
   .carrete_recomendados .card .card-body .seccionPrecios p {
@@ -277,14 +280,14 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
     width: 100%;
     min-width: 70px;
     font-size: 0.5em;
-    background-color: rgb(17, 57, 70);
+    background-color: #113946;
     align-items: center;
     align-content: center;
     margin: 2px auto;
     margin-left: -11px;
   }
   .carrete_recomendados .card:hover {
-    box-shadow: 0 8px 16px rgb(17, 57, 70);
+    box-shadow: 0 8px 16px #113946;
   }
 }
 @media screen and (min-width: 768px) {
@@ -294,7 +297,7 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
     max-width: 100%;
   }
   .carrete_recomendados .card .card-body h6 {
-    color: orangered;
+    color: #ff4500;
     font-size: 0.9rem;
     max-width: 100%;
   }
@@ -307,7 +310,7 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
     font-size: 0.9rem;
   }
   .carrete_recomendados .card .card-body .seccionPrecios .card-textPrice {
-    color: orangered;
+    color: #ff4500;
     font-size: 0.9rem;
   }
   .carrete_recomendados .card .card-body .seccionPrecios p {
@@ -317,7 +320,7 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
     width: 100%;
     min-width: 70px;
     font-size: 0.7em;
-    background-color: rgb(17, 57, 70);
+    background-color: #113946;
     align-items: center;
     margin: 5px 0px 0px 0px;
   }
@@ -348,7 +351,7 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
     max-width: 100%;
   }
   .carrete_recomendados .card .card-body h6 {
-    color: orangered;
+    color: #ff4500;
     font-size: 1.2rem;
     max-width: 100%;
   }
@@ -378,7 +381,7 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
     width: 100%;
     min-width: 70px;
     font-size: 0.8em;
-    background-color: rgb(17, 57, 70);
+    background-color: #113946;
     align-items: center;
     margin: 5px 0px 0px 0px;
   }
@@ -522,5 +525,250 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
   }
 }
 /* <---Nosotros---> */
+@media screen and (min-width: 480px) {
+  .nosotros h1 {
+    font-size: 1.4em;
+    margin-top: 45px;
+    text-align: center;
+    color: #113946;
+  }
+  .nosotros p {
+    font-size: 14px;
+    margin: 25px 15px 15px 15px;
+    text-wrap: balance;
+  }
+  .img__nosotrosUno img {
+    width: 440px;
+    height: auto;
+    border-radius: 5px;
+    margin: 15px;
+    display: flex;
+    justify-content: start;
+  }
+  .img__nosotrosDos img {
+    width: 440px;
+    height: auto;
+    border-radius: 5px;
+    margin: 15px;
+    display: flex;
+    justify-content: start;
+  }
+  .idMarca h2 {
+    text-align: center;
+    color: #BCA37F;
+  }
+  .mision h2 {
+    font-size: 1.6em;
+  }
+  .mision p {
+    width: 90%;
+    margin: 15px;
+    text-wrap: stable;
+    font-size: 14px;
+  }
+  .vision h2 {
+    font-size: 1.6em;
+  }
+  .vision p {
+    width: 90%;
+    margin: 15px;
+    text-wrap: stable;
+    font-size: 14px;
+  }
+  .separador {
+    width: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  .separador .imagen_separador {
+    width: 100%;
+  }
+  .separador .imagen_separador img {
+    width: 100%;
+    height: auto;
+    object-fit: fit;
+    transform: scaleY(-1);
+  }
+  .seccionCaracteristicas {
+    background-color: #EAD7BB;
+    border: 1px solid #EAD7BB;
+  }
+  .seccionCaracteristicas h2 {
+    text-align: center;
+    font-size: 1.6em;
+    color: #113946;
+    margin: 35px 0px 70px 0px;
+  }
+  .seccionLogos {
+    background-color: #EAD7BB;
+    border: 1px solid #EAD7BB;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .seccionLogos .logo_nosotros img {
+    width: 55px;
+    height: auto;
+    margin: 15px 25px;
+  }
+  .seccionLogos .logo_nosotros h3 {
+    font-size: 1.1em;
+  }
+  .seccionLogos .logo_nosotros p {
+    margin: 25px;
+    text-wrap: pretty;
+    font-size: 0.5em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .img__nosotrosUno img {
+    width: 440px;
+    height: auto;
+    border-radius: 5px;
+    margin: 15px auto;
+    display: flex;
+    justify-content: center; /* Alineación horizontal */
+    align-items: center;
+  }
+  .img__nosotrosDos img {
+    width: 440px;
+    height: auto;
+    border-radius: 5px;
+    margin: 15px auto;
+    display: flex;
+    justify-content: center; /* Alineación horizontal */
+    align-items: center;
+  }
+  .separador {
+    width: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  .separador .imagen_separador {
+    width: 100%;
+  }
+  .separador .imagen_separador img {
+    width: 100%;
+    height: auto;
+    object-fit: fit;
+    transform: scaleY(-1);
+  }
+  .seccionCaracteristicas {
+    background-color: #EAD7BB;
+    border: 1px solid #EAD7BB;
+  }
+  .seccionCaracteristicas h2 {
+    text-align: center;
+    font-size: 1.6em;
+    color: #113946;
+    margin: 35px 0px 70px 0px;
+  }
+  .seccionLogos {
+    background-color: #EAD7BB;
+    border: 1px solid #EAD7BB;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .seccionLogos .logo_nosotros img {
+    width: 55px;
+    height: auto;
+    margin: 15px 25px;
+  }
+  .seccionLogos .logo_nosotros h3 {
+    font-size: 1.1em;
+  }
+  .seccionLogos .logo_nosotros p {
+    margin: 25px;
+    text-wrap: pretty;
+    font-size: 0.7em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .nosotros h1 {
+    font-size: 16px;
+    margin: 45px 15px;
+    font-size: 2em;
+  }
+  .nosotros p {
+    width: 80%;
+    margin: 45px 15px 15px 15px;
+    font-size: 14px;
+    text-wrap: pretty;
+    line-height: 30px;
+    font-size: 16px;
+  }
+  .img__nosotrosUno img {
+    width: 540px;
+    height: auto;
+    border-radius: 5px;
+    margin: 15px auto;
+    display: flex;
+    justify-content: center; /* Alineación horizontal */
+    align-items: center;
+  }
+  .img__nosotrosDos img {
+    width: 540px;
+    height: auto;
+    border-radius: 5px;
+    margin: 15px auto;
+    display: flex;
+    justify-content: center; /* Alineación horizontal */
+    align-items: center;
+  }
+  .mision {
+    margin-top: 65px;
+  }
+  .vision {
+    margin-top: 65px;
+  }
+  .separador {
+    width: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  .separador .imagen_separador {
+    width: 100%;
+  }
+  .separador .imagen_separador img {
+    width: 100%;
+    height: auto;
+    object-fit: fit;
+    transform: scaleY(-1);
+  }
+  .seccionCaracteristicas {
+    background-color: #EAD7BB;
+    border: 5px solid #EAD7BB;
+  }
+  .seccionCaracteristicas h2 {
+    text-align: center;
+    font-size: 1.7em;
+    color: #113946;
+    margin: 35px 0px 70px 0px;
+  }
+  .seccionLogos {
+    background-color: #EAD7BB;
+    border: 1px solid #EAD7BB;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .seccionLogos .logo_nosotros img {
+    width: 55px;
+    height: auto;
+    margin: 15px 25px;
+  }
+  .seccionLogos .logo_nosotros h3 {
+    font-size: 1.2em;
+  }
+  .seccionLogos .logo_nosotros p {
+    margin: 25px;
+    text-wrap: pretty;
+    font-size: 0.9em;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */
