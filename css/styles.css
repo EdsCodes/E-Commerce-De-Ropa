@@ -11,6 +11,7 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 
+/*Header y footer de todas las paginas*/
 header {
   margin-bottom: 5px;
 }
@@ -110,6 +111,7 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
   margin: 0;
 }
 
+/*Paginas del sitio*/
 /* <---Página Inicio---> */
 @media screen and (min-width: 480px) {
   .imgSupFondo {

@@ -1,0 +1,338 @@
+/* <---Página Inicio---> */
+@media screen and (min-width: 480px) {
+    .imgSupFondo {
+      background-image: url(https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+      background-size: cover;
+      height: 100px;
+      margin: 5px auto;
+      h3 {
+        margin-top: 30px;
+        text-align: center;
+        align-content: center;
+      }
+    }
+  
+    .imgBotonesArriba {
+      background-image: url(https://images.pexels.com/photos/235525/pexels-photo-235525.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+      background-size: cover;
+      height: auto;
+      min-height: 200px;
+      object-fit: cover;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      opacity: 0.8;
+      margin-bottom: 5px;
+      button {
+        color: white;
+        font-size: 1.7rem;
+        width: 250px;
+      }
+  
+      button:hover {
+        color: $brown;
+      }
+    }
+    .carrete_prendas {
+      margin: 5px auto;
+      img {
+        border-radius: 5px;
+        min-height: fit-content;
+      }
+    }
+    .imgsPagPPal {
+      align-items: center;
+      align-content: center;
+      display: grid;
+      grid-auto-columns: 1fr;
+      grid-auto-rows: 1fr;
+      grid-template-columns: 0.9fr 1fr 0.9fr;
+      grid-template-rows: 0.5fr 0.5fr;
+      grid-gap: 5px;
+      grid-template-areas:
+        "img1__pagPpal img2__pagPpal img4__pagPpal"
+        "img1__pagPpal img3__pagPpal img4__pagPpal";
+  
+      .img1__pagPpal {
+        grid-area: img1__pagPpal;
+        width: 100%;
+        max-width: 100%;
+      }
+      .img1__pagPpal img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 2%;
+      }
+      .img2__pagPpal {
+        grid-area: img2__pagPpal;
+        width: 100%;
+        max-width: 100%;
+      }
+      .img2__pagPpal img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 10%;
+        object-fit: cover;
+        margin-top: 90px;
+      }
+      .img3__pagPpal {
+        grid-area: img3__pagPpal;
+        width: 100%;
+        max-width: 100%;
+      }
+      .img3__pagPpal img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 10%;
+        object-fit: cover;
+        margin-bottom: 90px;
+      }
+      .img4__pagPpal {
+        grid-area: img4__pagPpal;
+        width: 100%;
+        max-width: 100%;
+      }
+      .img4__pagPpal img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 2%;
+        object-fit: cover;
+      }
+    }
+    .divider {
+      width: 100vw;
+      .imgDivider img {
+        align-content: end;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+    .carrete_recomendados {
+      background-color: $lightbeige;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+      .card {
+        width: 20%;
+        border-radius: 5px;
+        padding: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease-in-out;
+        max-width: 100%;
+        max-height: 100%;
+        position: relative;
+  
+        .card-body {
+          display: inline;
+          justify-content: space-between;
+          width: auto;
+          align-content: center;
+          max-width: 100%;
+  
+          .card-title {
+            text-decoration: none;
+            font-size: 0.8rem;
+            max-width: 100%;
+          }
+  
+          h6 {
+            color: $orangered;
+            font-size: 0.8rem;
+            max-width: 100%;
+          }
+  
+          .card-text {
+            text-decoration: none;
+            font-size: 0.6em;
+          }
+  
+          .seccionPrecios {
+            display: flex;
+            text-align: left;
+            justify-content: space-evenly;
+            width: 100vw;
+            max-width: 100%;
+  
+            .textoTachado {
+              text-decoration: line-through;
+              font-size: 0.7rem;
+            }
+  
+            .card-textPrice {
+              color: $orangered;
+              font-size: 0.7rem;
+            }
+  
+            p {
+              font-size: 0.8rem;
+            }
+          }
+  
+          .btn {
+            width: 100%;
+            min-width: 70px;
+            font-size: 0.5em;
+            background-color: $blueking;
+            align-items: center;
+            align-content: center;
+            margin: 2px auto;
+            margin-left: -11px;
+          }
+        }
+      }
+  
+      /* Se ubica este hover en este punto ya que al ponerlo arriba aplicaba el sombreado independientemente a cada elemento de la card */
+      .card:hover {
+        box-shadow: 0 8px 16px $blueking;
+      }
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .carrete_recomendados {
+      .card {
+        .card-body {
+          .card-title {
+            text-decoration: none;
+            font-size: 0.9rem;
+            max-width: 100%;
+          }
+  
+          h6 {
+            color: $orangered;
+            font-size: 0.9rem;
+            max-width: 100%;
+          }
+  
+          .card-text {
+            text-decoration: none;
+            font-size: 0.8em;
+          }
+          .seccionPrecios {
+              .textoTachado {
+              text-decoration: line-through;
+              font-size: 0.9rem;
+            }
+  
+            .card-textPrice {
+              color: $orangered;
+              font-size: 0.9rem;
+            }
+  
+            p {
+              font-size: 0.9rem;
+            }
+          }
+  
+          .btn {
+            width: 100%;
+            min-width: 70px;
+            font-size: 0.7em;
+            background-color: $blueking;
+            align-items: center;
+            margin: 5px 0px 0px 0px;
+          }
+        }
+      }
+    }
+    .footer {
+      .itemFooter {
+        align-items: center;
+        width: 20vw;
+  
+        h2 {
+          align-items: center;
+          font-size: 0.7rem;
+          font-weight: bold;
+          padding-bottom: 10px;
+        }
+        p {
+          line-height: 0.4;
+          font-size: 0.5rem;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .imgBotonesArriba{
+      height: auto;
+      object-fit: cover;
+    }
+    .carrete_recomendados {
+      .card {
+        .card-body {
+          .card-title {
+            text-decoration: none;
+            font-size: 1rem;
+            max-width: 100%;
+          }
+  
+          h6 {
+            color: $orangered;
+            font-size: 1.2rem;
+            max-width: 100%;
+          }
+  
+          .card-text {
+            text-decoration: none;
+            font-size: 0.9em;
+          }
+  
+          .seccionPrecios {
+            display: flex;
+            text-align: left;
+            justify-content: space-evenly;
+            width: 100vw;
+            max-width: 100%;
+  
+            .textoTachado {
+              text-decoration: line-through;
+              font-size: 1rem;
+            }
+  
+            .card-textPrice {
+              color: $orangered;
+              font-size: 1rem;
+            }
+  
+            p {
+              font-size: 0.9rem;
+            }
+          }
+  
+          .btn {
+            width: 100%;
+            min-width: 70px;
+            font-size: 0.8em;
+            background-color: $blueking;
+            align-items: center;
+            margin: 5px 0px 0px 0px;
+          }
+        }
+      }
+    }
+    .footer {
+      .itemFooter {
+        h2 {
+          align-items: center;
+          font-size: 0.8em;
+          font-weight: bold;
+          padding: 10px 0px;
+        }
+        p {
+          line-height: 0.4;
+          font-size: 0.7rem;
+        }
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+      }
+    }
+  }
