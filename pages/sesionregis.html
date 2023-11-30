@@ -60,37 +60,34 @@
         </nav>
     </header>
   <main>
-      <div class="columnaGestionUsuario">
+    <div class="row">
+      <div class="columnaGestionUsuario col-sm-12 col-md-12 col-lg-6">
         <h2 class="TituloRegistro">Registrate aqui y recibe el 10% de descuento en tu primera compra</h2>
-        <div>
+    </div>
+    <div class="row">
           <form class="formularioRegistro">
-            <div>
+            <div class="campoFormulario">
               <label for="name"></label>
               <input type="text" name="name" placeholder="Nombre" required>
             </div>
-            <br>
-            <div>
+            <div class="campoFormulario">
               <label for="mail"></label>
               <input type="email" name="email" placeholder="Email" required>
             </div>
-            <br>
-            <div>
+            <div class="campoFormulario">
               <label for="phone"></label>
               <input type="tel" id="phone" name="phone" pattern="[0-9]{12}" placeholder="Tel.(Indic. pais+10 digitos)" required/>
             </div>
-            <br>
             <div>
               <label for="sex">Genero</label>
               <input type="radio" name="sex" value="muj" required> Mujer
               <input type="radio" name="sex" value="hom" required> Hombre
               <input type="radio" name="sex" value="noespec" required> No especifica
             </div>
-            <br>
             <div>
               <label for="nac">Fecha de nacimiento</label>
               <input type="date" name="nac" required>
             </div>
-            <br>
             <div class="selectPais">
               <label for="pais">Pais</label>
                 <select name="pais" id="">
@@ -104,45 +101,44 @@
                   <option value="per">Perú</option>
                 </select>
             </div>
-            <br>
             <div>
               <input type="checkbox" name="terminos" required>
               <label for="terminos">Acepto politica de privacidad y tratam. de datos</label>
             </div>
-            <br>
             <div class="botones_registro">
               <input type="submit" value="Recibe tu descuento">
               <input type="reset" value="borrar datos">
             </div>
-            <br>
           </form>
-        <div class="columnasSesionReg">
-          <div class="formularioIngreso">
-            <form>
-              <h2 class="tituloIngSesion">Ingresa aqui</h2>
-              <input type="email" class="email" placeholder="Email"/>
-              <div class="ingContrasenaIngreso">
-                <input type="password" class="password" placeholder="Contraseña" />
-              </div>
-              <div class="gestionDatosUsuario">
-                <div class="checboxIngSesion">
-                  <input type="checkbox" name="checkbox" id="checkbox" />
-                  <label for="">Recordar mis datos</label>
+      <div class="columnasSesionReg">
+            <div class="formularioIngreso">
+              <form>
+                <h2 class="tituloIngSesion">Ingresa aqui</h2>
+                <input type="email" class="email" placeholder="Email"/>
+                <div class="ingContrasenaIngreso">
+                  <input type="password" class="password" placeholder="Contraseña" />
                 </div>
-                <div class="olvidoContrasena">
-                  <a href="###">Olvidé mi contraseña</a>
+                <div class="gestionDatosUsuario">
+                  <div class="checboxIngSesion">
+                    <input type="checkbox" name="checkbox" id="checkbox" />
+                    <label for="">Recordar mis datos</label>
+                  </div>
+                  <div class="olvidoContrasena">
+                    <a href="###">Olvidé mi contraseña</a>
+                  </div>
                 </div>
-              </div>
-              <div class="botonLogin">
-                <button type="submit" value="submit">Login</button>
-              </div>
-            </form>
-          </div>
+                <div class="botonLogin">
+                  <button type="submit" value="submit">Login</button>
+                </div>
+              </form>
         </div>
       </div>
-      <div class="imgSesionReg">
-        <img src="../multi/pexels-maksim-goncharenok-4380970.jpg" alt="imagen sesion y registro">
+    </div>
+    <div class="row">
+      <div class="imgSesionReg col-sm-12 col-md-12 col-lg-6">
+        <img src="../multi/mujer_conjunto_beige.jpg" alt="imagen sesion y registro">
       </div>
+    </div>
   </main>
   <footer class="footer">
     <div class="itemFooter">

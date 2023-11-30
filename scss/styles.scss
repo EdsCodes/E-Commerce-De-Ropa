@@ -16,11 +16,13 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 
-/*Header y footer de todas las paginas*/
+/*Header y footer de todas las paginas del sitio*/
 @import "header";
 @import "footer";
 
 /*Paginas del sitio*/
-@import "inicioPag";
-@import "guiasytallasPag";
-@import "nosotrosPag";
+@import "index";
+@import "guiatallas";
+@import "nosotros";
+@import "sesionregis";
+@import "pagcompras";

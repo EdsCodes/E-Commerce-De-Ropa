@@ -11,7 +11,7 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 
-/*Header y footer de todas las paginas*/
+/*Header y footer de todas las paginas del sitio*/
 header {
   margin-bottom: 5px;
 }
@@ -770,6 +770,15 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
     margin: 25px;
     text-wrap: pretty;
     font-size: 0.9em;
+  }
+}
+@media screen and (min-width: 480px) {
+  .columnaGestionUsuario .TituloRegistro {
+    text-align: center;
+    font-size: 0.9em;
+  }
+  .columnaGestionUsuario .TituloRegistro .formularioRegistro .campoFormulario input {
+    width: 100vw;
   }
 }
 
