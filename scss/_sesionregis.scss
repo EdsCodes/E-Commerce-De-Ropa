@@ -1,45 +1,194 @@
 @media screen and (min-width: 480px) {
     .columnaGestionUsuario {
+        margin: 0px auto;
         .TituloRegistro {
             text-align: center;
-            font-size: 0.9em;
+            font-size: 1.3em;
+            margin: 50px 0px 40px 0px;
+        }
+        .seccionFormularios {
             .formularioRegistro {
+                border: solid 1px $blueking;
+                border-radius: 8px;
+                padding: 25px;
+                background-color: $beige;
+                color: $blueking;
+                box-shadow: 0 3px 8px $blueking;
                 .campoFormulario{
+                    text-align: center;
+                    margin: 0px auto;
                     input {
-                        width: 100vw;
+                        width: 98%;
+                        margin: 4px auto;
+                        padding: 2px;
+                        font-size: 80%;
+                        border-radius: 5px;
+                    }
+                }
+                .campoGenero {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    margin: 5px 5px 0 0;
+                }
+                .campoFechanac {
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 5px 5px 0 0;
+                    input {
+                        width: 220px;
+                        border-radius: 5px;
+                        padding: 2px;
+                        font-size: 80%;
+                    }
+                }
+                .selectPais {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    margin: 5px 5px 0 0;
+                    select {
+                        width: 220px;
+                        border-radius: 5px;
+                        padding: 2px;
+                        font-size: 80%;
+                    }
+                }
+                .termCondic {
+                    font-size: 0.7em;
+                    margin: 10px 0 10px;
+                    align-content: center;
+                }
+                .botones_registro {
+                    @extend .campoGenero;
+                    text-align: center;
+                    input {
+                        align-content: center;
+                        width: 200px;
+                        border-radius: 5px;
+                        background-color: $brown;
+                        color: $blueking;
+                        font-size: 80%;
+                        font-weight: bold;
+                    }
+                }
+            }
+            .tituloIngSesion {
+                @extend .TituloRegistro;
+            }
+            .formularioInicioSesion {
+                @extend .formularioRegistro;
+                margin: 20px 0 60px;
+                input {
+                    width: 98%;
+                    margin: 4px auto;
+                    padding: 2px;
+                    font-size: 80%;
+                    border-radius: 5px;
+                }
+                .ingDatosLogin {
+                    text-align: center;
+                    margin: 0px auto;
+                    input {
+                        width: 100%;
+                        margin: 4px auto;
+                        padding: 2px;
+                        font-size: 80%;
+                        border-radius: 5px;
+                    }
+                }
+                .email {
+
+                }
+                .password {
+                }
+                .gestionDatosUsuario {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    .checboxIngSesion {
+                        font-size: 0.7em;
+                        margin: 10px 0 10px;
+                        align-content: center;
+                        width: auto;
+                        input, label {
+                        }
+                    }
+                    .olvidoContrasena {
+                        a {
+                            text-decoration: none;
+                            color: inherit;
+                            font-size: 0.7em;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+                .botonLogin {
+                    text-align: center;
+                    margin-top: 5px;
+                    button {
+                        align-content: center;
+                        width: 100%;
+                        border-radius: 5px;
+                        background-color: $brown;
+                        color: $blueking;
+                        font-size: 80%;
+                        font-weight: bold;
                     }
                 }
             }
         }
     }
-    
-    
-    
-    .selectPais {
-    }
-    .botones_registro {
-    }
-    .columnasSesionReg {
-    }
-    .formularioIngreso {
-    }
-    .tituloIngSesion {
-    }
-    .email {
-    }
-    .ingContrasenaIngreso {
-    }
-    .password {
-    }
-    .gestionDatosUsuario {
-    }
-    .checboxIngSesion {
-    }
-    .olvidoContrasena {
-    }
-    .botonLogin {
-    }
     .imgSesionReg {
+        align-items: center;
+        text-align: center;
+        margin: 120px 0 60px 0;
+
+        img {
+            width: 450px;
+            height: auto;
+            margin: 10px auto;
+            align-items: center;
+            border-radius: 10px;
+        }
     }
-    
+}
+@media screen and (min-width: 768px) {
+    .imgSesionReg {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: 120px 0 60px 0;
+
+        img {
+            width: 350px;
+            height: auto;
+            margin: 10px auto;
+            align-items: center;
+            border-radius: 10px;
+            display:flex;
+            align-items: center;
+            margin: 0px auto;
+        }
+    }
+}
+@media screen and (min-width: 1024px) {
+    .imgSesionReg {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: 20px auto;
+        width: auto;
+        img {
+            width: 60vw;
+            height: auto;
+            object-fit: cover;
+            margin: 10px auto;
+            align-items: center;
+            border-radius: 10px;
+            display:flex;
+            align-items: center;
+        }
+    }
 }

@@ -1,0 +1,150 @@
+
+@media screen and (min-width: 480px) {
+    .tituloArticuloVta {
+        .articulo {
+            font-size: 1.1em;
+        }
+        .ref_articulo {
+            font-size: 0.7em;
+            color: $orangered;
+            font-style: italic;
+        }
+    }
+    .columnaIzqCompras {
+        .imgs_vta {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            .grupoImgsA {
+                margin: 0px 5px 0px;
+                img{
+                width: 200px;
+                height: auto;
+                border-radius: 5px;
+                opacity: 0.97;
+                box-shadow: 0 3px 8px black;
+                }
+                :hover{
+                    opacity: 1;
+                }
+            }
+            .grupoImgsB {
+                @extend .grupoImgsA;
+                margin: 5px 5px 0px;
+            }
+            
+        }
+        .botones_vta {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-around;
+            input {
+                width: 140px;
+                align-content: center;
+                border-radius: 5px;
+                background-color: $brown;
+                color: $blueking;
+                font-size: 60%;
+                font-weight: bold;
+                padding: 2px;
+            }
+        }
+        .descripcion_productovta {
+            margin-top: 20px;
+            font-size: 0.8em;
+            line-height: 15px;
+            text-wrap: pretty;
+            
+        }
+    }
+    .columnaDerCompras {
+        .precio_articulovta {
+            color: $orangered;
+        }
+        .seccionColorProd {
+            display: flex;
+            .tittleColores{
+                font-size: 0.8em;
+            }
+            .color-selector {
+                text-align: center;
+                .color-input {
+                    display: none;
+                }
+                .color-label {
+                    display: inline-block;
+                    width: 25px;
+                    height: 25px;
+                    border: 2px solid white;
+                    margin-left: 5px;
+                    cursor: pointer;
+                    border-radius: 50%;
+                }
+            }
+        }
+        .seccionTallaProd{
+            font-size: 0.8em;
+            a {
+                text-decoration: none;
+                color: inherit;
+                font-weight: bold;
+            }
+            .botonestallacompra {
+                margin: 5px 0px 15px;
+                input {
+                    width: 60px;
+                    border-radius: 5px;
+                    font-size: 0.8em;
+                    background-color: $beige;
+                    color: $blueking  ;
+                }
+            }
+        }
+        .bloqueCantidadLogos{
+            display: flex;
+            justify-content: space-between;
+            .seccionCantidadProd{
+                font-size: 0.7em; 
+                input {
+                    width: 120px;
+                    height: 20px;
+                }
+                .botonesAccionCompra{
+                    input {
+                        width: 140px;
+                        align-content: center;
+                        border-radius: 5px;
+                        background-color: $brown;
+                        color: $blueking;
+                        font-size: 0.8em;
+                        font-weight: bold;
+                        padding: 2px;
+                        margin: 2px;
+                    }
+                }
+            }
+            .areaTextoLogosVrAgreg {
+                display: flex;
+                .textoLogosVrAgreg {
+                    width: 30%;
+                    display: flex;
+                    flex-direction: column;
+                    .textoLogos {
+                        display: flex;
+                        flex-direction: column;
+                        font-size: 0.5em;
+                        text-align: center;
+                        margin: 15px;
+                    }
+                    img {
+                        width: 30px;
+                        height: auto;
+                        text-align: center;
+                        margin: 0px auto;
+                    }
+                }
+            }
+        }
+    }
+}

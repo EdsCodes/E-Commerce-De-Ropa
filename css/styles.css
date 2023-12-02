@@ -115,7 +115,7 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
 /* <---Página Inicio---> */
 @media screen and (min-width: 480px) {
   .imgSupFondo {
-    background-image: url(https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-image: url(../multi/paisaje_fondo.webp);
     background-size: cover;
     height: 100px;
     margin: 5px auto;
@@ -126,7 +126,7 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
     align-content: center;
   }
   .imgBotonesArriba {
-    background-image: url(https://images.pexels.com/photos/235525/pexels-photo-235525.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-image: url(../multi/img_jeanFondo.jpeg);
     background-size: cover;
     height: auto;
     min-height: 200px;
@@ -773,12 +773,317 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
   }
 }
 @media screen and (min-width: 480px) {
-  .columnaGestionUsuario .TituloRegistro {
-    text-align: center;
-    font-size: 0.9em;
+  .columnaGestionUsuario {
+    margin: 0px auto;
   }
-  .columnaGestionUsuario .TituloRegistro .formularioRegistro .campoFormulario input {
-    width: 100vw;
+  .columnaGestionUsuario .TituloRegistro, .columnaGestionUsuario .seccionFormularios .tituloIngSesion {
+    text-align: center;
+    font-size: 1.3em;
+    margin: 50px 0px 40px 0px;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioRegistro, .columnaGestionUsuario .seccionFormularios .formularioInicioSesion {
+    border: solid 1px #113946;
+    border-radius: 8px;
+    padding: 25px;
+    background-color: #EAD7BB;
+    color: #113946;
+    box-shadow: 0 3px 8px #113946;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioRegistro .campoFormulario, .columnaGestionUsuario .seccionFormularios .formularioInicioSesion .campoFormulario {
+    text-align: center;
+    margin: 0px auto;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioRegistro .campoFormulario input, .columnaGestionUsuario .seccionFormularios .formularioInicioSesion .campoFormulario input {
+    width: 98%;
+    margin: 4px auto;
+    padding: 2px;
+    font-size: 80%;
+    border-radius: 5px;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioRegistro .campoGenero, .columnaGestionUsuario .seccionFormularios .formularioInicioSesion .campoGenero, .columnaGestionUsuario .seccionFormularios .formularioRegistro .botones_registro, .columnaGestionUsuario .seccionFormularios .formularioInicioSesion .botones_registro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px 5px 0 0;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioRegistro .campoFechanac, .columnaGestionUsuario .seccionFormularios .formularioInicioSesion .campoFechanac {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 5px 0 0;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioRegistro .campoFechanac input, .columnaGestionUsuario .seccionFormularios .formularioInicioSesion .campoFechanac input {
+    width: 220px;
+    border-radius: 5px;
+    padding: 2px;
+    font-size: 80%;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioRegistro .selectPais, .columnaGestionUsuario .seccionFormularios .formularioInicioSesion .selectPais {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px 5px 0 0;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioRegistro .selectPais select, .columnaGestionUsuario .seccionFormularios .formularioInicioSesion .selectPais select {
+    width: 220px;
+    border-radius: 5px;
+    padding: 2px;
+    font-size: 80%;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioRegistro .termCondic, .columnaGestionUsuario .seccionFormularios .formularioInicioSesion .termCondic {
+    font-size: 0.7em;
+    margin: 10px 0 10px;
+    align-content: center;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioRegistro .botones_registro, .columnaGestionUsuario .seccionFormularios .formularioInicioSesion .botones_registro {
+    text-align: center;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioRegistro .botones_registro input, .columnaGestionUsuario .seccionFormularios .formularioInicioSesion .botones_registro input {
+    align-content: center;
+    width: 200px;
+    border-radius: 5px;
+    background-color: #BCA37F;
+    color: #113946;
+    font-size: 80%;
+    font-weight: bold;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioInicioSesion {
+    margin: 20px 0 60px;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioInicioSesion input {
+    width: 98%;
+    margin: 4px auto;
+    padding: 2px;
+    font-size: 80%;
+    border-radius: 5px;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioInicioSesion .ingDatosLogin {
+    text-align: center;
+    margin: 0px auto;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioInicioSesion .ingDatosLogin input {
+    width: 100%;
+    margin: 4px auto;
+    padding: 2px;
+    font-size: 80%;
+    border-radius: 5px;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioInicioSesion .gestionDatosUsuario {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioInicioSesion .gestionDatosUsuario .checboxIngSesion {
+    font-size: 0.7em;
+    margin: 10px 0 10px;
+    align-content: center;
+    width: auto;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioInicioSesion .gestionDatosUsuario .olvidoContrasena a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 0.7em;
+    margin-right: 10px;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioInicioSesion .botonLogin {
+    text-align: center;
+    margin-top: 5px;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioInicioSesion .botonLogin button {
+    align-content: center;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #BCA37F;
+    color: #113946;
+    font-size: 80%;
+    font-weight: bold;
+  }
+  .imgSesionReg {
+    align-items: center;
+    text-align: center;
+    margin: 120px 0 60px 0;
+  }
+  .imgSesionReg img {
+    width: 450px;
+    height: auto;
+    margin: 10px auto;
+    align-items: center;
+    border-radius: 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .imgSesionReg {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 120px 0 60px 0;
+  }
+  .imgSesionReg img {
+    width: 350px;
+    height: auto;
+    margin: 10px auto;
+    align-items: center;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin: 0px auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .imgSesionReg {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px auto;
+    width: auto;
+  }
+  .imgSesionReg img {
+    width: 60vw;
+    height: auto;
+    object-fit: cover;
+    margin: 10px auto;
+    align-items: center;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 480px) {
+  .tituloArticuloVta .articulo {
+    font-size: 1.1em;
+  }
+  .tituloArticuloVta .ref_articulo {
+    font-size: 0.7em;
+    color: #ff4500;
+    font-style: italic;
+  }
+  .columnaIzqCompras .imgs_vta {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .columnaIzqCompras .imgs_vta .grupoImgsA, .columnaIzqCompras .imgs_vta .grupoImgsB {
+    margin: 0px 5px 0px;
+  }
+  .columnaIzqCompras .imgs_vta .grupoImgsA img, .columnaIzqCompras .imgs_vta .grupoImgsB img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+    opacity: 0.97;
+    box-shadow: 0 3px 8px black;
+  }
+  .columnaIzqCompras .imgs_vta .grupoImgsA :hover, .columnaIzqCompras .imgs_vta .grupoImgsB :hover {
+    opacity: 1;
+  }
+  .columnaIzqCompras .imgs_vta .grupoImgsB {
+    margin: 5px 5px 0px;
+  }
+  .columnaIzqCompras .botones_vta {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .columnaIzqCompras .botones_vta input {
+    width: 140px;
+    align-content: center;
+    border-radius: 5px;
+    background-color: #BCA37F;
+    color: #113946;
+    font-size: 60%;
+    font-weight: bold;
+    padding: 2px;
+  }
+  .columnaIzqCompras .descripcion_productovta {
+    margin-top: 20px;
+    font-size: 0.8em;
+    line-height: 15px;
+    text-wrap: pretty;
+  }
+  .columnaDerCompras .precio_articulovta {
+    color: #ff4500;
+  }
+  .columnaDerCompras .seccionColorProd {
+    display: flex;
+  }
+  .columnaDerCompras .seccionColorProd .tittleColores {
+    font-size: 0.8em;
+  }
+  .columnaDerCompras .seccionColorProd .color-selector {
+    text-align: center;
+  }
+  .columnaDerCompras .seccionColorProd .color-selector .color-input {
+    display: none;
+  }
+  .columnaDerCompras .seccionColorProd .color-selector .color-label {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border: 2px solid white;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  .columnaDerCompras .seccionTallaProd {
+    font-size: 0.8em;
+  }
+  .columnaDerCompras .seccionTallaProd a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+  }
+  .columnaDerCompras .seccionTallaProd .botonestallacompra {
+    margin: 5px 0px 15px;
+  }
+  .columnaDerCompras .seccionTallaProd .botonestallacompra input {
+    width: 60px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    background-color: #EAD7BB;
+    color: #113946;
+  }
+  .columnaDerCompras .bloqueCantidadLogos {
+    display: flex;
+    justify-content: space-between;
+  }
+  .columnaDerCompras .bloqueCantidadLogos .seccionCantidadProd {
+    font-size: 0.7em;
+  }
+  .columnaDerCompras .bloqueCantidadLogos .seccionCantidadProd input {
+    width: 120px;
+    height: 20px;
+  }
+  .columnaDerCompras .bloqueCantidadLogos .seccionCantidadProd .botonesAccionCompra input {
+    width: 140px;
+    align-content: center;
+    border-radius: 5px;
+    background-color: #BCA37F;
+    color: #113946;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 2px;
+    margin: 2px;
+  }
+  .columnaDerCompras .bloqueCantidadLogos .areaTextoLogosVrAgreg {
+    display: flex;
+  }
+  .columnaDerCompras .bloqueCantidadLogos .areaTextoLogosVrAgreg .textoLogosVrAgreg {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+  }
+  .columnaDerCompras .bloqueCantidadLogos .areaTextoLogosVrAgreg .textoLogosVrAgreg .textoLogos {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.5em;
+    text-align: center;
+    margin: 15px;
+  }
+  .columnaDerCompras .bloqueCantidadLogos .areaTextoLogosVrAgreg .textoLogosVrAgreg img {
+    width: 30px;
+    height: auto;
+    text-align: center;
+    margin: 0px auto;
   }
 }
 
