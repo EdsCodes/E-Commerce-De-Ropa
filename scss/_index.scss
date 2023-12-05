@@ -1,4 +1,6 @@
 /* <---Página Inicio---> */
+
+
 @media screen and (min-width: 480px) {
     .imgSupFondo {
       background-image: url(../multi/paisaje_fondo.webp);
@@ -51,59 +53,65 @@
       grid-template-areas:
         "img1__pagPpal img2__pagPpal img4__pagPpal"
         "img1__pagPpal img3__pagPpal img4__pagPpal";
-  
+        
       .img1__pagPpal {
         grid-area: img1__pagPpal;
         width: 100%;
         max-width: 100%;
-      }
-      .img1__pagPpal img {
-        width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 2%;
+        position: relative;
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+          border-radius: 2%;
+          object-fit: cover;
+        }
+        @include seccionVtasPagPpal; 
       }
       .img2__pagPpal {
         grid-area: img2__pagPpal;
         width: 100%;
         max-width: 100%;
-      }
-      .img2__pagPpal img {
-        width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 10%;
-        object-fit: cover;
-        margin-top: 90px;
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+          border-radius: 10%;
+          object-fit: cover;
+          margin-top: 90px;
+        }
       }
       .img3__pagPpal {
         grid-area: img3__pagPpal;
         width: 100%;
         max-width: 100%;
-      }
-      .img3__pagPpal img {
-        width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 10%;
-        object-fit: cover;
-        margin-bottom: 90px;
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+          border-radius: 10%;
+          object-fit: cover;
+          margin-bottom: 90px;
+        }
       }
       .img4__pagPpal {
         grid-area: img4__pagPpal;
         width: 100%;
         max-width: 100%;
-      }
-      .img4__pagPpal img {
-        width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 2%;
-        object-fit: cover;
+        position: relative;
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+          border-radius: 2%;
+          object-fit: cover;
+        }
+        @include seccionVtasPagPpal;
       }
     }
     .divider {
-      width: 100vw;
+      width: 120vw;
+      margin: 0;
       .imgDivider img {
         align-content: end;
         width: 100%;
@@ -173,12 +181,11 @@
           }
   
           .btn {
+            @include botonesDeAccion;
             width: 100%;
             min-width: 70px;
             font-size: 0.5em;
-            background-color: $blueking;
             align-items: center;
-            align-content: center;
             margin: 2px auto;
             margin-left: -11px;
           }
