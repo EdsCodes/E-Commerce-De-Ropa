@@ -22,7 +22,7 @@ body {
 
     /*Mixins de los estilos Standard y de los mas usados*/
 
-/*Mixin de botones de venta en imagenes de pagina ppal (index)*/
+/*Mixin de botones de venta superpuestos en imagenes de pagina ppal (index)*/
 @mixin seccionVtasPagPpal {
   .seccionVtaImgsPpal{
     display: flex;
@@ -35,14 +35,14 @@ body {
     .card-img-overlay{
       display: flex;
       flex-direction: column;
-      margin: 0px 0px 35px 3px;
-
+      margin: 0px 0px 5px 3px;
       .seccionPrecios__imgsPagPPal{
         display: flex;
         justify-content: flex-end;
-        margin: 85px 0px 2px 0;
+        margin: 115px 0px 2px 0;
         position: relative;
-        left: 25px;
+        right: 18px;
+        top: 10px;
         .precioTachado{
           text-decoration: line-through;
           color: $orangered;
@@ -68,10 +68,12 @@ body {
     }
     .botonesAccionCompra {
       @include centrarElementos;
+      display: flex;
+      flex-direction: row;
       input {
         @include botonesDeAccion;
         font-size: 50%;
-        width: 80px;
+        width: 60px;
         height: 20px;
         margin: 0.5px;
       }

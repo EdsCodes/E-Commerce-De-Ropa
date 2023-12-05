@@ -112,15 +112,7 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
 }
 
 /*
-.img1__pagPpal {
-    grid-area: img1__pagPpal;
-    width: 100%;
-    max-width: 100%;
-    .img1__pagPpal {
-        grid-area: img1__pagPpal;
-        width: 100%;
-        max-width: 100%;
-        position: relative;
+
         .seccionVtaImgsPpal{
             position: absolute;
             display: flex;
@@ -175,7 +167,7 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
 </div>
 */
 /*Mixins de los estilos Standard y de los mas usados*/
-/*Mixin de botones de venta en imagenes de pagina ppal (index)*/
+/*Mixin de botones de venta superpuestos en imagenes de pagina ppal (index)*/
 /*Paginas del sitio*/
 /* <---Página Inicio---> */
 @media screen and (min-width: 480px) {
@@ -254,14 +246,15 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
   .imgsPagPPal .img1__pagPpal .seccionVtaImgsPpal .card-img-overlay {
     display: flex;
     flex-direction: column;
-    margin: 0px 0px 35px 3px;
+    margin: 0px 0px 5px 3px;
   }
   .imgsPagPPal .img1__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal {
     display: flex;
     justify-content: flex-end;
-    margin: 85px 0px 2px 0;
+    margin: 115px 0px 2px 0;
     position: relative;
-    left: 25px;
+    right: 18px;
+    top: 10px;
   }
   .imgsPagPPal .img1__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal .precioTachado {
     text-decoration: line-through;
@@ -289,6 +282,8 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
     flex-direction: column;
     text-align: center;
     align-items: center;
+    display: flex;
+    flex-direction: row;
   }
   .imgsPagPPal .img1__pagPpal .seccionVtaImgsPpal .botonesAccionCompra input {
     width: 140px;
@@ -302,7 +297,7 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
     padding: 2px;
     border: #FFF2D8 5px;
     font-size: 50%;
-    width: 80px;
+    width: 60px;
     height: 20px;
     margin: 0.5px;
   }
@@ -310,6 +305,7 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
     grid-area: img2__pagPpal;
     width: 100%;
     max-width: 100%;
+    position: relative;
   }
   .imgsPagPPal .img2__pagPpal img {
     width: 100%;
@@ -319,10 +315,78 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
     object-fit: cover;
     margin-top: 90px;
   }
+  .imgsPagPPal .img2__pagPpal .seccionVtaImgsPpal {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 190px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  }
+  .imgsPagPPal .img2__pagPpal .seccionVtaImgsPpal .card-img-overlay {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 5px 3px;
+  }
+  .imgsPagPPal .img2__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal {
+    display: flex;
+    justify-content: flex-end;
+    margin: 115px 0px 2px 0;
+    position: relative;
+    right: 18px;
+    top: 10px;
+  }
+  .imgsPagPPal .img2__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal .precioTachado {
+    text-decoration: line-through;
+    color: #ff4500;
+    margin-right: 3px;
+    font-size: 0.7em;
+    font-weight: 700;
+    -webkit-text-stroke: 0.1px black;
+  }
+  .imgsPagPPal .img2__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal .textPrice {
+    color: #ff4500;
+    font-size: 0.7em;
+    font-weight: 700;
+    margin-right: 15px;
+    -webkit-text-stroke: 0.1px black;
+  }
+  .imgsPagPPal .img2__pagPpal .seccionVtaImgsPpal .card-img-overlay .card-text {
+    font-size: 0.5em;
+    font-weight: 650;
+    color: black;
+    margin: 0px;
+  }
+  .imgsPagPPal .img2__pagPpal .seccionVtaImgsPpal .botonesAccionCompra {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+  }
+  .imgsPagPPal .img2__pagPpal .seccionVtaImgsPpal .botonesAccionCompra input {
+    width: 140px;
+    height: 25px;
+    align-content: center;
+    border-radius: 5px;
+    background-color: #113946;
+    color: white;
+    font-size: 60%;
+    font-weight: 400;
+    padding: 2px;
+    border: #FFF2D8 5px;
+    font-size: 50%;
+    width: 60px;
+    height: 20px;
+    margin: 0.5px;
+  }
   .imgsPagPPal .img3__pagPpal {
     grid-area: img3__pagPpal;
     width: 100%;
     max-width: 100%;
+    position: relative;
   }
   .imgsPagPPal .img3__pagPpal img {
     width: 100%;
@@ -331,6 +395,77 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
     border-radius: 10%;
     object-fit: cover;
     margin-bottom: 90px;
+  }
+  .imgsPagPPal .img3__pagPpal .seccionVtaImgsPpal {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 190px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  }
+  .imgsPagPPal .img3__pagPpal .seccionVtaImgsPpal .card-img-overlay {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 5px 3px;
+  }
+  .imgsPagPPal .img3__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal {
+    display: flex;
+    justify-content: flex-end;
+    margin: 115px 0px 2px 0;
+    position: relative;
+    right: 18px;
+    top: 10px;
+  }
+  .imgsPagPPal .img3__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal .precioTachado {
+    text-decoration: line-through;
+    color: #ff4500;
+    margin-right: 3px;
+    font-size: 0.7em;
+    font-weight: 700;
+    -webkit-text-stroke: 0.1px black;
+  }
+  .imgsPagPPal .img3__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal .textPrice {
+    color: #ff4500;
+    font-size: 0.7em;
+    font-weight: 700;
+    margin-right: 15px;
+    -webkit-text-stroke: 0.1px black;
+  }
+  .imgsPagPPal .img3__pagPpal .seccionVtaImgsPpal .card-img-overlay .card-text {
+    font-size: 0.5em;
+    font-weight: 650;
+    color: black;
+    margin: 0px;
+  }
+  .imgsPagPPal .img3__pagPpal .seccionVtaImgsPpal .botonesAccionCompra {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+  }
+  .imgsPagPPal .img3__pagPpal .seccionVtaImgsPpal .botonesAccionCompra input {
+    width: 140px;
+    height: 25px;
+    align-content: center;
+    border-radius: 5px;
+    background-color: #113946;
+    color: white;
+    font-size: 60%;
+    font-weight: 400;
+    padding: 2px;
+    border: #FFF2D8 5px;
+    font-size: 50%;
+    width: 60px;
+    height: 20px;
+    margin: 0.5px;
+  }
+  .imgsPagPPal .img3__pagPpal .seccionVtaImgsPpal {
+    bottom: 100px;
+    left: 10px;
   }
   .imgsPagPPal .img4__pagPpal {
     grid-area: img4__pagPpal;
@@ -357,14 +492,15 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
   .imgsPagPPal .img4__pagPpal .seccionVtaImgsPpal .card-img-overlay {
     display: flex;
     flex-direction: column;
-    margin: 0px 0px 35px 3px;
+    margin: 0px 0px 5px 3px;
   }
   .imgsPagPPal .img4__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal {
     display: flex;
     justify-content: flex-end;
-    margin: 85px 0px 2px 0;
+    margin: 115px 0px 2px 0;
     position: relative;
-    left: 25px;
+    right: 18px;
+    top: 10px;
   }
   .imgsPagPPal .img4__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal .precioTachado {
     text-decoration: line-through;
@@ -392,6 +528,8 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
     flex-direction: column;
     text-align: center;
     align-items: center;
+    display: flex;
+    flex-direction: row;
   }
   .imgsPagPPal .img4__pagPpal .seccionVtaImgsPpal .botonesAccionCompra input {
     width: 140px;
@@ -405,9 +543,12 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
     padding: 2px;
     border: #FFF2D8 5px;
     font-size: 50%;
-    width: 80px;
+    width: 60px;
     height: 20px;
     margin: 0.5px;
+  }
+  .imgsPagPPal .img4__pagPpal .seccionPrecios__imgsPagPPal {
+    right: 5px;
   }
   .divider {
     width: 120vw;
@@ -530,6 +671,12 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
     background-color: #113946;
     align-items: center;
     margin: 5px 0px 0px 0px;
+  }
+  .imgsPagPPal .img1__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal .precioTachado {
+    font-size: 0.8em;
+  }
+  .imgsPagPPal .img1__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal .textPrice {
+    font-size: 0.8em;
   }
   .footer .itemFooter {
     align-items: center;

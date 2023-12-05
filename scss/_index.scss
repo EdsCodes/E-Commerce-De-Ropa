@@ -72,6 +72,7 @@
         grid-area: img2__pagPpal;
         width: 100%;
         max-width: 100%;
+        position: relative;
         img {
           width: 100%;
           height: auto;
@@ -80,11 +81,13 @@
           object-fit: cover;
           margin-top: 90px;
         }
+        @include seccionVtasPagPpal; 
       }
       .img3__pagPpal {
         grid-area: img3__pagPpal;
         width: 100%;
         max-width: 100%;
+        position: relative;
         img {
           width: 100%;
           height: auto;
@@ -92,6 +95,11 @@
           border-radius: 10%;
           object-fit: cover;
           margin-bottom: 90px;
+        }
+        @include seccionVtasPagPpal; 
+        .seccionVtaImgsPpal{
+          bottom: 100px;
+          left: 10px;
         }
       }
       .img4__pagPpal {
@@ -107,6 +115,9 @@
           object-fit: cover;
         }
         @include seccionVtasPagPpal;
+        .seccionPrecios__imgsPagPPal{
+          right: 5px;
+        }
       }
     }
     .divider {
@@ -245,6 +256,35 @@
         }
       }
     }
+    .imgsPagPPal {
+      .img1__pagPpal {
+        .seccionVtaImgsPpal {
+          .card-img-overlay {
+            .seccionPrecios__imgsPagPPal {
+              .precioTachado {
+                font-size: 0.8em;
+              }
+              .textPrice {
+                font-size: 0.8em;
+              }
+              .card-text {
+              }
+            }
+          }
+          .botonesAccionCompra {
+          }
+        }
+      }
+      .img2__pagPpal {
+      }
+      .img3__pagPpal {
+      }
+      .float-end {
+      }
+      .img4__pagPpal {
+      }
+    }
+    
     .footer {
       .itemFooter {
         align-items: center;
