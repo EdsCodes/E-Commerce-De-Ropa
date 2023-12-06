@@ -38,6 +38,7 @@
             justify-content: space-around;
             input {
                 @include botonesDeAccion;
+                width: 30%;
             }
         }
         .descripcion_productovta {
@@ -155,6 +156,7 @@
         .botones_vta {
             input {
                 @include botonesDeAccion;
+                width: 30%;
                 font-size: 70%;
             }
         }
@@ -241,6 +243,7 @@
         .botones_vta {
             input {
                 @include botonesDeAccion;
+                width: 30%;
                 font-size: 70%;
             }
         }
