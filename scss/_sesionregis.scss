@@ -5,6 +5,7 @@
             text-align: center;
             font-size: 1.1em;
             margin: 50px 0px 40px 0px;
+            width: 95%;
         }
         .seccionFormularios {
             .formularioRegistro {
@@ -14,6 +15,7 @@
                 background-color: $beige;
                 color: $blueking;
                 box-shadow: 0 3px 8px $blueking;
+                width: 95%;
                 .campoFormulario{
                     text-align: center;
                     margin: 0px auto;
@@ -39,6 +41,7 @@
                     display: flex;
                     justify-content: space-between;
                     margin: 5px 5px 0 0;
+                    font-size: 0.8em;
                     input {
                         width: 220px;
                         border-radius: 5px;
@@ -51,6 +54,7 @@
                     flex-direction: row;
                     justify-content: space-between;
                     margin: 5px 5px 0 0;
+                    font-size: 0.8em;
                     select {
                         width: 220px;
                         border-radius: 5px;
@@ -68,7 +72,7 @@
                     text-align: center;
                     input {
                         @include botonesDeAccion;
-                        width: 200px;
+                        width: 180px;
                     }
                 }
             }
@@ -76,6 +80,7 @@
                 text-align: center;
                 font-size: 1.1em;
                 margin: 50px 0px 40px 0px;
+                width: 95%;
             }
             .formularioInicioSesion {
                 @extend .formularioRegistro;
@@ -134,19 +139,31 @@
                     }
                 }
             }
+            .img_relleno_pagSesioReg{
+                @include centrarElementos;
+                width: 95%;
+                img { 
+                    width: 60%;
+                    margin: 20px 0px 125px;
+                    border-radius: 40px;
+                }
+                :hover {
+                    box-shadow: 0 3px 8px $blueking;
+                }
+            }
         }
     }
     .imgSesionReg {
         align-items: center;
         text-align: center;
-        margin: 120px 0 60px 0;
-
+        margin: 120px auto;
+        width: 95%;
         img {
             width: 450px;
             height: auto;
-            margin: 10px auto;
             align-items: center;
             border-radius: 10px;
+            margin-right: 25px;
         }
     }
 }
@@ -164,9 +181,8 @@
         align-items: center;
         text-align: center;
         margin: 120px 0 60px 0;
-
         img {
-            width: 350px;
+            width: 550px;
             height: auto;
             margin: 10px auto;
             align-items: center;
@@ -178,6 +194,10 @@
     }
 }
 @media screen and (min-width: 1024px) {
+    .formularioInicioSesion {
+        margin-top: 300px;
+    }
+
     .imgSesionReg {
         display: flex;
         align-items: center;

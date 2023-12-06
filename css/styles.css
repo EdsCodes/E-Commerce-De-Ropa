@@ -61,113 +61,99 @@ header .menu_navegacion .espacioMarca .logoMarca img {
   border-radius: 50%;
   margin: 10px 0px 0px 0px;
 }
-header .menu_navegacion .navbar .navbar-nav a {
+header .menu_navegacion .navbar .container-fluid .navbar-toggler {
+  background-color: #FFF2D8;
+  border: 1px solid #FFF2D8;
+}
+header .menu_navegacion .navbar .container-fluid .navbar-nav a {
   color: rgb(188, 163, 127);
 }
-header .menu_navegacion .navbar .navbar-nav li a:hover {
+header .menu_navegacion .navbar .container-fluid .navbar-nav li a:hover {
   color: white;
 }
 
-.footer {
-  grid-area: footer;
-  background-color: rgb(188, 163, 127);
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  padding: 5px;
-  justify-content: space-between;
-  position: relative;
+@media screen and (min-width: 480px) {
+  .footer {
+    grid-area: footer;
+    background-color: rgb(188, 163, 127);
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 5px;
+    justify-content: space-between;
+    position: relative;
+  }
+  .footer .itemFooter {
+    align-items: center;
+    width: 20vw;
+  }
+  .footer .itemFooter h2 {
+    align-items: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+  .footer .itemFooter p {
+    line-height: 0.4;
+    font-size: 0.4rem;
+  }
+  .footer .itemFooter a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .footer .iconoRedesSociales {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+  }
+  .footer .iconoRedesSociales li {
+    margin-right: 10px;
+  }
+  .footer .iconoRedesSociales li img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
 }
-.footer .itemFooter {
-  align-items: center;
-  width: 20vw;
+@media screen and (min-width: 768px) {
+  .footer .itemFooter {
+    align-items: center;
+    width: 20vw;
+  }
+  .footer .itemFooter h2 {
+    align-items: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+  .footer .itemFooter p {
+    line-height: 0.4;
+    font-size: 0.5rem;
+    text-decoration: none;
+  }
 }
-.footer .itemFooter h2 {
-  align-items: center;
-  font-size: 0.7rem;
-  font-weight: bold;
-  padding-bottom: 10px;
+@media screen and (min-width: 1024px) {
+  .footer .itemFooter h2 {
+    align-items: center;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 10px 0px;
+  }
+  .footer .itemFooter p {
+    line-height: 0.4;
+    font-size: 0.7rem;
+  }
+  .footer .itemFooter a {
+    text-decoration: none;
+    color: inherit;
+  }
 }
-.footer .itemFooter p {
-  line-height: 0.4;
-  font-size: 0.4rem;
-}
-.footer .itemFooter a {
-  text-decoration: none;
-  color: inherit;
-}
-.footer .iconoRedesSociales {
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  padding: 0;
-}
-.footer .iconoRedesSociales li {
-  margin-right: 10px;
-}
-.footer .iconoRedesSociales li img {
-  width: 100%;
-  height: auto;
-  margin: 0;
-}
-
-/*
-
-        .seccionVtaImgsPpal{
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-        }
-        .card-img-overlay{
-            display: flex;
-            flex-direction: column;
-            .seccionPrecios__imgsPagPPal{
-            display: flex;
-            justify-content: flex-end;
-            .precioTachado{
-                text-decoration: line-through;
-                color: $orangered;
-                margin-right: 5px;
-                font-size: 0.8em;
-            }
-            .textPrice {
-                color: $orangered;
-                font-size: 0.8em;
-            }
-            }
-            .card-text {
-            font-size: 0.8em;
-            }
-        }
-        .botonesAccionCompra {
-            input {
-            @include botonesDeAccion;
-            @include centrarElementos;
-            width: 100px;
-        }
-    }
-}
-
-
-  html
-
-<div class="seccionVtaImgsPpal">
-    <div class="card-img-overlay">
-        <div class="seccionPrecios__imgsPagPPal">
-            <h5 class="precioTachado">$95.000 </h5>
-            <h5 class="textPrice">$75.000</h5>
-        </div>
-        <p class="card-text">Tallas 26-36.</p>
-        <p class="card-text"><small>Color azul</small></p>
-    </div>
-    <div class="botonesAccionCompra">
-        <input type="button" value="Añadir al carrito">
-        <input type="button" value="Comprar ya">
-    </div>
-</div>
-*/
 /*Mixins de los estilos Standard y de los mas usados*/
-/*Mixin de botones de venta superpuestos en imagenes de pagina ppal (index)*/
+/*Mixin de botones de venta superpuestos en imagenes de pagina ppal (index). Dividido en media queries de _480px, _768px y _1024px:*/
+/*Mixin estilo de Imgs de venta en la pag Ppal*/
+/*Botones de accion de toda la pagina*/
+/*Para centrar elementos...*/
 /*Paginas del sitio*/
 /* <---Página Inicio---> */
 @media screen and (min-width: 480px) {
@@ -672,26 +658,97 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
     align-items: center;
     margin: 5px 0px 0px 0px;
   }
+  .imgsPagPPal .img1__pagPpal .seccionVtaImgsPpal .card-img-overlay {
+    width: 150px;
+  }
+  .imgsPagPPal .img1__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal {
+    right: 35px;
+  }
   .imgsPagPPal .img1__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal .precioTachado {
     font-size: 0.8em;
   }
   .imgsPagPPal .img1__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal .textPrice {
     font-size: 0.8em;
   }
-  .footer .itemFooter {
-    align-items: center;
-    width: 20vw;
+  .imgsPagPPal .img1__pagPpal .seccionVtaImgsPpal .card-img-overlay .card-text {
+    font-size: 0.6em;
   }
-  .footer .itemFooter h2 {
-    align-items: center;
-    font-size: 0.7rem;
-    font-weight: bold;
-    padding-bottom: 10px;
+  .imgsPagPPal .img1__pagPpal .seccionVtaImgsPpal .botonesAccionCompra {
+    flex-direction: row;
   }
-  .footer .itemFooter p {
-    line-height: 0.4;
-    font-size: 0.5rem;
-    text-decoration: none;
+  .imgsPagPPal .img1__pagPpal .seccionVtaImgsPpal .botonesAccionCompra input {
+    font-size: 55%;
+    width: 80px;
+    height: 20px;
+  }
+  .imgsPagPPal .img2__pagPpal .seccionVtaImgsPpal .card-img-overlay {
+    width: 150px;
+  }
+  .imgsPagPPal .img2__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal {
+    right: 35px;
+  }
+  .imgsPagPPal .img2__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal .precioTachado {
+    font-size: 0.8em;
+  }
+  .imgsPagPPal .img2__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal .textPrice {
+    font-size: 0.8em;
+  }
+  .imgsPagPPal .img2__pagPpal .seccionVtaImgsPpal .card-img-overlay .card-text {
+    font-size: 0.6em;
+  }
+  .imgsPagPPal .img2__pagPpal .seccionVtaImgsPpal .botonesAccionCompra {
+    flex-direction: row;
+  }
+  .imgsPagPPal .img2__pagPpal .seccionVtaImgsPpal .botonesAccionCompra input {
+    font-size: 55%;
+    width: 80px;
+    height: 20px;
+  }
+  .imgsPagPPal .img3__pagPpal .seccionVtaImgsPpal .card-img-overlay {
+    width: 150px;
+  }
+  .imgsPagPPal .img3__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal {
+    right: 35px;
+  }
+  .imgsPagPPal .img3__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal .precioTachado {
+    font-size: 0.8em;
+  }
+  .imgsPagPPal .img3__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal .textPrice {
+    font-size: 0.8em;
+  }
+  .imgsPagPPal .img3__pagPpal .seccionVtaImgsPpal .card-img-overlay .card-text {
+    font-size: 0.6em;
+  }
+  .imgsPagPPal .img3__pagPpal .seccionVtaImgsPpal .botonesAccionCompra {
+    flex-direction: row;
+  }
+  .imgsPagPPal .img3__pagPpal .seccionVtaImgsPpal .botonesAccionCompra input {
+    font-size: 55%;
+    width: 80px;
+    height: 20px;
+  }
+  .imgsPagPPal .img4__pagPpal .seccionVtaImgsPpal .card-img-overlay {
+    width: 150px;
+  }
+  .imgsPagPPal .img4__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal {
+    right: 35px;
+  }
+  .imgsPagPPal .img4__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal .precioTachado {
+    font-size: 0.8em;
+  }
+  .imgsPagPPal .img4__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal .textPrice {
+    font-size: 0.8em;
+  }
+  .imgsPagPPal .img4__pagPpal .seccionVtaImgsPpal .card-img-overlay .card-text {
+    font-size: 0.6em;
+  }
+  .imgsPagPPal .img4__pagPpal .seccionVtaImgsPpal .botonesAccionCompra {
+    flex-direction: row;
+  }
+  .imgsPagPPal .img4__pagPpal .seccionVtaImgsPpal .botonesAccionCompra input {
+    font-size: 55%;
+    width: 80px;
+    height: 20px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -739,19 +796,113 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
     align-items: center;
     margin: 5px 0px 0px 0px;
   }
-  .footer .itemFooter h2 {
-    align-items: center;
-    font-size: 0.8em;
-    font-weight: bold;
-    padding: 10px 0px;
+  .imgsPagPPal .img1__pagPpal .seccionVtaImgsPpal {
+    height: 200px;
   }
-  .footer .itemFooter p {
-    line-height: 0.4;
-    font-size: 0.7rem;
+  .imgsPagPPal .img1__pagPpal .seccionVtaImgsPpal .card-img-overlay {
+    width: 200px;
   }
-  .footer .itemFooter a {
-    text-decoration: none;
-    color: inherit;
+  .imgsPagPPal .img1__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal {
+    right: 75px;
+    bottom: 105px;
+  }
+  .imgsPagPPal .img1__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal .precioTachado {
+    font-size: 0.9em;
+  }
+  .imgsPagPPal .img1__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal .textPrice {
+    font-size: 0.9em;
+  }
+  .imgsPagPPal .img1__pagPpal .seccionVtaImgsPpal .card-img-overlay .card-text {
+    font-size: 0.7em;
+  }
+  .imgsPagPPal .img1__pagPpal .seccionVtaImgsPpal .botonesAccionCompra {
+    flex-direction: row;
+  }
+  .imgsPagPPal .img1__pagPpal .seccionVtaImgsPpal .botonesAccionCompra input {
+    font-size: 65%;
+    width: 90px;
+    height: 20px;
+  }
+  .imgsPagPPal .img2__pagPpal .seccionVtaImgsPpal {
+    height: 200px;
+  }
+  .imgsPagPPal .img2__pagPpal .seccionVtaImgsPpal .card-img-overlay {
+    width: 200px;
+  }
+  .imgsPagPPal .img2__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal {
+    right: 75px;
+    bottom: 105px;
+  }
+  .imgsPagPPal .img2__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal .precioTachado {
+    font-size: 0.9em;
+  }
+  .imgsPagPPal .img2__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal .textPrice {
+    font-size: 0.9em;
+  }
+  .imgsPagPPal .img2__pagPpal .seccionVtaImgsPpal .card-img-overlay .card-text {
+    font-size: 0.7em;
+  }
+  .imgsPagPPal .img2__pagPpal .seccionVtaImgsPpal .botonesAccionCompra {
+    flex-direction: row;
+  }
+  .imgsPagPPal .img2__pagPpal .seccionVtaImgsPpal .botonesAccionCompra input {
+    font-size: 65%;
+    width: 90px;
+    height: 20px;
+  }
+  .imgsPagPPal .img3__pagPpal .seccionVtaImgsPpal {
+    height: 200px;
+  }
+  .imgsPagPPal .img3__pagPpal .seccionVtaImgsPpal .card-img-overlay {
+    width: 200px;
+  }
+  .imgsPagPPal .img3__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal {
+    right: 75px;
+    bottom: 105px;
+  }
+  .imgsPagPPal .img3__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal .precioTachado {
+    font-size: 0.9em;
+  }
+  .imgsPagPPal .img3__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal .textPrice {
+    font-size: 0.9em;
+  }
+  .imgsPagPPal .img3__pagPpal .seccionVtaImgsPpal .card-img-overlay .card-text {
+    font-size: 0.7em;
+  }
+  .imgsPagPPal .img3__pagPpal .seccionVtaImgsPpal .botonesAccionCompra {
+    flex-direction: row;
+  }
+  .imgsPagPPal .img3__pagPpal .seccionVtaImgsPpal .botonesAccionCompra input {
+    font-size: 65%;
+    width: 90px;
+    height: 20px;
+  }
+  .imgsPagPPal .img4__pagPpal .seccionVtaImgsPpal {
+    height: 200px;
+  }
+  .imgsPagPPal .img4__pagPpal .seccionVtaImgsPpal .card-img-overlay {
+    width: 200px;
+  }
+  .imgsPagPPal .img4__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal {
+    right: 75px;
+    bottom: 105px;
+  }
+  .imgsPagPPal .img4__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal .precioTachado {
+    font-size: 0.9em;
+  }
+  .imgsPagPPal .img4__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal .textPrice {
+    font-size: 0.9em;
+  }
+  .imgsPagPPal .img4__pagPpal .seccionVtaImgsPpal .card-img-overlay .card-text {
+    font-size: 0.7em;
+  }
+  .imgsPagPPal .img4__pagPpal .seccionVtaImgsPpal .botonesAccionCompra {
+    flex-direction: row;
+  }
+  .imgsPagPPal .img4__pagPpal .seccionVtaImgsPpal .botonesAccionCompra input {
+    font-size: 65%;
+    width: 90px;
+    height: 20px;
   }
 }
 /* <---Guias y tallas---> */
@@ -1132,6 +1283,7 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
     text-align: center;
     font-size: 1.1em;
     margin: 50px 0px 40px 0px;
+    width: 95%;
   }
   .columnaGestionUsuario .seccionFormularios .formularioRegistro, .columnaGestionUsuario .seccionFormularios .formularioInicioSesion {
     border: solid 1px #113946;
@@ -1140,6 +1292,7 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
     background-color: #EAD7BB;
     color: #113946;
     box-shadow: 0 3px 8px #113946;
+    width: 95%;
   }
   .columnaGestionUsuario .seccionFormularios .formularioRegistro .campoFormulario, .columnaGestionUsuario .seccionFormularios .formularioInicioSesion .campoFormulario {
     text-align: center;
@@ -1166,6 +1319,7 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
     display: flex;
     justify-content: space-between;
     margin: 5px 5px 0 0;
+    font-size: 0.8em;
   }
   .columnaGestionUsuario .seccionFormularios .formularioRegistro .campoFechanac input, .columnaGestionUsuario .seccionFormularios .formularioInicioSesion .campoFechanac input {
     width: 220px;
@@ -1178,6 +1332,7 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
     flex-direction: row;
     justify-content: space-between;
     margin: 5px 5px 0 0;
+    font-size: 0.8em;
   }
   .columnaGestionUsuario .seccionFormularios .formularioRegistro .selectPais select, .columnaGestionUsuario .seccionFormularios .formularioInicioSesion .selectPais select {
     width: 220px;
@@ -1204,12 +1359,13 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
     font-weight: 400;
     padding: 2px;
     border: #FFF2D8 5px;
-    width: 200px;
+    width: 180px;
   }
   .columnaGestionUsuario .seccionFormularios .tituloIngSesion {
     text-align: center;
     font-size: 1.1em;
     margin: 50px 0px 40px 0px;
+    width: 95%;
   }
   .columnaGestionUsuario .seccionFormularios .formularioInicioSesion {
     margin: 20px 0 60px;
@@ -1263,17 +1419,33 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
     font-size: 80%;
     font-weight: bold;
   }
+  .columnaGestionUsuario .seccionFormularios .img_relleno_pagSesioReg {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 95%;
+  }
+  .columnaGestionUsuario .seccionFormularios .img_relleno_pagSesioReg img {
+    width: 60%;
+    margin: 20px 0px 125px;
+    border-radius: 40px;
+  }
+  .columnaGestionUsuario .seccionFormularios .img_relleno_pagSesioReg :hover {
+    box-shadow: 0 3px 8px #113946;
+  }
   .imgSesionReg {
     align-items: center;
     text-align: center;
-    margin: 120px 0 60px 0;
+    margin: 120px auto;
+    width: 95%;
   }
   .imgSesionReg img {
     width: 450px;
     height: auto;
-    margin: 10px auto;
     align-items: center;
     border-radius: 10px;
+    margin-right: 25px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1292,7 +1464,7 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
     margin: 120px 0 60px 0;
   }
   .imgSesionReg img {
-    width: 350px;
+    width: 550px;
     height: auto;
     margin: 10px auto;
     align-items: center;
@@ -1303,6 +1475,9 @@ header .menu_navegacion .navbar .navbar-nav li a:hover {
   }
 }
 @media screen and (min-width: 1024px) {
+  .formularioInicioSesion {
+    margin-top: 300px;
+  }
   .imgSesionReg {
     display: flex;
     align-items: center;

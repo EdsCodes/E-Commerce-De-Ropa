@@ -46,12 +46,18 @@ header {
             }
         }
         .navbar {
-            .navbar-nav a{
-                color: rgb(188, 163, 127);
-            }
-            .navbar-nav li a:hover{
+            .container-fluid {
+                .navbar-toggler {
+                    background-color: $lightbeige; 
+                    border: 1px solid $lightbeige;
+                }
+                .navbar-nav a{
+                    color: rgb(188, 163, 127);
+                }
+                .navbar-nav li a:hover{
                     color: white;
+                }
             }
         }
     }
-  }
+}

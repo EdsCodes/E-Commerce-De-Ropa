@@ -22,8 +22,8 @@ body {
 
     /*Mixins de los estilos Standard y de los mas usados*/
 
-/*Mixin de botones de venta superpuestos en imagenes de pagina ppal (index)*/
-@mixin seccionVtasPagPpal {
+/*Mixin de botones de venta superpuestos en imagenes de pagina ppal (index). Dividido en media queries de _480px, _768px y _1024px:*/
+@mixin seccionVtasPagPpal_480 {
   .seccionVtaImgsPpal{
     display: flex;
     flex-direction: column;
@@ -80,7 +80,64 @@ body {
     }
   }
 }
+@mixin seccionVtasPagPpal_768 {
+  .seccionVtaImgsPpal {
+    .card-img-overlay {
+      width: 150px;
+      .seccionPrecios__imgsPagPPal {
+        right: 35px;
+        .precioTachado {
+          font-size: 0.8em;
+        }
+        .textPrice {
+          font-size: 0.8em;
+        }
+      }
+      .card-text {
+        font-size: 0.6em;
+      }
+    }
+    .botonesAccionCompra {
+      flex-direction: row;
+      input {
+        font-size: 55%;
+        width: 80px;
+        height: 20px;
+      }
+    }
+  }
+}
+@mixin seccionVtasPagPpal_1024 {
+  .seccionVtaImgsPpal {
+    height: 200px;
+    .card-img-overlay {
+      width: 200px;
+      .seccionPrecios__imgsPagPPal {
+        right: 75px;
+        bottom: 105px;
+        .precioTachado {
+          font-size: 0.9em;
+        }
+        .textPrice {
+          font-size: 0.9em;
+        }
+      }
+      .card-text {
+        font-size: 0.7em;
+      }
+    }
+    .botonesAccionCompra {
+      flex-direction: row;
+      input {
+        font-size: 65%;
+        width: 90px;
+        height: 20px;
+      }
+    }
+  }
+}
 
+/*Mixin estilo de Imgs de venta en la pag Ppal*/
 @mixin estiloImgsPagCompras {
   width: 200px;
   height: auto;
@@ -89,6 +146,7 @@ body {
   box-shadow: 0 3px 8px black;
 }
 
+/*Botones de accion de toda la pagina*/
 @mixin botonesDeAccion {
   width: 140px;
   height: 25px;
@@ -101,13 +159,14 @@ body {
   padding: 2px;
   border: $lightbeige 5px;
 }
+
+/*Para centrar elementos...*/
 @mixin centrarElementos {
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
 }
-
 
     /*Paginas del sitio*/
 @import "index";

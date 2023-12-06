@@ -66,7 +66,7 @@
           border-radius: 2%;
           object-fit: cover;
         }
-        @include seccionVtasPagPpal; 
+        @include seccionVtasPagPpal_480; 
       }
       .img2__pagPpal {
         grid-area: img2__pagPpal;
@@ -81,7 +81,7 @@
           object-fit: cover;
           margin-top: 90px;
         }
-        @include seccionVtasPagPpal; 
+        @include seccionVtasPagPpal_480; 
       }
       .img3__pagPpal {
         grid-area: img3__pagPpal;
@@ -96,7 +96,7 @@
           object-fit: cover;
           margin-bottom: 90px;
         }
-        @include seccionVtasPagPpal; 
+        @include seccionVtasPagPpal_480; 
         .seccionVtaImgsPpal{
           bottom: 100px;
           left: 10px;
@@ -114,7 +114,7 @@
           border-radius: 2%;
           object-fit: cover;
         }
-        @include seccionVtasPagPpal;
+        @include seccionVtasPagPpal_480;
         .seccionPrecios__imgsPagPPal{
           right: 5px;
         }
@@ -258,49 +258,16 @@
     }
     .imgsPagPPal {
       .img1__pagPpal {
-        .seccionVtaImgsPpal {
-          .card-img-overlay {
-            .seccionPrecios__imgsPagPPal {
-              .precioTachado {
-                font-size: 0.8em;
-              }
-              .textPrice {
-                font-size: 0.8em;
-              }
-              .card-text {
-              }
-            }
-          }
-          .botonesAccionCompra {
-          }
-        }
+        @include seccionVtasPagPpal_768;
       }
       .img2__pagPpal {
+        @include seccionVtasPagPpal_768;
       }
       .img3__pagPpal {
-      }
-      .float-end {
+        @include seccionVtasPagPpal_768;
       }
       .img4__pagPpal {
-      }
-    }
-    
-    .footer {
-      .itemFooter {
-        align-items: center;
-        width: 20vw;
-  
-        h2 {
-          align-items: center;
-          font-size: 0.7rem;
-          font-weight: bold;
-          padding-bottom: 10px;
-        }
-        p {
-          line-height: 0.4;
-          font-size: 0.5rem;
-          text-decoration: none;
-        }
+        @include seccionVtasPagPpal_768;
       }
     }
   }
@@ -362,22 +329,18 @@
         }
       }
     }
-    .footer {
-      .itemFooter {
-        h2 {
-          align-items: center;
-          font-size: 0.8em;
-          font-weight: bold;
-          padding: 10px 0px;
-        }
-        p {
-          line-height: 0.4;
-          font-size: 0.7rem;
-        }
-        a {
-          text-decoration: none;
-          color: inherit;
-        }
+    .imgsPagPPal {
+      .img1__pagPpal {
+        @include seccionVtasPagPpal_1024;
+      }
+      .img2__pagPpal {
+        @include seccionVtasPagPpal_1024;
+      }
+      .img3__pagPpal {
+        @include seccionVtasPagPpal_1024;
+      }
+      .img4__pagPpal {
+        @include seccionVtasPagPpal_1024;
       }
     }
   }

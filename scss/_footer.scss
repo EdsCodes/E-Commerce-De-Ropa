@@ -1,99 +1,83 @@
-.footer { 
-    grid-area: footer;
-    background-color: rgb(188, 163, 127);
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    padding: 5px;
-    justify-content: space-between;
-    position: relative;
-    .itemFooter {
-        align-items: center;
-        width: 20vw;
-        h2{
-            align-items: center;
-            font-size: 0.7rem;
-            font-weight: bold;
-            padding-bottom: 10px;
-        }
-        p{
-            line-height: 0.4;
-            font-size: 0.4rem;
-        }
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-    }
-    .iconoRedesSociales {
+@media screen and (min-width: 480px) {
+    .footer { 
+        grid-area: footer;
+        background-color: rgb(188, 163, 127);
         display: flex;
         flex-direction: row;
         list-style: none;
-        padding: 0;
-        li {
-            margin-right: 10px;
-            img {
-                width: 100%;
-                height: auto;
-                margin: 0;
+        padding: 5px;
+        justify-content: space-between;
+        position: relative;
+        .itemFooter {
+            align-items: center;
+            width: 20vw;
+            h2{
+                align-items: center;
+                font-size: 0.7rem;
+                font-weight: bold;
+                padding-bottom: 10px;
+            }
+            p{
+                line-height: 0.4;
+                font-size: 0.4rem;
+            }
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+        }
+        .iconoRedesSociales {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            padding: 0;
+            li {
+                margin-right: 10px;
+                img {
+                    width: 100%;
+                    height: auto;
+                    margin: 0;
+                }
             }
         }
     }
 }
-
-
-/*
-
-        .seccionVtaImgsPpal{
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-        }
-        .card-img-overlay{
-            display: flex;
-            flex-direction: column;
-            .seccionPrecios__imgsPagPPal{
-            display: flex;
-            justify-content: flex-end;
-            .precioTachado{
-                text-decoration: line-through;
-                color: $orangered;
-                margin-right: 5px;
-                font-size: 0.8em;
+@media screen and (min-width: 768px) {
+    .footer {
+        .itemFooter {
+            align-items: center;
+            width: 20vw;
+            h2 {
+                align-items: center;
+                font-size: 0.7rem;
+                font-weight: bold;
+                padding-bottom: 10px;
             }
-            .textPrice {
-                color: $orangered;
-                font-size: 0.8em;
+            p {
+                line-height: 0.4;
+                font-size: 0.5rem;
+                text-decoration: none;
             }
-            }
-            .card-text {
-            font-size: 0.8em;
-            }
-        }
-        .botonesAccionCompra {
-            input {
-            @include botonesDeAccion;
-            @include centrarElementos;
-            width: 100px;
         }
     }
 }
-
-
-  html
-
-<div class="seccionVtaImgsPpal">
-    <div class="card-img-overlay">
-        <div class="seccionPrecios__imgsPagPPal">
-            <h5 class="precioTachado">$95.000 </h5>
-            <h5 class="textPrice">$75.000</h5>
-        </div>
-        <p class="card-text">Tallas 26-36.</p>
-        <p class="card-text"><small>Color azul</small></p>
-    </div>
-    <div class="botonesAccionCompra">
-        <input type="button" value="Añadir al carrito">
-        <input type="button" value="Comprar ya">
-    </div>
-</div>
-*/
+@media screen and (min-width: 1024px) {
+    .footer {
+        .itemFooter {
+            h2 {
+                align-items: center;
+                font-size: 0.8em;
+                font-weight: bold;
+                padding: 10px 0px;
+            }
+            p {
+                line-height: 0.4;
+                font-size: 0.7rem;
+            }
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+        }
+    }
+}
