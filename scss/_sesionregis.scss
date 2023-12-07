@@ -180,6 +180,7 @@
         }
         .seccionFormularios {
             .formularioRegistro {
+                width: 98%;
                 .campoFormulario {
                     input {
                         font-size: 85%;
@@ -253,6 +254,7 @@
                 img { 
                     width: 50%;
                     border-radius: 40px;
+                    margin-left: 80px;
                 }
                 :hover {
                     box-shadow: 0 3px 8px $blueking;

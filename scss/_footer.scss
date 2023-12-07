@@ -5,13 +5,13 @@
         display: flex;
         flex-direction: row;
         list-style: none;
-        padding: 5px;
+        padding: 15px;
         justify-content: space-between;
         position: relative;
         font-family: Arial, sans-serif;
         .itemFooter {
             align-items: center;
-            width: 20vw;
+            width: 20%;
             h2{
                 align-items: center;
                 font-size: 0.7rem;
@@ -32,12 +32,15 @@
             flex-direction: row;
             list-style: none;
             padding: 0;
+            margin-right: 15px;
             li {
-                margin-right: 10px;
+                margin-right: 5px;
+                justify-content: space-around;
                 img {
-                    width: 100%;
+                    width: 80%;
                     height: auto;
-                    margin: 0;
+                    margin-right: 5px;
+                    border-radius: 5px;
                 }
             }
         }
@@ -45,6 +48,7 @@
 }
 @media screen and (min-width: 768px) {
     .footer {
+        padding: 15px 15px 15px 35px;
         .itemFooter {
             align-items: center;
             width: 20vw;
@@ -64,6 +68,7 @@
 }
 @media screen and (min-width: 1024px) {
     .footer {
+        padding: 15px 15px 15px 45px;
         .itemFooter {
             h2 {
                 align-items: center;
