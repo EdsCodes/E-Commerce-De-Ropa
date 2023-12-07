@@ -1,19 +1,18 @@
 /* <---Nosotros---> */
 @media screen and (min-width: 480px) {
     .nosotros {
-      h1 {
-        font-size: 1.4em;
+      .tituloNosotros {
+        font-size: 1.3em;
         margin-top: 45px;
         text-align: center;
-        color: $blueking; 
+        color: $brown;      
       }
-      p {
-        font-size: 14px;
+      .textoNosotros {
         margin: 25px 15px 15px 15px;
         text-wrap: balance;
+        padding-left: 5px;
+        font-size: 14px;
       }
-    }
-    .col-6 {
     }
     .img__nosotrosUno {
       img {
@@ -22,7 +21,7 @@
         border-radius: 5px;
         margin: 15px;
         display: flex;
-        justify-content: start;
+        justify-content: end;
       }
     }
     .img__nosotrosDos {
@@ -43,10 +42,11 @@
     }
     .mision {
       h2 {
-        font-size: 1.6em;
+        font-size: 1.3em;
       }
       p {
       width: 90%;
+      height: 50px;
       margin: 15px;
       text-wrap: stable;
       font-size: 14px;
@@ -54,17 +54,18 @@
     }
     .vision {
       h2 {
-        font-size: 1.6em;
+        font-size: 1.3em;
       }
       p {
       width: 90%;
+      height: 50px;
       margin: 15px;
       text-wrap: stable;
       font-size: 14px;
       }
     }
     .separador {
-      width: 100vh;
+      width: 100%;
       margin: 0;
       padding: 0;
       .imagen_separador {
@@ -82,9 +83,10 @@
       border: 1px solid $beige;
       h2 {
         text-align: center;
-        font-size: 1.6em;
+        font-size: 1.5em;
         color: $blueking;
         margin: 35px 0px 70px 0px;
+        @include centrarElementos;
       }
     }
     .seccionLogos {
@@ -113,25 +115,30 @@
   }
   
   @media screen and (min-width: 768px) {
+    .nosotros {
+      max-width: 60%;
+      padding-left: 15px;
+      h1 {
+        font-size: 1.3em;
+      }
+    }
     .img__nosotrosUno {
       img {
-        width: 440px;
+        width: 450px;
         height: auto;
         border-radius: 5px;
         margin: 15px auto;
-        display: flex;
-        justify-content: center; /* Alineación horizontal */
-        align-items: center;
+        @include centrarElementos;
       }
     }
     .img__nosotrosDos {
       img {
-        width: 440px;
+        width: 400px;
         height: auto;
         border-radius: 5px;
         margin: 15px auto;
         display: flex;
-        justify-content: center; /* Alineación horizontal */
+        justify-content: center;
         align-items: center;
       }
     }
@@ -185,51 +192,55 @@
   }
   @media screen and (min-width: 1024px) {
     .nosotros {
-      h1 {
+      .tituloNosotros {
         font-size: 16px;
         margin: 45px 15px;
-        font-size: 2em;
+        font-size: 1.4em;
+        padding-right: 30px;
       }
-      p {
+      .textoNosotros {
         width: 80%;
         margin: 45px 15px 15px 15px;
-        font-size: 14px;
+        font-size: 15px;
         text-wrap: pretty;
         line-height: 30px;
-        font-size: 16px;
+        padding-left: 60px;
       }
     }
-    .col-6 {
-    }
     .img__nosotrosUno {
+      width: 50%;
       img {
-        width: 540px;
+        width: 500px;
         height: auto;
         border-radius: 5px;
         margin: 15px auto;
         display: flex;
-        justify-content: center; /* Alineación horizontal */
+        justify-content: center; 
         align-items: center;
+        
       }
     }
     .img__nosotrosDos {
       img {
-        width: 540px;
+        width: 500px;
         height: auto;
         border-radius: 5px;
         margin: 15px auto;
         display: flex;
-        justify-content: center; /* Alineación horizontal */
-        align-items: center;
+        justify-content: center;         align-items: center;
       }
-    }
-    .idMarca {
     }
     .mision {
       margin-top: 65px;
+      p {
+        font-size: 15px;
+      }
     }
     .vision {
       margin-top: 65px;
+      p {
+        font-size: 15px;
+      }
     }
     .separador {
       width: 100vh;
@@ -238,7 +249,7 @@
       .imagen_separador {
         width: 100%;
         img{
-          width: 100%;
+          width: 100vw;
           height: auto;
           object-fit: fit;
           transform: scaleY(-1);

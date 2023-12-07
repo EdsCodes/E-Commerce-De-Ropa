@@ -1,7 +1,9 @@
 /* <---Página Inicio---> */
+
+
 @media screen and (min-width: 480px) {
     .imgSupFondo {
-      background-image: url(https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+      background-image: url(../multi/paisaje_fondo.webp);
       background-size: cover;
       height: 100px;
       margin: 5px auto;
@@ -11,9 +13,8 @@
         align-content: center;
       }
     }
-  
     .imgBotonesArriba {
-      background-image: url(https://images.pexels.com/photos/235525/pexels-photo-235525.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+      background-image: url(../multi/img_jeanFondo.jpeg);
       background-size: cover;
       height: auto;
       min-height: 200px;
@@ -29,13 +30,12 @@
         font-size: 1.7rem;
         width: 250px;
       }
-  
       button:hover {
         color: $brown;
       }
     }
     .carrete_prendas {
-      margin: 5px auto;
+      margin: 0px 0px 5px 0px;
       img {
         border-radius: 5px;
         min-height: fit-content;
@@ -53,59 +53,76 @@
       grid-template-areas:
         "img1__pagPpal img2__pagPpal img4__pagPpal"
         "img1__pagPpal img3__pagPpal img4__pagPpal";
-  
+        
       .img1__pagPpal {
         grid-area: img1__pagPpal;
         width: 100%;
         max-width: 100%;
-      }
-      .img1__pagPpal img {
-        width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 2%;
+        position: relative;
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+          border-radius: 2%;
+          object-fit: cover;
+        }
+        @include seccionVtasPagPpal_480; 
       }
       .img2__pagPpal {
         grid-area: img2__pagPpal;
         width: 100%;
         max-width: 100%;
-      }
-      .img2__pagPpal img {
-        width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 10%;
-        object-fit: cover;
-        margin-top: 90px;
+        position: relative;
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+          border-radius: 10%;
+          object-fit: cover;
+          margin-top: 90px;
+        }
+        @include seccionVtasPagPpal_480; 
       }
       .img3__pagPpal {
         grid-area: img3__pagPpal;
         width: 100%;
         max-width: 100%;
-      }
-      .img3__pagPpal img {
-        width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 10%;
-        object-fit: cover;
-        margin-bottom: 90px;
+        position: relative;
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+          border-radius: 10%;
+          object-fit: cover;
+          margin-bottom: 90px;
+        }
+        @include seccionVtasPagPpal_480; 
+        .seccionVtaImgsPpal{
+          bottom: 100px;
+          left: 10px;
+        }
       }
       .img4__pagPpal {
         grid-area: img4__pagPpal;
         width: 100%;
         max-width: 100%;
-      }
-      .img4__pagPpal img {
-        width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 2%;
-        object-fit: cover;
+        position: relative;
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+          border-radius: 2%;
+          object-fit: cover;
+        }
+        @include seccionVtasPagPpal_480;
+        .seccionPrecios__imgsPagPPal{
+          right: 5px;
+        }
       }
     }
     .divider {
-      width: 100vw;
+      width: 120vw;
+      margin: 0;
       .imgDivider img {
         align-content: end;
         width: 100%;
@@ -175,12 +192,11 @@
           }
   
           .btn {
+            @include botonesDeAccion;
             width: 100%;
             min-width: 70px;
             font-size: 0.5em;
-            background-color: $blueking;
             align-items: center;
-            align-content: center;
             margin: 2px auto;
             margin-left: -11px;
           }
@@ -240,22 +256,18 @@
         }
       }
     }
-    .footer {
-      .itemFooter {
-        align-items: center;
-        width: 20vw;
-  
-        h2 {
-          align-items: center;
-          font-size: 0.7rem;
-          font-weight: bold;
-          padding-bottom: 10px;
-        }
-        p {
-          line-height: 0.4;
-          font-size: 0.5rem;
-          text-decoration: none;
-        }
+    .imgsPagPPal {
+      .img1__pagPpal {
+        @include seccionVtasPagPpal_768;
+      }
+      .img2__pagPpal {
+        @include seccionVtasPagPpal_768;
+      }
+      .img3__pagPpal {
+        @include seccionVtasPagPpal_768;
+      }
+      .img4__pagPpal {
+        @include seccionVtasPagPpal_768;
       }
     }
   }
@@ -317,22 +329,18 @@
         }
       }
     }
-    .footer {
-      .itemFooter {
-        h2 {
-          align-items: center;
-          font-size: 0.8em;
-          font-weight: bold;
-          padding: 10px 0px;
-        }
-        p {
-          line-height: 0.4;
-          font-size: 0.7rem;
-        }
-        a {
-          text-decoration: none;
-          color: inherit;
-        }
+    .imgsPagPPal {
+      .img1__pagPpal {
+        @include seccionVtasPagPpal_1024;
+      }
+      .img2__pagPpal {
+        @include seccionVtasPagPpal_1024;
+      }
+      .img3__pagPpal {
+        @include seccionVtasPagPpal_1024;
+      }
+      .img4__pagPpal {
+        @include seccionVtasPagPpal_1024;
       }
     }
   }

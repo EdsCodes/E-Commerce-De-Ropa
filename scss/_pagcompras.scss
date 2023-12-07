@@ -1,0 +1,314 @@
+
+@media screen and (min-width: 480px) {
+    .tituloArticuloVta {
+        .articulo {
+            font-size: 1.1em;
+        }
+        .ref_articulo {
+            font-size: 0.7em;
+            color: $orangered;
+            font-style: italic;
+        }
+    }
+    .columnaIzqCompras {
+        .imgs_vta {
+            @include centrarElementos;
+            .grupoImgsA {
+                margin: 0px 5px 0px;
+                img{
+                    @include estiloImgsPagCompras;
+                }
+                :hover{
+                    opacity: 1;
+                }
+            }
+            .grupoImgsB {
+                margin: 5px 5px 0px;
+                img{
+                    @include estiloImgsPagCompras;
+                }
+                :hover{
+                    opacity: 1;
+                }
+            }
+        }
+        .botones_vta {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-around;
+            input {
+                @include botonesDeAccion;
+                width: 30%;
+            }
+        }
+        .descripcion_productovta {
+            margin-top: 20px;
+            font-size: 0.8em;
+            line-height: 15px;
+            text-wrap: pretty;
+        }
+    }
+    .columnaDerCompras {
+        .precio_articulovta {
+            color: $orangered;
+        }
+        .seccionColorProd {
+            display: flex;
+            .tittleColores{
+                font-size: 0.8em;
+            }
+            .color-selector {
+                text-align: center;
+                .color-input {
+                    display: none;
+                }
+                .color-label {
+                    display: inline-block;
+                    width: 25px;
+                    height: 25px;
+                    border: 2px solid white;
+                    margin-left: 5px;
+                    cursor: pointer;
+                    border-radius: 50%;
+                }
+            }
+        }
+        .seccionTallaProd{
+            font-size: 0.8em;
+            a {
+                text-decoration: none;
+                color: inherit;
+                font-weight: bold;
+            }
+            .botonestallacompra {
+                margin: 5px 0px 15px;
+                input {
+                    width: 60px;
+                    border-radius: 5px;
+                    font-size: 0.8em;
+                    background-color: $beige;
+                    color: $blueking  ;
+                }
+            }
+        }
+        .bloqueCantidadLogos{
+            display: flex;
+            justify-content: space-between;
+            .seccionCantidadProd{
+                font-size: 0.7em; 
+                input {
+                    width: 120px;
+                    height: 20px;
+                }
+                .botonesAccionCompra{
+                    margin-bottom: 10px;
+                    input {
+                        @include botonesDeAccion;
+                        font-size: 80%;
+                        margin: 2px;
+                    }
+                }
+            }
+            .areaTextoLogosVrAgreg {
+                display: flex;
+                .textoLogosVrAgreg {
+                    width: 30%;
+                    display: flex;
+                    flex-direction: column;
+                    .textoLogos {
+                        @include centrarElementos;
+                        font-size: 0.5em;
+                        margin: 15px;
+                    }
+                    img {
+                        width: 30px;
+                        height: auto;
+                        text-align: center;
+                        margin: 0px auto;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 768px) {
+    .tituloArticuloVta {
+        .articulo {
+            font-size: 1.3em;
+        }
+        .ref_articulo {
+            font-size: 0.9em;
+        }
+    }
+    .columnaIzqCompras {
+        .imgs_vta {
+            .grupoImgsA {
+                img{
+                    width: 230px;
+                }
+            }
+            .grupoImgsB {
+                img{
+                    width: 230px;
+                }
+            }
+        }
+        .botones_vta {
+            input {
+                @include botonesDeAccion;
+                width: 30%;
+                font-size: 70%;
+            }
+        }
+        .descripcion_productovta {
+            font-size: 0.9em;
+            line-height: 20px;
+        }
+    }
+    .columnaDerCompras{
+        .precio_articulovta {
+            font-size: 1.1em;
+        }
+        .seccionColorProd {
+            .tittleColores{
+                font-size: 0.9em;
+            }
+            .color-selector {
+                .color-label {
+                    width: 28px;
+                    height: 28px;
+                }
+            }
+        }
+        .seccionTallaProd{
+            font-size: 0.9em;
+            .botonestallacompra {
+                input {
+                    width: 60px;
+                    font-size: 0.9em;
+                }
+            }
+        }
+        .bloqueCantidadLogos {
+            .areaTextoLogosVrAgreg {
+                .textoLogosVrAgreg {
+                    .textoLogos {
+                        font-size: 0.6em;
+                    }
+                    img {
+                        width: 35px;
+                    }
+                }
+            }
+        }
+        .bloqueCantidadLogos{
+            .seccionCantidadProd{
+                font-size: 0.7em; 
+                input {
+                    width: 120px;
+                    height: 20px;
+                }
+                .botonesAccionCompra{
+                    input {
+                        @include botonesDeAccion;
+                        font-size: 90%;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 1024px) {
+    .tituloArticuloVta {
+        .articulo {
+            font-size: 1.4em;
+        }
+        .ref_articulo {
+            font-size: 0.9em;
+        }
+    }
+    .columnaIzqCompras {
+        .imgs_vta {
+            .grupoImgsA {
+                img{
+                    width: 230px;
+                }
+            }
+            .grupoImgsB {
+                img{
+                    width: 230px;
+                }
+            }
+        }
+        .botones_vta {
+            input {
+                @include botonesDeAccion;
+                width: 30%;
+                font-size: 70%;
+            }
+        }
+        .descripcion_productovta {
+            font-size: 0.9em;
+            line-height: 20px;
+        }
+    }
+    .columnaDerCompras{
+        .precio_articulovta {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .seccionColorProd {
+            .tittleColores{
+                font-size: 1em;
+            }
+            .color-selector {
+                .color-label {
+                    width: 28px;
+                    height: 28px;
+                }
+            }
+        }
+        .seccionTallaProd{
+            font-size: 1em;
+            margin-top: 60px;
+            .botonestallacompra {
+                margin-bottom: 20px;
+                input {
+                    width: 60px;
+                    font-size: 1em;
+                }
+            }
+        }
+        .bloqueCantidadLogos {
+            .areaTextoLogosVrAgreg {
+                .textoLogosVrAgreg {
+                    margin-top: 50px;
+                    .textoLogos {
+                        font-size: 0.6em;
+                    }
+                    img {
+                        width: 35px;
+                    }
+                }
+            }
+        }
+        .bloqueCantidadLogos{
+            .seccionCantidadProd{
+                font-size: 0.8em; 
+                input {
+                    width: 120px;
+                    height: 20px;
+                }
+                .botonesAccionCompra{
+                    margin-top: 50px;
+                    input {
+                        @include botonesDeAccion;
+                        width: 250px;
+                        font-size: 90%;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

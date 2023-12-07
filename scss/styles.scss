@@ -11,16 +11,165 @@ $orangered: #ff4500;
 }
 
 body {
-  min-width: 100%;
+  width: 100vw;
   background-color: white;
   font-family: "Quicksand", sans-serif;
+  overflow-x: hidden;
 }
 
-/*Header y footer de todas las paginas del sitio*/
+    /*Header y footer de todas las paginas del sitio*/
 @import "header";
 @import "footer";
 
-/*Paginas del sitio*/
+    /*Mixins de los estilos Standard y de los mas usados*/
+
+/*Mixin de botones de venta superpuestos en imagenes de pagina ppal (index). Dividido en media queries de _480px, _768px y _1024px:*/
+@mixin seccionVtasPagPpal_480 {
+  .seccionVtaImgsPpal{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 190px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    .card-img-overlay{
+      display: flex;
+      flex-direction: column;
+      margin: 0px 0px 5px 3px;
+      .seccionPrecios__imgsPagPPal{
+        display: flex;
+        justify-content: flex-end;
+        margin: 115px 0px 2px 0;
+        position: relative;
+        right: 18px;
+        top: 10px;
+        .precioTachado{
+          text-decoration: line-through;
+          color: $orangered;
+          margin-right: 3px;
+          font-size: 0.7em;
+          font-weight: 700;
+          -webkit-text-stroke: 0.1px black;
+        }
+        .textPrice {
+          color: $orangered;
+          font-size: 0.7em;
+          font-weight: 700;
+          margin-right: 15px;
+          -webkit-text-stroke: 0.1px black;
+        }
+      }
+      .card-text {
+        font-size: 0.5em;
+        font-weight: 650;
+        color: black;
+        margin: 0px;
+      }
+    }
+    .botonesAccionCompra {
+      @include centrarElementos;
+      display: flex;
+      flex-direction: row;
+      input {
+        @include botonesDeAccion;
+        font-size: 45%;
+        width: 60px;
+        height: 20px;
+        margin: 0.5px;
+      }
+    }
+  }
+}
+@mixin seccionVtasPagPpal_768 {
+  .seccionVtaImgsPpal {
+    .card-img-overlay {
+      width: 150px;
+      .seccionPrecios__imgsPagPPal {
+        right: 35px;
+        .precioTachado {
+          font-size: 0.8em;
+        }
+        .textPrice {
+          font-size: 0.8em;
+        }
+      }
+      .card-text {
+        font-size: 0.6em;
+      }
+    }
+    .botonesAccionCompra {
+      flex-direction: row;
+      input {
+        font-size: 55%;
+        width: 80px;
+        height: 20px;
+      }
+    }
+  }
+}
+@mixin seccionVtasPagPpal_1024 {
+  .seccionVtaImgsPpal {
+    height: 200px;
+    .card-img-overlay {
+      width: 200px;
+      .seccionPrecios__imgsPagPPal {
+        right: 75px;
+        bottom: 105px;
+        .precioTachado {
+          font-size: 0.9em;
+        }
+        .textPrice {
+          font-size: 0.9em;
+        }
+      }
+      .card-text {
+        font-size: 0.7em;
+      }
+    }
+    .botonesAccionCompra {
+      flex-direction: row;
+      input {
+        font-size: 65%;
+        width: 90px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+/*Mixin estilo de Imgs de venta en la pag Ppal*/
+@mixin estiloImgsPagCompras {
+  width: 200px;
+  height: auto;
+  border-radius: 5px;
+  opacity: 0.97;
+  box-shadow: 0 3px 8px black;
+}
+
+/*Botones de accion de toda la pagina*/
+@mixin botonesDeAccion {
+  width: 140px;
+  height: 25px;
+  align-content: center;
+  border-radius: 5px;
+  background-color: $blueking;
+  color: white;
+  font-size: 60%;
+  font-weight: 400;
+  padding: 2px;
+  border: $lightbeige 5px;
+}
+
+/*Para centrar elementos...*/
+@mixin centrarElementos {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+    /*Paginas del sitio*/
 @import "index";
 @import "guiatallas";
 @import "nosotros";
