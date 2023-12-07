@@ -66,12 +66,13 @@
     }
     .separador {
       width: 100%;
-      margin: 0;
+      height: auto;
       padding: 0;
       .imagen_separador {
         width: 100%;
+        margin: 0px -5px -5px -5px;
         img{
-          width: 100%;
+          width: 110%;
           height: auto;
           object-fit: fit;
           transform: scaleY(-1);

@@ -577,20 +577,21 @@ body {
     right: 5px;
   }
   .divider {
-    width: 120vw;
-    margin: 0;
+    width: 100%;
+    height: auto;
+    margin: -10px -40px -20px -15px;
   }
   .divider .imgDivider img {
     align-content: end;
-    width: 100%;
+    width: 110%;
     height: auto;
     object-fit: cover;
   }
   .carrete_recomendados {
-    background-color: #FFF2D8;
+    background-color: #EAD7BB;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 5px;
+    padding-bottom: 20px;
     /* Se ubica este hover en este punto ya que al ponerlo arriba aplicaba el sombreado independientemente a cada elemento de la card */
   }
   .carrete_recomendados .card {
@@ -1143,14 +1144,15 @@ body {
   }
   .separador {
     width: 100%;
-    margin: 0;
+    height: auto;
     padding: 0;
   }
   .separador .imagen_separador {
     width: 100%;
+    margin: 0px -5px -5px -5px;
   }
   .separador .imagen_separador img {
-    width: 100%;
+    width: 110%;
     height: auto;
     object-fit: fit;
     transform: scaleY(-1);
