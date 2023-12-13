@@ -1,19 +1,19 @@
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 320px) {
     header { 
         width: 100%;
+        overflow: hidden;
         .mensaje_inicial {
-            margin-top: 4px;
+            margin-top: 2px;
             height: 12px;
-            font-size: 60%;
-            font-weight: 700;
+            font-size: 50%;
+            font-weight: bolder;
             display: inline-block;
             white-space: nowrap;
-            overflow: hidden;
             position: relative;
             animation: desplazar 15s linear infinite;
             @keyframes desplazar {
                 0% {
-                    transform: translateX(15%);
+                    transform: translateX(100%);
                 }
                 100% {
                     transform: translateX(-100%);
@@ -29,37 +29,86 @@
                 justify-content: space-between;
                 align-items: center;
                 margin-left: 10px;
-                .tittleMarca h2{
-                    font-family: 'Ubuntu', sans-serif;
-                    color: rgb(234, 215, 187);
-                    text-decoration: none;
-                    font-family: 'Poppins', sans-serif;
-                    font-size: 1.2rem;
-                    padding-top: 5px;
-                    margin: 15px;
+                .tittleMarca {
+                    width: auto;
+                    text-wrap: nowrap;
+                    h2{
+                        font-family: 'Ubuntu', sans-serif;
+                        color: rgb(234, 215, 187);
+                        text-decoration: none;
+                        font-family: 'Poppins', sans-serif;
+                        font-size: 0.7rem;
+                        padding-top: 4px;
+                        margin: 2px;
+                    }
+                    h2:hover {
+                        color: white;
+                    }
                 }
+                .logoMarca {
+                    img{
+                        width: 18%;
+                        height: auto;
+                        border-radius: 50%;
+                        margin: 2px 0px 0px 5px;
+                    }
+                }
+            }
+            .navbar {
+                margin-right: 5px;
+                .container-fluid {
+                    .navbar-toggler {
+                        font-size: 50%;
+                        height: auto;
+                        background-color: $beige; 
+                        border: 1px solid $lightbeige;
+                    }
+                    .navbar-nav a{
+                        color: rgb(188, 163, 127);
+                        font-size: 0.6rem;
+                    }
+                    .navbar-nav li a:hover{
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 480px) {
+    header { 
+        .mensaje_inicial {
+            margin-top: 4px;
+            height: 12px;
+            font-size: 60%;
+        }
+        .menu_navegacion {
+            .espacioMarca {
+                margin-left: 10px;
+                .tittleMarca{
+                    h2{
+                        font-size: 1.2rem;
+                        padding-top: 5px;
+                        margin: 15px;
+                    }
                     .tittleMarca h2:hover {
                         color: white;
                     }
-                .logoMarca img{
-                    width: 18%;
-                    height: auto;
-                    border-radius: 50%;
-                    margin: 5px 0px 0px 0px;
+                }
+                .logoMarca {
+                    img{
+                        margin: 5px 0px 0px 0px;
+                    }
                 }
             }
             .navbar {
                 margin-right: 25px;
                 .container-fluid {
                     .navbar-toggler {
-                        background-color: $lightbeige; 
-                        border: 1px solid $lightbeige;
+                        font-size: 100%;
                     }
                     .navbar-nav a{
-                        color: rgb(188, 163, 127);
-                    }
-                    .navbar-nav li a:hover{
-                        color: white;
+                        font-size: 1rem;
                     }
                 }
             }
@@ -71,7 +120,7 @@
         .mensaje_inicial {
             @keyframes desplazar {
                 0% {
-                    transform: translateX(80%);
+                    transform: translateX(100%);
                 }
                 100% {
                     transform: translateX(-100%);

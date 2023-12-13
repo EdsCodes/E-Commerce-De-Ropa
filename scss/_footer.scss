@@ -1,4 +1,22 @@
 @media screen and (min-width: 480px) {
+    .seccionWhatsapp {
+        .float{
+        position: fixed;
+        width: 34px;
+        height: 34px;
+        background-color: #25d366;
+        bottom: 122px;
+        right: 30px;
+        color: #fff;
+        border-radius: 50%;
+        text-align: center;
+        z-index: 999;
+        box-shadow: 1px 1px 2px gray;
+        }
+        .fa-whatsapp{
+            font-size: 34px;
+        }
+    }
     .footer { 
         grid-area: footer;
         background-color: rgb(188, 163, 127);
@@ -12,6 +30,7 @@
         .itemFooter {
             align-items: center;
             width: 20%;
+            max-width: 20%;
             h2{
                 align-items: center;
                 font-size: 0.7rem;
@@ -26,27 +45,38 @@
                 text-decoration: none;
                 color: inherit;
             }
-        }
-        .iconoRedesSociales {
-            display: flex;
-            flex-direction: row;
-            list-style: none;
-            padding: 0;
-            margin-right: 15px;
-            li {
-                margin-right: 5px;
-                justify-content: space-around;
-                img {
-                    width: 80%;
-                    height: auto;
+            .iconoRedesSociales {
+                display: flex;
+                flex-direction: row;
+                list-style: none;
+                padding: 0;
+                margin-right: 15px;
+                li {
                     margin-right: 5px;
-                    border-radius: 5px;
+                    justify-content: space-around;
+                    .fa-brands {
+                        font-size: 18px;
+                        border-radius: 5px;
+                        margin: 0.3px;
+                    }
                 }
             }
         }
     }
 }
+
 @media screen and (min-width: 768px) {
+    .seccionWhatsapp {
+        .float{
+        width: 36px;
+        height: 36px;
+        bottom: 145px;
+        right: 30px;
+        }
+        .fa-whatsapp{
+            font-size: 36px;
+        }
+    }
     .footer {
         padding: 15px 15px 15px 35px;
         .itemFooter {
@@ -63,10 +93,30 @@
                 font-size: 0.5rem;
                 text-decoration: none;
             }
+            .iconoRedesSociales {
+                li {
+                    .fa-brands {
+                        font-size: 24px;
+                        margin: 0.3px;
+                    }
+                }
+            }
         }
     }
 }
+
 @media screen and (min-width: 1024px) {
+    .seccionWhatsapp {
+        .float{
+        width: 36px;
+        height: 36px;
+        bottom: 45px;
+        right: 30px;
+        }
+        .fa-whatsapp{
+            font-size: 36px;
+        }
+    }
     .footer {
         padding: 15px 15px 15px 45px;
         .itemFooter {
@@ -83,6 +133,14 @@
             a {
                 text-decoration: none;
                 color: inherit;
+            }
+            .iconoRedesSociales {
+                li {
+                    .fa-brands {
+                        font-size: 28px;
+                        margin: 0.7px;
+                    }
+                }
             }
         }
     }
