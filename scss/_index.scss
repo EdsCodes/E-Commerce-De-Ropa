@@ -1,13 +1,13 @@
 /* <---Página Inicio---> */
 
-
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 320px) {
   .imgSupFondo {
     background-image: url(../multi/paisaje_fondo.webp);
     background-size: cover;
     height: 100px;
     margin: 5px auto;
     h3 {
+      font-size: 0.9rem;
       margin-top: 30px;
       text-align: center;
       align-content: center;
@@ -17,7 +17,7 @@
     background-image: url(../multi/img_jeanFondo.jpeg);
     background-size: cover;
     height: auto;
-    min-height: 200px;
+    min-height: 120px;
     object-fit: cover;
     border-radius: 5px;
     display: flex;
@@ -27,7 +27,7 @@
     margin-bottom: 5px;
     button {
       color: white;
-      font-size: 1.7rem;
+      font-size: 0.9rem;
       width: 250px;
     }
     button:hover {
@@ -125,10 +125,9 @@
     height: auto;
     margin: -10px -40px -20px -15px;
     .imgDivider img {
-      align-content: end;
-      width: 110%;
+      width: 101.845%;
       height: auto;
-      object-fit: cover;
+      object-fit: contain;
     }
   }
   .carrete_recomendados {
@@ -203,7 +202,195 @@
         }
       }
     }
+    /* Se ubica este hover en este punto ya que al ponerlo arriba aplicaba el sombreado independientemente a cada elemento de la card */
+    .card:hover {
+      box-shadow: 0 8px 16px $blueking;
+    }
+  }
+}
+@media screen and (min-width: 480px) {
+  .imgSupFondo {
+    h3 {
+      font-size: 1.2rem;
+      margin-top: 30px;
+      text-align: center;
+      align-content: center;
+    }
+  }
+  .imgBotonesArriba {
+    min-height: 200px;
+    button {
+      font-size: 1.7rem;
+      width: 250px;
+    }
+  }
+  .carrete_prendas {
+    margin: 0px 0px 5px 0px ;
+    img {
+      border-radius: 5px;
+      min-height: fit-content;
+    }
+  }
+  .imgsPagPPal {
+    align-items: center;
+    align-content: center;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 0.9fr 1fr 0.9fr;
+    grid-template-rows: 0.5fr 0.5fr;
+    grid-gap: 5px;
+    grid-template-areas:
+      "img1__pagPpal img2__pagPpal img4__pagPpal"
+      "img1__pagPpal img3__pagPpal img4__pagPpal";
+      
+    .img1__pagPpal {
+      grid-area: img1__pagPpal;
+      width: 100%;
+      max-width: 100%;
+      position: relative;
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 2%;
+        object-fit: cover;
+      }
+      @include seccionVtasPagPpal_480; 
+    }
+    .img2__pagPpal {
+      grid-area: img2__pagPpal;
+      width: 100%;
+      max-width: 100%;
+      position: relative;
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 10%;
+        object-fit: cover;
+        margin-top: 90px;
+      }
+      @include seccionVtasPagPpal_480; 
+    }
+    .img3__pagPpal {
+      grid-area: img3__pagPpal;
+      width: 100%;
+      max-width: 100%;
+      position: relative;
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 10%;
+        object-fit: cover;
+        margin-bottom: 90px;
+      }
+      @include seccionVtasPagPpal_480; 
+      .seccionVtaImgsPpal{
+        bottom: 100px;
+        left: 10px;
+      }
+    }
+    .img4__pagPpal {
+      grid-area: img4__pagPpal;
+      width: 100%;
+      max-width: 100%;
+      position: relative;
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 2%;
+        object-fit: cover;
+      }
+      @include seccionVtasPagPpal_480;
+      .seccionPrecios__imgsPagPPal{
+        right: 5px;
+      }
+    }
+  }
+  .divider {
+    width: 100%;
+    height: auto;
+    margin: -10px -40px -20px -15px;
+    .imgDivider img {
+      height: auto;
+      object-fit: contain;
+    }
+  }
+  .carrete_recomendados {
+    background-color: $beige;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    .card {
+      width: 20%;
+      border-radius: 5px;
+      padding: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease-in-out;
+      max-width: 100%;
+      max-height: 100%;
+      position: relative;
 
+      .card-body {
+        display: inline;
+        justify-content: space-between;
+        width: auto;
+        align-content: center;
+        max-width: 100%;
+
+        .card-title {
+          text-decoration: none;
+          font-size: 0.8rem;
+          max-width: 100%;
+        }
+
+        h6 {
+          color: $orangered;
+          font-size: 0.8rem;
+          max-width: 100%;
+        }
+
+        .card-text {
+          text-decoration: none;
+          font-size: 0.6em;
+        }
+
+        .seccionPrecios {
+          display: flex;
+          text-align: left;
+          justify-content: space-evenly;
+          width: 100vw;
+          max-width: 100%;
+
+          .textoTachado {
+            text-decoration: line-through;
+            font-size: 0.7rem;
+          }
+
+          .card-textPrice {
+            color: $orangered;
+            font-size: 0.7rem;
+          }
+
+          p {
+            font-size: 0.8rem;
+          }
+        }
+
+        .btn {
+          @include botonesDeAccion;
+          width: 100%;
+          min-width: 70px;
+          font-size: 0.5em;
+          align-items: center;
+          margin: 2px auto;
+          margin-left: -11px;
+        }
+      }
+    }
     /* Se ubica este hover en este punto ya que al ponerlo arriba aplicaba el sombreado independientemente a cada elemento de la card */
     .card:hover {
       box-shadow: 0 8px 16px $blueking;
