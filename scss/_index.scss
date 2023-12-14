@@ -8,7 +8,7 @@
     margin: 5px auto;
     h3 {
       font-size: 0.9rem;
-      margin-top: 30px;
+      margin-top: 40px;
       text-align: center;
       align-content: center;
     }
@@ -47,12 +47,13 @@
     display: grid;
     grid-auto-columns: 1fr;
     grid-auto-rows: 1fr;
-    grid-template-columns: 0.9fr 1fr 0.9fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 0.5fr 0.5fr;
     grid-gap: 5px;
     grid-template-areas:
-      "img1__pagPpal img2__pagPpal img4__pagPpal"
-      "img1__pagPpal img3__pagPpal img4__pagPpal";
+      "img1__pagPpal img2__pagPpal"
+      "img1__pagPpal img4__pagPpal"
+      "img3__pagPpal img4__pagPpal";
       
     .img1__pagPpal {
       grid-area: img1__pagPpal;
@@ -66,7 +67,7 @@
         border-radius: 2%;
         object-fit: cover;
       }
-      @include seccionVtasPagPpal_480; 
+      @include seccionVtasPagPpal_320; 
     }
     .img2__pagPpal {
       grid-area: img2__pagPpal;
@@ -81,7 +82,7 @@
         object-fit: cover;
         margin-top: 90px;
       }
-      @include seccionVtasPagPpal_480; 
+      @include seccionVtasPagPpal_320; 
     }
     .img3__pagPpal {
       grid-area: img3__pagPpal;
@@ -96,7 +97,7 @@
         object-fit: cover;
         margin-bottom: 90px;
       }
-      @include seccionVtasPagPpal_480; 
+      @include seccionVtasPagPpal_320; 
       .seccionVtaImgsPpal{
         bottom: 100px;
         left: 10px;
@@ -114,7 +115,7 @@
         border-radius: 2%;
         object-fit: cover;
       }
-      @include seccionVtasPagPpal_480;
+      @include seccionVtasPagPpal_320;
       .seccionPrecios__imgsPagPPal{
         right: 5px;
       }
@@ -138,7 +139,7 @@
     .card {
       width: 20%;
       border-radius: 5px;
-      padding: 5px;
+      padding: 1px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       transition: box-shadow 0.3s ease-in-out;
       max-width: 100%;
@@ -154,19 +155,19 @@
 
         .card-title {
           text-decoration: none;
-          font-size: 0.8rem;
+          font-size: 0.6rem;
           max-width: 100%;
         }
 
         h6 {
           color: $orangered;
-          font-size: 0.8rem;
+          font-size: 0.6rem;
           max-width: 100%;
         }
 
         .card-text {
           text-decoration: none;
-          font-size: 0.6em;
+          font-size: 0.4em;
         }
 
         .seccionPrecios {
@@ -175,19 +176,16 @@
           justify-content: space-evenly;
           width: 100vw;
           max-width: 100%;
-
           .textoTachado {
             text-decoration: line-through;
-            font-size: 0.7rem;
+            font-size: 0.5rem;
           }
-
           .card-textPrice {
             color: $orangered;
-            font-size: 0.7rem;
+            font-size: 0.5rem;
           }
-
           p {
-            font-size: 0.8rem;
+            font-size: 0.6rem;
           }
         }
 
@@ -213,8 +211,6 @@
     h3 {
       font-size: 1.2rem;
       margin-top: 30px;
-      text-align: center;
-      align-content: center;
     }
   }
   .imgBotonesArriba {

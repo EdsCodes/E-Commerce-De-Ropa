@@ -23,7 +23,65 @@ body {
 
     /*Mixins de los estilos Standard y de los mas usados*/
 
-/*Mixin de botones de venta superpuestos en imagenes de pagina ppal (index). Dividido en media queries de _480px, _768px y _1024px:*/
+/*Mixin de botones de venta superpuestos en imagenes de pagina ppal (index). Dividido en media queries (min-width) de _320px, _480px, _768px y _1024px:*/
+@mixin seccionVtasPagPpal_320 {
+  .seccionVtaImgsPpal{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 190px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    .card-img-overlay{
+      display: flex;
+      flex-direction: column;
+      margin: 0px 0px 5px 3px;
+      .seccionPrecios__imgsPagPPal{
+        display: flex;
+        justify-content: flex-end;
+        margin: 115px 0px 2px 0;
+        position: relative;
+        right: 18px;
+        top: 10px;
+        .precioTachado{
+          text-decoration: line-through;
+          color: $orangered;
+          margin-right: 3px;
+          font-size: 0.6em;
+          font-weight: 700;
+          -webkit-text-stroke: 0.1px black;
+        }
+        .textPrice {
+          color: $orangered;
+          font-size: 0.6em;
+          font-weight: 700;
+          margin-right: 28px;
+          -webkit-text-stroke: 0.1px black;
+        }
+      }
+      .card-text {
+        font-size: 0.4em;
+        font-weight: 650;
+        color: black;
+        margin: 0px;
+      }
+    }
+    .botonesAccionCompra {
+      @include centrarElementos;
+      display: flex;
+      flex-direction: row;
+      input {
+        @include botonesDeAccion;
+        font-size: 45%;
+        width: 60px;
+        height: 20px;
+        margin: 0.5px;
+      }
+    }
+  }
+}
+
 @mixin seccionVtasPagPpal_480 {
   .seccionVtaImgsPpal{
     display: flex;

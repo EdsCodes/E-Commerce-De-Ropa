@@ -1,3 +1,81 @@
+@media screen and (min-width: 320px) {
+    .seccionWhatsapp {
+        .float{
+        position: fixed;
+        width: 34px;
+        height: 34px;
+        background-color: #25d366;
+        bottom: 122px;
+        right: 30px;
+        color: #fff;
+        border-radius: 50%;
+        text-align: center;
+        z-index: 999;
+        box-shadow: 1px 1px 2px gray;
+        }
+        .fa-whatsapp{
+            font-size: 34px;
+        }
+    }
+    .footer { 
+        grid-area: footer;
+        background-color: rgb(188, 163, 127);
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        padding: 15px;
+        justify-content: space-between;
+        position: relative;
+        font-family: Arial, sans-serif;
+        .itemFooter {
+            align-items: center;
+            width: 20%;
+            max-width: 20%;
+            white-space: wrap;
+            text-overflow: ellipsis;
+            h2{
+                align-items: center;
+                font-size: 0.4rem;
+                font-weight: bold;
+                padding-bottom: 10px;
+            }
+            p{
+                line-height: 0.1;
+                font-size: 6px;
+            }
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+            .iconoRedesSociales {
+                display: flex;
+                flex-direction: row;
+                list-style: none;
+                padding: 0;
+                margin-right: 10px;
+                li {
+                    margin-right: 5px;
+                    justify-content: space-around;
+                    .fa-brands {
+                        font-size: 13px;
+                        border-radius: 5px;
+                        margin: 0.1px;
+                    }
+                }
+            }
+            #wrapCorreoFooter {
+                text-wrap: wrap;
+            }
+            #lineHeigthItemFooter {
+                line-height: 1.3;
+            }
+        }
+        /*Para este tamaño de pantalla (320px), los 5 item del footer no cabían, por lo que el siguiente display:none; oculta el item "nuestras tiendas" del footer, y en lugar de ello se colocó el <p> conoce nuestras tiendas en el item "nosotros" del footer, solo para este tamaño, ocultando este y mostrándolo de nuevo para los otros media queries*/
+        .nuestrasTiendas {
+            display:none;
+        }
+    }
+}
 @media screen and (min-width: 480px) {
     .seccionWhatsapp {
         .float{
@@ -61,6 +139,14 @@
                     }
                 }
             }
+            /*Se incativa el <p> "conoce nuestras tiendas" del item del footer "Nosotros"*/
+            #conoceNuestrasTiendas{
+                display: none;
+            }
+        }
+        /*Se reactiva de nuevo el item del footer "nuestras tiendas*/
+        .nuestrasTiendas {
+            display: block;
         }
     }
 }

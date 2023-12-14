@@ -139,6 +139,82 @@ body {
     }
   }
 }
+@media screen and (min-width: 320px) {
+  .seccionWhatsapp .float {
+    position: fixed;
+    width: 34px;
+    height: 34px;
+    background-color: #25d366;
+    bottom: 122px;
+    right: 30px;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    z-index: 999;
+    box-shadow: 1px 1px 2px gray;
+  }
+  .seccionWhatsapp .fa-whatsapp {
+    font-size: 34px;
+  }
+  .footer {
+    grid-area: footer;
+    background-color: rgb(188, 163, 127);
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 15px;
+    justify-content: space-between;
+    position: relative;
+    font-family: Arial, sans-serif;
+    /*Para este tamaño de pantalla (320px), los 5 item del footer no cabían, por lo que el siguiente display:none; oculta el item "nuestras tiendas" del footer, y en lugar de ello se colocó el <p> conoce nuestras tiendas en el item "nosotros" del footer, solo para este tamaño, ocultando este y mostrándolo de nuevo para los otros media queries*/
+  }
+  .footer .itemFooter {
+    align-items: center;
+    width: 20%;
+    max-width: 20%;
+    white-space: wrap;
+    text-overflow: ellipsis;
+  }
+  .footer .itemFooter h2 {
+    align-items: center;
+    font-size: 0.4rem;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+  .footer .itemFooter p {
+    line-height: 0.1;
+    font-size: 6px;
+  }
+  .footer .itemFooter a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .footer .itemFooter .iconoRedesSociales {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin-right: 10px;
+  }
+  .footer .itemFooter .iconoRedesSociales li {
+    margin-right: 5px;
+    justify-content: space-around;
+  }
+  .footer .itemFooter .iconoRedesSociales li .fa-brands {
+    font-size: 13px;
+    border-radius: 5px;
+    margin: 0.1px;
+  }
+  .footer .itemFooter #wrapCorreoFooter {
+    text-wrap: wrap;
+  }
+  .footer .itemFooter #lineHeigthItemFooter {
+    line-height: 1.3;
+  }
+  .footer .nuestrasTiendas {
+    display: none;
+  }
+}
 @media screen and (min-width: 480px) {
   .seccionWhatsapp .float {
     position: fixed;
@@ -166,11 +242,13 @@ body {
     justify-content: space-between;
     position: relative;
     font-family: Arial, sans-serif;
+    /*Se reactiva de nuevo el item del footer "nuestras tiendas*/
   }
   .footer .itemFooter {
     align-items: center;
     width: 20%;
     max-width: 20%;
+    /*Se incativa el <p> "conoce nuestras tiendas" del item del footer "Nosotros"*/
   }
   .footer .itemFooter h2 {
     align-items: center;
@@ -201,6 +279,12 @@ body {
     font-size: 18px;
     border-radius: 5px;
     margin: 0.3px;
+  }
+  .footer .itemFooter #conoceNuestrasTiendas {
+    display: none;
+  }
+  .footer .nuestrasTiendas {
+    display: block;
   }
 }
 @media screen and (min-width: 768px) {
@@ -269,7 +353,7 @@ body {
   }
 }
 /*Mixins de los estilos Standard y de los mas usados*/
-/*Mixin de botones de venta superpuestos en imagenes de pagina ppal (index). Dividido en media queries de _480px, _768px y _1024px:*/
+/*Mixin de botones de venta superpuestos en imagenes de pagina ppal (index). Dividido en media queries (min-width) de _320px, _480px, _768px y _1024px:*/
 /*Mixin estilo de Imgs de venta en la pag Ppal*/
 /*Botones de accion de toda la pagina*/
 /*Para centrar elementos...*/
@@ -284,7 +368,7 @@ body {
   }
   .imgSupFondo h3 {
     font-size: 0.9rem;
-    margin-top: 30px;
+    margin-top: 40px;
     text-align: center;
     align-content: center;
   }
@@ -322,10 +406,10 @@ body {
     display: grid;
     grid-auto-columns: 1fr;
     grid-auto-rows: 1fr;
-    grid-template-columns: 0.9fr 1fr 0.9fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 0.5fr 0.5fr;
     grid-gap: 5px;
-    grid-template-areas: "img1__pagPpal img2__pagPpal img4__pagPpal" "img1__pagPpal img3__pagPpal img4__pagPpal";
+    grid-template-areas: "img1__pagPpal img2__pagPpal" "img1__pagPpal img4__pagPpal" "img3__pagPpal img4__pagPpal";
   }
   .imgsPagPPal .img1__pagPpal {
     grid-area: img1__pagPpal;
@@ -366,19 +450,19 @@ body {
     text-decoration: line-through;
     color: #ff4500;
     margin-right: 3px;
-    font-size: 0.7em;
+    font-size: 0.6em;
     font-weight: 700;
     -webkit-text-stroke: 0.1px black;
   }
   .imgsPagPPal .img1__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal .textPrice {
     color: #ff4500;
-    font-size: 0.7em;
+    font-size: 0.6em;
     font-weight: 700;
-    margin-right: 15px;
+    margin-right: 28px;
     -webkit-text-stroke: 0.1px black;
   }
   .imgsPagPPal .img1__pagPpal .seccionVtaImgsPpal .card-img-overlay .card-text {
-    font-size: 0.5em;
+    font-size: 0.4em;
     font-weight: 650;
     color: black;
     margin: 0px;
@@ -447,19 +531,19 @@ body {
     text-decoration: line-through;
     color: #ff4500;
     margin-right: 3px;
-    font-size: 0.7em;
+    font-size: 0.6em;
     font-weight: 700;
     -webkit-text-stroke: 0.1px black;
   }
   .imgsPagPPal .img2__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal .textPrice {
     color: #ff4500;
-    font-size: 0.7em;
+    font-size: 0.6em;
     font-weight: 700;
-    margin-right: 15px;
+    margin-right: 28px;
     -webkit-text-stroke: 0.1px black;
   }
   .imgsPagPPal .img2__pagPpal .seccionVtaImgsPpal .card-img-overlay .card-text {
-    font-size: 0.5em;
+    font-size: 0.4em;
     font-weight: 650;
     color: black;
     margin: 0px;
@@ -528,19 +612,19 @@ body {
     text-decoration: line-through;
     color: #ff4500;
     margin-right: 3px;
-    font-size: 0.7em;
+    font-size: 0.6em;
     font-weight: 700;
     -webkit-text-stroke: 0.1px black;
   }
   .imgsPagPPal .img3__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal .textPrice {
     color: #ff4500;
-    font-size: 0.7em;
+    font-size: 0.6em;
     font-weight: 700;
-    margin-right: 15px;
+    margin-right: 28px;
     -webkit-text-stroke: 0.1px black;
   }
   .imgsPagPPal .img3__pagPpal .seccionVtaImgsPpal .card-img-overlay .card-text {
-    font-size: 0.5em;
+    font-size: 0.4em;
     font-weight: 650;
     color: black;
     margin: 0px;
@@ -612,19 +696,19 @@ body {
     text-decoration: line-through;
     color: #ff4500;
     margin-right: 3px;
-    font-size: 0.7em;
+    font-size: 0.6em;
     font-weight: 700;
     -webkit-text-stroke: 0.1px black;
   }
   .imgsPagPPal .img4__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal .textPrice {
     color: #ff4500;
-    font-size: 0.7em;
+    font-size: 0.6em;
     font-weight: 700;
-    margin-right: 15px;
+    margin-right: 28px;
     -webkit-text-stroke: 0.1px black;
   }
   .imgsPagPPal .img4__pagPpal .seccionVtaImgsPpal .card-img-overlay .card-text {
-    font-size: 0.5em;
+    font-size: 0.4em;
     font-weight: 650;
     color: black;
     margin: 0px;
@@ -676,7 +760,7 @@ body {
   .carrete_recomendados .card {
     width: 20%;
     border-radius: 5px;
-    padding: 5px;
+    padding: 1px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease-in-out;
     max-width: 100%;
@@ -692,17 +776,17 @@ body {
   }
   .carrete_recomendados .card .card-body .card-title {
     text-decoration: none;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     max-width: 100%;
   }
   .carrete_recomendados .card .card-body h6 {
     color: #ff4500;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     max-width: 100%;
   }
   .carrete_recomendados .card .card-body .card-text {
     text-decoration: none;
-    font-size: 0.6em;
+    font-size: 0.4em;
   }
   .carrete_recomendados .card .card-body .seccionPrecios {
     display: flex;
@@ -713,14 +797,14 @@ body {
   }
   .carrete_recomendados .card .card-body .seccionPrecios .textoTachado {
     text-decoration: line-through;
-    font-size: 0.7rem;
+    font-size: 0.5rem;
   }
   .carrete_recomendados .card .card-body .seccionPrecios .card-textPrice {
     color: #ff4500;
-    font-size: 0.7rem;
+    font-size: 0.5rem;
   }
   .carrete_recomendados .card .card-body .seccionPrecios p {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
   .carrete_recomendados .card .card-body .btn {
     width: 140px;
@@ -748,8 +832,6 @@ body {
   .imgSupFondo h3 {
     font-size: 1.2rem;
     margin-top: 30px;
-    text-align: center;
-    align-content: center;
   }
   .imgBotonesArriba {
     min-height: 200px;
