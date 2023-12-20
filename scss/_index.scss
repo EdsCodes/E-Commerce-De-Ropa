@@ -145,58 +145,61 @@
       max-width: 100%;
       max-height: 100%;
       position: relative;
-
       .card-body {
         display: inline;
         justify-content: space-between;
-        width: auto;
+        width: 100%;
         align-content: center;
         max-width: 100%;
-
+        margin-left: -20%;
         .card-title {
           text-decoration: none;
-          font-size: 0.6rem;
+          font-size: 0.45rem;
+          text-align: center;
           max-width: 100%;
+          text-wrap: nowrap;
         }
-
         h6 {
           color: $orangered;
-          font-size: 0.6rem;
+          font-size: 0.5rem;
           max-width: 100%;
+          margin-top: -5px;
         }
-
         .card-text {
           text-decoration: none;
           font-size: 0.4em;
+          margin-top: -5px;
         }
-
         .seccionPrecios {
           display: flex;
           text-align: left;
           justify-content: space-evenly;
           width: 100vw;
           max-width: 100%;
+          margin-left: 14px;
+
           .textoTachado {
             text-decoration: line-through;
-            font-size: 0.5rem;
+            font-size: 0.4rem;
           }
           .card-textPrice {
             color: $orangered;
-            font-size: 0.5rem;
+            font-size: 0.4rem;
           }
           p {
             font-size: 0.6rem;
           }
         }
-
         .btn {
           @include botonesDeAccion;
-          width: 100%;
-          min-width: 70px;
-          font-size: 0.5em;
-          align-items: center;
+          @include centrarElementos;
+          width: 10vh;
+          max-width: 20vh;
+          min-width: 10vh;
+          font-size: 0.34em;
           margin: 2px auto;
-          margin-left: -11px;
+          padding-top: 10px;
+          margin-left: 0.5vw;
         }
       }
     }
@@ -336,46 +339,40 @@
         width: auto;
         align-content: center;
         max-width: 100%;
-
+        margin-left: 0px;
         .card-title {
           text-decoration: none;
           font-size: 0.8rem;
           max-width: 100%;
         }
-
         h6 {
           color: $orangered;
           font-size: 0.8rem;
           max-width: 100%;
         }
-
         .card-text {
           text-decoration: none;
           font-size: 0.6em;
         }
-
         .seccionPrecios {
           display: flex;
           text-align: left;
           justify-content: space-evenly;
           width: 100vw;
           max-width: 100%;
-
+          margin: 1px auto;
           .textoTachado {
             text-decoration: line-through;
             font-size: 0.7rem;
           }
-
           .card-textPrice {
             color: $orangered;
             font-size: 0.7rem;
           }
-
           p {
             font-size: 0.8rem;
           }
         }
-
         .btn {
           @include botonesDeAccion;
           width: 100%;
@@ -383,7 +380,7 @@
           font-size: 0.5em;
           align-items: center;
           margin: 2px auto;
-          margin-left: -11px;
+          margin-right: 14px;
         }
       }
     }
@@ -402,29 +399,28 @@
           text-decoration: none;
           font-size: 0.9rem;
           max-width: 100%;
+          margin: 5px auto;
+          margin-bottom: 15px;
         }
-
         h6 {
           color: $orangered;
           font-size: 0.9rem;
           max-width: 100%;
         }
-
         .card-text {
           text-decoration: none;
           font-size: 0.8em;
         }
         .seccionPrecios {
-            .textoTachado {
+          margin: 1px auto;
+          .textoTachado {
             text-decoration: line-through;
             font-size: 0.9rem;
           }
-
           .card-textPrice {
             color: $orangered;
             font-size: 0.9rem;
           }
-
           p {
             font-size: 0.9rem;
           }
@@ -433,6 +429,7 @@
         .btn {
           width: 100%;
           min-width: 70px;
+          max-width: 250px;
           font-size: 0.7em;
           background-color: $blueking;
           align-items: center;
@@ -465,12 +462,12 @@
   .carrete_recomendados {
     .card {
       .card-body {
+        margin-left: 0px;
         .card-title {
           text-decoration: none;
           font-size: 1rem;
           max-width: 100%;
         }
-
         h6 {
           color: $orangered;
           font-size: 1.2rem;

@@ -2,10 +2,10 @@
     .seccionWhatsapp {
         .float{
         position: fixed;
-        width: 34px;
-        height: 34px;
+        width: 30px;
+        height: 30px;
         background-color: #25d366;
-        bottom: 122px;
+        bottom: 115px;
         right: 30px;
         color: #fff;
         border-radius: 50%;
@@ -14,7 +14,7 @@
         box-shadow: 1px 1px 2px gray;
         }
         .fa-whatsapp{
-            font-size: 34px;
+            font-size: 30px;
         }
     }
     .footer { 
@@ -67,7 +67,12 @@
                 text-wrap: wrap;
             }
             #lineHeigthItemFooter {
-                line-height: 1.3;
+                line-height: 1.2;
+                margin-top: -4px;
+            }
+            .espacioItemfooter{
+                margin-top: -4px;
+                line-height: 1.2;
             }
         }
         /*Para este tamaño de pantalla (320px), los 5 item del footer no cabían, por lo que el siguiente display:none; oculta el item "nuestras tiendas" del footer, y en lugar de ello se colocó el <p> conoce nuestras tiendas en el item "nosotros" del footer, solo para este tamaño, ocultando este y mostrándolo de nuevo para los otros media queries*/
@@ -111,7 +116,7 @@
             max-width: 20%;
             h2{
                 align-items: center;
-                font-size: 0.7rem;
+                font-size: 0.6rem;
                 font-weight: bold;
                 padding-bottom: 10px;
             }

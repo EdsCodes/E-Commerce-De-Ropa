@@ -1,20 +1,74 @@
 /* <---Guias y tallas---> */
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 320px) {
     .Titulo_parrafoUno h1{
       text-align: center;
-      font-size: 1.5em;
+      font-size: 1.2em;
       margin: 35px;
       color: $brown;
     }
     .section_parrafoUno {
       .subTitulo_parrafoUno h3{
-        font-size: 1.1em;
+        font-size: 1em;
         color: $brown;
       }
     .parrafoUno {
       p{
-        font-size: 12px;
+        font-size: 10px;
         text-wrap: pretty;
+      }
+    }
+    }
+    .videoYt {
+      iframe {
+        width: 260px;
+        height: 180px;
+        margin-left: 15px;
+      }
+    }
+    .parrafoDos {
+      p {
+        font-size: 10px;
+      }
+      .tablaMujeres {
+        @include centrarElementos;
+        h2 {
+          text-align: center;
+          margin-top: 20px;
+          color: $brown;
+          font-size: 1em;
+        }
+        table {
+          font-size: 10px;
+          width: 90%;
+        }
+      }
+      .tablaHombres {
+        @include centrarElementos;
+        h2 {
+          text-align: center;
+          margin-top: 20px;
+          color: $brown;
+          margin-left: -15px;
+          font-size: 1em;
+        }
+        table {
+          font-size: 10px;
+          width: 90%;
+        }
+      }
+    }
+  }
+@media screen and (min-width: 480px) {
+    .Titulo_parrafoUno h1{
+      font-size: 1.5em;
+    }
+    .section_parrafoUno {
+      .subTitulo_parrafoUno h3{
+        font-size: 1.2em;
+      }
+    .parrafoUno {
+      p{
+        font-size: 12px;
       }
     }
     }
@@ -32,25 +86,18 @@
       .tablaMujeres {
         @include centrarElementos;
         h2 {
-          text-align: center;
-          margin-top: 20px;
-          color: $brown;
+          font-size: 1.2em;
         }
         table {
           font-size: 12px;
-          width: 90%;
         }
       }
       .tablaHombres {
-        @include centrarElementos;
         h2 {
-          text-align: center;
-          margin-top: 20px;
-          color: $brown;
+          font-size: 1.2em;
         }
         table {
           font-size: 12px;
-          width: 90%;
         }
       }
     }
@@ -64,7 +111,7 @@
     .section_parrafoUno {
       margin-top: 30px;
       .subTitulo_parrafoUno h3{
-        font-size: 1.2em;
+        font-size: 1.3em;
       }
     .parrafoUno {
       p{
@@ -89,8 +136,8 @@
       }
       .tablaMujeres {
         h2 {
-          text-align: center;
           margin-top: 20px;
+          font-size: 1.3em;
         }
       }
       table {
@@ -99,8 +146,8 @@
     }
     .tablaHombres {
       h2 {
-        text-align: center;
         margin-top: 20px;
+        font-size: 1.3em;
       }
       table {
         font-size: 12px;
@@ -110,12 +157,11 @@
   
   @media screen and (min-width: 1024px) {
     .Titulo_parrafoUno h1{
-      text-align: center;
       font-size: 2em;
     }
     .section_parrafoUno {
       .subTitulo_parrafoUno h3{
-        font-size: 1.3em;
+        font-size: 1.4em;
       }
       .parrafoUno {
         p{
@@ -127,6 +173,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-bottom: 50px;
         iframe {
           width: 600px;
           height: 355px;
@@ -135,14 +182,14 @@
       }
     }
     .parrafoDos {
-      margin-top: 60px;
+      margin-top: 64px;
       p {
         font-size: 14px;
       }
       .tablaMujeres {
         h2 {
-          text-align: center;
           margin-top: 20px;
+          font-size: 1.4em;
         }
       }
       table {
@@ -151,8 +198,8 @@
     }
     .tablaHombres {
       h2 {
-        text-align: center;
         margin-top: 20px;
+        font-size: 1.4em;
       }
       table {
         width: 100%;

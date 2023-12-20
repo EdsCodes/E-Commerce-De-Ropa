@@ -142,10 +142,10 @@ body {
 @media screen and (min-width: 320px) {
   .seccionWhatsapp .float {
     position: fixed;
-    width: 34px;
-    height: 34px;
+    width: 30px;
+    height: 30px;
     background-color: #25d366;
-    bottom: 122px;
+    bottom: 115px;
     right: 30px;
     color: #fff;
     border-radius: 50%;
@@ -154,7 +154,7 @@ body {
     box-shadow: 1px 1px 2px gray;
   }
   .seccionWhatsapp .fa-whatsapp {
-    font-size: 34px;
+    font-size: 30px;
   }
   .footer {
     grid-area: footer;
@@ -209,7 +209,12 @@ body {
     text-wrap: wrap;
   }
   .footer .itemFooter #lineHeigthItemFooter {
-    line-height: 1.3;
+    line-height: 1.2;
+    margin-top: -4px;
+  }
+  .footer .itemFooter .espacioItemfooter {
+    margin-top: -4px;
+    line-height: 1.2;
   }
   .footer .nuestrasTiendas {
     display: none;
@@ -252,7 +257,7 @@ body {
   }
   .footer .itemFooter h2 {
     align-items: center;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     font-weight: bold;
     padding-bottom: 10px;
   }
@@ -770,23 +775,28 @@ body {
   .carrete_recomendados .card .card-body {
     display: inline;
     justify-content: space-between;
-    width: auto;
+    width: 100%;
     align-content: center;
     max-width: 100%;
+    margin-left: -20%;
   }
   .carrete_recomendados .card .card-body .card-title {
     text-decoration: none;
-    font-size: 0.6rem;
+    font-size: 0.45rem;
+    text-align: center;
     max-width: 100%;
+    text-wrap: nowrap;
   }
   .carrete_recomendados .card .card-body h6 {
     color: #ff4500;
-    font-size: 0.6rem;
+    font-size: 0.5rem;
     max-width: 100%;
+    margin-top: -5px;
   }
   .carrete_recomendados .card .card-body .card-text {
     text-decoration: none;
     font-size: 0.4em;
+    margin-top: -5px;
   }
   .carrete_recomendados .card .card-body .seccionPrecios {
     display: flex;
@@ -794,14 +804,15 @@ body {
     justify-content: space-evenly;
     width: 100vw;
     max-width: 100%;
+    margin-left: 14px;
   }
   .carrete_recomendados .card .card-body .seccionPrecios .textoTachado {
     text-decoration: line-through;
-    font-size: 0.5rem;
+    font-size: 0.4rem;
   }
   .carrete_recomendados .card .card-body .seccionPrecios .card-textPrice {
     color: #ff4500;
-    font-size: 0.5rem;
+    font-size: 0.4rem;
   }
   .carrete_recomendados .card .card-body .seccionPrecios p {
     font-size: 0.6rem;
@@ -817,12 +828,17 @@ body {
     font-weight: 400;
     padding: 2px;
     border: #FFF2D8 5px;
-    width: 100%;
-    min-width: 70px;
-    font-size: 0.5em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     align-items: center;
+    width: 10vh;
+    max-width: 20vh;
+    min-width: 10vh;
+    font-size: 0.34em;
     margin: 2px auto;
-    margin-left: -11px;
+    padding-top: 10px;
+    margin-left: 0.5vw;
   }
   .carrete_recomendados .card:hover {
     box-shadow: 0 8px 16px #113946;
@@ -1219,6 +1235,7 @@ body {
     width: auto;
     align-content: center;
     max-width: 100%;
+    margin-left: 0px;
   }
   .carrete_recomendados .card .card-body .card-title {
     text-decoration: none;
@@ -1240,6 +1257,7 @@ body {
     justify-content: space-evenly;
     width: 100vw;
     max-width: 100%;
+    margin: 1px auto;
   }
   .carrete_recomendados .card .card-body .seccionPrecios .textoTachado {
     text-decoration: line-through;
@@ -1268,7 +1286,7 @@ body {
     font-size: 0.5em;
     align-items: center;
     margin: 2px auto;
-    margin-left: -11px;
+    margin-right: 14px;
   }
   .carrete_recomendados .card:hover {
     box-shadow: 0 8px 16px #113946;
@@ -1279,6 +1297,8 @@ body {
     text-decoration: none;
     font-size: 0.9rem;
     max-width: 100%;
+    margin: 5px auto;
+    margin-bottom: 15px;
   }
   .carrete_recomendados .card .card-body h6 {
     color: #ff4500;
@@ -1288,6 +1308,9 @@ body {
   .carrete_recomendados .card .card-body .card-text {
     text-decoration: none;
     font-size: 0.8em;
+  }
+  .carrete_recomendados .card .card-body .seccionPrecios {
+    margin: 1px auto;
   }
   .carrete_recomendados .card .card-body .seccionPrecios .textoTachado {
     text-decoration: line-through;
@@ -1303,6 +1326,7 @@ body {
   .carrete_recomendados .card .card-body .btn {
     width: 100%;
     min-width: 70px;
+    max-width: 250px;
     font-size: 0.7em;
     background-color: #113946;
     align-items: center;
@@ -1405,6 +1429,9 @@ body {
   .imgBotonesArriba {
     height: auto;
     object-fit: cover;
+  }
+  .carrete_recomendados .card .card-body {
+    margin-left: 0px;
   }
   .carrete_recomendados .card .card-body .card-title {
     text-decoration: none;
@@ -1556,20 +1583,72 @@ body {
   }
 }
 /* <---Guias y tallas---> */
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 320px) {
   .Titulo_parrafoUno h1 {
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin: 35px;
     color: #BCA37F;
   }
   .section_parrafoUno .subTitulo_parrafoUno h3 {
-    font-size: 1.1em;
+    font-size: 1em;
     color: #BCA37F;
   }
   .section_parrafoUno .parrafoUno p {
-    font-size: 12px;
+    font-size: 10px;
     text-wrap: pretty;
+  }
+  .videoYt iframe {
+    width: 260px;
+    height: 180px;
+    margin-left: 15px;
+  }
+  .parrafoDos p {
+    font-size: 10px;
+  }
+  .parrafoDos .tablaMujeres {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .parrafoDos .tablaMujeres h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: #BCA37F;
+    font-size: 1em;
+  }
+  .parrafoDos .tablaMujeres table {
+    font-size: 10px;
+    width: 90%;
+  }
+  .parrafoDos .tablaHombres {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .parrafoDos .tablaHombres h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: #BCA37F;
+    margin-left: -15px;
+    font-size: 1em;
+  }
+  .parrafoDos .tablaHombres table {
+    font-size: 10px;
+    width: 90%;
+  }
+}
+@media screen and (min-width: 480px) {
+  .Titulo_parrafoUno h1 {
+    font-size: 1.5em;
+  }
+  .section_parrafoUno .subTitulo_parrafoUno h3 {
+    font-size: 1.2em;
+  }
+  .section_parrafoUno .parrafoUno p {
+    font-size: 12px;
   }
   .videoYt iframe {
     width: 420px;
@@ -1586,28 +1665,16 @@ body {
     align-items: center;
   }
   .parrafoDos .tablaMujeres h2 {
-    text-align: center;
-    margin-top: 20px;
-    color: #BCA37F;
+    font-size: 1.2em;
   }
   .parrafoDos .tablaMujeres table {
     font-size: 12px;
-    width: 90%;
-  }
-  .parrafoDos .tablaHombres {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
   }
   .parrafoDos .tablaHombres h2 {
-    text-align: center;
-    margin-top: 20px;
-    color: #BCA37F;
+    font-size: 1.2em;
   }
   .parrafoDos .tablaHombres table {
     font-size: 12px;
-    width: 90%;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1619,7 +1686,7 @@ body {
     margin-top: 30px;
   }
   .section_parrafoUno .subTitulo_parrafoUno h3 {
-    font-size: 1.2em;
+    font-size: 1.3em;
   }
   .section_parrafoUno .parrafoUno p {
     font-size: 13px;
@@ -1639,15 +1706,15 @@ body {
     font-size: 13px;
   }
   .parrafoDos .tablaMujeres h2 {
-    text-align: center;
     margin-top: 20px;
+    font-size: 1.3em;
   }
   .parrafoDos table {
     font-size: 13px;
   }
   .tablaHombres h2 {
-    text-align: center;
     margin-top: 20px;
+    font-size: 1.3em;
   }
   .tablaHombres table {
     font-size: 12px;
@@ -1655,11 +1722,10 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .Titulo_parrafoUno h1 {
-    text-align: center;
     font-size: 2em;
   }
   .section_parrafoUno .subTitulo_parrafoUno h3 {
-    font-size: 1.3em;
+    font-size: 1.4em;
   }
   .section_parrafoUno .parrafoUno p {
     font-size: 14px;
@@ -1669,6 +1735,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
   }
   .section_parrafoUno .videoYt iframe {
     width: 600px;
@@ -1676,21 +1743,21 @@ body {
     margin: 5px auto;
   }
   .parrafoDos {
-    margin-top: 60px;
+    margin-top: 64px;
   }
   .parrafoDos p {
     font-size: 14px;
   }
   .parrafoDos .tablaMujeres h2 {
-    text-align: center;
     margin-top: 20px;
+    font-size: 1.4em;
   }
   .parrafoDos table {
     font-size: 14px;
   }
   .tablaHombres h2 {
-    text-align: center;
     margin-top: 20px;
+    font-size: 1.4em;
   }
   .tablaHombres table {
     width: 100%;
@@ -1698,6 +1765,109 @@ body {
   }
 }
 /* <---Nosotros---> */
+@media screen and (min-width: 320px) {
+  main {
+    overflow: hidden;
+  }
+  .nosotros .tituloNosotros {
+    font-size: 1.2em;
+    margin-top: 45px;
+    text-align: center;
+    color: #BCA37F;
+  }
+  .nosotros .textoNosotros {
+    margin: 25px 15px 15px 15px;
+    text-wrap: balance;
+    padding-left: 5px;
+    font-size: 10px;
+  }
+  .img__nosotrosUno img {
+    width: 270px;
+    height: auto;
+    border-radius: 5px;
+    margin: 15px auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .img__nosotrosDos img {
+    width: 270px;
+    height: auto;
+    border-radius: 5px;
+    margin: 15px auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .idMarca h2 {
+    text-align: center;
+    color: #BCA37F;
+  }
+  .mision h2 {
+    font-size: 1em;
+  }
+  .mision p {
+    height: 50px;
+    margin: 15px;
+    text-wrap: stable;
+    font-size: 10px;
+    margin-bottom: 40px;
+  }
+  .vision h2 {
+    font-size: 1em;
+  }
+  .vision p {
+    height: 50px;
+    margin: 15px;
+    text-wrap: stable;
+    font-size: 10px;
+    margin-bottom: 40px;
+  }
+  .seccionCaracteristicas {
+    background-color: #EAD7BB;
+    overflow-y: hidden;
+  }
+  .seccionCaracteristicas .tituloCaracteristicas {
+    border: 1px solid #EAD7BB;
+    font-size: 1.2em;
+    color: #113946;
+  }
+  .seccionCaracteristicas .tituloCaracteristicas h2 {
+    text-align: center;
+    font-size: 0.9em;
+    color: #113946;
+    margin: 55px 0px 40px 0px;
+  }
+  .seccionCaracteristicas .seccionLogos {
+    background-color: #EAD7BB;
+    border: 1px solid #EAD7BB;
+    text-align: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    margin-left: 3px;
+  }
+  .seccionCaracteristicas .seccionLogos .logo_nosotros {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .seccionCaracteristicas .seccionLogos .logo_nosotros img {
+    width: 35px;
+    height: auto;
+    margin: 2px auto;
+  }
+  .seccionCaracteristicas .seccionLogos .logo_nosotros h3 {
+    font-size: 0.8em;
+  }
+  .seccionCaracteristicas .seccionLogos .logo_nosotros p {
+    text-align: center;
+    text-wrap: pretty;
+    font-size: 0.5em;
+    margin: 15px 0 45px 0;
+  }
+}
 @media screen and (min-width: 480px) {
   .nosotros .tituloNosotros {
     font-size: 1.3em;
@@ -1731,6 +1901,10 @@ body {
     text-align: center;
     color: #BCA37F;
   }
+  .mision {
+    margin-top: 50px;
+    height: 180px;
+  }
   .mision h2 {
     font-size: 1.3em;
   }
@@ -1740,6 +1914,10 @@ body {
     margin: 15px;
     text-wrap: stable;
     font-size: 14px;
+  }
+  .vision {
+    margin-bottom: 35px;
+    height: 180px;
   }
   .vision h2 {
     font-size: 1.3em;
@@ -1751,36 +1929,15 @@ body {
     text-wrap: stable;
     font-size: 14px;
   }
-  .separador {
-    width: 100%;
-    height: auto;
-    padding: 0;
-  }
-  .separador .imagen_separador {
-    width: 100%;
-    margin: 0px -5px -5px -5px;
-  }
-  .separador .imagen_separador img {
-    width: 110%;
-    height: auto;
-    object-fit: fit;
-    transform: scaleY(-1);
-  }
   .seccionCaracteristicas {
     background-color: #EAD7BB;
     border: 1px solid #EAD7BB;
   }
-  .seccionCaracteristicas h2 {
-    text-align: center;
-    font-size: 1.5em;
+  .seccionCaracteristicas .tituloCaracteristicas {
+    font-size: 1.4em;
     color: #113946;
-    margin: 35px 0px 70px 0px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
   }
-  .seccionLogos {
+  .seccionCaracteristicas .seccionLogos {
     background-color: #EAD7BB;
     border: 1px solid #EAD7BB;
     text-align: center;
@@ -1788,30 +1945,30 @@ body {
     flex-direction: row;
     justify-content: space-between;
   }
-  .seccionLogos .logo_nosotros img {
-    width: 55px;
+  .seccionCaracteristicas .seccionLogos .logo_nosotros img {
+    width: 40px;
     height: auto;
-    margin: 15px 25px;
+    margin: 5px auto;
   }
-  .seccionLogos .logo_nosotros h3 {
+  .seccionCaracteristicas .seccionLogos .logo_nosotros h3 {
     font-size: 1.1em;
   }
-  .seccionLogos .logo_nosotros p {
-    margin: 25px;
+  .seccionCaracteristicas .seccionLogos .logo_nosotros p {
+    margin: 15px 0 45px 0;
     text-wrap: pretty;
     font-size: 0.5em;
   }
 }
 @media screen and (min-width: 768px) {
   .nosotros {
-    max-width: 60%;
-    padding-left: 15px;
+    max-width: 95%;
+    margin: 5px auto;
   }
-  .nosotros h1 {
+  .nosotros .tituloNosotros {
     font-size: 1.3em;
   }
   .img__nosotrosUno img {
-    width: 450px;
+    width: 400px;
     height: auto;
     border-radius: 5px;
     margin: 15px auto;
@@ -1829,50 +1986,28 @@ body {
     justify-content: center;
     align-items: center;
   }
-  .separador {
-    width: 100vh;
-    margin: 0;
-    padding: 0;
-  }
-  .separador .imagen_separador {
-    width: 100%;
-  }
-  .separador .imagen_separador img {
-    width: 100%;
-    height: auto;
-    object-fit: fit;
-    transform: scaleY(-1);
-  }
   .seccionCaracteristicas {
     background-color: #EAD7BB;
     border: 1px solid #EAD7BB;
   }
   .seccionCaracteristicas h2 {
     text-align: center;
-    font-size: 1.6em;
+    font-size: 1.5em;
     color: #113946;
     margin: 35px 0px 70px 0px;
   }
-  .seccionLogos {
-    background-color: #EAD7BB;
-    border: 1px solid #EAD7BB;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .seccionLogos .logo_nosotros img {
-    width: 55px;
+  .seccionCaracteristicas .seccionLogos .logo_nosotros img {
+    width: 48px;
     height: auto;
-    margin: 15px 25px;
+    margin: 10px 5px;
   }
-  .seccionLogos .logo_nosotros h3 {
-    font-size: 1.1em;
+  .seccionCaracteristicas .seccionLogos .logo_nosotros h3 {
+    font-size: 1.2em;
   }
-  .seccionLogos .logo_nosotros p {
+  .seccionCaracteristicas .seccionLogos .logo_nosotros p {
     margin: 25px;
     text-wrap: pretty;
-    font-size: 0.7em;
+    font-size: 0.6em;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1894,22 +2029,20 @@ body {
     width: 50%;
   }
   .img__nosotrosUno img {
-    width: 500px;
-    height: auto;
-    border-radius: 5px;
+    width: 480px;
     margin: 15px auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 55px;
   }
   .img__nosotrosDos img {
-    width: 500px;
-    height: auto;
-    border-radius: 5px;
+    width: 480px;
     margin: 15px auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 60px;
   }
   .mision {
     margin-top: 65px;
@@ -1918,24 +2051,11 @@ body {
     font-size: 15px;
   }
   .vision {
-    margin-top: 65px;
+    margin-top: 75px;
   }
   .vision p {
     font-size: 15px;
-  }
-  .separador {
-    width: 100vh;
-    margin: 0;
-    padding: 0;
-  }
-  .separador .imagen_separador {
-    width: 100%;
-  }
-  .separador .imagen_separador img {
-    width: 100vw;
-    height: auto;
-    object-fit: fit;
-    transform: scaleY(-1);
+    margin-bottom: 60px;
   }
   .seccionCaracteristicas {
     background-color: #EAD7BB;
@@ -1947,7 +2067,7 @@ body {
     color: #113946;
     margin: 35px 0px 70px 0px;
   }
-  .seccionLogos {
+  .seccionCaracteristicas .seccionLogos {
     background-color: #EAD7BB;
     border: 1px solid #EAD7BB;
     text-align: center;
@@ -1955,26 +2075,214 @@ body {
     flex-direction: row;
     justify-content: space-between;
   }
-  .seccionLogos .logo_nosotros img {
+  .seccionCaracteristicas .seccionLogos .logo_nosotros img {
     width: 55px;
     height: auto;
     margin: 15px 25px;
   }
-  .seccionLogos .logo_nosotros h3 {
+  .seccionCaracteristicas .seccionLogos .logo_nosotros h3 {
     font-size: 1.2em;
   }
-  .seccionLogos .logo_nosotros p {
+  .seccionCaracteristicas .seccionLogos .logo_nosotros p {
     margin: 25px;
     text-wrap: pretty;
     font-size: 0.9em;
+    display: inline-block;
   }
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 320px) {
   .columnaGestionUsuario {
     margin: 0px auto;
   }
   .columnaGestionUsuario .TituloRegistro {
     text-align: center;
+    font-size: 0.9em;
+    margin: 30px 0px 20px 0px;
+    width: 100%;
+    color: #ff4500;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioRegistro {
+    border: solid 1px #113946;
+    border-radius: 8px;
+    padding: 25px;
+    background-color: #EAD7BB;
+    color: #113946;
+    box-shadow: 0 3px 8px #113946;
+    width: 100%;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioRegistro .campoFormulario {
+    text-align: center;
+    margin: 0px auto;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioRegistro .campoFormulario input {
+    width: 98%;
+    margin: 4px auto;
+    padding: 2px;
+    font-size: 80%;
+    border-radius: 5px;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioRegistro .campoGenero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    margin: 5px 5px 0 0;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioRegistro .campoGenero p {
+    font-size: 0.6em;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioRegistro .campoFechanac {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 5px 0 0;
+    font-size: 0.6em;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioRegistro .campoFechanac input {
+    width: 220px;
+    border-radius: 5px;
+    padding: 2px;
+    font-size: 80%;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioRegistro .selectPais {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px 5px 0 0;
+    font-size: 0.6em;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioRegistro .selectPais select {
+    width: 200px;
+    height: 25px;
+    border-radius: 5px;
+    padding: 2px;
+    font-size: 80%;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioRegistro .termCondic {
+    font-size: 0.5em;
+    margin: 10px 0 10px;
+    align-content: center;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioRegistro .botones_registro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    margin: 5px 5px 0 0;
+    text-align: center;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioRegistro .botones_registro input {
+    width: 140px;
+    height: 25px;
+    align-content: center;
+    border-radius: 5px;
+    background-color: #113946;
+    color: white;
+    font-size: 60%;
+    font-weight: 400;
+    padding: 2px;
+    border: #FFF2D8 5px;
+    width: 115px;
+  }
+  .columnaGestionUsuario .seccionFormularios .tituloIngSesion {
+    text-align: center;
+    font-size: 0.9em;
+    margin: 50px 0px 40px 0px;
+    width: 100%;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioInicioSesion {
+    border: solid 1px #113946;
+    border-radius: 8px;
+    padding: 25px;
+    background-color: #EAD7BB;
+    color: #113946;
+    box-shadow: 0 3px 8px #113946;
+    width: 100%;
+    margin: 20px 0 60px;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioInicioSesion input {
+    width: 98%;
+    margin: 4px auto;
+    padding: 2px;
+    font-size: 80%;
+    border-radius: 5px;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioInicioSesion .ingDatosLogin {
+    text-align: center;
+    margin: 0px auto;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioInicioSesion .ingDatosLogin input {
+    width: 100%;
+    margin: 4px auto;
+    padding: 2px;
+    font-size: 80%;
+    border-radius: 5px;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioInicioSesion .gestionDatosUsuario {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioInicioSesion .gestionDatosUsuario .checboxIngSesion {
+    font-size: 0.5em;
+    margin: 5px 0 5px;
+    align-content: ce;
+    width: 150px;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioInicioSesion .gestionDatosUsuario .olvidoContrasena a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 0.5em;
+    margin-right: 10px;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioInicioSesion .botonLogin {
+    text-align: center;
+    margin-top: 5px;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioInicioSesion .botonLogin button {
+    width: 140px;
+    height: 25px;
+    align-content: center;
+    border-radius: 5px;
+    background-color: #113946;
+    color: white;
+    font-size: 60%;
+    font-weight: 400;
+    padding: 2px;
+    border: #FFF2D8 5px;
+    width: 90%;
+  }
+  .columnaGestionUsuario .seccionFormularios .img_relleno_pagSesioReg {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 95%;
+  }
+  .columnaGestionUsuario .seccionFormularios .img_relleno_pagSesioReg img {
+    width: 60%;
+    margin: 20px 0px 125px;
+    border-radius: 40px;
+  }
+  .columnaGestionUsuario .seccionFormularios .img_relleno_pagSesioReg :hover {
+    box-shadow: 0 3px 8px #113946;
+  }
+  .imgSesionReg {
+    align-items: center;
+    text-align: center;
+    margin: 40px auto;
+    width: 95%;
+  }
+  .imgSesionReg img {
+    width: 280px;
+    height: auto;
+    align-items: center;
+    border-radius: 10px;
+    margin-right: 25px;
+  }
+}
+@media screen and (min-width: 480px) {
+  .columnaGestionUsuario .TituloRegistro {
     font-size: 1.1em;
     margin: 50px 0px 40px 0px;
     width: 95%;
@@ -2152,7 +2460,7 @@ body {
     width: 95%;
   }
   .imgSesionReg img {
-    width: 450px;
+    width: 430px;
     height: auto;
     align-items: center;
     border-radius: 10px;
@@ -2257,21 +2565,212 @@ body {
   }
 }
 @media screen and (min-width: 1024px) {
-  .formularioInicioSesion {
-    margin-top: 300px;
+  .columnaGestionUsuario .seccionFormularios .formularioInicioSesion {
+    margin-top: 40px;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioInicioSesion .botonLogin {
+    text-align: center;
+    margin-top: 5px;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioInicioSesion .botonLogin button {
+    width: 140px;
+    height: 25px;
+    align-content: center;
+    border-radius: 5px;
+    background-color: #113946;
+    color: white;
+    font-size: 60%;
+    font-weight: 400;
+    padding: 2px;
+    border: #FFF2D8 5px;
+    width: 70%;
+  }
+  .columnaGestionUsuario .seccionFormularios .tituloIngSesion {
+    margin: 90px 0px 40px 0px;
+    width: 100%;
   }
   .imgSesionReg {
     text-align: center;
     margin: 20px auto;
     width: auto;
+    margin-top: 50px;
   }
   .imgSesionReg img {
-    width: 550px;
+    width: 580px;
     object-fit: cover;
     margin: 10px auto;
     align-items: center;
     border-radius: 10px;
     display: flex;
+  }
+}
+@media screen and (min-width: 320px) {
+  .tituloArticuloVta {
+    margin-top: 15px;
+  }
+  .tituloArticuloVta .articulo {
+    font-size: 0.72em;
+  }
+  .tituloArticuloVta .ref_articulo {
+    font-size: 0.5em;
+    color: #ff4500;
+    font-style: italic;
+  }
+  .columnaIzqCompras .imgs_vta {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .columnaIzqCompras .imgs_vta .grupoImgsA {
+    margin: 0px 5px 0px;
+  }
+  .columnaIzqCompras .imgs_vta .grupoImgsA img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+    opacity: 0.97;
+    box-shadow: 0 3px 8px black;
+    width: 120px;
+  }
+  .columnaIzqCompras .imgs_vta .grupoImgsA :hover {
+    opacity: 1;
+  }
+  .columnaIzqCompras .imgs_vta .grupoImgsB {
+    margin: 5px 5px 0px;
+  }
+  .columnaIzqCompras .imgs_vta .grupoImgsB img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+    opacity: 0.97;
+    box-shadow: 0 3px 8px black;
+    width: 120px;
+  }
+  .columnaIzqCompras .imgs_vta .grupoImgsB :hover {
+    opacity: 1;
+  }
+  .columnaIzqCompras .botones_vta {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .columnaIzqCompras .botones_vta input {
+    width: 140px;
+    height: 25px;
+    align-content: center;
+    border-radius: 5px;
+    background-color: #113946;
+    color: white;
+    font-size: 60%;
+    font-weight: 400;
+    padding: 2px;
+    border: #FFF2D8 5px;
+    font-size: 10px;
+    width: 30%;
+    padding: 5px;
+  }
+  .columnaIzqCompras .descripcion_productovta {
+    margin-top: 20px;
+    font-size: 0.6em;
+    line-height: 15px;
+    text-wrap: pretty;
+  }
+  .columnaDerCompras .precio_articulovta {
+    color: #ff4500;
+  }
+  .columnaDerCompras .seccionColorProd {
+    display: flex;
+  }
+  .columnaDerCompras .seccionColorProd .tittleColores {
+    font-size: 0.8em;
+  }
+  .columnaDerCompras .seccionColorProd .color-selector {
+    text-align: center;
+  }
+  .columnaDerCompras .seccionColorProd .color-selector .color-input {
+    display: none;
+  }
+  .columnaDerCompras .seccionColorProd .color-selector .color-label {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    border: 2px solid white;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  .columnaDerCompras .seccionTallaProd {
+    font-size: 0.6em;
+  }
+  .columnaDerCompras .seccionTallaProd a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+  }
+  .columnaDerCompras .seccionTallaProd .botonestallacompra {
+    margin: 5px 0px 15px;
+  }
+  .columnaDerCompras .seccionTallaProd .botonestallacompra input {
+    width: 70px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    background-color: #EAD7BB;
+    color: #113946;
+    font-weight: 900;
+  }
+  .columnaDerCompras .bloqueCantidadLogos {
+    display: flex;
+    justify-content: space-between;
+  }
+  .columnaDerCompras .bloqueCantidadLogos .seccionCantidadProd {
+    font-size: 0.6em;
+  }
+  .columnaDerCompras .bloqueCantidadLogos .seccionCantidadProd input {
+    width: 120px;
+    height: 20px;
+  }
+  .columnaDerCompras .bloqueCantidadLogos .seccionCantidadProd .botonesAccionCompra {
+    margin-bottom: 10px;
+  }
+  .columnaDerCompras .bloqueCantidadLogos .seccionCantidadProd .botonesAccionCompra input {
+    width: 140px;
+    height: 25px;
+    align-content: center;
+    border-radius: 5px;
+    background-color: #113946;
+    color: white;
+    font-size: 60%;
+    font-weight: 400;
+    padding: 2px;
+    border: #FFF2D8 5px;
+    width: 98%;
+    font-size: 100%;
+    margin: 2px;
+  }
+  .columnaDerCompras .bloqueCantidadLogos .areaTextoLogosVrAgreg {
+    display: flex;
+  }
+  .columnaDerCompras .bloqueCantidadLogos .areaTextoLogosVrAgreg .textoLogosVrAgreg {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+  .columnaDerCompras .bloqueCantidadLogos .areaTextoLogosVrAgreg .textoLogosVrAgreg .textoLogos {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-size: 0.4em;
+    margin: 5px;
+    text-wrap: balance;
+  }
+  .columnaDerCompras .bloqueCantidadLogos .areaTextoLogosVrAgreg .textoLogosVrAgreg img {
+    width: 30px;
+    height: auto;
+    text-align: center;
+    margin: 0px auto;
   }
 }
 @media screen and (min-width: 480px) {
@@ -2317,8 +2816,6 @@ body {
   }
   .columnaIzqCompras .botones_vta {
     margin-top: 15px;
-    display: flex;
-    justify-content: space-around;
   }
   .columnaIzqCompras .botones_vta input {
     width: 140px;
@@ -2337,19 +2834,9 @@ body {
     margin-top: 20px;
     font-size: 0.8em;
     line-height: 15px;
-    text-wrap: pretty;
-  }
-  .columnaDerCompras .precio_articulovta {
-    color: #ff4500;
-  }
-  .columnaDerCompras .seccionColorProd {
-    display: flex;
   }
   .columnaDerCompras .seccionColorProd .tittleColores {
-    font-size: 0.8em;
-  }
-  .columnaDerCompras .seccionColorProd .color-selector {
-    text-align: center;
+    font-size: 0.6em;
   }
   .columnaDerCompras .seccionColorProd .color-selector .color-input {
     display: none;
@@ -2358,10 +2845,7 @@ body {
     display: inline-block;
     width: 25px;
     height: 25px;
-    border: 2px solid white;
-    margin-left: 5px;
-    cursor: pointer;
-    border-radius: 50%;
+    border: 1px solid white;
   }
   .columnaDerCompras .seccionTallaProd {
     font-size: 0.8em;
@@ -2406,8 +2890,7 @@ body {
     font-weight: 400;
     padding: 2px;
     border: #FFF2D8 5px;
-    font-size: 80%;
-    margin: 2px;
+    width: 100%;
   }
   .columnaDerCompras .bloqueCantidadLogos .areaTextoLogosVrAgreg {
     display: flex;
@@ -2416,6 +2899,7 @@ body {
     width: 30%;
     display: flex;
     flex-direction: column;
+    margin-left: 0px;
   }
   .columnaDerCompras .bloqueCantidadLogos .areaTextoLogosVrAgreg .textoLogosVrAgreg .textoLogos {
     display: flex;

@@ -1,4 +1,146 @@
 
+@media screen and (min-width: 320px) {
+    .tituloArticuloVta {
+        margin-top: 15px;
+        .articulo {
+            font-size: 0.72em;
+            
+        }
+        .ref_articulo {
+            font-size: 0.5em;
+            color: $orangered;
+            font-style: italic;
+        }
+    }
+    .columnaIzqCompras {
+        .imgs_vta {
+            @include centrarElementos;
+            .grupoImgsA {
+                margin: 0px 5px 0px;
+                img{
+                    @include estiloImgsPagCompras;
+                    width: 120px;
+                }
+                :hover{
+                    opacity: 1;
+                }
+            }
+            .grupoImgsB {
+                margin: 5px 5px 0px;
+                img{
+                    @include estiloImgsPagCompras;
+                    width: 120px;
+                }
+                :hover{
+                    opacity: 1;
+                }
+            }
+        }
+        .botones_vta {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-around;
+            input {
+                @include botonesDeAccion;
+                font-size: 10px;
+                width: 30%;
+                padding: 5px;
+            }
+        }
+        .descripcion_productovta {
+            margin-top: 20px;
+            font-size: 0.6em;
+            line-height: 15px;
+            text-wrap: pretty;
+        }
+    }
+    .columnaDerCompras {
+        .precio_articulovta {
+            color: $orangered;
+        }
+        .seccionColorProd {
+            display: flex;
+            .tittleColores{
+                font-size: 0.8em;
+            }
+            .color-selector {
+                text-align: center;
+                .color-input {
+                    display: none;
+                }
+                .color-label {
+                    display: inline-block;
+                    width: 23px;
+                    height: 23px;
+                    border: 2px solid white;
+                    margin-left: 5px;
+                    cursor: pointer;
+                    border-radius: 50%;
+                }
+            }
+        }
+        .seccionTallaProd{
+            font-size: 0.6em;
+            a {
+                text-decoration: none;
+                color: inherit;
+                font-weight: bold;
+            }
+            .botonestallacompra {
+                margin: 5px 0px 15px;
+                input {
+                    width: 70px;
+                    border-radius: 5px;
+                    font-size: 0.8em;
+                    background-color: $beige;
+                    color: $blueking;
+                    font-weight: 900;
+                }
+            }
+        }
+        .bloqueCantidadLogos{
+            display: flex;
+            justify-content: space-between;
+            .seccionCantidadProd{
+                font-size: 0.6em; 
+                input {
+                    width: 120px;
+                    height: 20px;
+                }
+                .botonesAccionCompra{
+                    margin-bottom: 10px;
+                    input {
+                        @include botonesDeAccion;
+                        width: 98%;
+                        font-size: 100%;
+                        margin: 2px;
+                    }
+                }
+            }
+            .areaTextoLogosVrAgreg {
+                display: flex;
+                .textoLogosVrAgreg {
+                    width: 40%;
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 10px;
+                    .textoLogos {
+                        @include centrarElementos;
+                        font-size: 0.4em;
+                        margin: 5px;
+                        text-wrap:balance;
+                    }
+                    img {
+                        width: 30px;
+                        height: auto;
+                        text-align: center;
+                        margin: 0px auto;
+                    }
+                }
+            }
+        }
+    }
+}
 @media screen and (min-width: 480px) {
     .tituloArticuloVta {
         .articulo {
@@ -34,8 +176,6 @@
         }
         .botones_vta {
             margin-top: 15px;
-            display: flex;
-            justify-content: space-around;
             input {
                 @include botonesDeAccion;
                 width: 30%;
@@ -45,20 +185,14 @@
             margin-top: 20px;
             font-size: 0.8em;
             line-height: 15px;
-            text-wrap: pretty;
         }
     }
     .columnaDerCompras {
-        .precio_articulovta {
-            color: $orangered;
-        }
         .seccionColorProd {
-            display: flex;
             .tittleColores{
-                font-size: 0.8em;
+                font-size: 0.6em;
             }
             .color-selector {
-                text-align: center;
                 .color-input {
                     display: none;
                 }
@@ -66,10 +200,7 @@
                     display: inline-block;
                     width: 25px;
                     height: 25px;
-                    border: 2px solid white;
-                    margin-left: 5px;
-                    cursor: pointer;
-                    border-radius: 50%;
+                    border: 1px solid white;
                 }
             }
         }
@@ -104,8 +235,7 @@
                     margin-bottom: 10px;
                     input {
                         @include botonesDeAccion;
-                        font-size: 80%;
-                        margin: 2px;
+                        width: 100%;
                     }
                 }
             }
@@ -115,6 +245,7 @@
                     width: 30%;
                     display: flex;
                     flex-direction: column;
+                    margin-left: 0px;
                     .textoLogos {
                         @include centrarElementos;
                         font-size: 0.5em;
