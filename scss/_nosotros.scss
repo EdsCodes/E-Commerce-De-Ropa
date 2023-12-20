@@ -5,16 +5,16 @@
   } 
   .nosotros {
     .tituloNosotros {
-      font-size: 1.2em;
       margin-top: 45px;
       text-align: center;
       color: $brown;      
+      @include h1_size320;
     }
     .textoNosotros {
       margin: 25px 15px 15px 15px;
       text-wrap: balance;
       padding-left: 5px;
-      font-size: 10px;
+      @include p_size320;
     }
   }
   .img__nosotrosUno {
@@ -43,30 +43,31 @@
     h2 {
       text-align: center;
       color: $brown;
+      @include h2_size320;
     }
   }
   .mision {
     h2 {
-      font-size: 1em;
+      @include h2_size320;
     }
     p {
     height: 50px;
     margin: 15px;
     text-wrap: stable;
-    font-size: 10px;
     margin-bottom: 40px;
+    @include p_size320;
     }
   }
   .vision {
     h2 {
-      font-size: 1em;
+      @include h2_size320;
     }
     p {
-    height: 50px;
-    margin: 15px;
-    text-wrap: stable;
-    font-size: 10px;
-    margin-bottom: 40px;
+      height: 50px;
+      margin: 15px;
+      text-wrap: stable;
+      margin-bottom: 40px;
+      @include p_size320;
     }
   }
   .seccionCaracteristicas {
@@ -74,13 +75,12 @@
     overflow-y: hidden;
     .tituloCaracteristicas {
       border: 1px solid $beige;
-      font-size: 1.2em;
       color: $blueking;
+      text-align: center;
+      color: $blueking;
+      margin: 55px 0px 40px 0px;
       h2 {
-        text-align: center;
-        font-size: 0.9em;
-        color: $blueking;
-        margin: 55px 0px 40px 0px;
+        @include h2_size320;
       }
     }
     .seccionLogos {
@@ -102,13 +102,13 @@
           margin: 2px auto;
         }
         h3 {
-          font-size: 0.8em;
+          @include h3_size320;
         }
         p {
           text-align: center;
           text-wrap: pretty;
-          font-size: 0.5em;
           margin: 15px 0 45px 0;
+          @include pLogos_size320;
         }
       }
     }
@@ -117,157 +117,131 @@
 @media screen and (min-width: 480px) {
   .nosotros {
     .tituloNosotros {
-      font-size: 1.3em;
-      margin-top: 45px;
-      text-align: center;
-      color: $brown;      
+      @include h1_size480;
     }
     .textoNosotros {
-      margin: 25px 15px 15px 15px;
-      text-wrap: balance;
-      padding-left: 5px;
-      font-size: 14px;
+      @include p_size480;
     }
   }
   .img__nosotrosUno {
     img {
       width: 440px;
-      height: auto;
-      border-radius: 5px;
-      margin: 15px;
-      display: flex;
       justify-content: end;
     }
   }
   .img__nosotrosDos {
     img {
       width: 440px;
-      height: auto;
-      border-radius: 5px;
-      margin: 15px;
-      display: flex;
       justify-content: start;
     }
   }
   .idMarca {
     h2 {
-      text-align: center;
-      color: $brown;
+      @include h2_size480;
     }
   }
   .mision {
     margin-top: 50px;
     height: 180px;
     h2 {
-      font-size: 1.3em;
+      @include h2_size480;
     }
     p {
     width: 90%;
     height: 50px;
-    margin: 15px;
-    text-wrap: stable;
-    font-size: 14px;
+    @include p_size480;
     }
   }
   .vision {
     margin-bottom: 35px;
     height: 180px;
     h2 {
-      font-size: 1.3em;
+      @include h2_size480;
     }
     p {
-    width: 90%;
-    height: 50px;
-    margin: 15px;
-    text-wrap: stable;
-    font-size: 14px;
+      width: 90%;
+      height: 50px;
+      @include p_size480;
     }
   }
   .seccionCaracteristicas {
-    background-color: $beige;
-    border: 1px solid $beige;
     .tituloCaracteristicas {
-      font-size: 1.4em;
-      color: $blueking;
+      @include h2_size480;
     }
     .seccionLogos {
-      background-color: $beige;
-      border: 1px solid $beige;
-      text-align: center;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
       .logo_nosotros {
         img {
           width: 40px;
-          height: auto;
           margin: 5px auto; 
         }
         h3 {
-          font-size: 1.1em;
+          @include h3_size480;
         }
         p {
-          margin: 15px 0 45px 0;
-          text-wrap: pretty;
-          font-size: 0.5em;
+          @include pLogos_size480;
         }
       }
     }
   }
 }
-  
 @media screen and (min-width: 768px) {
     .nosotros {
       max-width: 95%;
       margin: 5px auto;
-      
       .tituloNosotros {
-        font-size: 1.3em;
+        @include h1_size768;
+      }
+      .textoNosotros {
+        @include p_size768;
       }
     }
     .img__nosotrosUno {
       img {
         width: 400px;
-        height: auto;
-        border-radius: 5px;
-        margin: 15px auto;
         @include centrarElementos;
       }
     }
     .img__nosotrosDos {
       img {
         width: 400px;
-        height: auto;
-        border-radius: 5px;
-        margin: 15px auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      }
+    }
+    .idMarca {
+      h2 {
+        @include h2_size768;
+      }
+    }
+    .mision {
+      h2 {
+        @include h2_size768;
+      }
+      p {
+      @include p_size768;
+      }
+    }
+    .vision {
+      h2 {
+        @include h2_size768;
+      }
+      p {
+        @include p_size768;
       }
     }
     .seccionCaracteristicas {
-      background-color: $beige;
-      border: 1px solid $beige;
-      h2 {
-        text-align: center;
-        font-size: 1.5em;
-        color: $blueking;
-        margin: 35px 0px 70px 0px;
+      .tituloCaracteristicas {
+        @include h2_size768;
       }
       .seccionLogos {
         .logo_nosotros {
           img {
             width: 48px;
-            height: auto;
-            margin: 10px 5px ;
           }
           h3 {
-            font-size: 1.2em;
+            @include h3_size768;
           }
           p {
-            margin: 25px;
-            text-wrap: pretty;
-            font-size: 0.6em;
+            margin: 15px 0 55px 0;
+            @include pLogos_size768;
           }
         }
       }
@@ -276,52 +250,41 @@
 @media screen and (min-width: 1024px) {
     .nosotros {
       .tituloNosotros {
-        font-size: 16px;
         margin: 45px 15px;
-        font-size: 1.4em;
-        padding-right: 30px;
+        @include h1_size1024;
       }
       .textoNosotros {
-        width: 80%;
         margin: 45px 15px 15px 15px;
-        font-size: 15px;
         text-wrap: pretty;
         line-height: 30px;
         padding-left: 60px;
+        @include p_size1024;
       }
     }
     .img__nosotrosUno {
       width: 50%;
       img {
         width: 480px;
-        margin: 15px auto;
-        display: flex;
-        justify-content: center; 
-        align-items: center;
         margin-top: 55px;
       }
     }
     .img__nosotrosDos {
       img {
         width: 480px;
-        margin: 15px auto;
-        display: flex;
-        justify-content: center;         
-        align-items: center;
         margin-bottom: 60px;
       }
     }
     .mision {
-      margin-top: 65px;
+      margin-top: 10px;
       p {
-        font-size: 15px;
+        @include p_size1024;
       }
     }
     .vision {
-      margin-top: 75px;
+      margin-top: 15px;
       p {
-        font-size: 15px;
         margin-bottom: 60px;
+        @include p_size1024;
       }
     }
     .seccionCaracteristicas {
@@ -329,9 +292,9 @@
       border: 5px solid $beige;
       h2 {
         text-align: center;
-        font-size: 1.7em;
         color: $blueking;
         margin: 35px 0px 70px 0px;
+        @include h2_size1024;
       }
       .seccionLogos {
         background-color: $beige;
@@ -347,13 +310,13 @@
           margin: 15px 25px;
         }
         h3 {
-          font-size: 1.2em;
+          @include h3_size1024;
         }
         p {
           margin: 25px;
           text-wrap: pretty;
-          font-size: 0.9em;
           display: inline-block;
+          @include p_size1024;
         }
       }
     }

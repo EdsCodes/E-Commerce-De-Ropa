@@ -17,11 +17,8 @@ body {
   overflow-x: hidden;
 }
 
-    /*Header y footer de todas las paginas del sitio*/
-@import "header";
-@import "footer";
 
-    /*Mixins de los estilos Standard y de los mas usados*/
+/*Mixins de los estilos Standard y de los mas usados*/
 
 /*Mixin de botones de venta superpuestos en imagenes de pagina ppal (index). Dividido en media queries (min-width) de _320px, _480px, _768px y _1024px:*/
 @mixin seccionVtasPagPpal_320 {
@@ -81,7 +78,6 @@ body {
     }
   }
 }
-
 @mixin seccionVtasPagPpal_480 {
   .seccionVtaImgsPpal{
     display: flex;
@@ -227,7 +223,77 @@ body {
   align-items: center;
 }
 
-    /*Paginas del sitio*/
+/*Tamaños de texto standard para h1, h2, h3, p de los mains de las pags y p de los logos o imgs, divididos por media queries: */
+/*--TextSizes standard _320px*/
+@mixin h1_size320 {
+  font-size: 1.2em;
+} 
+@mixin h2_size320{
+  font-size: 1em;
+}
+@mixin h3_size320{
+  font-size: 0.9em;
+}
+@mixin p_size320{
+  font-size: 0.7em;
+}
+@mixin pLogos_size320{
+  font-size: 0.5em;
+}
+/*--TextSizes standard _480px*/
+@mixin h1_size480 {
+  font-size: 1.4em;
+} 
+@mixin h2_size480{
+  font-size: 1.2em;
+}
+@mixin h3_size480{
+  font-size: 1.1em;
+}
+@mixin p_size480{
+  font-size: 0.8em;
+}
+@mixin pLogos_size480{
+  font-size: 0.6em;
+}
+/*--TextSizes standard _768px*/
+@mixin h1_size768 {
+  font-size: 1.6em;
+} 
+@mixin h2_size768{
+  font-size: 1.4em;
+}
+@mixin h3_size768{
+  font-size: 1.3em;
+}
+@mixin p_size768{
+  font-size: 0.9em;
+}
+@mixin pLogos_size768{
+  font-size: 0.7em;
+}
+/*--TextSizes standard _1024px*/
+@mixin h1_size1024 {
+  font-size: 1.8em;
+} 
+@mixin h2_size1024{
+  font-size: 1.6em;
+}
+@mixin h3_size1024{
+  font-size: 1.5em;
+}
+@mixin p_size1024{
+  font-size: 1em;
+}
+@mixin pLogos_size1024-{
+  font-size: 0.8em;
+}
+
+/*Header y footer de todas las paginas del sitio*/
+@import "header";
+@import "footer";
+
+/*Paginas del sitio*/
 @import "index";
 @import "guiatallas";
 @import "nosotros";
