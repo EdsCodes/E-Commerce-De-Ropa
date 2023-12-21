@@ -160,7 +160,7 @@
     }
   }
   
-  @media screen and (min-width: 1024px) {
+ @media screen and (min-width: 1024px) {
     .Titulo_parrafoUno h1{
       @include h1_size1024;
     }
@@ -175,7 +175,7 @@
       }
       .videoYt {
         width: 80%;
-        margin-bottom: 50px;
+        margin-top: 50px;
         iframe {
           width: 450px;
           height: 305px;
@@ -207,7 +207,7 @@
       }
       table {
         width: 100%;
-        margin-bottom: 0px;
+        margin-bottom: 40px;
         @include p_size1024;
       }
     }
