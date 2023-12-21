@@ -3,13 +3,12 @@
     .tituloArticuloVta {
         margin-top: 15px;
         .articulo {
-            font-size: 0.72em;
-            
+            @include h2_size320;
         }
         .ref_articulo {
-            font-size: 0.5em;
             color: $orangered;
             font-style: italic;
+            @include p_size320;
         }
     }
     .columnaIzqCompras {
@@ -49,19 +48,20 @@
         }
         .descripcion_productovta {
             margin-top: 20px;
-            font-size: 0.6em;
             line-height: 15px;
             text-wrap: pretty;
+            @include p_size320;
         }
     }
     .columnaDerCompras {
         .precio_articulovta {
             color: $orangered;
+            @include h3_size320;
         }
         .seccionColorProd {
             display: flex;
             .tittleColores{
-                font-size: 0.8em;
+                @include p_size320;
             }
             .color-selector {
                 text-align: center;
@@ -80,7 +80,7 @@
             }
         }
         .seccionTallaProd{
-            font-size: 0.6em;
+            @include p_size320;
             a {
                 text-decoration: none;
                 color: inherit;
@@ -102,7 +102,7 @@
             display: flex;
             justify-content: space-between;
             .seccionCantidadProd{
-                font-size: 0.6em; 
+                @include p_size320; 
                 input {
                     width: 120px;
                     height: 20px;
@@ -126,9 +126,9 @@
                     margin-left: 10px;
                     .textoLogos {
                         @include centrarElementos;
-                        font-size: 0.4em;
-                        margin: 5px;
+                        margin: 3px;
                         text-wrap:balance;
+                        @include pLogos_size320;
                     }
                     img {
                         width: 30px;
@@ -144,12 +144,12 @@
 @media screen and (min-width: 480px) {
     .tituloArticuloVta {
         .articulo {
-            font-size: 1.1em;
+            @include h2_size480;
         }
         .ref_articulo {
-            font-size: 0.7em;
             color: $orangered;
             font-style: italic;
+            @include p_size480;
         }
     }
     .columnaIzqCompras {
@@ -183,21 +183,23 @@
         }
         .descripcion_productovta {
             margin-top: 20px;
-            font-size: 0.8em;
             line-height: 15px;
+            @include p_size480;
         }
     }
     .columnaDerCompras {
+        .precio_articulovta {
+            @include h3_size480;
+        }
         .seccionColorProd {
             .tittleColores{
-                font-size: 0.6em;
+                @include p_size480;
             }
             .color-selector {
                 .color-input {
                     display: none;
                 }
                 .color-label {
-                    display: inline-block;
                     width: 25px;
                     height: 25px;
                     border: 1px solid white;
@@ -205,7 +207,7 @@
             }
         }
         .seccionTallaProd{
-            font-size: 0.8em;
+            @include p_size480;
             a {
                 text-decoration: none;
                 color: inherit;
@@ -215,24 +217,13 @@
                 margin: 5px 0px 15px;
                 input {
                     width: 60px;
-                    border-radius: 5px;
-                    font-size: 0.8em;
-                    background-color: $beige;
-                    color: $blueking  ;
                 }
             }
         }
         .bloqueCantidadLogos{
-            display: flex;
-            justify-content: space-between;
             .seccionCantidadProd{
-                font-size: 0.7em; 
-                input {
-                    width: 120px;
-                    height: 20px;
-                }
+                @include p_size480; 
                 .botonesAccionCompra{
-                    margin-bottom: 10px;
                     input {
                         @include botonesDeAccion;
                         width: 100%;
@@ -240,22 +231,13 @@
                 }
             }
             .areaTextoLogosVrAgreg {
-                display: flex;
                 .textoLogosVrAgreg {
                     width: 30%;
-                    display: flex;
-                    flex-direction: column;
                     margin-left: 0px;
                     .textoLogos {
                         @include centrarElementos;
-                        font-size: 0.5em;
                         margin: 15px;
-                    }
-                    img {
-                        width: 30px;
-                        height: auto;
-                        text-align: center;
-                        margin: 0px auto;
+                        @include pLogos_size480;
                     }
                 }
             }
@@ -265,10 +247,10 @@
 @media screen and (min-width: 768px) {
     .tituloArticuloVta {
         .articulo {
-            font-size: 1.3em;
+            @include h2_size768;
         }
         .ref_articulo {
-            font-size: 0.9em;
+            @include p_size768;
         }
     }
     .columnaIzqCompras {
@@ -292,17 +274,17 @@
             }
         }
         .descripcion_productovta {
-            font-size: 0.9em;
             line-height: 20px;
+            @include p_size768;
         }
     }
     .columnaDerCompras{
         .precio_articulovta {
-            font-size: 1.1em;
+            @include h3_size768;
         }
         .seccionColorProd {
             .tittleColores{
-                font-size: 0.9em;
+                @include p_size768;
             }
             .color-selector {
                 .color-label {
@@ -312,7 +294,7 @@
             }
         }
         .seccionTallaProd{
-            font-size: 0.9em;
+            @include p_size768;
             .botonestallacompra {
                 input {
                     width: 60px;
@@ -321,20 +303,8 @@
             }
         }
         .bloqueCantidadLogos {
-            .areaTextoLogosVrAgreg {
-                .textoLogosVrAgreg {
-                    .textoLogos {
-                        font-size: 0.6em;
-                    }
-                    img {
-                        width: 35px;
-                    }
-                }
-            }
-        }
-        .bloqueCantidadLogos{
             .seccionCantidadProd{
-                font-size: 0.7em; 
+                @include p_size768; 
                 input {
                     width: 120px;
                     height: 20px;
@@ -346,6 +316,17 @@
                     }
                 }
             }
+            .areaTextoLogosVrAgreg {
+                .textoLogosVrAgreg {
+                    .textoLogos {
+                        @include pLogos_size768;
+                    }
+                    img {
+                        width: 35px;
+                    }
+                }
+            }
+        
         }
     }
 }
@@ -353,92 +334,55 @@
     .tituloArticuloVta {
         margin: 20px 0px 30px 12px;
         .articulo {
-            font-size: 1.5em;
+            @include h2_size1024;
         }
         .ref_articulo {
-            font-size: 0.9em;
+            @include p_size1024;
         }
     }
     .columnaIzqCompras {
-        .imgs_vta {
-            .grupoImgsA {
-                img{
-                    width: 230px;
-                }
-            }
-            .grupoImgsB {
-                img{
-                    width: 230px;
-                }
-            }
-        }
-        .botones_vta {
-            input {
-                @include botonesDeAccion;
-                width: 30%;
-                font-size: 70%;
-            }
-        }
         .descripcion_productovta {
-            font-size: 0.9em;
-            line-height: 20px;
             margin: 20px 10px 30px 12px;
+            @include p_size1024;
         }
     }
     .columnaDerCompras{
         .precio_articulovta {
-            font-size: 1.2em;
             margin-bottom: 30px;
+            @include h3_size1024;
         }
         .seccionColorProd {
             .tittleColores{
-                font-size: 1em;
-            }
-            .color-selector {
-                .color-label {
-                    width: 28px;
-                    height: 28px;
-                }
+                @include p_size1024;
             }
         }
         .seccionTallaProd{
-            font-size: 1em;
+            @include p_size1024;
             margin-top: 60px;
             .botonestallacompra {
                 margin-bottom: 20px;
                 input {
-                    width: 60px;
                     font-size: 1em;
                 }
             }
         }
         .bloqueCantidadLogos {
-            .areaTextoLogosVrAgreg {
-                .textoLogosVrAgreg {
-                    margin-top: 50px;
-                    .textoLogos {
-                        font-size: 0.6em;
-                    }
-                    img {
-                        width: 35px;
-                    }
-                }
-            }
-        }
-        .bloqueCantidadLogos{
             .seccionCantidadProd{
-                font-size: 0.8em; 
-                input {
-                    width: 120px;
-                    height: 20px;
-                }
+                @include p_size1024; 
                 .botonesAccionCompra{
                     margin-top: 50px;
                     input {
                         @include botonesDeAccion;
                         width: 250px;
-                        font-size: 90%;
                         margin-top: 10px;
+                    }
+                }
+            }
+            .areaTextoLogosVrAgreg {
+                .textoLogosVrAgreg {
+                    margin-top: 50px;
+                    .textoLogos {
+                        @include pLogos_size1024;
                     }
                 }
             }

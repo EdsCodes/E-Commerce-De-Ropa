@@ -17,8 +17,7 @@ body {
   overflow-x: hidden;
 }
 
-
-/*Mixins de los estilos Standard y de los mas usados*/
+/*Mixins de los estilos Standard y de los mas usados--->*/
 
 /*Mixin de botones de venta superpuestos en imagenes de pagina ppal (index). Dividido en media queries (min-width) de _320px, _480px, _768px y _1024px:*/
 @mixin seccionVtasPagPpal_320 {
@@ -201,7 +200,7 @@ body {
   box-shadow: 0 3px 8px black;
 }
 
-/*Botones de accion de toda la pagina*/
+/*Botones de accion de toda el sitio web*/
 @mixin botonesDeAccion {
   width: 140px;
   height: 25px;
@@ -223,7 +222,7 @@ body {
   align-items: center;
 }
 
-/*Tamaños de texto standard para h1, h2, h3, p de los mains de las pags y p de los logos o imgs, divididos por media queries: */
+/*Para las paginas con mucho texto, se definió tamaños de texto standard para h1, h2, h3, p de pags y p de los logos o imgs, divididos por media queries: */
 /*--TextSizes standard _320px*/
 @mixin h1_size320 {
   font-size: 1.2em;
@@ -285,7 +284,7 @@ body {
 @mixin p_size1024{
   font-size: 1em;
 }
-@mixin pLogos_size1024-{
+@mixin pLogos_size1024{
   font-size: 0.8em;
 }
 

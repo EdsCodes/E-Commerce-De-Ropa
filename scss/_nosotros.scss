@@ -288,35 +288,22 @@
       }
     }
     .seccionCaracteristicas {
-      background-color: $beige;
-      border: 5px solid $beige;
       h2 {
-        text-align: center;
-        color: $blueking;
         margin: 35px 0px 70px 0px;
         @include h2_size1024;
       }
       .seccionLogos {
-        background-color: $beige;
-        border: 1px solid $beige;
-        text-align: center;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
         .logo_nosotros {
         img {
           width: 55px;
-          height: auto;
-          margin: 15px 25px;
+          margin: 15px auto;
         }
         h3 {
           @include h3_size1024;
         }
         p {
-          margin: 25px;
-          text-wrap: pretty;
-          display: inline-block;
-          @include p_size1024;
+          margin: 5px 0 85px 0;
+          @include pLogos_size1024;
         }
       }
     }

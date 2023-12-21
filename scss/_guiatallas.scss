@@ -2,32 +2,35 @@
 @media screen and (min-width: 320px) {
     .Titulo_parrafoUno h1{
       text-align: center;
-      font-size: 1.2em;
       margin: 35px;
       color: $brown;
+      @include h1_size320;
     }
     .section_parrafoUno {
       .subTitulo_parrafoUno h3{
-        font-size: 1em;
         color: $brown;
+        margin-bottom: 25px;
+        @include h3_size320;
       }
     .parrafoUno {
       p{
-        font-size: 10px;
         text-wrap: pretty;
+        @include p_size320;
       }
     }
     }
     .videoYt {
+      @include centrarElementos;
+      margin: 1px auto;
       iframe {
         width: 260px;
         height: 180px;
-        margin-left: 15px;
       }
     }
     .parrafoDos {
+      margin-top: 30px;
       p {
-        font-size: 10px;
+        @include p_size320;
       }
       .tablaMujeres {
         @include centrarElementos;
@@ -35,11 +38,11 @@
           text-align: center;
           margin-top: 20px;
           color: $brown;
-          font-size: 1em;
+          @include h2_size320;
         }
         table {
-          font-size: 10px;
           width: 90%;
+          @include p_size320;
         }
       }
       .tablaHombres {
@@ -49,55 +52,55 @@
           margin-top: 20px;
           color: $brown;
           margin-left: -15px;
-          font-size: 1em;
+          @include h2_size320;
         }
         table {
-          font-size: 10px;
           width: 90%;
+          @include p_size320;
         }
       }
     }
   }
+  
 @media screen and (min-width: 480px) {
     .Titulo_parrafoUno h1{
-      font-size: 1.5em;
+      @include h1_size480;
     }
     .section_parrafoUno {
       .subTitulo_parrafoUno h3{
-        font-size: 1.2em;
+        @include h3_size480;
       }
-    .parrafoUno {
-      p{
-        font-size: 12px;
+      .parrafoUno {
+        p{
+          @include p_size480;
+        }
       }
-    }
     }
     .videoYt {
       iframe {
         width: 420px;
         height: 255px;
-        margin-left: 15px;
       }
     }
     .parrafoDos {
       p {
-        font-size: 12px;
+        @include p_size480;
       }
       .tablaMujeres {
         @include centrarElementos;
         h2 {
-          font-size: 1.2em;
+          @include h2_size480;
         }
         table {
-          font-size: 12px;
+          @include p_size480;
         }
       }
       .tablaHombres {
         h2 {
-          font-size: 1.2em;
+          @include h2_size480;
         }
         table {
-          font-size: 12px;
+          @include p_size480;
         }
       }
     }
@@ -105,17 +108,17 @@
   
   @media screen and (min-width: 768px) {
     .Titulo_parrafoUno h1{
-      font-size: 1.6em;
       margin: 35px;
+      @include h1_size768;
     }
     .section_parrafoUno {
       margin-top: 30px;
       .subTitulo_parrafoUno h3{
-        font-size: 1.3em;
+        @include h3_size768;
       }
     .parrafoUno {
       p{
-        font-size: 13px;
+        @include p_size768;
       }
     }
     }
@@ -132,78 +135,80 @@
     }
     .parrafoDos {
       p {
-        font-size: 13px;
+        margin-top: 35px;
+        @include p_size768;
       }
       .tablaMujeres {
         h2 {
           margin-top: 20px;
-          font-size: 1.3em;
+          @include h2_size768;
         }
       }
       table {
-        font-size: 13px;
+        @include p_size768;
       }
     }
     .tablaHombres {
       h2 {
         margin-top: 20px;
-        font-size: 1.3em;
+        @include h2_size768;
       }
       table {
-        font-size: 12px;
+        margin-bottom: 65px;
+        @include p_size768;
       }
     }
   }
   
   @media screen and (min-width: 1024px) {
     .Titulo_parrafoUno h1{
-      font-size: 2em;
+      @include h1_size1024;
     }
     .section_parrafoUno {
       .subTitulo_parrafoUno h3{
-        font-size: 1.4em;
+        @include h3_size1024;
       }
       .parrafoUno {
         p{
-          font-size: 14px;
+          @include p_size1024;
         }
       }
       .videoYt {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        width: 80%;
         margin-bottom: 50px;
         iframe {
-          width: 600px;
-          height: 355px;
+          width: 450px;
+          height: 305px;
           margin: 5px auto;
         }
       }
     }
     .parrafoDos {
-      margin-top: 64px;
+      margin-top: 50px;
       p {
-        font-size: 14px;
+        @include p_size1024;
       }
       .tablaMujeres {
+        margin-top: 40px;
         h2 {
           margin-top: 20px;
-          font-size: 1.4em;
+          @include h2_size1024;
         }
       }
       table {
-        font-size: 14px;
+        @include p_size1024;
       }
     }
     .tablaHombres {
+      margin-top: 40px;
       h2 {
         margin-top: 20px;
-        font-size: 1.4em;
+        @include h2_size1024;
       }
       table {
         width: 100%;
-        font-size: 14px;
+        margin-bottom: 0px;
+        @include p_size1024;
       }
     }
   }

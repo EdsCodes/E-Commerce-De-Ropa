@@ -12,12 +12,12 @@ body {
   overflow-x: hidden;
 }
 
-/*Mixins de los estilos Standard y de los mas usados*/
+/*Mixins de los estilos Standard y de los mas usados--->*/
 /*Mixin de botones de venta superpuestos en imagenes de pagina ppal (index). Dividido en media queries (min-width) de _320px, _480px, _768px y _1024px:*/
 /*Mixin estilo de Imgs de venta en la pag Ppal*/
-/*Botones de accion de toda la pagina*/
+/*Botones de accion de toda el sitio web*/
 /*Para centrar elementos...*/
-/*Tamaños de texto standard para h1, h2, h3, p de los mains de las pags y p de los logos o imgs, divididos por media queries: */
+/*Para las paginas con mucho texto, se definió tamaños de texto standard para h1, h2, h3, p de pags y p de los logos o imgs, divididos por media queries: */
 /*--TextSizes standard _320px*/
 /*--TextSizes standard _480px*/
 /*--TextSizes standard _768px*/
@@ -377,10 +377,10 @@ body {
     margin: 5px auto;
   }
   .imgSupFondo h3 {
-    font-size: 0.9rem;
     margin-top: 40px;
     text-align: center;
     align-content: center;
+    font-size: 0.9rem;
   }
   .imgBotonesArriba {
     background-image: url(../multi/img_jeanFondo.jpeg);
@@ -1591,25 +1591,35 @@ body {
 @media screen and (min-width: 320px) {
   .Titulo_parrafoUno h1 {
     text-align: center;
-    font-size: 1.2em;
     margin: 35px;
     color: #BCA37F;
+    font-size: 1.2em;
   }
   .section_parrafoUno .subTitulo_parrafoUno h3 {
-    font-size: 1em;
     color: #BCA37F;
+    margin-bottom: 25px;
+    font-size: 0.9em;
   }
   .section_parrafoUno .parrafoUno p {
-    font-size: 10px;
     text-wrap: pretty;
+    font-size: 0.7em;
+  }
+  .videoYt {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 1px auto;
   }
   .videoYt iframe {
     width: 260px;
     height: 180px;
-    margin-left: 15px;
+  }
+  .parrafoDos {
+    margin-top: 30px;
   }
   .parrafoDos p {
-    font-size: 10px;
+    font-size: 0.7em;
   }
   .parrafoDos .tablaMujeres {
     display: flex;
@@ -1624,8 +1634,8 @@ body {
     font-size: 1em;
   }
   .parrafoDos .tablaMujeres table {
-    font-size: 10px;
     width: 90%;
+    font-size: 0.7em;
   }
   .parrafoDos .tablaHombres {
     display: flex;
@@ -1641,27 +1651,26 @@ body {
     font-size: 1em;
   }
   .parrafoDos .tablaHombres table {
-    font-size: 10px;
     width: 90%;
+    font-size: 0.7em;
   }
 }
 @media screen and (min-width: 480px) {
   .Titulo_parrafoUno h1 {
-    font-size: 1.5em;
+    font-size: 1.4em;
   }
   .section_parrafoUno .subTitulo_parrafoUno h3 {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
   .section_parrafoUno .parrafoUno p {
-    font-size: 12px;
+    font-size: 0.8em;
   }
   .videoYt iframe {
     width: 420px;
     height: 255px;
-    margin-left: 15px;
   }
   .parrafoDos p {
-    font-size: 12px;
+    font-size: 0.8em;
   }
   .parrafoDos .tablaMujeres {
     display: flex;
@@ -1673,19 +1682,19 @@ body {
     font-size: 1.2em;
   }
   .parrafoDos .tablaMujeres table {
-    font-size: 12px;
+    font-size: 0.8em;
   }
   .parrafoDos .tablaHombres h2 {
     font-size: 1.2em;
   }
   .parrafoDos .tablaHombres table {
-    font-size: 12px;
+    font-size: 0.8em;
   }
 }
 @media screen and (min-width: 768px) {
   .Titulo_parrafoUno h1 {
-    font-size: 1.6em;
     margin: 35px;
+    font-size: 1.6em;
   }
   .section_parrafoUno {
     margin-top: 30px;
@@ -1694,7 +1703,7 @@ body {
     font-size: 1.3em;
   }
   .section_parrafoUno .parrafoUno p {
-    font-size: 13px;
+    font-size: 0.9em;
   }
   .videoYt {
     display: flex;
@@ -1708,65 +1717,71 @@ body {
     margin: 5px auto;
   }
   .parrafoDos p {
-    font-size: 13px;
+    margin-top: 35px;
+    font-size: 0.9em;
   }
   .parrafoDos .tablaMujeres h2 {
     margin-top: 20px;
-    font-size: 1.3em;
+    font-size: 1.4em;
   }
   .parrafoDos table {
-    font-size: 13px;
+    font-size: 0.9em;
   }
   .tablaHombres h2 {
     margin-top: 20px;
-    font-size: 1.3em;
+    font-size: 1.4em;
   }
   .tablaHombres table {
-    font-size: 12px;
+    margin-bottom: 65px;
+    font-size: 0.9em;
   }
 }
 @media screen and (min-width: 1024px) {
   .Titulo_parrafoUno h1 {
-    font-size: 2em;
+    font-size: 1.8em;
   }
   .section_parrafoUno .subTitulo_parrafoUno h3 {
-    font-size: 1.4em;
+    font-size: 1.5em;
   }
   .section_parrafoUno .parrafoUno p {
-    font-size: 14px;
+    font-size: 1em;
   }
   .section_parrafoUno .videoYt {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 80%;
     margin-bottom: 50px;
   }
   .section_parrafoUno .videoYt iframe {
-    width: 600px;
-    height: 355px;
+    width: 450px;
+    height: 305px;
     margin: 5px auto;
   }
   .parrafoDos {
-    margin-top: 64px;
+    margin-top: 50px;
   }
   .parrafoDos p {
-    font-size: 14px;
+    font-size: 1em;
+  }
+  .parrafoDos .tablaMujeres {
+    margin-top: 40px;
   }
   .parrafoDos .tablaMujeres h2 {
     margin-top: 20px;
-    font-size: 1.4em;
+    font-size: 1.6em;
   }
   .parrafoDos table {
-    font-size: 14px;
+    font-size: 1em;
+  }
+  .tablaHombres {
+    margin-top: 40px;
   }
   .tablaHombres h2 {
     margin-top: 20px;
-    font-size: 1.4em;
+    font-size: 1.6em;
   }
   .tablaHombres table {
     width: 100%;
-    font-size: 14px;
+    margin-bottom: 0px;
+    font-size: 1em;
   }
 }
 /* <---Nosotros---> */
@@ -2015,37 +2030,20 @@ body {
     margin-bottom: 60px;
     font-size: 1em;
   }
-  .seccionCaracteristicas {
-    background-color: #EAD7BB;
-    border: 5px solid #EAD7BB;
-  }
   .seccionCaracteristicas h2 {
-    text-align: center;
-    color: #113946;
     margin: 35px 0px 70px 0px;
     font-size: 1.6em;
   }
-  .seccionCaracteristicas .seccionLogos {
-    background-color: #EAD7BB;
-    border: 1px solid #EAD7BB;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
   .seccionCaracteristicas .seccionLogos .logo_nosotros img {
     width: 55px;
-    height: auto;
-    margin: 15px 25px;
+    margin: 15px auto;
   }
   .seccionCaracteristicas .seccionLogos .logo_nosotros h3 {
     font-size: 1.5em;
   }
   .seccionCaracteristicas .seccionLogos .logo_nosotros p {
-    margin: 25px;
-    text-wrap: pretty;
-    display: inline-block;
-    font-size: 1em;
+    margin: 5px 0 85px 0;
+    font-size: 0.8em;
   }
 }
 @media screen and (min-width: 320px) {
@@ -2054,10 +2052,10 @@ body {
   }
   .columnaGestionUsuario .TituloRegistro {
     text-align: center;
-    font-size: 0.9em;
     margin: 30px 0px 20px 0px;
     width: 100%;
     color: #ff4500;
+    font-size: 1em;
   }
   .columnaGestionUsuario .seccionFormularios .formularioRegistro {
     border: solid 1px #113946;
@@ -2074,7 +2072,7 @@ body {
   }
   .columnaGestionUsuario .seccionFormularios .formularioRegistro .campoFormulario input {
     width: 98%;
-    margin: 4px auto;
+    margin: 3px auto;
     padding: 2px;
     font-size: 80%;
     border-radius: 5px;
@@ -2082,11 +2080,12 @@ body {
   .columnaGestionUsuario .seccionFormularios .formularioRegistro .campoGenero {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-content: center;
-    margin: 5px 5px 0 0;
+    justify-content: center;
+    align-items: center;
+    margin: 3px auto;
   }
   .columnaGestionUsuario .seccionFormularios .formularioRegistro .campoGenero p {
+    margin: 5px;
     font-size: 0.6em;
   }
   .columnaGestionUsuario .seccionFormularios .formularioRegistro .campoFechanac {
@@ -2116,6 +2115,10 @@ body {
     font-size: 80%;
   }
   .columnaGestionUsuario .seccionFormularios .formularioRegistro .termCondic {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     font-size: 0.5em;
     margin: 10px 0 10px;
     align-content: center;
@@ -2143,9 +2146,9 @@ body {
   }
   .columnaGestionUsuario .seccionFormularios .tituloIngSesion {
     text-align: center;
-    font-size: 0.9em;
     margin: 50px 0px 40px 0px;
     width: 100%;
+    font-size: 1em;
   }
   .columnaGestionUsuario .seccionFormularios .formularioInicioSesion {
     border: solid 1px #113946;
@@ -2175,17 +2178,16 @@ body {
     font-size: 80%;
     border-radius: 5px;
   }
-  .columnaGestionUsuario .seccionFormularios .formularioInicioSesion .gestionDatosUsuario {
+  .columnaGestionUsuario .seccionFormularios .formularioInicioSesion .gestionDatosUsuario .checboxIngSesion {
+    width: 45%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    align-content: center;
     align-items: center;
-  }
-  .columnaGestionUsuario .seccionFormularios .formularioInicioSesion .gestionDatosUsuario .checboxIngSesion {
     font-size: 0.5em;
-    margin: 5px 0 5px;
-    align-content: ce;
-    width: 150px;
+    text-wrap: nowrap;
+    margin: 5px;
   }
   .columnaGestionUsuario .seccionFormularios .formularioInicioSesion .gestionDatosUsuario .olvidoContrasena a {
     text-decoration: none;
@@ -2219,7 +2221,7 @@ body {
   }
   .columnaGestionUsuario .seccionFormularios .img_relleno_pagSesioReg img {
     width: 60%;
-    margin: 20px 0px 125px;
+    margin: 40px auto;
     border-radius: 40px;
   }
   .columnaGestionUsuario .seccionFormularios .img_relleno_pagSesioReg :hover {
@@ -2228,7 +2230,7 @@ body {
   .imgSesionReg {
     align-items: center;
     text-align: center;
-    margin: 40px auto;
+    margin: 10px auto;
     width: 95%;
   }
   .imgSesionReg img {
@@ -2241,37 +2243,13 @@ body {
 }
 @media screen and (min-width: 480px) {
   .columnaGestionUsuario .TituloRegistro {
-    font-size: 1.1em;
-    margin: 50px 0px 40px 0px;
+    margin: 30px auto;
     width: 95%;
-    color: #ff4500;
+    font-size: 1.2em;
   }
   .columnaGestionUsuario .seccionFormularios .formularioRegistro {
-    border: solid 1px #113946;
-    border-radius: 8px;
-    padding: 25px;
-    background-color: #EAD7BB;
-    color: #113946;
-    box-shadow: 0 3px 8px #113946;
     width: 95%;
-  }
-  .columnaGestionUsuario .seccionFormularios .formularioRegistro .campoFormulario {
-    text-align: center;
-    margin: 0px auto;
-  }
-  .columnaGestionUsuario .seccionFormularios .formularioRegistro .campoFormulario input {
-    width: 98%;
-    margin: 4px auto;
-    padding: 2px;
-    font-size: 80%;
-    border-radius: 5px;
-  }
-  .columnaGestionUsuario .seccionFormularios .formularioRegistro .campoGenero {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: center;
-    margin: 5px 5px 0 0;
+    margin: 1px auto;
   }
   .columnaGestionUsuario .seccionFormularios .formularioRegistro .campoGenero p {
     font-size: 0.8em;
@@ -2329,9 +2307,9 @@ body {
   }
   .columnaGestionUsuario .seccionFormularios .tituloIngSesion {
     text-align: center;
-    font-size: 1.1em;
-    margin: 50px 0px 40px 0px;
+    margin: 60px 0px 40px 0px;
     width: 95%;
+    font-size: 1.2em;
   }
   .columnaGestionUsuario .seccionFormularios .formularioInicioSesion {
     border: solid 1px #113946;
@@ -2411,18 +2389,9 @@ body {
   .columnaGestionUsuario .seccionFormularios .img_relleno_pagSesioReg :hover {
     box-shadow: 0 3px 8px #113946;
   }
-  .imgSesionReg {
-    align-items: center;
-    text-align: center;
-    margin: 40px auto;
-    width: 95%;
-  }
   .imgSesionReg img {
     width: 430px;
     height: auto;
-    align-items: center;
-    border-radius: 10px;
-    margin-right: 25px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -2430,10 +2399,10 @@ body {
     margin: 0px auto;
   }
   .columnaGestionUsuario .TituloRegistro {
-    font-size: 1.2em;
+    font-size: 1.4em;
   }
   .columnaGestionUsuario .seccionFormularios .formularioRegistro {
-    width: 98%;
+    width: 100%;
   }
   .columnaGestionUsuario .seccionFormularios .formularioRegistro .campoFormulario input {
     font-size: 85%;
@@ -2567,12 +2536,12 @@ body {
     margin-top: 15px;
   }
   .tituloArticuloVta .articulo {
-    font-size: 0.72em;
+    font-size: 1em;
   }
   .tituloArticuloVta .ref_articulo {
-    font-size: 0.5em;
     color: #ff4500;
     font-style: italic;
+    font-size: 0.7em;
   }
   .columnaIzqCompras .imgs_vta {
     display: flex;
@@ -2630,18 +2599,19 @@ body {
   }
   .columnaIzqCompras .descripcion_productovta {
     margin-top: 20px;
-    font-size: 0.6em;
     line-height: 15px;
     text-wrap: pretty;
+    font-size: 0.7em;
   }
   .columnaDerCompras .precio_articulovta {
     color: #ff4500;
+    font-size: 0.9em;
   }
   .columnaDerCompras .seccionColorProd {
     display: flex;
   }
   .columnaDerCompras .seccionColorProd .tittleColores {
-    font-size: 0.8em;
+    font-size: 0.7em;
   }
   .columnaDerCompras .seccionColorProd .color-selector {
     text-align: center;
@@ -2659,7 +2629,7 @@ body {
     border-radius: 50%;
   }
   .columnaDerCompras .seccionTallaProd {
-    font-size: 0.6em;
+    font-size: 0.7em;
   }
   .columnaDerCompras .seccionTallaProd a {
     text-decoration: none;
@@ -2682,7 +2652,7 @@ body {
     justify-content: space-between;
   }
   .columnaDerCompras .bloqueCantidadLogos .seccionCantidadProd {
-    font-size: 0.6em;
+    font-size: 0.7em;
   }
   .columnaDerCompras .bloqueCantidadLogos .seccionCantidadProd input {
     width: 120px;
@@ -2720,9 +2690,9 @@ body {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    font-size: 0.4em;
-    margin: 5px;
+    margin: 3px;
     text-wrap: balance;
+    font-size: 0.5em;
   }
   .columnaDerCompras .bloqueCantidadLogos .areaTextoLogosVrAgreg .textoLogosVrAgreg img {
     width: 30px;
@@ -2733,12 +2703,12 @@ body {
 }
 @media screen and (min-width: 480px) {
   .tituloArticuloVta .articulo {
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
   .tituloArticuloVta .ref_articulo {
-    font-size: 0.7em;
     color: #ff4500;
     font-style: italic;
+    font-size: 0.8em;
   }
   .columnaIzqCompras .imgs_vta {
     display: flex;
@@ -2790,17 +2760,19 @@ body {
   }
   .columnaIzqCompras .descripcion_productovta {
     margin-top: 20px;
-    font-size: 0.8em;
     line-height: 15px;
+    font-size: 0.8em;
+  }
+  .columnaDerCompras .precio_articulovta {
+    font-size: 1.1em;
   }
   .columnaDerCompras .seccionColorProd .tittleColores {
-    font-size: 0.6em;
+    font-size: 0.8em;
   }
   .columnaDerCompras .seccionColorProd .color-selector .color-input {
     display: none;
   }
   .columnaDerCompras .seccionColorProd .color-selector .color-label {
-    display: inline-block;
     width: 25px;
     height: 25px;
     border: 1px solid white;
@@ -2818,24 +2790,9 @@ body {
   }
   .columnaDerCompras .seccionTallaProd .botonestallacompra input {
     width: 60px;
-    border-radius: 5px;
-    font-size: 0.8em;
-    background-color: #EAD7BB;
-    color: #113946;
-  }
-  .columnaDerCompras .bloqueCantidadLogos {
-    display: flex;
-    justify-content: space-between;
   }
   .columnaDerCompras .bloqueCantidadLogos .seccionCantidadProd {
-    font-size: 0.7em;
-  }
-  .columnaDerCompras .bloqueCantidadLogos .seccionCantidadProd input {
-    width: 120px;
-    height: 20px;
-  }
-  .columnaDerCompras .bloqueCantidadLogos .seccionCantidadProd .botonesAccionCompra {
-    margin-bottom: 10px;
+    font-size: 0.8em;
   }
   .columnaDerCompras .bloqueCantidadLogos .seccionCantidadProd .botonesAccionCompra input {
     width: 140px;
@@ -2850,13 +2807,8 @@ body {
     border: #FFF2D8 5px;
     width: 100%;
   }
-  .columnaDerCompras .bloqueCantidadLogos .areaTextoLogosVrAgreg {
-    display: flex;
-  }
   .columnaDerCompras .bloqueCantidadLogos .areaTextoLogosVrAgreg .textoLogosVrAgreg {
     width: 30%;
-    display: flex;
-    flex-direction: column;
     margin-left: 0px;
   }
   .columnaDerCompras .bloqueCantidadLogos .areaTextoLogosVrAgreg .textoLogosVrAgreg .textoLogos {
@@ -2864,19 +2816,13 @@ body {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    font-size: 0.5em;
     margin: 15px;
-  }
-  .columnaDerCompras .bloqueCantidadLogos .areaTextoLogosVrAgreg .textoLogosVrAgreg img {
-    width: 30px;
-    height: auto;
-    text-align: center;
-    margin: 0px auto;
+    font-size: 0.6em;
   }
 }
 @media screen and (min-width: 768px) {
   .tituloArticuloVta .articulo {
-    font-size: 1.3em;
+    font-size: 1.4em;
   }
   .tituloArticuloVta .ref_articulo {
     font-size: 0.9em;
@@ -2902,11 +2848,11 @@ body {
     font-size: 70%;
   }
   .columnaIzqCompras .descripcion_productovta {
-    font-size: 0.9em;
     line-height: 20px;
+    font-size: 0.9em;
   }
   .columnaDerCompras .precio_articulovta {
-    font-size: 1.1em;
+    font-size: 1.3em;
   }
   .columnaDerCompras .seccionColorProd .tittleColores {
     font-size: 0.9em;
@@ -2922,14 +2868,8 @@ body {
     width: 60px;
     font-size: 0.9em;
   }
-  .columnaDerCompras .bloqueCantidadLogos .areaTextoLogosVrAgreg .textoLogosVrAgreg .textoLogos {
-    font-size: 0.6em;
-  }
-  .columnaDerCompras .bloqueCantidadLogos .areaTextoLogosVrAgreg .textoLogosVrAgreg img {
-    width: 35px;
-  }
   .columnaDerCompras .bloqueCantidadLogos .seccionCantidadProd {
-    font-size: 0.7em;
+    font-size: 0.9em;
   }
   .columnaDerCompras .bloqueCantidadLogos .seccionCantidadProd input {
     width: 120px;
@@ -2948,52 +2888,33 @@ body {
     border: #FFF2D8 5px;
     font-size: 90%;
   }
+  .columnaDerCompras .bloqueCantidadLogos .areaTextoLogosVrAgreg .textoLogosVrAgreg .textoLogos {
+    font-size: 0.7em;
+  }
+  .columnaDerCompras .bloqueCantidadLogos .areaTextoLogosVrAgreg .textoLogosVrAgreg img {
+    width: 35px;
+  }
 }
 @media screen and (min-width: 1024px) {
   .tituloArticuloVta {
     margin: 20px 0px 30px 12px;
   }
   .tituloArticuloVta .articulo {
-    font-size: 1.5em;
+    font-size: 1.6em;
   }
   .tituloArticuloVta .ref_articulo {
-    font-size: 0.9em;
-  }
-  .columnaIzqCompras .imgs_vta .grupoImgsA img {
-    width: 230px;
-  }
-  .columnaIzqCompras .imgs_vta .grupoImgsB img {
-    width: 230px;
-  }
-  .columnaIzqCompras .botones_vta input {
-    width: 140px;
-    height: 25px;
-    align-content: center;
-    border-radius: 5px;
-    background-color: #113946;
-    color: white;
-    font-size: 60%;
-    font-weight: 400;
-    padding: 2px;
-    border: #FFF2D8 5px;
-    width: 30%;
-    font-size: 70%;
+    font-size: 1em;
   }
   .columnaIzqCompras .descripcion_productovta {
-    font-size: 0.9em;
-    line-height: 20px;
     margin: 20px 10px 30px 12px;
+    font-size: 1em;
   }
   .columnaDerCompras .precio_articulovta {
-    font-size: 1.2em;
     margin-bottom: 30px;
+    font-size: 1.5em;
   }
   .columnaDerCompras .seccionColorProd .tittleColores {
     font-size: 1em;
-  }
-  .columnaDerCompras .seccionColorProd .color-selector .color-label {
-    width: 28px;
-    height: 28px;
   }
   .columnaDerCompras .seccionTallaProd {
     font-size: 1em;
@@ -3003,24 +2924,10 @@ body {
     margin-bottom: 20px;
   }
   .columnaDerCompras .seccionTallaProd .botonestallacompra input {
-    width: 60px;
     font-size: 1em;
   }
-  .columnaDerCompras .bloqueCantidadLogos .areaTextoLogosVrAgreg .textoLogosVrAgreg {
-    margin-top: 50px;
-  }
-  .columnaDerCompras .bloqueCantidadLogos .areaTextoLogosVrAgreg .textoLogosVrAgreg .textoLogos {
-    font-size: 0.6em;
-  }
-  .columnaDerCompras .bloqueCantidadLogos .areaTextoLogosVrAgreg .textoLogosVrAgreg img {
-    width: 35px;
-  }
   .columnaDerCompras .bloqueCantidadLogos .seccionCantidadProd {
-    font-size: 0.8em;
-  }
-  .columnaDerCompras .bloqueCantidadLogos .seccionCantidadProd input {
-    width: 120px;
-    height: 20px;
+    font-size: 1em;
   }
   .columnaDerCompras .bloqueCantidadLogos .seccionCantidadProd .botonesAccionCompra {
     margin-top: 50px;
@@ -3037,8 +2944,13 @@ body {
     padding: 2px;
     border: #FFF2D8 5px;
     width: 250px;
-    font-size: 90%;
     margin-top: 10px;
+  }
+  .columnaDerCompras .bloqueCantidadLogos .areaTextoLogosVrAgreg .textoLogosVrAgreg {
+    margin-top: 50px;
+  }
+  .columnaDerCompras .bloqueCantidadLogos .areaTextoLogosVrAgreg .textoLogosVrAgreg .textoLogos {
+    font-size: 0.8em;
   }
 }
 
