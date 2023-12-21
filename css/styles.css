@@ -1748,7 +1748,7 @@ body {
   }
   .section_parrafoUno .videoYt {
     width: 80%;
-    margin-bottom: 50px;
+    margin-top: 50px;
   }
   .section_parrafoUno .videoYt iframe {
     width: 450px;
@@ -1780,7 +1780,7 @@ body {
   }
   .tablaHombres table {
     width: 100%;
-    margin-bottom: 0px;
+    margin-bottom: 40px;
     font-size: 1em;
   }
 }
