@@ -1,12 +1,12 @@
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 320px) {
     .columnaGestionUsuario {
         margin: 0px auto;
         .TituloRegistro {
             text-align: center;
-            font-size: 1.1em;
-            margin: 50px 0px 40px 0px;
-            width: 95%;
+            margin: 30px 0px 20px 0px;
+            width: 100%;
             color: $orangered;
+            @include h2_size320;
         }
         .seccionFormularios {
             .formularioRegistro {
@@ -16,13 +16,13 @@
                 background-color: $beige;
                 color: $blueking;
                 box-shadow: 0 3px 8px $blueking;
-                width: 95%;
+                width: 100%;
                 .campoFormulario{
                     text-align: center;
                     margin: 0px auto;
                     input {
                         width: 98%;
-                        margin: 4px auto;
+                        margin: 3px auto;
                         padding: 2px;
                         font-size: 80%;
                         border-radius: 5px;
@@ -31,9 +31,166 @@
                 .campoGenero {
                     display: flex;
                     flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 3px auto;
+                    p {
+                        margin: 5px;
+                        font-size: 0.6em;
+                    }
+                }
+                .campoFechanac {
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 5px 5px 0 0;
+                    font-size: 0.6em;
+                    input {
+                        width: 220px;
+                        border-radius: 5px;
+                        padding: 2px;
+                        font-size: 80%;
+                    }
+                }
+                .selectPais {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    margin: 5px 5px 0 0;
+                    font-size: 0.6em;
+                    select {
+                        width: 200px;
+                        height: 25px;
+                        border-radius: 5px;
+                        padding: 2px;
+                        font-size: 80%;
+                    }
+                }
+                .termCondic {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 0.5em;
+                    margin: 10px 0 10px;
+                    align-content: center;
+                }
+                .botones_registro {
+                    display: flex;
+                    flex-direction: row;
                     justify-content: space-between;
                     align-content: center;
                     margin: 5px 5px 0 0;
+                    text-align: center;
+                    input {
+                        @include botonesDeAccion;
+                        width: 115px;
+                    }
+                }
+            }
+            .tituloIngSesion {
+                text-align: center;
+                margin: 50px 0px 40px 0px;
+                width: 100%;
+                @include h2_size320;
+            }
+            .formularioInicioSesion {
+                border: solid 1px $blueking;
+                border-radius: 8px;
+                padding: 25px;
+                background-color: $beige;
+                color: $blueking;
+                box-shadow: 0 3px 8px $blueking;
+                width: 100%;
+                margin: 20px 0 60px;
+                input {
+                    width: 98%;
+                    margin: 4px auto;
+                    padding: 2px;
+                    font-size: 80%;
+                    border-radius: 5px;
+                }
+                .ingDatosLogin {
+                    text-align: center;
+                    margin: 0px auto;
+                    input {
+                        width: 100%;
+                        margin: 4px auto;
+                        padding: 2px;
+                        font-size: 80%;
+                        border-radius: 5px;
+                    }
+                }
+                .gestionDatosUsuario {
+                    .checboxIngSesion {
+                        width: 45%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-content: center;
+                        align-items: center;
+                        font-size: 0.5em;
+                        text-wrap: nowrap;
+                        margin: 5px;
+                    }   
+                    .olvidoContrasena {
+                        a {
+                            text-decoration: none;
+                            color: inherit;
+                            font-size: 0.5em;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+                .botonLogin {
+                    text-align: center;
+                    margin-top: 5px;
+                    button {
+                        @include botonesDeAccion;
+                        width: 90%
+                    }
+                }
+            }
+            .img_relleno_pagSesioReg {
+                @include centrarElementos;
+                width: 95%;
+                img { 
+                    width: 60%;
+                    margin: 40px auto;
+                    border-radius: 40px;
+                }
+                :hover {
+                    box-shadow: 0 3px 8px $blueking;
+                }
+            }
+        }
+    }
+    .imgSesionReg {
+        align-items: center;
+        text-align: center;
+        margin: 10px auto;
+        width: 95%;
+        img {
+            width: 280px;
+            height: auto;
+            align-items: center;
+            border-radius: 10px;
+            margin-right: 25px;
+        }
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .columnaGestionUsuario {
+        .TituloRegistro {
+            margin: 30px auto;
+            width: 95%;
+            @include h2_size480;
+        }
+        .seccionFormularios {
+            .formularioRegistro {
+                width: 95%;
+                margin: 1px auto;
+                .campoGenero {
                     p {
                         font-size: 0.8em;
                     }
@@ -83,9 +240,9 @@
             }
             .tituloIngSesion {
                 text-align: center;
-                font-size: 1.1em;
-                margin: 50px 0px 40px 0px;
+                margin: 60px 0px 40px 0px;
                 width: 95%;
+                @include h2_size480;
             }
             .formularioInicioSesion {
                 border: solid 1px $blueking;
@@ -158,16 +315,9 @@
         }
     }
     .imgSesionReg {
-        align-items: center;
-        text-align: center;
-        margin: 40px auto;
-        width: 95%;
         img {
-            width: 450px;
+            width: 430px;
             height: auto;
-            align-items: center;
-            border-radius: 10px;
-            margin-right: 25px;
         }
     }
 }
@@ -176,11 +326,11 @@
     .columnaGestionUsuario {
         margin: 0px auto;
         .TituloRegistro {
-            font-size: 1.2em;
+            @include h2_size768;
         }
         .seccionFormularios {
             .formularioRegistro {
-                width: 98%;
+                width: 100%;
                 .campoFormulario {
                     input {
                         font-size: 85%;
@@ -278,16 +428,33 @@
 }
     
 @media screen and (min-width: 1024px) {
-    .formularioInicioSesion {
-        margin-top: 300px;
+    
+    .columnaGestionUsuario {
+        .seccionFormularios {
+            .formularioInicioSesion {
+                margin-top: 40px;
+                .botonLogin {
+                    text-align: center;
+                    margin-top: 5px;
+                    button {
+                        @include botonesDeAccion;
+                        width: 70%
+                    }
+                }
+            }
+            .tituloIngSesion {
+                margin: 90px 0px 40px 0px;
+                width: 100%;
+            }
+        }
     }
-
     .imgSesionReg {
         text-align: center;
         margin: 20px auto;
         width: auto;
+        margin-top: 50px;
         img {
-            width: 550px;
+            width: 580px;
             object-fit: cover;
             margin: 10px auto;
             align-items: center;

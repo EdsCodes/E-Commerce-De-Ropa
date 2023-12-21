@@ -14,6 +14,8 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <!--Link a Fontawesome-->
         <script src="https://kit.fontawesome.com/d777a6b17c.js" crossorigin="anonymous"></script>
+        <!--Link a animate.style/-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <!--Link a libreria AOS-->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <!--Link a estilo propio-->
@@ -21,7 +23,7 @@
         <meta name="description" content="Desde nuestro origen en 2023, hemos sido tu destino para la moda casual y deportiva. En cada una de nuestras prendas, te invitamos a ser parte de nuestra visión de estilo sin esfuerzo. Bienvenido a nuestro universo, donde la moda y la comodidad se mezclan.">
         <meta name="keywords" content="ropa casual, moda deportiva, outfits urbanos, estilo activo, tendencias de moda, prendas cómodas, moda contemporánea, streetwear, ropa para hombres y mujeres, outfits informales, estilo de vida activo, últimas tendencias en moda, conjuntos modernos, sportswear">
     </head>
-    <body> 
+<body> 
     <header class="header">
         <div class="mensaje_inicial">
             <p>ENVIOS GRATIS a todo Colombia por compras mayores a $200.000 - *No aplica para pagos contraentrega - aplican T&C*</p>
@@ -29,7 +31,7 @@
         <nav class="menu_navegacion">
             <div class="espacioMarca">
                 <div class="tittleMarca">
-                    <h2>Me lo llevo Store</h2>
+                    <h2 class="animate__animated animate__bounce">Me lo llevo Store</h2>
                 </div>
                 <div class="logoMarca">
                     <a class="logoMarca" href="../index.html">
@@ -65,11 +67,11 @@
             </div>
         </nav>
     </header>
-    <main>
+    <main class="paginaNosotros container-fluid">
         <div class="row">
             <div class="nosotros col-sm-12 col-md-12 col-lg-6">
                 <h1 class="tituloNosotros">Somos diferentes</h1>
-                <p class="textoNosotros" data-aos="fade-right">Te ofrecemos prendas deportivas y casuales de excelente calidad con el respaldo de nuestra marca y marcas aliadas. Aquí encuentras lo que necesitas y más, porque pensamos en ti y en todo lo bueno del deporte y lo que te hace sentir orgulloso de llevar una vida saludable. Todas nuestras prendas se caracterizan por tener tecnología textil de secado rápido y protección UV, además de que te ofrecemos diseños funcionales y cómodos que te brindan bienestar y confort en todo momento.</p>
+                <p class="textoNosotros">Te ofrecemos prendas deportivas y casuales de excelente calidad con el respaldo de nuestra marca y marcas aliadas. Aquí encuentras lo que necesitas y más, porque pensamos en tí y en todo lo bueno del deporte. Disfruta bienestar y comfort en todo momento.</p>
             </div>
             <div class="img__nosotrosUno col-sm-12 col-md-12 col-lg-6">
                 <img src="https://images.pexels.com/photos/3756681/pexels-photo-3756681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="mujer_en_escritorio">
@@ -90,30 +92,25 @@
                 </div>
             </div>
         </div>
-        <div class="separador row">
-            <div class="imagen_separador col-12">
-                <img src="../multi/wavesOpacity.svg" alt="separador">
-            </div>
-        </div>
-        <aside class="row">
-            <div class="seccionCaracteristicas col-12">
+        <aside class="seccionCaracteristicas row">
+            <div class="tituloCaracteristicas col-12">
                 <h2>Nuestras prendas son pensadas para ti</h2>
             </div>
             <div class="seccionLogos row">
                 <div class="logo_nosotros col-4">
                     <img src="../multi/secado_rapido.png" alt="icono secado rápido">
-                    <h3>Secado rápido</h3>
-                    <p>Puedes estar tranquilo siempre, ya que nuestras prendas te ofrecen una tecnología de secado rápido que te permite estar fresco en todo momento.</p>
+                    <h3>Confianza</h3>
+                    <p>Puedes estar siempre tranquilo, ya que nuestras prendas te ofrecen una tecnología de secado rápido.</p>
                 </div>
                 <div class="logo_nosotros col-4">
                     <img src="../multi/proteccion_uv.ico" alt="icono protección UV">
-                    <h3>Protección UV</h3>
-                    <p>Contar con el respaldo de la tecnología de protección UV te permite ir a cualquier lugar, en cualquier momento, porque cuidamos de ti.</p>
+                    <h3>Protección</h3>
+                    <p>Contar con el respaldo de la protección UV te permite ir a cualquier lugar, en cualquier momento.</p>
                 </div>
                 <div class="logo_nosotros col-4">
                     <img src="../multi/calidad.ico" alt="icono calidad prendas">
-                    <h3>Calidad al 100</h3>
-                    <p>Todas nuestras prendas tienen nuestro sello de garantia, ya que estamos seguros de la calidad que ofrecemos, ¡y tú nos inspiras en todo momento!</p>
+                    <h3>Calidad</h3>
+                    <p>Todas nuestras prendas tienen nuestro sello de garantia, ya que estamos seguros de lo que te ofrecemos.</p>
                 </div>
             </div>
         </aside>
@@ -128,32 +125,32 @@
             <h2>Nosotros</h2>
             <p>T&C de envio</p>
             <p>T&C de devoluciones</p>
+            <p id="lineHeigthItemFooter">Conoce nuestras tiendas</p>
         </div>
         <div class="itemFooter">
             <h2>Contactanos</h2>
-            <p>contacto@melollevostore.com</p>
-            <p>WhatsApp: (+57) 3205555555</p>
+            <p>contacto@mlllstore.com</p>
+            <p id="lineHeigthItemFooter">WhatsApp: (+57) 3205907046</p>
         </div>
         <div class="itemFooter">
             <h2>Te ayudamos</h2>
-            <p><a href="./guiatallas.html" target="_blank">Guia de tallas y medidas</a></p>
-            <p><a target: blank href="https://www.servientrega.com/wps/portal/rastreo-envio/!ut/p/z1/jY9PC4JAFMQ_Swev-57_QrptBGWkURDaXmKVzTXUlXUT-vZJdayld5vHb2YYYJAD6_hYV9zUquPNpM9sfgmjONhg4O7X6SrAw3HpJalLYz9GyF4A_jiKwP7xWwBmj8-AWSo8mngfwJKxBVY1qnjPpV3hRxUwLa5CC03uenpLY_ph4aCDpSKD4LqU5MGlUqRUrYPffFINBvIvOPTtKcdb2Iw7OnsCEfOw4Q!!/dz/d5/L2dBISEvZ0FBIS9nQSEh/" target="_blank">¿Donde está mi pedido?</a></p>
+            <p class="espacioItemfooter"><a target: blank href="https://www.servientrega.com/wps/portal/rastreo-envio/!ut/p/z1/jY9PC4JAFMQ_Swev-57_QrptBGWkURDaXmKVzTXUlXUT-vZJdayld5vHb2YYYJAD6_hYV9zUquPNpM9sfgmjONhg4O7X6SrAw3HpJalLYz9GyF4A_jiKwP7xWwBmj8-AWSo8mngfwJKxBVY1qnjPpV3hRxUwLa5CC03uenpLY_ph4aCDpSKD4LqU5MGlUqRUrYPffFINBvIvOPTtKcdb2Iw7OnsCEfOw4Q!!/dz/d5/L2dBISEvZ0FBIS9nQSEh/" target="_blank">¿Donde está mi pedido?</a></p>
             <p>PQRS</p>
         </div>
-        <div class="itemFooter">
+        <div class="itemFooter nuestrasTiendas">
             <h2>Nuestras tiendas</h2>
             <p>Cali Cra 5 #17-29</p>
             <p>Bogotá Cll 42 #80-79 Lc 2</p>
             <p>Pereira Cra 17 #12-30 Lc 10</p>
         </div>
         <div class="itemFooter">
-          <h2>Síguenos</h2>
-          <ul class="iconoRedesSociales">
-            <li><a href="http://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram" alt="Logo instagram"></i></a></li>
-            <li><a href="http://www.facebook.com" target="_blank"><i class="fa-brands fa-square-facebook" alt="Logo facebook"></i></a></li>
-            <li><a href="http://www.youtube.com" target="_blank"><i class="fa-brands fa-square-youtube" alt="Logo youtube"></i></a></li>
-            <li><a href="http://www.twitter.com" target="_blank"><i class="fa-brands fa-square-x-twitter" alt="Logo X (Twitter)"></i></a></li>
-          </ul>
+            <h2>Síguenos</h2>
+            <ul class="iconoRedesSociales">
+                <li><a href="http://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram" alt="Logo instagram"></i></a></li>
+                <li><a href="http://www.facebook.com" target="_blank"><i class="fa-brands fa-square-facebook" alt="Logo facebook"></i></a></li>
+                <li><a href="http://www.youtube.com" target="_blank"><i class="fa-brands fa-square-youtube" alt="Logo youtube"></i></a></li>
+                <li><a href="http://www.twitter.com" target="_blank"><i class="fa-brands fa-square-x-twitter" alt="Logo X (Twitter)"></i></a></li>
+            </ul>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
