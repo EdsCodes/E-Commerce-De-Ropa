@@ -121,23 +121,23 @@
                     }
                 }
                 .gestionDatosUsuario {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-left: 25px;
                     .checboxIngSesion {
-                        width: 45%;
                         display: flex;
                         flex-direction: row;
-                        justify-content: center;
-                        align-content: center;
                         align-items: center;
                         font-size: 0.5em;
                         text-wrap: nowrap;
-                        margin: 5px;
+                        margin-top: 4px;
                     }   
                     .olvidoContrasena {
                         a {
                             text-decoration: none;
                             color: inherit;
                             font-size: 0.5em;
-                            margin-right: 10px;
+                            margin: 0px 25px auto auto;
                         }
                     }
                 }
