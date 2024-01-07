@@ -84,6 +84,10 @@
               <label for="phone"></label>
               <input type="tel" id="phone" name="phone" pattern="[0-9]{12}" placeholder="Tel.(Indic. pais+10 digitos)" required/>
             </div>
+            <div class="campoFormulario">
+              <label for="contrasenaRegistro"></label>
+              <input type="password" id="regPassword" name="regPassword" pattern="[0-9][a-z]{6}" placeholder="Contraseña" required/>
+            </div>
             <div class="campoGenero">
               <p><label for="gender">Genero:</label></p>
               <input type="radio" name="gender" value="Mujer" required> <p>Mujer</p>
@@ -119,7 +123,7 @@
           <h2 class="tituloIngSesion">Ya te registraste? Ingresa aqui</h2>
           <form class="formularioInicioSesion">
             <div class="ingDatosLogin">
-              <input type="email" class="email" placeholder="Email" required/>
+              <input type="email" class="email" name="emailUsuarioRegistrado" placeholder="Email" required/>
               <input type="password" class="password" placeholder="Contraseña" required/>
             </div>
             <div class="gestionDatosUsuario">
@@ -131,7 +135,7 @@
                 <a href="###">Olvidé mi contraseña</a>
               </div>
             </div>
-            <div class="botonLogin">
+            <div class="botonLogin" id="botonLogin">
               <button type="submit" value="submit">Login</button>
             </div>
           </form>
