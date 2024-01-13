@@ -67,6 +67,9 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log("País: " + pais);
         console.log("Acepta Términos: " + aceptaTerminos);
 
+        //validar el registro ok (true), y mediante una funcion de aletoriedad calcular uno de los 4 beneficios ofrecidos, mostrandolo en un alert en la pagina al cliente:
+        while 
+
         // Imprimo línea al final para separar cada registro en el console.log
         console.log("<----------------------------------------------->");
         
