@@ -6,7 +6,7 @@
   <title>Inicia Sesion o registrate - Me Lo LLevo Store</title>
   <link rel="apple-touch-icon" sizes="192x192" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./multi/favicon_io/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../multi/favicon_io/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -69,34 +69,43 @@
   <main class="container-fluid">
     <div class="row">
       <div class="columnaGestionUsuario col-sm-12 col-md-6 col-lg-6">
-        <h2 class="TituloRegistro">Registrate aqui y recibe el 10% de descuento en tu primera compra</h2>
+        <h2 class="TituloRegistro">Registrate aqui y recibe UNA de las sorpresas que hemos preparado para ti: </h2>
+        <p>1. Descuento de Bienvenida: descuento del 15% en tu primera compra.</p>
+        <p>2. Envío Gratuito: Para compras superiores a $100.000, tu envío es gratuito.
+        </p>
+        <p>3. Cupón Exclusivo: cupón único del 10% adicional para tu siguiente compra.</p>
+        <p>4. Regalo Sorpresa: Para pedidos mayores a $200.000, incluimos un regalo sorpresa en tu paquete.</p>
         <div class="seccionFormularios">
           <form class="formularioRegistro">
             <div class="campoFormulario">
-              <label for="name"></label>
-              <input class="nombre" type="text" name="name" placeholder="Nombre" required>
+              <label for="nombreRegistro"></label>
+              <input class="nombreRegistro" type="text" name="nombreRegistro" placeholder="Nombre" required>
             </div>
             <div class="campoFormulario">
-              <label for="mail"></label>
-              <input type="email" name="email" placeholder="Email" required>
+              <label for="mailRegistro"></label>
+              <input type="email" name="mailRegistro" placeholder="E-mail" required>
             </div>
             <div class="campoFormulario">
               <label for="phone"></label>
               <input type="tel" id="phone" name="phone" pattern="[0-9]{12}" placeholder="Tel.(Indic. pais+10 digitos)" required/>
             </div>
+            <div class="campoFormulario">
+              <label for="contrasenaRegistro"></label>
+              <input type="password" id="regPassword" name="regPassword" pattern="[0-9][a-z]{6}" placeholder="Contraseña" required/>
+            </div>
             <div class="campoGenero">
-              <p><label for="sex">Genero:</label></p>
-              <input type="radio" name="sex" value="muj" required> <p>Mujer</p>
-              <input type="radio" name="sex" value="hom" required> <p>Hombre</p>
-              <input type="radio" name="sex" value="noespec" required> <p>No especifíca</p>
+              <p><label for="gender">Genero:</label></p>
+              <input type="radio" name="gender" value="Mujer" required> <p>Mujer</p>
+              <input type="radio" name="gender" value="Hombre" required> <p>Hombre</p>
+              <input type="radio" name="gender" value="noespec" required> <p>No especifíca</p>
             </div>
             <div class="campoFechanac">
-              <label for="nac">Fecha de nacimiento:</label>
-              <input type="date" name="nac" required>
+              <label for="fechaNac">Fecha de nacimiento:</label>
+              <input type="date" name="fechaNac" required>
             </div>
             <div class="selectPais">
-              <label for="pais">Pais:</label>
-              <select name="pais" id="">
+              <label for="paisRegistro">Pais:</label>
+              <select name="paisRegistro" id="">
                 <option value="mex">Mexico</option>
                 <option value="col">Colombia</option>
                 <option value="bra">Brasil</option>
@@ -112,14 +121,14 @@
               <label for="terminos">Acepto politica de privacidad y tratam. de datos</label>
             </div>
             <div class="botones_registro">
-              <input type="submit" value="Recibe tu descuento">
-              <input type="reset" value="Borrar datos">
+              <input type="button" id="registrarBtn" value="Recibe tu descuento">
+              <input type="reset" id="borrarDatosBtn" value="Borrar datos">
             </div>
           </form>
-          <h2 class="tituloIngSesion">Ya te registraste? Ingresa aqui</h2>
+          <h2 class="tituloIngSesion">Ya eres usuario registrado? Ingresa aqui</h2>
           <form class="formularioInicioSesion">
             <div class="ingDatosLogin">
-              <input type="email" class="email" placeholder="Email" required/>
+              <input type="email" class="email" name="emailUsuarioRegistrado" placeholder="Email" required/>
               <input type="password" class="password" placeholder="Contraseña" required/>
             </div>
             <div class="gestionDatosUsuario">
@@ -131,7 +140,7 @@
                 <a href="###">Olvidé mi contraseña</a>
               </div>
             </div>
-            <div class="botonLogin">
+            <div class="botonLogin" id="botonLogin">
               <button type="submit" value="submit">Login</button>
             </div>
           </form>
@@ -186,5 +195,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script> AOS.init({   easing: 'ease-out-back',duration: 2000});</script>
+  <!--Link a script propio Js-->
+  <script src="../js/script.js"></script>
 </body> 
 </html>
