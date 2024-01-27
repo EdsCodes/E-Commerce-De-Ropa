@@ -2100,14 +2100,14 @@ body {
     padding: 2px;
     font-size: 80%;
   }
-  .columnaGestionUsuario .seccionFormularios .formularioRegistro .selectPais {
+  .columnaGestionUsuario .seccionFormularios .formularioRegistro .selectCiudad {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: 5px 5px 0 0;
     font-size: 0.6em;
   }
-  .columnaGestionUsuario .seccionFormularios .formularioRegistro .selectPais select {
+  .columnaGestionUsuario .seccionFormularios .formularioRegistro .selectCiudad select {
     width: 200px;
     height: 25px;
     border-radius: 5px;
@@ -2131,7 +2131,7 @@ body {
     margin: 5px 5px 0 0;
     text-align: center;
   }
-  .columnaGestionUsuario .seccionFormularios .formularioRegistro .botones_registro input {
+  .columnaGestionUsuario .seccionFormularios .formularioRegistro .botones_registro .registrarBtn {
     width: 140px;
     height: 25px;
     align-content: center;
@@ -2268,14 +2268,14 @@ body {
     padding: 2px;
     font-size: 80%;
   }
-  .columnaGestionUsuario .seccionFormularios .formularioRegistro .selectPais {
+  .columnaGestionUsuario .seccionFormularios .formularioRegistro .selectCiudad {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: 5px 5px 0 0;
     font-size: 0.8em;
   }
-  .columnaGestionUsuario .seccionFormularios .formularioRegistro .selectPais select {
+  .columnaGestionUsuario .seccionFormularios .formularioRegistro .selectCiudad select {
     width: 220px;
     border-radius: 5px;
     padding: 2px;
@@ -2418,10 +2418,10 @@ body {
   .columnaGestionUsuario .seccionFormularios .formularioRegistro .campoFechanac input {
     font-size: 85%;
   }
-  .columnaGestionUsuario .seccionFormularios .formularioRegistro .selectPais {
+  .columnaGestionUsuario .seccionFormularios .formularioRegistro .selectCiudad {
     font-size: 0.9em;
   }
-  .columnaGestionUsuario .seccionFormularios .formularioRegistro .selectPais select {
+  .columnaGestionUsuario .seccionFormularios .formularioRegistro .selectCiudad select {
     font-size: 85%;
   }
   .columnaGestionUsuario .seccionFormularios .formularioRegistro .termCondic {

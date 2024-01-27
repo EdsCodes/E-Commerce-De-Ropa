@@ -16,7 +16,7 @@ function NuevoCliente(nombre, email, telefono, direccion, contrasenaRegistro, ge
     this.genero = genero;
     this.fechaNacimiento = fechaNacimiento;
     this.edadUsuario = 0; 
-    this.pais = pais;
+    this.ciudad = ciudad;
     this.aceptaTerminos = aceptaTerminos;
 }
 
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
             contrasenaRegistro = document.querySelector('[name="regPassword"]').value,
             genero = document.querySelector('[name="gender"]:checked').value,
             fechaNacimiento = document.querySelector('[name="fechaNac"]').value,
-            pais = document.querySelector('[name="paisRegistro"]').value,
+            ciudad = document.querySelector('[name="ciudadRegistro"]').value,
             aceptaTerminos = document.querySelector('[name="terminos"]').checked
         );
 
