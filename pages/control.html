@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de control admin  (Provisional) - MeLoLLevoStore</title>
+  <link rel="apple-touch-icon" sizes="192x192" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../multi/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@300&family=Oswald&family=Poppins:wght@500&family=Quicksand:wght@600&family=Tilt+Neon&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!--Link a Fontawesome-->
+  <script src="https://kit.fontawesome.com/d777a6b17c.js" crossorigin="anonymous"></script>
+  <!--Link a libreria AOS-->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!--Link a estilo propio-->
+  <link rel="stylesheet" href="../css/styles.css">
+  <meta name="description" content= "Ingresa a un mundo de estilo en nuestra tienda! Regístrate para desbloquear ofertas exclusivas, seguimiento de pedidos y una experiencia de compra personalizada. Inicia sesión para sumergirte en un universo de moda versátil. ¡Únete a la comunidad del estilo, donde cada clic te acerca más a tu look perfecto!">
+  <meta name="keywords" content="ropa casual, moda deportiva, outfits urbanos, estilo activo, tendencias de moda, prendas cómodas, moda contemporánea, streetwear, ropa para hombres y mujeres, outfits informales, estilo de vida activo, últimas tendencias en moda, conjuntos modernos, sportswear">
+</head>
+</head>
+  <!--NOTA: Se trabajara en panel de control para añadir o quitar productos y para mostrar informes de clientes, productos, añadir inventario, controlar promociones, etc... pero para mas adelante...-->
+<body class="bodyControl">
+    <h1 class="tituloControl" >Panel de control de admin MeloLLevo Store (Proximamente... para la proxima entrega)</h1>
+    <form class="formularioRegistro">
+      <h2 class="tituloIngresoProds">Ingreso de productos</h2>
+      <div class="campoFormulario" style="border-radius: 10px;">
+        <label for="nombreProducto"></label>
+        <input class="nombreRegistro" type="text" name="nombreRegistro" placeholder="Class" required>
+      </div>
+      <div class="campoFormulario">
+        <label for="posicion"></label>
+        <input type="posicion" name="UrlImagen" placeholder="UrlImagen" required>
+      </div>
+      <div class="campoFormulario">
+        <label for="phone"></label>
+        <input type="tel" id="phone" name="phone" placeholder="precio" required/>
+      </div>
+      <div class="campoFormulario">
+        <label for="direccion"></label>
+        <input type="name" id="direccionCliente" name="direccionCliente" pattern="any" placeholder="Texto producto" required/>
+      </div>
+      <div class="campoFormulario">
+        <label for="colorPrendaIngresada"></label>
+        <input type="password" id="colorPrendaIngresada" name="colorPrendaIngresada" placeholder="color producto" required/>
+      </div>
+      <div class="campoGenero" style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+        <p><label for="gender">Genero de la prenda:</label></p>
+        <input type="radio" name="gender" value="Mujer" required> <p>Mujer</p>
+        <input type="radio" name="gender" value="Hombre" required> <p>Hombre</p>
+      </div>
+      <div class="termCondic" style="margin: 20px;">
+        <input type="checkbox" name="terminos" required>
+        <label for="terminos">He revisado todos los datos y estan correctos</label>
+      </div>
+      <div class="botones_registro">
+        <input type="button" id="registrarBtn" value="Registrar producto">
+        <input type="reset" id="borrarDatosBtn" value="Borrar datos">
+      </div>
+    </form>
+    <!--Link a script propio Js-->
+    <script src="../js/script.js"></script>    
+</body>
+</html>

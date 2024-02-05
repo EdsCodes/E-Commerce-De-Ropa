@@ -2955,5 +2955,94 @@ body {
     font-size: 0.8em;
   }
 }
+.bodyControl {
+  width: 100%;
+  background-color: #EAD7BB;
+  font-family: "Quicksand", sans-serif;
+  overflow-x: hidden;
+}
+.bodyControl .tituloControl {
+  color: #ff4500;
+  font-style: italic;
+  margin-top: 20px;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.bodyControl .formularioRegistro {
+  align-items: center;
+  text-align: center;
+  margin-top: 100px;
+  padding: 10px;
+}
+.bodyControl .formularioRegistro .tituloIngresoProds {
+  color: #113946;
+  font-style: italic;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.bodyControl .formularioRegistro .campoFormulario {
+  text-align: center;
+  margin: 0px auto;
+}
+.bodyControl .formularioRegistro .campoFormulario input {
+  width: 40%;
+  margin: 3px auto;
+  padding: 2px;
+  font-size: 80%;
+  border-radius: 5px;
+}
+.bodyControl .formularioRegistro .campoGenero {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 3px auto;
+}
+.bodyControl .formularioRegistro .campoGenero p {
+  margin: 5px;
+  font-size: 1em;
+}
+.bodyControl .formularioRegistro .termCondic {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7em;
+  margin: 10px 0 10px;
+  align-content: center;
+}
+.bodyControl .formularioRegistro .botones_registro {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+.bodyControl .formularioRegistro .botones_registro input {
+  width: 140px;
+  height: 25px;
+  align-content: center;
+  border-radius: 5px;
+  background-color: #113946;
+  color: white;
+  font-size: 60%;
+  font-weight: 400;
+  padding: 2px;
+  border: #FFF2D8 5px;
+  align-items: center;
+  font-size: 70%;
+  width: 250px;
+  height: 20px;
+  margin: 0.5px;
+}
 
 /*# sourceMappingURL=styles.css.map */
