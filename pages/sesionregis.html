@@ -55,10 +55,10 @@
                 <a class="nav-link" href="./nosotros.html">Nosotros</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./sesionregis.html">Inicia sesión</a>
+                <a class="nav-link" href="./pagcompras.html">Compras</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./pagcompras.html">Compras</a>
+                <a class="nav-link" href="./sesionregis.html">Inicia sesión</a>
               </li>
             </ul>
           </div>
@@ -90,6 +90,10 @@
               <input type="tel" id="phone" name="phone" pattern="[0-9]{12}" placeholder="Tel.(Indic. pais+10 digitos)" required/>
             </div>
             <div class="campoFormulario">
+              <label for="direccion"></label>
+              <input type="name" id="direccionCliente" name="direccionCliente" pattern="any" placeholder="direccion" required/>
+            </div>
+            <div class="campoFormulario">
               <label for="contrasenaRegistro"></label>
               <input type="password" id="regPassword" name="regPassword" pattern="[0-9][a-z]{6}" placeholder="Contraseña" required/>
             </div>
@@ -103,17 +107,17 @@
               <label for="fechaNac">Fecha de nacimiento:</label>
               <input type="date" name="fechaNac" required>
             </div>
-            <div class="selectPais">
-              <label for="paisRegistro">Pais:</label>
-              <select name="paisRegistro" id="">
-                <option value="mex">Mexico</option>
-                <option value="col">Colombia</option>
-                <option value="bra">Brasil</option>
-                <option value="arg">Argentina</option>
-                <option value="chi">Chile</option>
-                <option value="uy">Uruguay</option>
-                <option value="par">Paraguay</option>
-                <option value="per">Perú</option>
+            <div class="selectCiudad">
+              <label for="ciudadRegistro">Ciudad:</label>
+              <select name="ciudadRegistro" id="">
+                <option value="Cal">Cali</option>
+                <option value="Bog">Bogota</option>
+                <option value="Med">Medellin</option>
+                <option value="Barr">Barranquilla</option>
+                <option value="SanMar">Santa Marta</option>
+                <option value="Cart">Cartagena</option>
+                <option value="Per">Pereira</option>
+                <option value="Otr">Otra</option>
               </select>
             </div>
             <div class="termCondic">
@@ -128,8 +132,8 @@
           <h2 class="tituloIngSesion">Ya eres usuario registrado? Ingresa aqui</h2>
           <form class="formularioInicioSesion">
             <div class="ingDatosLogin">
-              <input type="email" class="email" name="emailUsuarioRegistrado" placeholder="Email" required/>
-              <input type="password" class="password" placeholder="Contraseña" required/>
+              <input type="email" class="email" id="email" name="emailUsuarioRegistrado" placeholder="Email" required/>
+              <input type="password" class="password" id="password" placeholder="Contraseña" required/>
             </div>
             <div class="gestionDatosUsuario">
               <div class="checboxIngSesion">
@@ -196,6 +200,6 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script> AOS.init({   easing: 'ease-out-back',duration: 2000});</script>
   <!--Link a script propio Js-->
-  <script src="../js/script.js"></script>
+  <script src="../js/inicioSesion.js"></script>
 </body> 
 </html>
