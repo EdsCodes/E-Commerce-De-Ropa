@@ -1,4 +1,4 @@
- //----------------PAGINA: INICIA SESION------------------//
+//----------------PAGINA: INICIA SESION------------------//
 
     // --- Formulario de registro:
 
@@ -29,10 +29,8 @@
             const fechaActual = new Date();
             let edad = fechaActual.getFullYear() - fechaNacimiento.getFullYear();
 
-            if (
-                fechaNacimiento.getMonth() > fechaActual.getMonth() ||
-                (fechaNacimiento.getMonth() === fechaActual.getMonth() &&
-                    fechaNacimiento.getDate() > fechaActual.getDate())
+            if (fechaNacimiento.getMonth() > fechaActual.getMonth() || 
+            (fechaNacimiento.getMonth() === fechaActual.getMonth() && fechaNacimiento.getDate() > fechaActual.getDate())
             ) {
                 edad--;
             }
@@ -44,7 +42,6 @@
             function aleatorio(min, max) {
                 return Math.floor(Math.random() * (max - min + 1) + min);
             }
-
             switch (aleatorio(1, 4)) {
                 case 1:
                     return "Bono de bienvenida del 15% de descuento para la 1era compra.";
@@ -72,26 +69,27 @@
         const aceptaTerminos = document.querySelector('[name="terminos"]').checked;
 
         if (!aceptaTerminos) {
-            alert("Debes aceptar los términos y condiciones para continuar.");
+            alert("Debes aceptar los terminos y condiciones para continuar")
             return;
         }
-
+        
         var fechaNacUsuario = new Date(fechaNacimiento);
 
-        if (isNaN(fechaNacUsuario.getTime()) || fechaNacUsuario.getFullYear() > new Date().getFullYear() - 18) {
+        if (isNaN(fechaNacUsuario.getTime()) || fechaNacUsuario.getFullYear() > new Date().getFullYear() - 18){
             alert("Por favor, ingresa una fecha de nacimiento válida.");
             console.error("Registro & id no válidos");
             return;
-        }
+        } 
+        
+        // Duda, porque el sigte codigo ternario no funca??, no valida el return para detener la ejecucion del codigo...
+        // (isNaN(fechaNacUsuario.getTime()) || fechaNacUsuario.getFullYear() > new Date().getFullYear() - 18) ? (alert("Por favor, ingresa una fecha de nacimiento válida."), console.error("Registro & id no válidos"), return) : null;
 
         const nuevoCliente = new Cliente(nombre, email, telefono, direccion, contrasenaRegistro, genero, fechaNacimiento, ciudad, aceptaTerminos);
-
+        
         listaClientes.push(nuevoCliente);
-
+        
         alert("Bienvenid@, " + nuevoCliente.premioSorpresaGanado);
-
         console.table(listaClientes);
-
         console.log("Fecha de actualización de registro: " + new Date());
 
         resetFormulario();

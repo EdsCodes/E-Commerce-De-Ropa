@@ -54,6 +54,19 @@
                     }
                 }
             }
+            .barraBusqueda{
+                margin: auto;
+                .form-control {
+                    width: 100px;
+                    height: 20px;
+                    
+                }
+                .btn {
+                    width: 40px;
+                    height: 20px;
+                    padding: 1px;
+                }
+            }
             .navbar {
                 margin-right: 5px;
                 .container-fluid {

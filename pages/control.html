@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+  <!--Temporalmente ubicado en barra de navegacion-->
+
+  <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -22,30 +24,26 @@
   <meta name="keywords" content="ropa casual, moda deportiva, outfits urbanos, estilo activo, tendencias de moda, prendas cómodas, moda contemporánea, streetwear, ropa para hombres y mujeres, outfits informales, estilo de vida activo, últimas tendencias en moda, conjuntos modernos, sportswear">
 </head>
 </head>
-  <!--NOTA: Se trabajara en panel de control para añadir o quitar productos y para mostrar informes de clientes, productos, añadir inventario, controlar promociones, etc... pero para mas adelante...-->
+  <!--NOTA: Se trabaja en panel de control para añadir o quitar productos añadir o quitar productos usando la LS-->
 <body class="bodyControl">
-    <h1 class="tituloControl" >Panel de control de admin MeloLLevo Store (Proximamente... para la proxima entrega)</h1>
-    <form class="formularioRegistro">
-      <h2 class="tituloIngresoProds">Ingreso de productos</h2>
-      <div class="campoFormulario" style="border-radius: 10px;">
-        <label for="nombreProducto"></label>
-        <input class="nombreRegistro" type="text" name="nombreRegistro" placeholder="Class" required>
-      </div>
+    <h1 class="tituloControl" >Panel de control (Ingresar productos para que vayan apareciendo en la pagina index)</h1>
+    <form class="formularioControl">
+      <h2 class="tituloIngresoProds">Ingreso de productos seccion 1 (4 productos en mosaico)</h2>
       <div class="campoFormulario">
         <label for="posicion"></label>
-        <input type="posicion" name="UrlImagen" placeholder="UrlImagen" required>
+        <input class="UrlImagen" type="posicion" name="UrlImagen" placeholder="UrlImagen" required>
       </div>
       <div class="campoFormulario">
-        <label for="phone"></label>
-        <input type="tel" id="phone" name="phone" placeholder="precio" required/>
+        <label for="precio"></label>
+        <input class="precio" type="number" id="precio" name="precio" placeholder="precio" required/>
       </div>
       <div class="campoFormulario">
-        <label for="direccion"></label>
-        <input type="name" id="direccionCliente" name="direccionCliente" pattern="any" placeholder="Texto producto" required/>
+        <label for="textoProducto"></label>
+        <input class="textoProducto" type="name" id="textoProducto" name="textoProducto" pattern="any" placeholder="Texto producto" required/>
       </div>
       <div class="campoFormulario">
         <label for="colorPrendaIngresada"></label>
-        <input type="password" id="colorPrendaIngresada" name="colorPrendaIngresada" placeholder="color producto" required/>
+        <input class="colorPrendaIngresada" type="any" id="colorPrendaIngresada" name="colorPrendaIngresada" placeholder="color producto" required/>
       </div>
       <div class="campoGenero" style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
         <p><label for="gender">Genero de la prenda:</label></p>
@@ -57,11 +55,20 @@
         <label for="terminos">He revisado todos los datos y estan correctos</label>
       </div>
       <div class="botones_registro">
-        <input type="button" id="registrarBtn" value="Registrar producto">
-        <input type="reset" id="borrarDatosBtn" value="Borrar datos">
+        <input type="button" id="BtnControl" value="Registrar producto">
+        <input type="reset" id="borrarDatosControl" value="Borrar datos formulario">
+        <input type="reset" id="borrarDatosLS" value="Borrar datos LS">
+      </div>
+      <div>
+          <p style="margin-top: 40px;">URLS de imagenes para probar el funcionamiento del LS y de la interaccion con el DOM en el sitio:</p>
+          <p>imagen 1 - vertical:  &nbsp;&nbsp;&nbsp;&nbsp;  ./multi/mujer_con_jean_roto.jpeg</p>
+          <p>imagen 2 - horizontal:  &nbsp;&nbsp;&nbsp;&nbsp;  ./multi/mujer_blusa_beige.jpeg</p>  
+          <p>imagen 3 - horizontal:  &nbsp;&nbsp;&nbsp;&nbsp;  ./multi/saco_gris_hombre.jpeg</p>  
+          <p>imagen 4 - vertical:  &nbsp;&nbsp;&nbsp;&nbsp;  ./multi/buzo_rojo_hombre.jpeg</p>  
       </div>
     </form>
     <!--Link a script propio Js-->
-    <script src="../js/script.js"></script>    
+    <script src="../js/control.js"></script> 
+    <script src="../js/index.js"></script> 
 </body>
 </html>

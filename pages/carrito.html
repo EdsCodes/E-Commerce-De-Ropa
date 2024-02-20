@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guia de tallas - Me Lo LLevo Store</title>
+    <title>Pagina de compras - Me Lo LLevo Store</title>
     <link rel="apple-touch-icon" sizes="192x192" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../multi/favicon_io/favicon-16x16.png">
@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!--Link a estilo propio-->
     <link rel="stylesheet" href="../css/styles.css">
-    <meta name="description" content="Descubre el ajuste perfecto en nuestra guía de tallas: tu brújula para la comodidad sin límites. Navega por nuestro universo de ropa casual y deportiva con confianza, sabiendo que cada prenda se adapta a ti a la perfección. ¡Porque la moda es aún más fabulosa cuando se ajusta a ti!">
+    <meta name="description" content= "¡Estas a un paso de transformar tu estilo, todo lo que quieres a un click de distancia, ¿Estas list@ para transformar tu look?">
     <meta name="keywords" content="ropa casual, moda deportiva, outfits urbanos, estilo activo, tendencias de moda, prendas cómodas, moda contemporánea, streetwear, ropa para hombres y mujeres, outfits informales, estilo de vida activo, últimas tendencias en moda, conjuntos modernos, sportswear">
 </head>
 <body> 
@@ -32,7 +32,7 @@
                     <h2 class="animate__animated animate__bounce">Me lo llevo Store</h2>
                 </div>
                 <div class="logoMarca">
-                    <a class="logoMarca" href="../index.html">
+                    <a class="logoMarca" href="index.html">
                         <img src="../multi/favicon_io/android-chrome-192x192.png" alt="Logo de Me lo llevo Store">
                     </a>
                 </div>
@@ -77,125 +77,49 @@
             </div>
         </nav>
     </header>
-    <main class="body__guiaTallas container-fluid">
+    <main class="container-fluid">
         <div class="row">
-            <section class="Titulo_parrafoUno col-12">
-                <h1>Guía de tallas</h1>
-            </section>
-            <section class="section_parrafoUno col-sm-12 col-md-12 col-lg-6">
-                <div class="subTitulo_parrafoUno">
-                    <h3>¿Cómo medir tu cuerpo?</h3>
-                </div> 
-                <div class="parrafoUno">
-                    <p><strong>PECHO:</strong> Mide el contorno de la parte más amplia del pecho, manteniendo la cinta horizontal.</p>
-                    <p><strong>CINTURA:</strong> Mide la parte más estrecha (generalmente la región lumbar y los puntos de flexión laterales), manteniendo la cinta horizontal.</p>
-                    <p><strong>CADERAS:</strong> Mide la circunferencia de la parte más amplia de tus caderas, manteniendo la cinta horizontal.</p>
-                    <p><strong>ENTREPIERNA:</strong> Para conocer la medida de la entrepierna de la prenda, mide desde la costura de la entrepierna hasta el tobillo, solo en el caso de pantalón largo.</p>
-                    <div class="parrafoUno_continuacion">
-                        <p>A continuación te compartimos un video guía de cómo tomar tus tallas de la mejor manera:</p>
+            <div class="tituloArticuloVta col-12"> 
+                <h1 class="articulo">Tu carrito</h1>
+            </div>
+            <div class="columnaIzqCarrito col-sm-12 col-md-6 col-lg-6">
+                <div class="ImgProducto_carrito">
+                    <img src="../multi/camisa_azulJean_hombre.jpeg">
+                </div>
+                <div class="AccionProdCar">    
+                    <h4>Titulo de producto</h4>
+                    <p>CANTIDAD: <input class="quantity" id="id_form-0-quantity" min="1" name="form-0-quantity" value="1" type="number"></p>
+                    <p>Total</p>
+                    <div class="botonBorrProd_carrito">
+                        <!-- <input type="button" id="borrarProdCarrito" value= "Borrar"> -->
+                        <button class="btn btn-light botonBorrProd_carrito" id="borrarProdCarrito" type="button" value= "Borrar"><i class="fa-solid fa-trash"></i></button>
                     </div>
                 </div>
-                <section class="videoYt col-sm-12 col-md-12 col-lg-6">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/jK35Yjr0bMw?si=Q9pIDvpTNiQx6KvB" title="Reproductor de video de YouTube" allowfullscreen></iframe>
-                </section>
-            </section>
-            <aside class="parrafoDos col-sm-12 col-md-12 col-lg-6">
-                <p>Recuerda, si tu medida está entre dos tallas te recomendamos tomar la mayor. Para mayor exactitud, te traemos el cuadro de tallas:</p>
-                <div class="tablaMujeres">
-                    <h2 class="titulo_tablaMujeres">Mujeres</h2>
-                    <table class="table table-striped" cellpadding="10px">
-                        <tr>
-                            <th>Tallas</th>
-                            <th>Busto (cm)</th>
-                            <th>Cintura (cm)</th>
-                            <th>Cadera (cm)</th>
-                            <th>Ent.p. (cm)</th>
-                        </tr>
-                        <tr>
-                            <td>XS (0-2)</td>
-                            <td>77-82</td>
-                            <td>61-66</td>
-                            <td>86-91</td>
-                            <td>78</td>
-                        </tr>
-                        <tr>
-                            <td>S (4-6)</td>
-                            <td>83-88</td>
-                            <td>67-72</td>
-                            <td>92-97</td>
-                            <td>78.5</td>
-                        </tr>
-                        <tr>
-                            <td>M (8-10)</td>
-                            <td>89-94</td>
-                            <td>73-78</td>
-                            <td>98-103</td>
-                            <td>79</td>
-                        </tr>
-                        <tr>
-                            <td>L (12-14)</td>
-                            <td>95-101</td>
-                            <td>79-85</td>
-                            <td>104-110</td>
-                            <td>79.5</td>
-                        </tr>
-                        <tr>
-                            <td>XL (16-18)</td>
-                            <td>102-109</td>
-                            <td>86-94</td>
-                            <td>111-117</td>
-                            <td>80</td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="tablaHombres">
-                    <h2 class="titulo_tablaHombres">Hombres</h2>
-                    <table class="table table-striped" cellpadding="10px">
-                        <tr>
-                            <th>Tallas</th>
-                            <th>Busto (cm)</th>
-                            <th>Cintura (cm)</th>
-                            <th>Cadera (cm)</th>
-                            <th>Ent.p. (cm)</th>
-                        </tr>
-                        <tr>
-                            <td>XS</td>
-                            <td>83-86</td>
-                            <td>71-74</td>
-                            <td>82-85</td>
-                            <td>81</td>
-                        </tr>
-                        <tr>
-                            <td>S</td>
-                            <td>87-92</td>
-                            <td>75-80</td>
-                            <td>86-91</td>
-                            <td>81.5</td>
-                        </tr>
-                        <tr>
-                            <td>M</td>
-                            <td>93-100</td>
-                            <td>81-88</td>
-                            <td>92-99</td>
-                            <td>82</td>
-                        </tr>
-                        <tr>
-                            <td>L</td>
-                            <td>101-108</td>
-                            <td>89-96</td>
-                            <td>100-107</td>
-                            <td>82.5</td>
-                        </tr>
-                        <tr>
-                            <td>XL</td>
-                            <td>109-118</td>
-                            <td>97-106</td>
-                            <td>108-116</td>
-                            <td>83</td>
-                        </tr>
-                    </table>
+            </div>
+            <div class="columnaDerCompras col-sm-12 col-md-6 col-lg-6">
+                <h2 class="resumen_articulovta">Resumen de tu compra</h2>
+                <p class="total_articulovta">Total</p>
+                <div class="accionTotalCarrito">
+                    <input type="button" value="Borrar carrito">
+                    <input type="button" value="Finalizar Comprar">
                 </div> 
-            </aside> 
+                <div class="imgMediosPago">
+                    <img src="../multi/payments_checkout.png">
+                </div>
+                <div class="bloqueCantidadLogos">
+                    <div class="areaTextoLogosVrAgreg">
+                        <div class="textoLogosVrAgreg">
+                            <p class="textoLogos"><img src="../multi/truck.ico">Envios gratis para compras mayores a $200.000</p>
+                        </div>
+                        <div class="textoLogosVrAgreg">
+                            <p class="textoLogos"><img src="../multi/amex_logo.ico">Compras seguras y diversos medios de pago</p>
+                        </div>  
+                        <div class="textoLogosVrAgreg">
+                            <p class="textoLogos"><img src="../multi/calidad.ico">Calidad garantizada en todos tus productos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="seccionWhatsapp">
             <a href="https://wa.link/k0kj1j" target="blank" class="float">
@@ -238,6 +162,6 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <!--Link a script propio Js-->
-    <script src="../js/script.js"></script>
+    <script src="./js/index.js"></script>
 </body> 
 </html>
