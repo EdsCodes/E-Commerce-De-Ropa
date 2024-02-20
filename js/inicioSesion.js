@@ -1,4 +1,4 @@
- //----------------PAGINA: INICIA SESION------------------//
+//----------------PAGINA: INICIA SESION------------------//
 
     // --- Formulario de registro:
 

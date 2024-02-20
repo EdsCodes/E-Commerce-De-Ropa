@@ -37,6 +37,12 @@
                     </a>
                 </div>
             </div>
+            <div class="barraBusqueda">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" id="barraBusqueda"type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-light" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
             <div class="navbar navbar-expand-lg ms-auto">
                 <div class="container-fluid">
                     <button class="navbar-toggler"
@@ -46,7 +52,11 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+                                <!--Ubicado temporalmente aqui... -->
+                                <a class="nav-link" aria-current="page" href="./pages/control.html" target="_blank">Panel de control</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="./index.html">Inicio</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="./pages/guiatallas.html">Guía de tallas</a>
@@ -55,10 +65,11 @@
                                 <a class="nav-link" href="./pages/nosotros.html">Nosotros</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./pages/pagcompras.html">Compras</a>
+                                <a class="nav-link" href="./pages/sesionregis.html">Inicia sesión</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./pages/sesionregis.html">Inicia sesión</a>
+                                <a class="nav-link position-relative" href="./pages/carrito.html"><i class="fa-solid fa-cart-shopping"></i>
+                                <span id="totalCarrito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span></a>
                             </li>
                         </ul>
                     </div>
@@ -129,75 +140,7 @@
         </div>
         </div>
         <div class="imgsPagPPal col-12" id="listaProductosPagPpal">
-            <!--<div class="img1__pagPpal">
-                <img src="./multi/mujer_con_jean_roto.jpeg" class="rounded float-start"
-                alt="mujer_con_jean_roto">
-                <div class="seccionVtaImgsPpal">
-                    <div class="card-img-overlay">
-                        <div class="seccionPrecios__imgsPagPPal">
-                            <h5 class="precioTachado">$85.000 </h5>
-                            <h5 class="textPrice">$65.000</h5>
-                        </div>
-                        <p class="card-text"> Jean Azul Dama. Tallas 26-36.</p>
-                        <p class="card-text"><small>Color azul</small></p>
-                    </div>
-                    <div class="botonesAccionCompra">
-                        <input type="button" value="Añadir al carrito">
-                        <input type="button" value="Comprar">
-                    </div>
-                </div>
-            </div>
-            <div class="img2__pagPpal">
-                <img src="./multi/mujer_blusa_beige.jpeg" class="rounded float-start" alt="mujer_blusa_beige">
-                <div class="seccionVtaImgsPpal">
-                    <div class="card-img-overlay">
-                        <div class="seccionPrecios__imgsPagPPal">
-                            <h5 class="precioTachado">$75.000 </h5>
-                            <h5 class="textPrice">$55.000</h5>
-                        </div>
-                        <p class="card-text" id=" textoProducto"> Blusa Dama. Tallas S-XL.</p>
-                        <p class="card-text"><small>Color beige</small></p>
-                    </div>
-                    <div class= "botonesAccionCompra">
-                        <input type="button" value="Añadir al carrito">
-                        <input type="button" value="Comprar">
-                    </div>
-                </div>
-            </div>
-            <div class="img3__pagPpal">
-                <img src="./multi/saco_gris_hombre.jpeg" class="rounded float-end" alt="saco_gris_hombre">
-                <div class="seccionVtaImgsPpal">
-                    <div class="card-img-overlay">
-                        <div class="seccionPrecios__imgsPagPPal">
-                            <h5 class="precioTachado">$65.000 </h5>
-                            <h5 class="textPrice">$45.000</h5>
-                        </div>
-                        <p class="card-text"> Saco hombre. Tallas S-XL.</p>
-                        <p class="card-text"><small>Color gris</small></p>
-                    </div>
-                    <div class="botonesAccionCompra">
-                        <input type="button" value="Añadir al carrito">
-                        <input type="button" value="Comprar">
-                    </div>
-                </div>
-            </div>
-            <div class="img4__pagPpal">
-                <img src="./multi/buzo_rojo_hombre.jpeg" alt="buzo_rojo_hombre">
-                <div class="seccionVtaImgsPpal">
-                    <div class="card-img-overlay">
-                        <div class="seccionPrecios__imgsPagPPal">
-                            <h5 class="precioTachado">$95.000 </h5>
-                            <h5 class="textPrice">$75.000</h5>
-                        </div>
-                        <p class="card-text"> Hoddie Hombre. Tallas S-XL.</p>
-                        <p class="card-text"><small>Color Rojo</small></p>
-                    </div>
-                    <div class="botonesAccionCompra">
-                        <input type="button" value="Añadir al carrito">
-                        <input type="button" value="Comprar">
-                    </div>
-                </div>
-            </div>-->
+          <!--Espacio para generacion de productos desde Js-->
         </div>
         <div class="divider col-12">
             <figure class="imgDivider">
@@ -320,8 +263,8 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <!--Link a script propio Js-->
-    <script src="../js/index.js"></script>
+    <!--Link a scripts propios Js-->
+    <script src="./js/index.js"></script>
 </body>
 </html>
         
