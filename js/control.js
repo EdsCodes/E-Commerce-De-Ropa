@@ -33,12 +33,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
         guardarProductosLS(productos);
 
+        document.getElementById("mensajePanelControl").innerHTML = "¡Producto registrado! Actualiza la pagina index";
+
         resetFormulario();
     });
 
     function eliminarDatos() {
         localStorage.removeItem("productos");
-        alert("Datos borrados correctamente");
+        document.getElementById("mensajePanelControl").innerHTML = "¡LS borrada!";
+        resetFormulario ();
     }
 
     document.getElementById("borrarDatosLS").addEventListener("click", eliminarDatos);
