@@ -1,0 +1,43 @@
+
+//render de productos filtrados
+.cardProdsFilt {
+    @include centrarElementos;
+    margin: 50px auto 50px auto;
+    height: 480px;
+    .card-img-top {
+        height: auto;
+        width: 150px;
+    }
+    .card-body {
+        margin-top: auto;
+        width: 520px;
+        .card-title {
+            font-size: 1.8em;
+        }
+        .card-text {
+            font-size: 1.2em;
+        }
+        .seccionPrecios {
+            .textoTachado {
+                font-size: 1.5em;
+                text-decoration: line-through;
+                color: $orangered;
+            }
+            .card-textPrice {
+                font-size: 1.5em;
+                color: $orangered;
+            }
+        }
+        .btn {
+            @include botonesDeAccion;
+            padding-top: 4px;
+            height: 20px;
+            width: 70px;
+            font-size: 0.8em;
+        }
+    }
+    :hover{
+        zoom: 102%;
+    }
+}
+

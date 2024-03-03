@@ -7,7 +7,7 @@ const mostrarProdsFilt = obtenerProductosFiltradosLS();
 function generarHTMLProductoDetalle(producto) { 
     const precioConAumento = Math.round(producto.precio * 1.10);
     return `
-        <div class="card" style="width: 18rem;">
+        <div class="card cardProdsFilt col-md-4" style="width: 10rem; font-size: 10px;">
             <img src=".${producto.imagenUrl}" class="card-img-top" alt="${producto.textoProducto}">
             <div class="card-body">
                 <h5 class="card-title">${producto.textoProducto}</h5>
@@ -29,3 +29,4 @@ mostrarProdsFilt.forEach(producto => {
     const productoHTML = generarHTMLProductoDetalle(producto); 
     document.getElementById('prodsFiltrados').innerHTML += productoHTML;
 });
+

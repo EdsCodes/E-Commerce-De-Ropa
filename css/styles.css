@@ -80,6 +80,7 @@ body {
     margin: 2px 0px 0px 5px;
   }
   header .menu_navegacion .barraBusqueda {
+    display: none;
     margin: auto;
   }
   header .menu_navegacion .barraBusqueda .form-control {
@@ -3561,6 +3562,57 @@ body {
   width: 250px;
   height: 20px;
   margin: 0.5px;
+}
+
+.cardProdsFilt {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: 50px auto 50px auto;
+  height: 480px;
+}
+.cardProdsFilt .card-img-top {
+  height: auto;
+  width: 150px;
+}
+.cardProdsFilt .card-body {
+  margin-top: auto;
+  width: 520px;
+}
+.cardProdsFilt .card-body .card-title {
+  font-size: 1.8em;
+}
+.cardProdsFilt .card-body .card-text {
+  font-size: 1.2em;
+}
+.cardProdsFilt .card-body .seccionPrecios .textoTachado {
+  font-size: 1.5em;
+  text-decoration: line-through;
+  color: #ff4500;
+}
+.cardProdsFilt .card-body .seccionPrecios .card-textPrice {
+  font-size: 1.5em;
+  color: #ff4500;
+}
+.cardProdsFilt .card-body .btn {
+  width: 140px;
+  height: 25px;
+  align-content: center;
+  border-radius: 5px;
+  background-color: #113946;
+  color: white;
+  font-size: 60%;
+  font-weight: 400;
+  padding: 2px;
+  border: #FFF2D8 5px;
+  padding-top: 4px;
+  height: 20px;
+  width: 70px;
+  font-size: 0.8em;
+}
+.cardProdsFilt :hover {
+  zoom: 102%;
 }
 
 /*# sourceMappingURL=styles.css.map */
