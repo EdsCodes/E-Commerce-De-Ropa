@@ -762,6 +762,10 @@ body {
   .imgsPagPPal .img4__pagPpal .seccionPrecios__imgsPagPPal {
     right: 5px;
   }
+  .imgsPagPPal .img4__pagPpal .seccionPrecios__imgsPagPPal .textDesc {
+    font-size: 0.9em;
+    font-weight: bolder;
+  }
   .divider {
     width: 100%;
     height: auto;

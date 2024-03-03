@@ -1,0 +1,6 @@
+[
+    {"id":1, "imagenUrl": "./multi/mujer_con_jean_roto.jpeg", "textoProducto": "Jean Dama", "descuento": "-10%", "talla": "Talla 26-36", "precio": 75000, "color": "Azul", "genero": "mujer"},
+    {"id":2, "imagenUrl": "./multi/mujer_blusa_beige.jpeg", "textoProducto": "Blusa dama", "descuento": "-10%", "talla": "Talla S-XL", "precio": 65000,  "color": "Beige", "genero": "mujer"},
+    {"id":3, "imagenUrl": "./multi/saco_gris_hombre.jpeg", "textoProducto": "Saco gris", "descuento": "-10%", "talla": "Talla S-XL", "precio": 70000,  "color": "Gris", "genero": "hombre"},
+    {"id":4, "imagenUrl": "./multi/buzo_rojo_hombre.jpeg", "textoProducto": "Buzo hombre", "descuento": "-10%", "talla": "Talla S-XL", "precio": 90000,  "color": "Rojo", "genero": "hombre"}
+]

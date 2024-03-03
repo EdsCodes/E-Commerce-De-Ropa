@@ -118,6 +118,10 @@
       @include seccionVtasPagPpal_320;
       .seccionPrecios__imgsPagPPal{
         right: 5px;
+        .textDesc{
+          font-size: 0.9em;
+          font-weight: bolder;
+        }
       }
     }
   }

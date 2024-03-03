@@ -33,9 +33,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
         guardarProductosLS(productos);
 
-        document.getElementById("mensajePanelControl").innerHTML = "¡Producto registrado! Actualiza la pagina index";
+        document.getElementById("mensajePanelControl").innerHTML = "¡Producto registrado!";
 
         resetFormulario();
+
     });
 
     function eliminarDatos() {
@@ -50,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function guardarProductosLS(productos) {
         localStorage.setItem("productos", JSON.stringify(productos));
     }
+
 });
 
 

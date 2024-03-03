@@ -1,0 +1,7 @@
+[
+    {"id":5, "imagenUrl": "./multi/jean_dama_azul.jpeg",  "textoProducto": "Jean Dama", "descuento": "-10%", "talla": "Talla 26-36", "precio": 80000, "color": "Azul", "genero": "mujer"},
+    {"id":6, "imagenUrl": "./multi/camisa_azulJean_hombre.jpeg", "textoProducto": "Camisa hombre", "descuento": "-10%", "talla": "Talla S-XL", "precio": 60000, "color": "Azul", "genero": "hombre"},
+    {"id":7, "imagenUrl": "./multi/jean_dama.jpeg", "textoProducto": "Jean dama", "descuento": "-10%", "talla": "Talla 26-36", "precio": 80000, "color": "Azul", "genero": "mujer"},
+    {"id":8, "imagenUrl": "./multi/camisa_casual_hombre.jpeg", "textoProducto": "Camisa casual hombre", "descuento": "-10%", "talla": "Talla S-XL", "precio": 75000, "color": "Colores variados", "genero": "hombre"},
+    {"id":9, "imagenUrl": "./multi/camisa_unisex.jpeg", "textoProducto": "Camisa unisex", "descuento": "-10%", "talla": "Talla S-XL", "precio": 78000, "color": "Colores variados", "genero": "mujer"}
+]
