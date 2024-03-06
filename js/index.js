@@ -27,10 +27,9 @@ document.addEventListener('DOMContentLoaded', async function () {
 
         function generarHTMLProducto(producto) {
         const precioConAumento = Math.round(producto.precio * 1.10);
-
         return `
-            <div class="img${producto.id}__pagPpal"> 
-                <img src="${producto.imagenUrl}" class="rounded float-start" alt="${producto.textoProducto}">
+            <div id=${producto.id} class="img${producto.id}__pagPpal"> 
+                <img src="${producto.imagenUrl1}" class="rounded float-start" alt="${producto.textoProducto}">
                 <div class="seccionVtaImgsPpal">
                     <div class="card-img-overlay">
                         <div class="seccionPrecios__imgsPagPPal">
@@ -42,8 +41,8 @@ document.addEventListener('DOMContentLoaded', async function () {
                         <p class="card-text"><small>${producto.color} ${producto.talla}</small></p>
                     </div>
                     <div class="botonesAccionCompra">
-                        <input type="button" class="verDetalleProd" value="Ver detalle">
-                        <input type="button" id="anadirCarrito" value="Añadir al carrito">
+                        <a href="../pages/detalleProducto.html" class="btn btn-dark" value="Ver detalle" onclick="encontrarIdProd(${producto.id});">Ver detalle</a>
+                        <a href="./pages/detalleProducto.html" class="btn btn-dark">Añadir al carrito</a>
                     </div>
                 </div>
             </div>
@@ -55,7 +54,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
             return `
                 <div class="card" style="width: 18rem;">
-                    <img src="${producto.imagenUrl}" class="card-img-top" alt="${producto.textoProducto}">
+                    <img src="${producto.imagenUrl1}" class="card-img-top" alt="${producto.textoProducto}">
                     <div class="card-body">
                         <h5 class="card-title">${producto.textoProducto}</h5>
                         <h6>${producto.descuento}</h6>
@@ -65,13 +64,13 @@ document.addEventListener('DOMContentLoaded', async function () {
                             <p class="textoTachado">$${precioConAumento}</p>
                             <p class="card-textPrice">$${producto.precio}</p>
                         </div>
-                        <a href="./pages/detalleProducto.html" class="btn btn-dark">Ver detalle</a>
-                        <a href="./pages/detalleProducto.html" class="btn btn-dark">Añadir al carrito</a>
+                        <a href="../pages/detalleProducto.html" class="btn btn-dark" onclick="encontrarIdProd(${producto.id});"> Ver detalle</a>
+                        <a href="../pages/detalleProducto.html" class="btn btn-dark">Añadir al carrito</a>
                     </div>
                 </div>
             `;
         };
-    
+
         function renderizarProductos(productos, elemento) {
             const htmlProductos = productos.map(producto => generarHTMLProducto(producto)).join('');
             elemento.innerHTML = htmlProductos;
@@ -102,8 +101,10 @@ document.addEventListener('DOMContentLoaded', async function () {
             guardarProductosFiltradosLS(prodsFiltrados);
         }
 
+        localStorage.setItem('prodsPagPpal', JSON.stringify(prodsPagPpal));
+
         function abrirPagDetalle () {
-            window.open('../pages/detalleProducto.html')
+            window.open('../pages/detalleFiltrados.html')
         }
 
         function accionesProd() {
@@ -118,6 +119,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         
         botonFiltroMujer.addEventListener("click", accionesProd);
         botonFiltroHombre.addEventListener("click", accionesProd);
+
     
     } catch (error) {
         console.error("Error al cargar la página:", error);
