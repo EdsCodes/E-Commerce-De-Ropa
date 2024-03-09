@@ -32,12 +32,11 @@ document.addEventListener('DOMContentLoaded', async function () {
                 <img src="${producto.imagenUrl1}" class="rounded float-start" alt="${producto.textoProducto}">
                 <div class="seccionVtaImgsPpal">
                     <div class="card-img-overlay">
-                    <div class="seccionPrecios__imgsPagPPal">
-                        <div class="porcDesc"><h5 class="textDesc">${producto.descuento}</h5></div>
+                        <div class="seccionPrecios__imgsPagPPal">
                             <h5 class="precioTachado">$${precioConAumento}</h5>
                             <h5 class="textPrice">$${producto.precio}</h5>
                         </div>
-                        <p class="card-text">${producto.textoProducto}</p>
+                        <p class="card-text">${producto.textoProducto}  (-10% OFF)</p>
                         <p class="card-text"><small>${producto.color} ${producto.talla}</small></p>
                     </div>
                     <div class="botonesAccionCompra">

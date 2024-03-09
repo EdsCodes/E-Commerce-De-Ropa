@@ -170,6 +170,7 @@ body {
     .card-img-overlay {
       width: 200px;
       .seccionPrecios__imgsPagPPal {
+        display: flex;
         right: 75px;
         bottom: 105px;
         .precioTachado {

@@ -1514,6 +1514,7 @@ body {
     width: 200px;
   }
   .imgsPagPPal .img1__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal {
+    display: flex;
     right: 75px;
     bottom: 105px;
   }
@@ -1543,6 +1544,7 @@ body {
     width: 200px;
   }
   .imgsPagPPal .img2__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal {
+    display: flex;
     right: 75px;
     bottom: 105px;
   }
@@ -1572,6 +1574,7 @@ body {
     width: 200px;
   }
   .imgsPagPPal .img3__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal {
+    display: flex;
     right: 75px;
     bottom: 105px;
   }
@@ -1601,6 +1604,7 @@ body {
     width: 200px;
   }
   .imgsPagPPal .img4__pagPpal .seccionVtaImgsPpal .card-img-overlay .seccionPrecios__imgsPagPPal {
+    display: flex;
     right: 75px;
     bottom: 105px;
   }
@@ -2531,6 +2535,9 @@ body {
   }
 }
 @media screen and (min-width: 1024px) {
+  .columnaGestionUsuario .seccionFormularios .formularioRegistro {
+    margin-top: 60px;
+  }
   .columnaGestionUsuario .seccionFormularios .formularioInicioSesion {
     margin-top: 40px;
   }
@@ -2676,12 +2683,34 @@ body {
     width: 40%;
     padding: 5px;
   }
-  .columnaDerCompras .resumen_articulovta {
+  .columnaDerCompras .campoCodDescuento {
+    display: flex;
+    flex-direction: row;
+  }
+  .columnaDerCompras .campoCodDescuento input {
+    height: 25px;
+    width: 180px;
+    margin-left: 15px;
+  }
+  .columnaDerCompras .campoCodDescuento button {
+    margin-left: 25px;
+    width: 140px;
+    height: 25px;
+    align-content: center;
+    border-radius: 5px;
+    background-color: #113946;
+    color: white;
+    font-size: 60%;
+    font-weight: 400;
+    padding: 2px;
+    border: #FFF2D8 5px;
+  }
+  .columnaDerCompras .campoCodDescuento .resumen_articulovta {
     margin-top: 25px;
     color: black;
     font-size: 1em;
   }
-  .columnaDerCompras .total_articulovta {
+  .columnaDerCompras .campoCodDescuento .total_articulovta {
     color: #ff4500;
     font-size: 1em;
   }
