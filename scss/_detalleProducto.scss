@@ -54,9 +54,19 @@
         }
     }
     .columnaDerCompras {
-        .precio_articulovta {
-            color: $orangered;
-            @include h3_size320;
+        .preciosDetalleProd {
+            display: flex;
+            .textoTachado {
+                font-size: 1.3em;
+                text-decoration: line-through;
+                color: $orangered;
+                margin-right: 15px;
+            }
+            .precio_articulovta {
+                color: $orangered;
+                @include h3_size320;
+                font-size: 1.3em;
+            }
         }
         .seccionColorProd {
             display: flex;

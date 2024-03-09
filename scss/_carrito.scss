@@ -10,51 +10,68 @@
         }
     }
     .columnaIzqCarrito {
-        display: flex;
-        flex-direction: row;
-        .ImgProducto_carrito {
-            img{
-                @include estiloImgsPagCompras;
-                width: 120px;
+        .itemCarrito {
+            display: flex;
+            flex-direction: row;
+            margin: 25px;
+            .ImgProducto_carrito {
+                img{
+                    @include estiloImgsPagCompras;
+                    width: 120px;
+                }
+                :hover{
+                    opacity: 1;
+                }
             }
-            :hover{
-                opacity: 1;
-            }
-        }
-        .AccionProdCar {
-            margin: 20px;
-            h4{
-                @include h2_size320;
-            }
-            p{
-                @include p_size320
-            }
-            input {
-                width: 80px;
-            }
-            .botonBorrProd_carrito{
-                button {
-                    @include botonesDeAccion;
-                    background-color: $beige;
-                    color: $blueking;
-                    font-size: 12px;
-                    width: 40%;
-                    padding: 5px;
+            .AccionProdCar {
+                margin: 20px;
+                h4{
+                    @include h2_size320;
+                }
+                p{
+                    @include p_size320
+                }
+                input {
+                    width: 80px;
+                }
+                .botonBorrProd_carrito{
+                    button {
+                        @include botonesDeAccion;
+                        background-color: $beige;
+                        color: $blueking;
+                        font-size: 12px;
+                        width: 40%;
+                        padding: 5px;
+                    }
                 }
             }
         }
     }
     .columnaDerCompras {
-        .resumen_articulovta {
-            color: black;
-            @include h2_size320;
-        }
-        .total_articulovta{
-            color: $orangered;
-            @include h2_size320;
+        .campoCodDescuento{
+            display: flex;
+            flex-direction: row;
+            input {
+                height: 25px;
+                width: 180px;
+                margin-left: 15px;
+            }
+            button {
+                margin-left: 25px;
+                @include botonesDeAccion;
+            }
+            .resumen_articulovta {
+                margin-top: 25px;
+                color: black;
+                @include h2_size320;
+            }
+            .total_articulovta{
+                color: $orangered;
+                @include h2_size320;
+            }
         }
         .accionTotalCarrito {
-           input {
+            button {
                 @include botonesDeAccion;
             }
         }
