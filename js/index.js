@@ -32,8 +32,8 @@ document.addEventListener('DOMContentLoaded', async function () {
                 <img src="${producto.imagenUrl1}" class="rounded float-start" alt="${producto.textoProducto}">
                 <div class="seccionVtaImgsPpal">
                     <div class="card-img-overlay">
-                        <div class="seccionPrecios__imgsPagPPal">
-                            <h5 class="textDesc">${producto.descuento}</h5>
+                    <div class="seccionPrecios__imgsPagPPal">
+                        <div class="porcDesc"><h5 class="textDesc">${producto.descuento}</h5></div>
                             <h5 class="precioTachado">$${precioConAumento}</h5>
                             <h5 class="textPrice">$${producto.precio}</h5>
                         </div>
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                     </div>
                     <div class="botonesAccionCompra">
                         <a href="../pages/detalleProducto.html" class="btn btn-dark" value="Ver detalle" onclick="encontrarIdProd(${producto.id});">Ver detalle</a>
-                        <a href="./pages/detalleProducto.html" class="btn btn-dark">Añadir al carrito</a>
+                        <a class="btn btn-dark" onclick="encontrarIdProd(${producto.id}); agregarProdCarrito();">Añadir al carrito</a>
                     </div>
                 </div>
             </div>
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                             <p class="card-textPrice">$${producto.precio}</p>
                         </div>
                         <a href="../pages/detalleProducto.html" class="btn btn-dark" onclick="encontrarIdProd(${producto.id});"> Ver detalle</a>
-                        <a href="../pages/detalleProducto.html" class="btn btn-dark">Añadir al carrito</a>
+                        <a class="btn btn-dark" onclick="encontrarIdProd(${producto.id}); agregarProdCarrito();">Añadir al carrito</a>
                     </div>
                 </div>
             `;

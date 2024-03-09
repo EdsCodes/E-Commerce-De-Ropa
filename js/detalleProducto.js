@@ -20,6 +20,7 @@ const verProducto = () => {
 function renderProducto() {
     const producto = verProducto(); 
     let contenido = "";
+    const precioConAumento = Math.round(producto.precio * 1.10);
     if (producto) {
         contenido = `
             <div class="tituloArticuloVta col-12"> 
@@ -45,8 +46,8 @@ function renderProducto() {
                 <p class="descripcion_productovta">${producto.descripcion}</p>
             </div>
             <div class="columnaDerCompras col-sm-12 col-md-12 col-lg-6">
-                <p class="textoTachado">$${producto.precioAumentado}</p>
-                <p class="precio_articulovta">$${producto.precio}</p>
+                <div class ="preciosDetalleProd"><p class="textoTachado">$${precioConAumento}</p>
+                <p class="precio_articulovta">$${producto.precio}</p></div>
                 <div class="seccionColorProd">
                     <p class="tittleColores">Colores:</p>
                     <div class="color-selector">
@@ -73,7 +74,7 @@ function renderProducto() {
                     <div class="seccionCantidadProd">
                         <p>CANTIDAD: <input class="quantity" id="id_form-0-quantity" min="0" name="form-0-quantity" value="1" type="number"></p>
                         <div class="botonesAccionCompra">
-                            <input type="button" id="anadirCarrito" value="Añadir al carrito">
+                            <input type="button" id="anadirCarrito" onclick="agregarProdCarrito()" value="Añadir al carrito">
                         </div> 
                     </div>
                     <div class="areaTextoLogosVrAgreg">
@@ -97,19 +98,3 @@ function renderProducto() {
 }
 
 renderProducto();
-
-// // Función para abrir la página de detalle del producto y mostrar la información del producto
-// function abrirPagDetalle(id) {
-//     // Obtener el producto seleccionado del array de productos
-//     var productoEncontrado = productos.find(function(producto) {
-//         return producto.id === id;
-//     });
-//     window.open('../pages/detalleProducto.html')
-//     // Renderizar el producto
-//     renderProducto(productoEncontrado);
-// }
-
-// // Agregar event listener a cada botón "Ver producto"
-// document.querySelectorAll('.verProductoBtn').forEach(btn => {
-//     btn.addEventListener('click', obtenerIdProductoClickeado);
-// });

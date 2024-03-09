@@ -19,7 +19,7 @@ function generarHTMLProductoDetalle(producto) {
                     <p class="card-textPrice">$${producto.precio}</p>
                 </div>
                 <a href="../pages/detalleProducto.html" class="btn btn-dark" onclick="encontrarIdProd(${producto.id});">Ver detalle</a>
-                <a href="./pages/detalleProducto.html" class="btn btn-dark">Añadir al carrito</a>
+                <a class="btn btn-dark" onclick="encontrarIdProd(${producto.id}); agregarProdCarrito();">Añadir al carrito</a>
             </div>
         </div>
     `;

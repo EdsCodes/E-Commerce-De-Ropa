@@ -33,16 +33,19 @@ body {
       display: flex;
       flex-direction: column;
       margin: 0px 0px 5px 3px;
+      .textDesc{
+        color: $orangered;
+      }
       .seccionPrecios__imgsPagPPal{
         display: flex;
         justify-content: flex-end;
-        margin: 115px 0px 2px 0;
+        margin: 15px 0px 2px 0;
         position: relative;
         right: 18px;
         top: 10px;
         .precioTachado{
           text-decoration: line-through;
-          color: $orangered;
+          color: black;
           margin-right: 3px;
           font-size: 0.6em;
           font-weight: 700;
@@ -67,7 +70,7 @@ body {
       @include centrarElementos;
       display: flex;
       flex-direction: row;
-      input {
+      a {
         @include botonesDeAccion;
         font-size: 45%;
         width: 60px;
@@ -124,7 +127,7 @@ body {
       @include centrarElementos;
       display: flex;
       flex-direction: row;
-      input {
+      a {
         @include botonesDeAccion;
         font-size: 45%;
         width: 60px;
@@ -153,9 +156,9 @@ body {
     }
     .botonesAccionCompra {
       flex-direction: row;
-      input {
-        font-size: 55%;
-        width: 80px;
+      a {
+        font-size: 65%;
+        width: 90px;
         height: 20px;
       }
     }
@@ -182,10 +185,12 @@ body {
     }
     .botonesAccionCompra {
       flex-direction: row;
-      input {
-        font-size: 65%;
-        width: 90px;
-        height: 20px;
+      a {
+        align-items: center;
+        margin-top: 25px;
+        font-size: 55%;
+        width: 100px;
+        height: 25px;
       }
     }
   }
@@ -297,6 +302,6 @@ body {
 @import "guiatallas";
 @import "nosotros";
 @import "sesionregis";
-@import "pagcompras";
+@import "detalleFiltrados";
 @import "carrito";
 @import "detalleProducto";
