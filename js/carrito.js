@@ -130,7 +130,7 @@ function renderCarrito() {
                     <button title="Validar codigo" onclick="renderCarrito()">Validar código</button>
                 </div>
                 <div class="campoCodDescuento">
-                    <p class="total_articulovta">Total: $${validarCodigoProm()} </p>
+                    <p class="total_articulovta" id="vrTotalProductos">Total: $${validarCodigoProm()}</p>
                 </div>
                 <div class="accionTotalCarrito">
                     <button class="btn btn-sm" onclick="eliminarCarrito()" title="Borrar carrito"><b>Borrar Carrito</b></button>
@@ -165,20 +165,19 @@ let codigoDescuentoAplicado = false;
 
 function validarCodigoProm() {
     const codigoDescuento = document.querySelector('.codigoDescuento');
-
     let totalConDescuento = 0;
 
     if (codigoDescuentoAplicado) {
         Swal.fire({
-            title: "Refresca la pagina e ingresa nuevamente tu codigo de descuento!",
-            text: "Solo puedes ingresar un codigo por compra",
+            title: "¡Refresca la página e ingresa nuevamente tu código de descuento!",
+            text: "Solo puedes ingresar un código por compra",
             icon: "warning"
         });
         totalConDescuento = sumaTotalProductos();
         return totalConDescuento;
     }
 
-    if (codigoDescuento === null || codigoDescuento === "") {
+    if (!codigoDescuento || codigoDescuento.value === "") {
         totalConDescuento = sumaTotalProductos();
         codigoDescuentoAplicado = false;
     } else {
@@ -189,34 +188,35 @@ function validarCodigoProm() {
             case "MELOLLEVO123":
                 porcentajeDescuento = 0.04;
                 break;
-
             case "COMPRAYA123":
                 porcentajeDescuento = 0.06;
                 break;
-
             case "LLEVATELO123":
                 porcentajeDescuento = 0.08;
                 break;
-
             case "COMPRA456":
                 porcentajeDescuento = 0.10;
                 break;
+            default:
+            Swal.fire({
+                title: "¡Error!",
+                text: "Por favor ingresa un codigo de descuento correcto.",
+                icon: "warning"
+            });
         }
 
         totalConDescuento = sumaTotalProductos() - (sumaTotalProductos() * porcentajeDescuento);
-
-        
         codigoDescuentoAplicado = true;
     }
     return totalConDescuento;
 }
 
-const totalConDescto = validarCodigoProm();
-
 const finalizarCompra = () => {
-    const mensaje = codigoDescuentoAplicado ? `tu cuenta total con descuento es $${totalConDescto} pesos.` : `tu cuenta total es $${totalConDescto} pesos.`;
+    const totalConDescto = document.getElementById('vrTotalProductos').innerText;
+    const mensaje = codigoDescuentoAplicado ? `Tu valor a pagar es en ${totalConDescto} pesos.` : `Tu cuenta total es $${sumaTotalProductos()} pesos.`;
+
     Swal.fire({
-        title: "Muchas Gracias por tu Compra, vuelve pronto!",
+        title: "¡Muchas gracias por tu compra, vuelve pronto!",
         text: mensaje,
         imageUrl: "../images/logo3.png",
         imageWidth: 50,
@@ -229,7 +229,7 @@ const finalizarCompra = () => {
         if (result.isConfirmed) {
             localStorage.removeItem("carrito");
             Swal.fire({
-                title: "listo!",
+                title: "¡Listo!",
                 text: "Tu compra será enviada a la dirección registrada.",
                 icon: "success"
             });
