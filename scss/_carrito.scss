@@ -48,14 +48,27 @@
         }
     }
     .columnaDerCompras {
-        .resumen_articulovta {
-            margin-top: 25px;
-            color: black;
-            @include h2_size320;
-        }
-        .total_articulovta{
-            color: $orangered;
-            @include h2_size320;
+        .campoCodDescuento{
+            display: flex;
+            flex-direction: row;
+            input {
+                height: 25px;
+                width: 180px;
+                margin-left: 15px;
+            }
+            button {
+                margin-left: 25px;
+                @include botonesDeAccion;
+            }
+            .resumen_articulovta {
+                margin-top: 25px;
+                color: black;
+                @include h2_size320;
+            }
+            .total_articulovta{
+                color: $orangered;
+                @include h2_size320;
+            }
         }
         .accionTotalCarrito {
             button {

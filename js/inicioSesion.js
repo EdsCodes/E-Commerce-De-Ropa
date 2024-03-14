@@ -17,7 +17,7 @@
             this.edad = this.calcularEdad();
             this.ciudad = ciudad;
             this.aceptaTerminos = aceptaTerminos;
-            this.premioSorpresaGanado = this.calcularPremioSorpresa();
+            this.codigoDescuentoGanado = this.calcularCodigoDescuento();
         }
 
         mostrarInformacion() {
@@ -38,19 +38,39 @@
             return edad;
         }
 
-        calcularPremioSorpresa() {
+        calcularCodigoDescuento() {
             function aleatorio(min, max) {
                 return Math.floor(Math.random() * (max - min + 1) + min);
             }
             switch (aleatorio(1, 4)) {
                 case 1:
-                    return "Bono de bienvenida del 15% de descuento para la 1era compra.";
+                    Swal.fire({
+                        title: "MELOLLEVO123",
+                        text: "Hola, " + this.nombre + ". Usa este codigo en tu carrito y obten un 4% de descuento adicional en tu compra.",
+                        icon: "success"
+                    });
+                    return "Codigo descuento: MELOLLEVO123";
                 case 2:
-                    return "El envío de la primera compra es totalmente gratuito.";
+                    Swal.fire({
+                        title: "COMPRAYA123",
+                        text: "Hola, " + this.nombre + ". Usa este codigo en tu carrito y obten un 6% de descuento adicional en tu compra.",
+                        icon: "success"
+                    });
+                    return "codigo descuento: COMPRAYA123";
                 case 3:
-                    return "Cupón único del 10% adicional para la 1era compra.";
+                    Swal.fire({
+                        title: "LLEVATELO123",
+                        text: "Hola, " + this.nombre + ". Usa este codigo en tu carrito y obten un 8% de descuento adicional en tu compra.",
+                        icon: "success"
+                    });
+                    return "codigo descuento: LLEVATELO123";
                 case 4:
-                    return "Para 1er pedido mayor a $200.000, un regalo sorpresa.";
+                    Swal.fire({
+                        title: "COMPRA456",
+                        text: "Hola, " + this.nombre + ". Usa este codigo en tu carrito y obten un 10% de descuento adicional en tu compra.",
+                        icon: "success"
+                    });
+                    return "codigo descuento: COMPRA456";
             }
         }
     }
@@ -88,7 +108,6 @@
         
         listaClientes.push(nuevoCliente);
         
-        alert("Bienvenid@, " + nuevoCliente.premioSorpresaGanado);
         console.table(listaClientes);
         console.log("Fecha de actualización de registro: " + new Date());
 
