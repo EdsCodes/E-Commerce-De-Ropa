@@ -17,7 +17,11 @@
             this.edad = this.calcularEdad();
             this.ciudad = ciudad;
             this.aceptaTerminos = aceptaTerminos;
+<<<<<<< HEAD
+            this.codigoDescuentoGanado = this.calcularCodigoDescuento();
+=======
             this.beneficioGanado = this.beneficioGanado();
+>>>>>>> 651b146aaa09636f97ade57c9d3019e7e46600fc
         }
 
         mostrarInformacion() {
@@ -38,13 +42,45 @@
             return edad;
         }
 
+<<<<<<< HEAD
+        calcularCodigoDescuento() {
+=======
         beneficioGanado() {
+>>>>>>> 651b146aaa09636f97ade57c9d3019e7e46600fc
             function aleatorio(min, max) {
                 return Math.floor(Math.random() * (max - min + 1) + min);
             }
             switch (aleatorio(1, 3)) {
                 case 1:
                     Swal.fire({
+<<<<<<< HEAD
+                        title: "MELOLLEVO123",
+                        text: "Hola, " + this.nombre + ". Usa este codigo en tu carrito y obten un 4% de descuento adicional en tu compra.",
+                        icon: "success"
+                    });
+                    return "Codigo descuento: MELOLLEVO123";
+                case 2:
+                    Swal.fire({
+                        title: "COMPRAYA123",
+                        text: "Hola, " + this.nombre + ". Usa este codigo en tu carrito y obten un 6% de descuento adicional en tu compra.",
+                        icon: "success"
+                    });
+                    return "codigo descuento: COMPRAYA123";
+                case 3:
+                    Swal.fire({
+                        title: "LLEVATELO123",
+                        text: "Hola, " + this.nombre + ". Usa este codigo en tu carrito y obten un 8% de descuento adicional en tu compra.",
+                        icon: "success"
+                    });
+                    return "codigo descuento: LLEVATELO123";
+                case 4:
+                    Swal.fire({
+                        title: "COMPRA456",
+                        text: "Hola, " + this.nombre + ". Usa este codigo en tu carrito y obten un 10% de descuento adicional en tu compra.",
+                        icon: "success"
+                    });
+                    return "codigo descuento: COMPRA456";
+=======
                         title: "Felicidades "+ this.nombre,
                         text: "Si tu pedido es mayor a $200.000, recibiras en tu paquete un regalo sorpresa.",
                         icon: "success"
@@ -64,6 +100,7 @@
                         icon: "success"
                     });
                     return "descuento en tienda por referido";
+>>>>>>> 651b146aaa09636f97ade57c9d3019e7e46600fc
             }
         }
     }
