@@ -80,29 +80,6 @@ const eliminarCarrito = () => {
     });
 }
 
-const finalizarCompra = () => {
-    Swal.fire({
-        title: "Para finalizar, por favor confirma tu compra",
-        text: "Total a pagar: $" + sumaTotalProductos() + " pesos.",
-        imageUrl: "../images/logo3.png",
-        imageWidth: 50,
-        imageAlt: "Me lo Llevo Store",
-        showCancelButton: true,
-        confirmButtonColor: "#ff4500",
-        cancelButtonColor: "#113946",
-        confirmButtonText: "Aceptar"
-        }).then((result) => {
-            if (result.isConfirmed) {
-                localStorage.removeItem("carrito");
-                Swal.fire({
-                    title: "Gracias por tu compra!",
-                    text: "Tu pedido será enviado a la direccion registrada.",
-                    icon: "success"
-                });
-            }
-        });
-}
-
 const renderBotonCarrito = () => {
     document.getElementById("totalCarrito").innerHTML = cantTotalProductos();
 }
