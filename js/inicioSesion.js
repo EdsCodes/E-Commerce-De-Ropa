@@ -17,11 +17,7 @@
             this.edad = this.calcularEdad();
             this.ciudad = ciudad;
             this.aceptaTerminos = aceptaTerminos;
-<<<<<<< HEAD
             this.codigoDescuentoGanado = this.calcularCodigoDescuento();
-=======
-            this.beneficioGanado = this.beneficioGanado();
->>>>>>> 651b146aaa09636f97ade57c9d3019e7e46600fc
         }
 
         mostrarInformacion() {
@@ -42,18 +38,13 @@
             return edad;
         }
 
-<<<<<<< HEAD
         calcularCodigoDescuento() {
-=======
-        beneficioGanado() {
->>>>>>> 651b146aaa09636f97ade57c9d3019e7e46600fc
             function aleatorio(min, max) {
                 return Math.floor(Math.random() * (max - min + 1) + min);
             }
-            switch (aleatorio(1, 3)) {
+            switch (aleatorio(1, 4)) {
                 case 1:
                     Swal.fire({
-<<<<<<< HEAD
                         title: "MELOLLEVO123",
                         text: "Hola, " + this.nombre + ". Usa este codigo en tu carrito y obten un 4% de descuento adicional en tu compra.",
                         icon: "success"
@@ -80,27 +71,6 @@
                         icon: "success"
                     });
                     return "codigo descuento: COMPRA456";
-=======
-                        title: "Felicidades "+ this.nombre,
-                        text: "Si tu pedido es mayor a $200.000, recibiras en tu paquete un regalo sorpresa.",
-                        icon: "success"
-                    });
-                    return "regalo sorpresa";
-                case 2:
-                    Swal.fire({
-                        title: "Felicidades "+ this.nombre,
-                        text: "Acercate a una de nuestras tiendas con tu documento, recibiras un regalo de bienvenida :)",
-                        icon: "success"
-                    });
-                    return "regalo de bienvenida en tienda";
-                case 3:
-                    Swal.fire({
-                        title: "Felicidades "+ this.nombre,
-                        text: "Si llevas a uno de tus amig@s a nuestras tiendas, recibiras un descuento del 4% adicional en tu compra",
-                        icon: "success"
-                    });
-                    return "descuento en tienda por referido";
->>>>>>> 651b146aaa09636f97ade57c9d3019e7e46600fc
             }
         }
     }
@@ -144,7 +114,7 @@
         resetFormulario();
     });
 
-    // Sistema de "login" provisional y muuuuy inseguro jajaja... para aplicar el método de búsqueda find, consiste en buscar el dato entre los datos de clientes (objetos) registrados en el array [listaClientes], compararlos, y si son iguales salta alert de bienvenido.
+    // Sistema de "login" provisional y muuuuy inseguro jajaja... para aplicar el método de búsqueda find (mientras aprendemos AJAX y fetch), consiste en buscar el dato entre los datos de clientes (objetos) registrados en el array [listaClientes], compararlos, y si son iguales salta alert de bienvenido.
 
         document.getElementById('botonLogin').addEventListener('click', function (event) {
         event.preventDefault();
@@ -157,20 +127,35 @@
         });
 
         if (usuarioEncontrado) {
-            Swal.fire({
-                title: "Bienvenido de nuevo " + usuarioEncontrado.nombre,
-                text: "Checa las nuevas colecciones que tenemos para ti.",
-                icon: "success"
-            });
+            alert("Bienvenido de nuevo " + usuarioEncontrado.nombre);
+            return;
         } else {
-            Swal.fire({
-                position:"center",
-                icon: "error",
-                text: "Usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.",
-                showConfirmButton: false,
-                timer: 1000
-            });
+            alert("Usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.");
         }
         
         resetFormulario();
     });
+
+    //sistema provisional de ingreso a pagina de admin de productos y otros del sitio. al INGRESAR LOS SIGTES DATOS SE INGRESA A LA PAG DE ADMIN DEL SITIO (PROVISIONAL) <!--NOTA: Se trabajara en panel de control para añadir o quitar productos y para mostrar informes de clientes, de productos, añadir o quitar inventario, controlar promociones, etc... pero para mas adelante...-->
+
+    const emailAdmin = "admin@gmail.com";
+    const contrasenaAdmin = "Admin123*";
+
+    function ingresarComoAdmin() {
+    const emailAdminRegistrado = document.getElementById('email').value;
+    const contrasenaAdminReg = document.getElementById('password').value;
+
+        while (emailAdminRegistrado === emailAdmin && contrasenaAdminReg === contrasenaAdmin){
+            alert("Bienvenido, admin");
+            window.open("../pages/control.html", "_blank");
+            return;
+        }
+    }
+
+    document.getElementById('botonLogin').addEventListener('click', function() {
+    ingresarComoAdmin();
+    });
+
+    function resetFormulario() {
+        document.querySelector('.formularioRegistro').reset();
+    }
