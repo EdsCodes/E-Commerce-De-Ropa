@@ -77,6 +77,14 @@ body {
         height: 20px;
         margin: 0.5px;
       }
+      button {
+        @include botonesDeAccion;
+        font-size: 45%;
+        width: 60px;
+        height: 20px;
+        margin: 0.5px;
+      }
+      
     }
   }
 }
@@ -128,6 +136,13 @@ body {
       display: flex;
       flex-direction: row;
       a {
+        @include botonesDeAccion;
+        font-size: 45%;
+        width: 60px;
+        height: 20px;
+        margin: 0.5px;
+      }
+      button {
         @include botonesDeAccion;
         font-size: 45%;
         width: 60px;
@@ -187,6 +202,13 @@ body {
     .botonesAccionCompra {
       flex-direction: row;
       a {
+        align-items: center;
+        margin-top: 25px;
+        font-size: 55%;
+        width: 100px;
+        height: 25px;
+      }
+      button {
         align-items: center;
         margin-top: 25px;
         font-size: 55%;
