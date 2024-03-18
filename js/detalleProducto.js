@@ -97,4 +97,4 @@ function renderProducto() {
     document.getElementById("vistaDetalleProd").innerHTML = contenido;
 }
 
-renderProducto();
+renderProducto(); 
