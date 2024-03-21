@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', async function () {
-    
+
     async function consumirApiProductos() {
         try {
             const respuesta = await fetch('./js/productos.json');
@@ -23,30 +23,30 @@ document.addEventListener('DOMContentLoaded', async function () {
     const [productos, productosCarrete] = await Promise.all([consumirApiProductos(), consumirApiProductosCarrete()]);
 
     function generarHTMLProducto(producto) {
-    const precioConAumento = Math.round(producto.precio * 1.10);
-    return `
-        <div id=${producto.id} class="img${producto.id}__pagPpal"> 
-            <img src="${producto.imagenUrl1}" class="rounded float-start" alt="${producto.textoProducto}">
-            <div class="seccionVtaImgsPpal">
-                <div class="card-img-overlay">
-                    <div class="seccionPrecios__imgsPagPPal">
-                        <h5 class="precioTachado">$${precioConAumento}</h5>
-                        <h5 class="textPrice">$${producto.precio}</h5>
+        const precioConAumento = Math.round(producto.precio * 1.10);
+        return `
+            <div id="${producto.id}" class="img${producto.id}__pagPpal"> 
+                <img src="${producto.imagenUrl1}" class="rounded float-start" alt="${producto.textoProducto}">
+                <div class="seccionVtaImgsPpal">
+                    <div class="card-img-overlay">
+                        <div class="seccionPrecios__imgsPagPPal">
+                            <h5 class="precioTachado">$${precioConAumento}</h5>
+                            <h5 class="textPrice">$${producto.precio}</h5>
+                        </div>
+                        <p class="card-text">${producto.textoProducto}  (-10% OFF)</p>
+                        <p class="card-text"><small>${producto.color} ${producto.talla}</small></p>
                     </div>
-                    <p class="card-text">${producto.textoProducto}  (-10% OFF)</p>
-                    <p class="card-text"><small>${producto.color} ${producto.talla}</small></p>
-                </div>
-                <div class="botonesAccionCompra">
-                    <a href="./pages/detalleProducto.html" class="btn btn-dark" value="Ver detalle" onclick="encontrarIdProd(${producto.id});">Ver detalle</a>
-                    <button class="btn btn-dark" onclick="encontrarIdProd(${producto.id}); agregarProdCarrito();">Añadir al carrito</button>
+                    <div class="botonesAccionCompra">
+                        <a href="./pages/detalleProducto.html" class="btn btn-dark" value="Ver detalle" onclick="encontrarIdProd(${producto.id});">Ver detalle</a>
+                        <button class="btn btn-dark" onclick="encontrarIdProd(${producto.id}); agregarProdCarrito();">Añadir al carrito</button>
+                    </div>
                 </div>
             </div>
-        </div>
         `;
     };
 
     function generarHTMLProductosCarrete(producto) {
-    const precioConAumento = Math.round(producto.precio * 1.10);
+        const precioConAumento = Math.round(producto.precio * 1.10);
 
         return `
             <div class="card" style="width: 18rem;">
@@ -69,25 +69,25 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     function renderizarProductos(productos, elemento) {
         const htmlProductos = productos.map(producto => generarHTMLProducto(producto)).join('');
-        elemento? elemento.innerHTML = htmlProductos: null;
+        elemento ? elemento.innerHTML = htmlProductos : null;
     };
 
-    function renderizarProdsCarrete (productos, elemento) {
+    function renderizarProdsCarrete(productos, elemento) {
         const htmlProductos = productos.map(producto => generarHTMLProductosCarrete(producto)).join('');
-        elemento? elemento.innerHTML = htmlProductos: null;
+        elemento ? elemento.innerHTML = htmlProductos : null;
     };
-    
+
     renderizarProductos(productos, document.getElementById('listaProductosPagPpal'));
     renderizarProdsCarrete(productosCarrete, document.getElementById('carrete_recomendados'));
 
-    const prodsPagPpal = productos.concat(productosCarrete); 
+    const prodsPagPpal = productos.concat(productosCarrete);
 
-    let prodsFiltrados = []; 
-    
+    let prodsFiltrados = [];
+
     function filtrarPorGenero(genero) {
         return prodsPagPpal.filter(producto => producto.genero === genero);
     }
-    
+
     function guardarProductosFiltradosLS(prodsFiltrados) {
         localStorage.setItem("productosFiltrados", JSON.stringify(prodsFiltrados));
     }
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     localStorage.setItem('prodsPagPpal', JSON.stringify(prodsPagPpal));
 
-    function abrirPagDetalle () {
+    function abrirPagDetalle() {
         window.open('../pages/detalleFiltrados.html')
     }
 
@@ -109,11 +109,11 @@ document.addEventListener('DOMContentLoaded', async function () {
         console.log(prodsFiltrados);
         setTimeout(abrirPagDetalle, 1000);
     }
-    
+
     const botonFiltroMujer = document.getElementById('botonFiltroMujer');
     const botonFiltroHombre = document.getElementById('botonFiltroHombre');
-    
+
     botonFiltroMujer.addEventListener("click", accionesProd);
     botonFiltroHombre.addEventListener("click", accionesProd);
-    
+
 });
