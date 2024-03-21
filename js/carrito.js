@@ -27,15 +27,15 @@ const agregarProdCarrito = () => {
     const carrito = obtenerCarritoLS();
     carrito.push(producto);
     guardarCarritoLS(carrito);
-    renderBotonCarrito();
+    desplegarBotonCarrito();
 }
 
 const eliminarProductoCarrito = (id) => {
     const carrito = obtenerCarritoLS();
     const carritoActualizado = carrito.filter(item => item.id !== id);
     guardarCarritoLS(carritoActualizado);
-    renderCarrito();
-    renderBotonCarrito();
+    desplegarGraficosCarrito();
+    desplegarBotonCarrito();
     Swal.fire({
         position:"center",
         icon: "error",
@@ -69,8 +69,8 @@ const eliminarCarrito = () => {
                 icon: "success",
             });
         } else {
-            renderCarrito();
-            renderBotonCarrito();
+            desplegarGraficosCarrito();
+            desplegarBotonCarrito();
             Swal.fire({
                 title: "Guardado!",
                 text: "Estas a un solo paso de tener tus productos favoritos!",
@@ -80,7 +80,7 @@ const eliminarCarrito = () => {
     });
 }
 
-const renderBotonCarrito = () => {
+const desplegarBotonCarrito = () => {
     document.getElementById("totalCarrito").innerHTML = cantTotalProductos();
 }
 
@@ -90,7 +90,7 @@ const cantTotalProductos = () => {
 }
 
 
-function renderCarrito() {
+function desplegarGraficosCarrito() {
     const carrito = obtenerCarritoLS();
     let contenido = "";
 
@@ -106,7 +106,7 @@ function renderCarrito() {
                 <div class="columnaIzqCarrito col-sm-6 col-md-4 col-lg-4" id="ProductosCarrito">
                     <div class="itemCarrito">
                         <div class="ImgProducto_carrito">
-                            <img src="${producto.imagenUrl1}" alt="${producto.textoProducto}">
+                            <img src=".${producto.imagenUrl1}" alt="${producto.textoProducto}">
                         </div>
                         <div class="AccionProdCar">    
                             <h4>${producto.textoProducto}</h4>
@@ -127,7 +127,7 @@ function renderCarrito() {
                     <p class="total_articulovta">Sub Total: $${sumaTotalProductos()}</p>
                     <label for="Codigo de descuento:"></label>
                     <input class="codigoDescuento" type="any" name="codigoDescuento" id="codigoDescuento" placeholder="    Codigo Descuento">
-                    <button title="Validar codigo" onclick="renderCarrito()">Validar código</button>
+                    <button title="Validar codigo" onclick="desplegarGraficosCarrito()">Validar código</button>
                 </div>
                 <div class="campoCodDescuento">
                     <p class="total_articulovta" id="vrTotalProductos">Total: $${validarCodigoProm()}</p>
@@ -158,9 +158,7 @@ function renderCarrito() {
         contenido = `<h1 class="text-center" style="margin: 230px 0 230px 0">Tu carrito de compras se encuentra vacío!</h1>`;
     }
     let contenidoCarrito = document.getElementById("contenidoGralCarrito") 
-    if (contenidoCarrito) {
-        contenidoCarrito.innerHTML = contenido;
-    }
+    contenidoCarrito? contenidoCarrito.innerHTML = contenido: null;
 }
 
 let codigoDescuentoAplicado = false;
@@ -239,5 +237,5 @@ const finalizarCompra = () => {
     });
 }
 
-renderCarrito();
-renderBotonCarrito();
+desplegarGraficosCarrito();
+desplegarBotonCarrito();

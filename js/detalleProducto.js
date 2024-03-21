@@ -33,12 +33,12 @@ function renderProducto() {
             <div class="columnaIzqCompras col-sm-12 col-md-12 col-lg-6">
                 <div class="imgs_vta">
                     <div class="grupoImgsA">
-                        <img src="${producto.imagenUrl1}" alt="foto 1 articulo seleccionado"> 
-                        <img src="${producto.imagenUrl2}" alt="foto 2 articulo seleccionado"> 
+                        <img src=".${producto.imagenUrl1}" alt="foto 1 articulo seleccionado"> 
+                        <img src=".${producto.imagenUrl2}" alt="foto 2 articulo seleccionado"> 
                     </div>
                     <div class="grupoImgsB">
-                        <img src="${producto.imagenUrl3}" alt="foto 3 articulo seleccionado"> 
-                        <img src="${producto.imagenUrl4}" alt="foto 4 articulo seleccionado">
+                        <img src=".${producto.imagenUrl3}" alt="foto 3 articulo seleccionado"> 
+                        <img src=".${producto.imagenUrl4}" alt="foto 4 articulo seleccionado">
                     </div>
                 </div>
                 <div class="botones_vta">

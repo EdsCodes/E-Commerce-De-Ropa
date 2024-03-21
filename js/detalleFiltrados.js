@@ -8,7 +8,7 @@ function generarHTMLProductoDetalle(producto) {
     const precioConAumento = Math.round(producto.precio * 1.10);
     return `
         <div class="card cardProdsFilt col-md-4" style="width: 10rem; font-size: 10px;">
-            <img src="${producto.imagenUrl1}" class="card-img-top" alt="${producto.textoProducto}">
+            <img src=".${producto.imagenUrl1}" class="card-img-top" alt="${producto.textoProducto}">
             <div class="card-body">
                 <h5 class="card-title">${producto.textoProducto}</h5>
                 <h6>${producto.descuento}</h6>
@@ -27,5 +27,6 @@ function generarHTMLProductoDetalle(producto) {
 
 mostrarProdsFilt.forEach(producto => {
     const productoHTML = generarHTMLProductoDetalle(producto); 
-    document.getElementById('prodsFiltrados').innerHTML += productoHTML;
+    let contenidoDetallefiltrados = document.getElementById('prodsFiltrados');
+    contenidoDetallefiltrados ? contenidoDetallefiltrados.innerHTML += productoHTML : null;
 });
