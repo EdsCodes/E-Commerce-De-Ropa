@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     
     async function consumirApiProductos() {
         try {
-            const respuesta = await fetch('../js/productos.json');
+            const respuesta = await fetch('./js/productos.json');
             const datos = await respuesta.json();
             return datos;
         } catch (error) {
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     async function consumirApiProductosCarrete() {
         try {
-            const respuesta = await fetch('../js/productosCarrete.json');
+            const respuesta = await fetch('.gt/js/productosCarrete.json');
             const datos = await respuesta.json();
             return datos;
         } catch (error) {
