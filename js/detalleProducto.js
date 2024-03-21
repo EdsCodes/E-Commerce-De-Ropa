@@ -19,8 +19,11 @@ const verProducto = () => {
 
 function renderProducto() {
     const producto = verProducto(); 
-    let contenido = "";
-    const precioConAumento = Math.round(producto.precio * 1.10);
+    let contenido = '';
+    let precioConAumento = 0;
+    if(producto){
+        precioConAumento = Math.round(producto.precio * 1.10);
+    }
     if (producto) {
         contenido = `
             <div class="tituloArticuloVta col-12"> 
@@ -91,10 +94,12 @@ function renderProducto() {
                 </div>
             </div>
             `;
-    } else {
-        contenido = "<p>No se encontró ningún producto.</p>";
+            let vista=document.getElementById('vistaDetalleProd');
+
+            if (vista){
+                vista.innerHTML = contenido;
+            }
     }
-    document.getElementById("vistaDetalleProd").innerHTML = contenido;
 }
 
 renderProducto();

@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                         <p class="card-text"><small>${producto.color} ${producto.talla}</small></p>
                     </div>
                     <div class="botonesAccionCompra">
-                        <a href="../pages/detalleProducto.html" class="btn btn-dark" value="Ver detalle" onclick="encontrarIdProd(${producto.id});">Ver detalle</a>
+                        <a href="./pages/detalleProducto.html" class="btn btn-dark" value="Ver detalle" onclick="encontrarIdProd(${producto.id});">Ver detalle</a>
                         <button class="btn btn-dark" onclick="encontrarIdProd(${producto.id}); agregarProdCarrito();">Añadir al carrito</button>
                     </div>
                 </div>
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                             <p class="textoTachado">$${precioConAumento}</p>
                             <p class="card-textPrice">$${producto.precio}</p>
                         </div>
-                        <a href="../pages/detalleProducto.html" class="btn btn-dark" onclick="encontrarIdProd(${producto.id});"> Ver detalle</a>
+                        <a href="./pages/detalleProducto.html" class="btn btn-dark" onclick="encontrarIdProd(${producto.id});"> Ver detalle</a>
                         <button class="btn btn-dark" onclick="encontrarIdProd(${producto.id}); agregarProdCarrito();">Añadir al carrito</button>
                     </div>
                 </div>
