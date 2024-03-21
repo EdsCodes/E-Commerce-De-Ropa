@@ -17,7 +17,7 @@ const verProducto = () => {
     return producto;
 }
 
-function renderProducto() {
+function mostrarProducto() {
     const producto = verProducto(); 
     let contenido = '';
     let precioConAumento = 0;
@@ -95,11 +95,8 @@ function renderProducto() {
             </div>
             `;
             let vista=document.getElementById('vistaDetalleProd');
-
-            if (vista){
-                vista.innerHTML = contenido;
-            }
+            vista ? vista.innerHTML = contenido: null;
     }
 }
 
-renderProducto(); 
+mostrarProducto(); 

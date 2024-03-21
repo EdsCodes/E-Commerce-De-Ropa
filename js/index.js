@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', async function () {
                 const datos = await respuesta.json();
                 return datos;
             } catch (error) {
-                console.error("Error al consumir la primera API:", error);
                 return [];
             }
         }
@@ -18,7 +17,6 @@ document.addEventListener('DOMContentLoaded', async function () {
                 const datos = await respuesta.json();
                 return datos;
             } catch (error) {
-                console.error("Error al consumir la segunda API:", error);
                 return [];
             }
         }
@@ -103,7 +101,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         localStorage.setItem('prodsPagPpal', JSON.stringify(prodsPagPpal));
 
         function abrirPagDetalle () {
-            window.open('../pages/detalleFiltrados.html')
+            window.open('./pages/detalleFiltrados.html')
         }
 
         function accionesProd() {

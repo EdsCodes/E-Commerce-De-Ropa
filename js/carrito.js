@@ -45,12 +45,12 @@ const eliminarProductoCarrito = (id) => {
     });
 }
 
-const sumaTotalProductos = () => {
+const sumaVrTotalProds = () => {
     const carrito = obtenerCarritoLS();
     return carrito.reduce((acumulador, item) => acumulador + item.precio, 0);
 }
 
-const eliminarCarrito = () => {
+const borrarTodoCarrito = () => {
     Swal.fire({
         title: "Deseas eliminar todo tu carrito de compras?",
         text: "Por favor, confirmar.",
@@ -124,7 +124,7 @@ function desplegarGraficosCarrito() {
             <div class="columnaDerCompras col-sm-6 col-md-8 col-lg-8">
             <h2 class="resumen_articulovta">Resumen de tu compra</h2>
                 <div class="campoCodDescuento">
-                    <p class="total_articulovta">Sub Total: $${sumaTotalProductos()}</p>
+                    <p class="total_articulovta">Sub Total: $${sumaVrTotalProds()}</p>
                     <label for="Codigo de descuento:"></label>
                     <input class="codigoDescuento" type="any" name="codigoDescuento" id="codigoDescuento" placeholder="    Codigo Descuento">
                     <button title="Validar codigo" onclick="desplegarGraficosCarrito()">Validar código</button>
@@ -133,7 +133,7 @@ function desplegarGraficosCarrito() {
                     <p class="total_articulovta" id="vrTotalProductos">Total: $${validarCodigoProm()}</p>
                 </div>
                 <div class="accionTotalCarrito">
-                    <button class="btn btn-sm" onclick="eliminarCarrito()" title="Borrar carrito"><b>Borrar Carrito</b></button>
+                    <button class="btn btn-sm" onclick="borrarTodoCarrito()" title="Borrar carrito"><b>Borrar Carrito</b></button>
                     <button class="btn btn-sm" onclick="finalizarCompra()" title="Finalizar Compra"><b>Finalizar Compra</b></button>
                 </div> 
                 <div class="imgMediosPago">
@@ -173,12 +173,12 @@ function validarCodigoProm() {
             text: "Solo puedes ingresar un código por compra",
             icon: "warning"
         });
-        totalConDescuento = sumaTotalProductos();
+        totalConDescuento = sumaVrTotalProds();
         return totalConDescuento;
     }
 
     if (!codigoDescuento || codigoDescuento.value === "") {
-        totalConDescuento = sumaTotalProductos();
+        totalConDescuento = sumaVrTotalProds();
         codigoDescuentoAplicado = false;
     } else {
         const valorCodigo = codigoDescuento.value.toUpperCase();
@@ -205,7 +205,7 @@ function validarCodigoProm() {
             });
         }
 
-        totalConDescuento = sumaTotalProductos() - (sumaTotalProductos() * porcentajeDescuento);
+        totalConDescuento = sumaVrTotalProds() - (sumaVrTotalProds() * porcentajeDescuento);
         codigoDescuentoAplicado = true;
     }
     return totalConDescuento;
@@ -213,7 +213,7 @@ function validarCodigoProm() {
 
 const finalizarCompra = () => {
     const totalConDescto = document.getElementById('vrTotalProductos').innerText;
-    const mensaje = codigoDescuentoAplicado ? `Tu valor a pagar es en ${totalConDescto} pesos.` : `Tu cuenta total es $${sumaTotalProductos()} pesos.`;
+    const mensaje = codigoDescuentoAplicado ? `Tu valor a pagar es en ${totalConDescto} pesos.` : `Tu cuenta total es $${sumaVrTotalProds()} pesos.`;
 
     Swal.fire({
         title: "¡Muchas gracias por tu compra, vuelve pronto!",
