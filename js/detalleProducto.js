@@ -94,8 +94,8 @@ function mostrarProducto() {
                 </div>
             </div>
             `;
-            let vista=document.getElementById('vistaDetalleProd');
-            vista ? vista.innerHTML = contenido: null;
+        let vista = document.getElementById('vistaDetalleProd');
+        vista ? vista.innerHTML = contenido: null;
     }
 }
 
