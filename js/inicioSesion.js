@@ -101,9 +101,6 @@
             return;
         } 
         
-        // Duda, porque el sigte codigo ternario no funca??, no valida el return para detener la ejecucion del codigo...
-        // (isNaN(fechaNacUsuario.getTime()) || fechaNacUsuario.getFullYear() > new Date().getFullYear() - 18) ? (alert("Por favor, ingresa una fecha de nacimiento válida."), console.error("Registro & id no válidos"), return) : null;
-
         const nuevoCliente = new Cliente(nombre, email, telefono, direccion, contrasenaRegistro, genero, fechaNacimiento, ciudad, aceptaTerminos);
         
         listaClientes.push(nuevoCliente);
@@ -136,26 +133,7 @@
         resetFormulario();
     });
 
-    //sistema provisional de ingreso a pagina de admin de productos y otros del sitio. al INGRESAR LOS SIGTES DATOS SE INGRESA A LA PAG DE ADMIN DEL SITIO (PROVISIONAL) <!--NOTA: Se trabajara en panel de control para añadir o quitar productos y para mostrar informes de clientes, de productos, añadir o quitar inventario, controlar promociones, etc... pero para mas adelante...-->
-
-    const emailAdmin = "admin@gmail.com";
-    const contrasenaAdmin = "Admin123*";
-
-    function ingresarComoAdmin() {
-    const emailAdminRegistrado = document.getElementById('email').value;
-    const contrasenaAdminReg = document.getElementById('password').value;
-
-        while (emailAdminRegistrado === emailAdmin && contrasenaAdminReg === contrasenaAdmin){
-            alert("Bienvenido, admin");
-            window.open("../pages/control.html", "_blank");
-            return;
-        }
-    }
-
-    document.getElementById('botonLogin').addEventListener('click', function() {
-    ingresarComoAdmin();
-    });
-
+    
     function resetFormulario() {
         document.querySelector('.formularioRegistro').reset();
     }
