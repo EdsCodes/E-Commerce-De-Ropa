@@ -3,22 +3,20 @@ document.addEventListener('DOMContentLoaded', async function () {
     try {
         async function consumirApiProductos() {
             try {
-                const respuesta = await fetch('./js/productos.json');
+                const respuesta = await fetch('../js/productos.json');
                 const datos = await respuesta.json();
                 return datos;
             } catch (error) {
-                console.error("Error al consumir la primera API:", error);
                 return [];
             }
         }
 
         async function consumirApiProductosCarrete() {
             try {
-                const respuesta = await fetch('./js/productosCarrete.json');
+                const respuesta = await fetch('../js/productosCarrete.json');
                 const datos = await respuesta.json();
                 return datos;
             } catch (error) {
-                console.error("Error al consumir la segunda API:", error);
                 return [];
             }
         }
