@@ -157,8 +157,10 @@ function renderCarrito() {
     } else {
         contenido = `<h1 class="text-center" style="margin: 230px 0 230px 0">Tu carrito de compras se encuentra vacío!</h1>`;
     }
-
-    document.getElementById("contenidoGralCarrito").innerHTML = contenido;
+    let contenidoCarrito = document.getElementById("contenidoGralCarrito") 
+    if (contenidoCarrito) {
+        contenidoCarrito.innerHTML = contenido;
+    }
 }
 
 let codigoDescuentoAplicado = false;

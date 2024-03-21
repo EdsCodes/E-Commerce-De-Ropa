@@ -517,6 +517,22 @@ body {
     height: 20px;
     margin: 0.5px;
   }
+  .imgsPagPPal .img1__pagPpal .seccionVtaImgsPpal .botonesAccionCompra button {
+    width: 140px;
+    height: 25px;
+    align-content: center;
+    border-radius: 5px;
+    background-color: #113946;
+    color: white;
+    font-size: 60%;
+    font-weight: 400;
+    padding: 2px;
+    border: #FFF2D8 5px;
+    font-size: 45%;
+    width: 60px;
+    height: 20px;
+    margin: 0.5px;
+  }
   .imgsPagPPal .img2__pagPpal {
     grid-area: img2__pagPpal;
     width: 100%;
@@ -586,6 +602,22 @@ body {
     flex-direction: row;
   }
   .imgsPagPPal .img2__pagPpal .seccionVtaImgsPpal .botonesAccionCompra a {
+    width: 140px;
+    height: 25px;
+    align-content: center;
+    border-radius: 5px;
+    background-color: #113946;
+    color: white;
+    font-size: 60%;
+    font-weight: 400;
+    padding: 2px;
+    border: #FFF2D8 5px;
+    font-size: 45%;
+    width: 60px;
+    height: 20px;
+    margin: 0.5px;
+  }
+  .imgsPagPPal .img2__pagPpal .seccionVtaImgsPpal .botonesAccionCompra button {
     width: 140px;
     height: 25px;
     align-content: center;
@@ -685,6 +717,22 @@ body {
     height: 20px;
     margin: 0.5px;
   }
+  .imgsPagPPal .img3__pagPpal .seccionVtaImgsPpal .botonesAccionCompra button {
+    width: 140px;
+    height: 25px;
+    align-content: center;
+    border-radius: 5px;
+    background-color: #113946;
+    color: white;
+    font-size: 60%;
+    font-weight: 400;
+    padding: 2px;
+    border: #FFF2D8 5px;
+    font-size: 45%;
+    width: 60px;
+    height: 20px;
+    margin: 0.5px;
+  }
   .imgsPagPPal .img3__pagPpal .seccionVtaImgsPpal {
     bottom: 100px;
     left: 10px;
@@ -757,6 +805,22 @@ body {
     flex-direction: row;
   }
   .imgsPagPPal .img4__pagPpal .seccionVtaImgsPpal .botonesAccionCompra a {
+    width: 140px;
+    height: 25px;
+    align-content: center;
+    border-radius: 5px;
+    background-color: #113946;
+    color: white;
+    font-size: 60%;
+    font-weight: 400;
+    padding: 2px;
+    border: #FFF2D8 5px;
+    font-size: 45%;
+    width: 60px;
+    height: 20px;
+    margin: 0.5px;
+  }
+  .imgsPagPPal .img4__pagPpal .seccionVtaImgsPpal .botonesAccionCompra button {
     width: 140px;
     height: 25px;
     align-content: center;
@@ -988,6 +1052,22 @@ body {
     height: 20px;
     margin: 0.5px;
   }
+  .imgsPagPPal .img1__pagPpal .seccionVtaImgsPpal .botonesAccionCompra button {
+    width: 140px;
+    height: 25px;
+    align-content: center;
+    border-radius: 5px;
+    background-color: #113946;
+    color: white;
+    font-size: 60%;
+    font-weight: 400;
+    padding: 2px;
+    border: #FFF2D8 5px;
+    font-size: 45%;
+    width: 60px;
+    height: 20px;
+    margin: 0.5px;
+  }
   .imgsPagPPal .img2__pagPpal {
     grid-area: img2__pagPpal;
     width: 100%;
@@ -1054,6 +1134,22 @@ body {
     flex-direction: row;
   }
   .imgsPagPPal .img2__pagPpal .seccionVtaImgsPpal .botonesAccionCompra a {
+    width: 140px;
+    height: 25px;
+    align-content: center;
+    border-radius: 5px;
+    background-color: #113946;
+    color: white;
+    font-size: 60%;
+    font-weight: 400;
+    padding: 2px;
+    border: #FFF2D8 5px;
+    font-size: 45%;
+    width: 60px;
+    height: 20px;
+    margin: 0.5px;
+  }
+  .imgsPagPPal .img2__pagPpal .seccionVtaImgsPpal .botonesAccionCompra button {
     width: 140px;
     height: 25px;
     align-content: center;
@@ -1150,6 +1246,22 @@ body {
     height: 20px;
     margin: 0.5px;
   }
+  .imgsPagPPal .img3__pagPpal .seccionVtaImgsPpal .botonesAccionCompra button {
+    width: 140px;
+    height: 25px;
+    align-content: center;
+    border-radius: 5px;
+    background-color: #113946;
+    color: white;
+    font-size: 60%;
+    font-weight: 400;
+    padding: 2px;
+    border: #FFF2D8 5px;
+    font-size: 45%;
+    width: 60px;
+    height: 20px;
+    margin: 0.5px;
+  }
   .imgsPagPPal .img3__pagPpal .seccionVtaImgsPpal {
     bottom: 100px;
     left: 10px;
@@ -1219,6 +1331,22 @@ body {
     flex-direction: row;
   }
   .imgsPagPPal .img4__pagPpal .seccionVtaImgsPpal .botonesAccionCompra a {
+    width: 140px;
+    height: 25px;
+    align-content: center;
+    border-radius: 5px;
+    background-color: #113946;
+    color: white;
+    font-size: 60%;
+    font-weight: 400;
+    padding: 2px;
+    border: #FFF2D8 5px;
+    font-size: 45%;
+    width: 60px;
+    height: 20px;
+    margin: 0.5px;
+  }
+  .imgsPagPPal .img4__pagPpal .seccionVtaImgsPpal .botonesAccionCompra button {
     width: 140px;
     height: 25px;
     align-content: center;
@@ -1537,6 +1665,13 @@ body {
     width: 100px;
     height: 25px;
   }
+  .imgsPagPPal .img1__pagPpal .seccionVtaImgsPpal .botonesAccionCompra button {
+    align-items: center;
+    margin-top: 25px;
+    font-size: 55%;
+    width: 100px;
+    height: 25px;
+  }
   .imgsPagPPal .img2__pagPpal .seccionVtaImgsPpal {
     height: 200px;
   }
@@ -1561,6 +1696,13 @@ body {
     flex-direction: row;
   }
   .imgsPagPPal .img2__pagPpal .seccionVtaImgsPpal .botonesAccionCompra a {
+    align-items: center;
+    margin-top: 25px;
+    font-size: 55%;
+    width: 100px;
+    height: 25px;
+  }
+  .imgsPagPPal .img2__pagPpal .seccionVtaImgsPpal .botonesAccionCompra button {
     align-items: center;
     margin-top: 25px;
     font-size: 55%;
@@ -1597,6 +1739,13 @@ body {
     width: 100px;
     height: 25px;
   }
+  .imgsPagPPal .img3__pagPpal .seccionVtaImgsPpal .botonesAccionCompra button {
+    align-items: center;
+    margin-top: 25px;
+    font-size: 55%;
+    width: 100px;
+    height: 25px;
+  }
   .imgsPagPPal .img4__pagPpal .seccionVtaImgsPpal {
     height: 200px;
   }
@@ -1621,6 +1770,13 @@ body {
     flex-direction: row;
   }
   .imgsPagPPal .img4__pagPpal .seccionVtaImgsPpal .botonesAccionCompra a {
+    align-items: center;
+    margin-top: 25px;
+    font-size: 55%;
+    width: 100px;
+    height: 25px;
+  }
+  .imgsPagPPal .img4__pagPpal .seccionVtaImgsPpal .botonesAccionCompra button {
     align-items: center;
     margin-top: 25px;
     font-size: 55%;
