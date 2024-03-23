@@ -2277,13 +2277,21 @@ body {
   .columnaGestionUsuario .seccionFormularios .formularioRegistro .campoGenero {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 3px auto;
   }
-  .columnaGestionUsuario .seccionFormularios .formularioRegistro .campoGenero p {
-    margin: 5px;
-    font-size: 0.6em;
+  .columnaGestionUsuario .seccionFormularios .formularioRegistro .campoGenero fieldset {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioRegistro .campoGenero fieldset legend {
+    font-size: 0.9em;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioRegistro .campoGenero fieldset label {
+    display: inline-block;
+    font-size: 0.9em;
+  }
+  .columnaGestionUsuario .seccionFormularios .formularioRegistro .campoGenero fieldset input[type=radio] {
+    display: inline-block;
   }
   .columnaGestionUsuario .seccionFormularios .formularioRegistro .campoFechanac {
     display: flex;

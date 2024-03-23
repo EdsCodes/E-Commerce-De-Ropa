@@ -39,7 +39,7 @@
         </div>
         <div class="barraBusqueda">
             <form class="d-flex" role="search">
-                <input class="form-control me-2" id="barraBusqueda"type="search" placeholder="Buscar" aria-label="Search">
+                <input class="form-control me-2" id="barraBusqueda" type="search" placeholder="Buscar" aria-label="Search">
                 <button class="btn btn-light" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
         </div>
@@ -51,21 +51,21 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./guiatallas.html">Guía de tallas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./nosotros.html">Nosotros</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./sesionregis.html">Inicia sesión</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link position-relative" href="./carrito.html"><i class="fa-solid fa-cart-shopping"></i>
-                          <span id="totalCarrito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"></span></a>
+                      <li class="nav-item">
+                          <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="./guiatallas.html">Guía de tallas</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="./nosotros.html">Nosotros</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="./sesionregis.html">Inicia sesión</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link position-relative" href="./carrito.html"><i class="fa-solid fa-cart-shopping"></i>
+                        <span id="totalCarrito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"></span></a>
                       </li>
                     </ul>
                 </div>
@@ -76,42 +76,48 @@
   <main class="container-fluid">
     <div class="row">
       <div class="columnaGestionUsuario col-sm-12 col-md-6 col-lg-6">
-        <h2 class="TituloRegistro">Registrate aqui y recibe un codigo de descuento adicional para tu compra.</p>
+        <h2 class="TituloRegistro">Registrate aqui y recibe un codigo de descuento adicional para tu compra.</h2>
         <div class="seccionFormularios">
           <form class="formularioRegistro">
             <div class="campoFormulario">
               <label for="nombreRegistro"></label>
-              <input class="nombreRegistro" type="text" name="nombreRegistro" placeholder="Nombre" required>
+              <input class="nombreRegistro" id="nombreRegistro" type="text" name="nombreRegistro" placeholder="Nombre" required>
             </div>
             <div class="campoFormulario">
               <label for="mailRegistro"></label>
-              <input type="email" name="mailRegistro" placeholder="E-mail" required>
+              <input type="email" name="mailRegistro" id="mailRegistro" placeholder="E-mail" required>
             </div>
             <div class="campoFormulario">
               <label for="phone"></label>
               <input type="tel" id="phone" name="phone" pattern="[0-9]{12}" placeholder="Tel.(Indic. pais+10 digitos)" required/>
             </div>
             <div class="campoFormulario">
-              <label for="direccion"></label>
-              <input type="name" id="direccionCliente" name="direccionCliente" pattern="any" placeholder="direccion" required/>
+              <label for="direccionCliente"></label>
+              <input type="text" id="direccionCliente" name="direccionCliente"/>
             </div>
             <div class="campoFormulario">
-              <label for="contrasenaRegistro"></label>
+              <label for="regPassword"></label>
               <input type="password" id="regPassword" name="regPassword" pattern="[0-9][a-z]{6}" placeholder="Contraseña" required/>
             </div>
             <div class="campoGenero">
-              <p><label for="gender">Genero:</label></p>
-              <input type="radio" name="gender" value="Mujer" required> <p>Mujer</p>
-              <input type="radio" name="gender" value="Hombre" required> <p>Hombre</p>
-              <input type="radio" name="gender" value="noespec" required> <p>No especifíca</p>
+              <fieldset id="gender">
+                <div>
+                  <legend>Genero:</legend>
+                </div>
+                <div>
+                  <label><input type="radio" name="gender" value="Mujer" required> Mujer</label>
+                  <label><input type="radio" name="gender" value="Hombre" required> Hombre</label>
+                  <label><input type="radio" name="gender" value="noespec" required> No especifica</label>
+                </div>
+              </fieldset>
             </div>
             <div class="campoFechanac">
               <label for="fechaNac">Fecha de nacimiento:</label>
-              <input type="date" name="fechaNac" required>
+              <input type="date" name="fechaNac" id="fechaNac" required>
             </div>
             <div class="selectCiudad">
               <label for="ciudadRegistro">Ciudad:</label>
-              <select name="ciudadRegistro" id="">
+              <select name="ciudadRegistro" id="ciudadRegistro">
                 <option value="Cal">Cali</option>
                 <option value="Bog">Bogota</option>
                 <option value="Med">Medellin</option>
@@ -123,7 +129,7 @@
               </select>
             </div>
             <div class="termCondic">
-              <input type="checkbox" name="terminos" required>
+              <input type="checkbox" name="terminos" id="terminos" required>
               <label for="terminos">Acepto politica de privacidad y tratam. de datos</label>
             </div>
             <div class="botones_registro">
@@ -139,11 +145,11 @@
             </div>
             <div class="gestionDatosUsuario">
               <div class="checboxIngSesion">
-                <input type="checkbox" name="checkbox" id="checkbox" />
-                <label for="">Recordar mis datos</label>
+                <input type="checkbox" name="checkbox" id="checkbox"/>
+                <label for="checkbox">Recordar mis datos</label>
               </div>
               <div class="olvidoContrasena">
-                <a href="###">Olvidé mi contraseña</a>
+                <a href="./sesionregis.html">Olvidé mi contraseña</a>
               </div>
             </div>
             <div class="botonLogin" id="botonLogin">
@@ -175,11 +181,11 @@
     <div class="itemFooter">
         <h2>Contactanos</h2>
         <p>contacto@mlllstore.com</p>
-        <p id="lineHeigthItemFooter">WhatsApp: (+57) 3205907046</p>
+        <p class="lineHeigthItemFooter">WhatsApp: (+57) 3205907046</p>
     </div>
     <div class="itemFooter">
         <h2>Te ayudamos</h2>
-        <p class="espacioItemfooter"><a target: blank href="https://www.servientrega.com/wps/portal/rastreo-envio/!ut/p/z1/jY9PC4JAFMQ_Swev-57_QrptBGWkURDaXmKVzTXUlXUT-vZJdayld5vHb2YYYJAD6_hYV9zUquPNpM9sfgmjONhg4O7X6SrAw3HpJalLYz9GyF4A_jiKwP7xWwBmj8-AWSo8mngfwJKxBVY1qnjPpV3hRxUwLa5CC03uenpLY_ph4aCDpSKD4LqU5MGlUqRUrYPffFINBvIvOPTtKcdb2Iw7OnsCEfOw4Q!!/dz/d5/L2dBISEvZ0FBIS9nQSEh/" target="_blank">¿Donde está mi pedido?</a></p>
+        <p class="espacioItemfooter"><a href="https://www.servientrega.com/wps/portal/rastreo-envio/!ut/p/z1/jY9PC4JAFMQ_Swev-57_QrptBGWkURDaXmKVzTXUlXUT-vZJdayld5vHb2YYYJAD6_hYV9zUquPNpM9sfgmjONhg4O7X6SrAw3HpJalLYz9GyF4A_jiKwP7xWwBmj8-AWSo8mngfwJKxBVY1qnjPpV3hRxUwLa5CC03uenpLY_ph4aCDpSKD4LqU5MGlUqRUrYPffFINBvIvOPTtKcdb2Iw7OnsCEfOw4Q!!/dz/d5/L2dBISEvZ0FBIS9nQSEh/" target="_blank">¿Donde está mi pedido?</a></p>
         <p>PQRS</p>
     </div>
     <div class="itemFooter nuestrasTiendas">
@@ -191,10 +197,10 @@
     <div class="itemFooter">
       <h2>Síguenos</h2>
       <ul class="iconoRedesSociales">
-        <li><a href="http://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram" alt="Logo instagram"></i></a></li>
-        <li><a href="http://www.facebook.com" target="_blank"><i class="fa-brands fa-square-facebook" alt="Logo facebook"></i></a></li>
-        <li><a href="http://www.youtube.com" target="_blank"><i class="fa-brands fa-square-youtube" alt="Logo youtube"></i></a></li>
-        <li><a href="http://www.twitter.com" target="_blank"><i class="fa-brands fa-square-x-twitter" alt="Logo X (Twitter)"></i></a></li>
+        <li><a href="http://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="http://www.facebook.com" target="_blank"><i class="fa-brands fa-square-facebook"></i></a></li>
+        <li><a href="http://www.youtube.com" target="_blank"><i class="fa-brands fa-square-youtube"></i></a></li>
+        <li><a href="http://www.twitter.com" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a></li>
       </ul>
     </div>
   </footer>

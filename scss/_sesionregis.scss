@@ -28,17 +28,27 @@
                         border-radius: 5px;
                     }
                 }
+                
                 .campoGenero {
                     display: flex;
                     flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
-                    margin: 3px auto;
-                    p {
-                        margin: 5px;
-                        font-size: 0.6em;
+                    fieldset {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        legend{
+                            @include h3_size320;
+                        }
+                        label {
+                            display: inline-block;
+                            @include h3_size320;
+                        }
+                        input[type="radio"] {
+                            display: inline-block;
+                        }
                     }
                 }
+                  
                 .campoFechanac {
                     display: flex;
                     justify-content: space-between;
