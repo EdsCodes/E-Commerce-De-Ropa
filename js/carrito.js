@@ -93,8 +93,7 @@ const cantTotalProductos = () => {
 function desplegarGraficosCarrito() {
     const carrito = obtenerCarritoLS();
     let contenido = "";
-
-    if (cantTotalProductos() > 0) {
+    if (carrito && cantTotalProductos() > 0) {
         contenido = `
         <div class="tituloArticuloVta col-12"> 
             <h1 class="articulo">Tu carrito</h1>
