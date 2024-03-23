@@ -2285,10 +2285,12 @@ body {
   }
   .columnaGestionUsuario .seccionFormularios .formularioRegistro .campoGenero fieldset legend {
     font-size: 0.9em;
+    margin-right: 20px;
   }
   .columnaGestionUsuario .seccionFormularios .formularioRegistro .campoGenero fieldset label {
     display: inline-block;
     font-size: 0.9em;
+    margin-right: 10px;
   }
   .columnaGestionUsuario .seccionFormularios .formularioRegistro .campoGenero fieldset input[type=radio] {
     display: inline-block;
