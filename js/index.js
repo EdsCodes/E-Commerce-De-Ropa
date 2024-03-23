@@ -102,16 +102,16 @@ document.addEventListener('DOMContentLoaded', async function () {
     function abrirPagDetalle () {
         window.open('../pages/detalleFiltrados.html')
     }
-
+    
+    const botonFiltroMujer = document.getElementById('botonFiltroMujer');
+    const botonFiltroHombre = document.getElementById('botonFiltroHombre');
+    
     function accionesProd() {
         const genero = this.dataset.genre;
         actualizarProdsFiltYSaveLS(genero);
         console.log(prodsFiltrados);
         setTimeout(abrirPagDetalle, 1000);
     }
-    
-    const botonFiltroMujer = document.getElementById('botonFiltroMujer');
-    const botonFiltroHombre = document.getElementById('botonFiltroHombre');
     
     botonFiltroMujer.addEventListener("click", accionesProd);
     botonFiltroHombre.addEventListener("click", accionesProd);
