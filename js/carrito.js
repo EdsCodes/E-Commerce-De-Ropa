@@ -50,6 +50,11 @@ const sumaVrTotalProds = () => {
     return carrito.reduce((acumulador, item) => acumulador + item.precio, 0);
 }
 
+async function recargaPagTiempo() {
+    await new Promise (resolve => setTimeout(resolve, 5000));
+        location.reload();
+}
+
 const borrarTodoCarrito = () => {
     const swalOptions = {
         title: "¿Deseas eliminar todo tu carrito de compras?",
@@ -80,6 +85,8 @@ const borrarTodoCarrito = () => {
             });
         }
     });
+
+    recargaPagTiempo();
 }
 
 const desplegarBotonCarrito = () => {
@@ -238,6 +245,7 @@ const finalizarCompra = () => {
             });
         }
     });
+    recargaPagTiempo();
 }
 
 desplegarGraficosCarrito();
