@@ -58,7 +58,7 @@ const borrarTodoCarrito = () => {
         showCancelButton: true,
         confirmButtonColor: "#113946",
         cancelButtonColor: "#ff4500",
-        confirmButtonText: "Sí, eliminar mi carrito de compras",
+        confirmButtonText: "Sí, eliminar",
         cancelButtonText: "No, deseo seguir comprando"
     };
 
@@ -82,14 +82,13 @@ const borrarTodoCarrito = () => {
     });
 }
 
-
 const desplegarBotonCarrito = () => {
     document.getElementById("totalCarrito").innerHTML = QTotalProductos();
 }
 
 const QTotalProductos = () => {
     const carrito = GetCarritoLs();
-    return carrito.length;
+    return carrito.length === 0 ? null : carrito.length;
 }
 
 
