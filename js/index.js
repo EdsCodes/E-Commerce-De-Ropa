@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     localStorage.setItem('prodsPagPpal', JSON.stringify(prodsPagPpal));
 
     function abrirPagDetalle () {
-        window.open('./pages/detalleFiltrados.html')
+        window.open('../pages/detalleFiltrados.html')
     }
     
     const botonFiltroMujer = document.getElementById('botonFiltroMujer');
