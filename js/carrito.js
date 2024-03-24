@@ -4,36 +4,36 @@ function obtenerprodsPagPpalLS() {
 
 const prodsPagPpal = obtenerprodsPagPpalLS();
 
-const guardarCarritoLS = (prods) => {
+const saveLsCarrito = (prods) => {
     localStorage.setItem("carrito", JSON.stringify(prods));
 }
 
-const obtenerCarritoLS = () => {
+const GetCarritoLs = () => {
     return JSON.parse(localStorage.getItem("carrito")) || [];
 }
 
-function obtenerIdProductoLS() {
+function getProdId() {
     return JSON.parse(localStorage.getItem("idProducto")) || 0;
 }
 
-function buscarProd() {
-    const id = obtenerIdProductoLS();
+function buscarProdConId() {
+    const id = getProdId();
     const producto = prodsPagPpal.find(item => item.id === id);
     return producto;
 }
 
 const agregarProdCarrito = () => {
-    const producto = buscarProd();
-    const carrito = obtenerCarritoLS();
+    const producto = buscarProdConId();
+    const carrito = GetCarritoLs();
     carrito.push(producto);
-    guardarCarritoLS(carrito);
+    saveLsCarrito(carrito);
     desplegarBotonCarrito();
 }
 
 const eliminarProductoCarrito = (id) => {
-    const carrito = obtenerCarritoLS();
-    const carritoActualizado = carrito.filter(item => item.id !== id);
-    guardarCarritoLS(carritoActualizado);
+    const carrito = GetCarritoLs();
+    const carritoActual = carrito.filter(item => item.id !== id);
+    saveLsCarrito(carritoActual);
     desplegarGraficosCarrito();
     desplegarBotonCarrito();
     Swal.fire({
@@ -46,54 +46,57 @@ const eliminarProductoCarrito = (id) => {
 }
 
 const sumaVrTotalProds = () => {
-    const carrito = obtenerCarritoLS();
+    const carrito = GetCarritoLs();
     return carrito.reduce((acumulador, item) => acumulador + item.precio, 0);
 }
 
 const borrarTodoCarrito = () => {
-    Swal.fire({
-        title: "Deseas eliminar todo tu carrito de compras?",
-        text: "Por favor, confirmar.",
+    const swalOptions = {
+        title: "¿Deseas eliminar todo tu carrito de compras?",
+        text: "Por favor, confirma.",
         icon: "warning",
         showCancelButton: true,
         confirmButtonColor: "#113946",
         cancelButtonColor: "#ff4500",
-        confirmButtonText: "Sí, eliminar",
-        cancelButtonText: "no, deseo seguir comprando!"
-    }).then((result) => {
+        confirmButtonText: "Sí, eliminar mi carrito de compras",
+        cancelButtonText: "No, deseo seguir comprando"
+    };
+
+    Swal.fire(swalOptions).then((result) => {
         if (result.isConfirmed) {
             localStorage.removeItem("carrito");
             Swal.fire({
-                title: "Carrito Eliminado!",
-                text: "Tus productos fueron eliminados correctamente de tu carrito de compras!",
-                icon: "success",
+                title: "¡Carrito Eliminado!",
+                text: "Tus productos fueron eliminados correctamente de tu carrito de compras.",
+                icon: "success"
             });
         } else {
             desplegarGraficosCarrito();
             desplegarBotonCarrito();
             Swal.fire({
-                title: "Guardado!",
-                text: "Estas a un solo paso de tener tus productos favoritos!",
+                title: "Guardado",
+                text: "¡Estás a un solo paso de tener tus productos favoritos!",
                 icon: "success"
             });
         }
     });
 }
 
+
 const desplegarBotonCarrito = () => {
-    document.getElementById("totalCarrito").innerHTML = cantTotalProductos();
+    document.getElementById("totalCarrito").innerHTML = QTotalProductos();
 }
 
-const cantTotalProductos = () => {
-    const carrito = obtenerCarritoLS();
+const QTotalProductos = () => {
+    const carrito = GetCarritoLs();
     return carrito.length;
 }
 
 
 function desplegarGraficosCarrito() {
-    const carrito = obtenerCarritoLS();
+    const carrito = GetCarritoLs();
     let contenido = "";
-    if (carrito && cantTotalProductos() > 0) {
+    if (carrito && QTotalProductos() > 0) {
         contenido = `
         <div class="tituloArticuloVta col-12"> 
             <h1 class="articulo">Tu carrito</h1>
@@ -154,7 +157,7 @@ function desplegarGraficosCarrito() {
             </div>
         `;
     } else {
-        contenido = `<h1 class="text-center" style="margin: 230px 0 230px 0">Tu carrito de compras se encuentra vacío!</h1>`;
+        contenido = `<h1 class="textoCarritoVacio">Tu carrito de compras se encuentra vacío!</h1>`;
     }
     let contenidoCarrito = document.getElementById("contenidoGralCarrito") 
     contenidoCarrito? contenidoCarrito.innerHTML = contenido: null;
@@ -214,7 +217,7 @@ const finalizarCompra = () => {
     const totalConDescto = document.getElementById('vrTotalProductos').innerText;
     const mensaje = codigoDescuentoAplicado ? `Tu valor a pagar es en ${totalConDescto} pesos.` : `Tu cuenta total es $${sumaVrTotalProds()} pesos.`;
 
-    Swal.fire({
+    const swalOptions = {
         title: "¡Muchas gracias por tu compra, vuelve pronto!",
         text: mensaje,
         imageUrl: "../images/logo3.png",
@@ -224,7 +227,9 @@ const finalizarCompra = () => {
         confirmButtonColor: "#ff4500",
         cancelButtonColor: "#113946",
         confirmButtonText: "Aceptar"
-    }).then((result) => {
+    };
+
+    Swal.fire(swalOptions).then((result) => {
         if (result.isConfirmed) {
             localStorage.removeItem("carrito");
             Swal.fire({

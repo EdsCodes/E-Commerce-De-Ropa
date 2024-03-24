@@ -2798,6 +2798,10 @@ body {
   .container-fluid {
     margin-left: 25px;
   }
+  #contenidoGralCarrito .textoCarritoVacio {
+    margin: 230px 0 230px 0;
+    text-align: center;
+  }
   .tituloArticuloVta {
     margin-top: 15px;
   }
