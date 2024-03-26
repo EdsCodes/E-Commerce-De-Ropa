@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', async function () {
     
-    async function consumirApiProductos() {
+    async function consumirApiProds() {
         try {
             const respuesta = await fetch('./js/productos.json');
             const datos = await respuesta.json();
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         }
     }
 
-    async function consumirApiProductosCarrete() {
+    async function consumirApiProdsCarrete() {
         try {
             const respuesta = await fetch('./js/productosCarrete.json');
             const datos = await respuesta.json();
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         }
     }
 
-    const [productos, productosCarrete] = await Promise.all([consumirApiProductos(), consumirApiProductosCarrete()]);
+    const [productos, productosCarrete] = await Promise.all([consumirApiProds(), consumirApiProdsCarrete()]);
 
     function generarHTMLProducto(producto) {
     const precioConAumento = Math.round(producto.precio * 1.10);
@@ -37,8 +37,8 @@ document.addEventListener('DOMContentLoaded', async function () {
                     <p class="card-text"><small>${producto.color} ${producto.talla}</small></p>
                 </div>
                 <div class="botonesAccionCompra">
-                    <a href="./pages/detalleProducto.html" class="btn btn-dark" value="Ver detalle" onclick="encontrarIdProd(${producto.id});">Ver detalle</a>
-                    <button class="btn btn-dark" onclick="encontrarIdProd(${producto.id}); agregarProdCarrito();">Añadir al carrito</button>
+                    <a href="./pages/detalleProducto.html" class="btn btn-dark" value="Ver detalle" onclick="SaveIdProd(${producto.id});">Ver detalle</a>
+                    <button class="btn btn-dark" onclick="SaveIdProd(${producto.id}); agregarProdCarrito();">Añadir al carrito</button>
                 </div>
             </div>
         </div>
@@ -60,27 +60,31 @@ document.addEventListener('DOMContentLoaded', async function () {
                         <p class="textoTachado">$${precioConAumento}</p>
                         <p class="card-textPrice">$${producto.precio}</p>
                     </div>
-                    <a href="./pages/detalleProducto.html" class="btn btn-dark" onclick="encontrarIdProd(${producto.id});"> Ver detalle</a>
-                    <button class="btn btn-dark" onclick="encontrarIdProd(${producto.id}); agregarProdCarrito();">Añadir al carrito</button>
+                    <a href="./pages/detalleProducto.html" class="btn btn-dark" onclick="SaveIdProd(${producto.id});"> Ver detalle</a>
+                    <button class="btn btn-dark" onclick="SaveIdProd(${producto.id}); agregarProdCarrito();">Añadir al carrito</button>
                 </div>
             </div>
         `;
     };
 
-    function renderizarProductos(productos, elemento) {
+    function desplegarProductos(productos, elemento) {
         const htmlProductos = productos.map(producto => generarHTMLProducto(producto)).join('');
         elemento? elemento.innerHTML = htmlProductos: null;
     };
 
-    function renderizarProdsCarrete (productos, elemento) {
+    function desplegarProdsCarrete (productos, elemento) {
         const htmlProductos = productos.map(producto => generarHTMLProductosCarrete(producto)).join('');
         elemento? elemento.innerHTML = htmlProductos: null;
     };
     
-    renderizarProductos(productos, document.getElementById('listaProductosPagPpal'));
-    renderizarProdsCarrete(productosCarrete, document.getElementById('carrete_recomendados'));
+    desplegarProductos(productos, document.getElementById('listaProductosPagPpal'));
+    desplegarProdsCarrete(productosCarrete, document.getElementById('carrete_recomendados'));
 
     const prodsPagPpal = productos.concat(productosCarrete); 
+
+    localStorage.setItem('prodsPagPpal', JSON.stringify(prodsPagPpal));
+
+    //Filtros por genero de la pag ppal:
 
     let prodsFiltrados = []; 
     
@@ -96,8 +100,6 @@ document.addEventListener('DOMContentLoaded', async function () {
         prodsFiltrados = filtrarPorGenero(genero);
         guardarProductosFiltradosLS(prodsFiltrados);
     }
-
-    localStorage.setItem('prodsPagPpal', JSON.stringify(prodsPagPpal));
 
     function abrirPagDetalle () {
         window.open('./pages/detalleFiltrados.html')

@@ -2,30 +2,28 @@ function obtenerprodsPagPpalLS() {
     return JSON.parse(localStorage.getItem("prodsPagPpal")) || [];
 }
 
-const encontrarIdProd = (id) => {
+const SaveIdProd = (id) => {
     localStorage.setItem("idProducto", JSON.stringify(id));
 }
 
-function obtenerIdProductoLS() {
+function getIdProd() {
     return JSON.parse(localStorage.getItem("idProducto")) || 0;
 }
 
-const verProducto = () => {
-    const id = obtenerIdProductoLS();
+const FindProductoConId = () => {
+    const id = getIdProd();
     const productos = obtenerprodsPagPpalLS();
     const producto = productos.find(item => item.id === id);
     return producto;
 }
 
 function mostrarProducto() {
-    const producto = verProducto(); 
-    let contenido = '';
+    const producto = FindProductoConId(); 
+    let contenidoDetalleProd = '';
     let precioConAumento = 0;
     if(producto){
         precioConAumento = Math.round(producto.precio * 1.10);
-    }
-    if (producto) {
-        contenido = `
+        contenidoDetalleProd = `
             <div class="tituloArticuloVta col-12"> 
                 <h1 class="articulo">${producto.textoProducto}</h1>
                 <p class="ref_articulo">REF: ${producto.ref}</p>
@@ -95,8 +93,8 @@ function mostrarProducto() {
             </div>
             `;
         let vista = document.getElementById('vistaDetalleProd');
-        vista ? vista.innerHTML = contenido: null;
-    }
+        vista ? vista.innerHTML = contenidoDetalleProd: null;
+    } 
 }
 
-mostrarProducto(); 
+mostrarProducto();

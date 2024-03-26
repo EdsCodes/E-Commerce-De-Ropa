@@ -1,41 +1,29 @@
-function obtenerprodsPagPpalLS() {
-    return JSON.parse(localStorage.getItem("prodsPagPpal")) || [];
-}
-
-const prodsPagPpal = obtenerprodsPagPpalLS();
-
 const saveLsCarrito = (prods) => {
-    localStorage.setItem("carrito", JSON.stringify(prods));
+    localStorage.setItem("carritoCompras", JSON.stringify(prods));
 }
 
 const GetCarritoLs = () => {
-    return JSON.parse(localStorage.getItem("carrito")) || [];
-}
-
-function getProdId() {
-    return JSON.parse(localStorage.getItem("idProducto")) || 0;
-}
-
-function buscarProdConId() {
-    const id = getProdId();
-    const producto = prodsPagPpal.find(item => item.id === id);
-    return producto;
+    return JSON.parse(localStorage.getItem("carritoCompras")) || [];
 }
 
 const agregarProdCarrito = () => {
-    const producto = buscarProdConId();
-    const carrito = GetCarritoLs();
-    carrito.push(producto);
-    saveLsCarrito(carrito);
-    desplegarBotonCarrito();
+    const producto = FindProductoConId();
+    if (producto) { 
+        const carritoCompras = GetCarritoLs();
+        carritoCompras.push(producto);
+        saveLsCarrito(carritoCompras);
+        desplegarTotalCarrito();
+    } else {
+        console.error('El producto no se encontró en la página principal.');
+    }
 }
 
 const eliminarProductoCarrito = (id) => {
-    const carrito = GetCarritoLs();
-    const carritoActual = carrito.filter(item => item.id !== id);
+    const carritoCompras = GetCarritoLs();
+    const carritoActual = carritoCompras.filter(item => item.id !== id);
     saveLsCarrito(carritoActual);
     desplegarGraficosCarrito();
-    desplegarBotonCarrito();
+    desplegarTotalCarrito();
     Swal.fire({
         position:"center",
         icon: "error",
@@ -46,12 +34,12 @@ const eliminarProductoCarrito = (id) => {
 }
 
 const sumaVrTotalProds = () => {
-    const carrito = GetCarritoLs();
-    return carrito.reduce((acumulador, item) => acumulador + item.precio, 0);
+    const carritoCompras = GetCarritoLs();
+    return carritoCompras.reduce((acumulador, item) => acumulador + item.precio, 0);
 }
 
 async function recargaPagTiempo() {
-    await new Promise (resolve => setTimeout(resolve, 5000));
+    await new Promise (resolve => setTimeout(resolve, 3000));
         location.reload();
 }
 
@@ -69,15 +57,16 @@ const borrarTodoCarrito = () => {
 
     Swal.fire(swalOptions).then((result) => {
         if (result.isConfirmed) {
-            localStorage.removeItem("carrito");
+            localStorage.removeItem("carritoCompras");
             Swal.fire({
                 title: "¡Carrito Eliminado!",
                 text: "Tus productos fueron eliminados correctamente de tu carrito de compras.",
                 icon: "success"
             });
+            recargaPagTiempo();
         } else {
             desplegarGraficosCarrito();
-            desplegarBotonCarrito();
+            desplegarTotalCarrito();
             Swal.fire({
                 title: "Guardado",
                 text: "¡Estás a un solo paso de tener tus productos favoritos!",
@@ -86,31 +75,30 @@ const borrarTodoCarrito = () => {
         }
     });
 
-    recargaPagTiempo();
 }
 
-const desplegarBotonCarrito = () => {
+const desplegarTotalCarrito = () => {
     document.getElementById("totalCarrito").innerHTML = QTotalProductos();
 }
 
 const QTotalProductos = () => {
-    const carrito = GetCarritoLs();
-    return carrito.length === 0 ? null : carrito.length;
+    const carritoCompras = GetCarritoLs();
+    return carritoCompras.length === 0 ? null : carritoCompras.length;
 }
 
 
 function desplegarGraficosCarrito() {
-    const carrito = GetCarritoLs();
-    let contenido = "";
-    if (carrito && QTotalProductos() > 0) {
-        contenido = `
+    const carritoCompras = GetCarritoLs();
+    let contenidoHtml = "";
+    if (carritoCompras && QTotalProductos() > 0) {
+        contenidoHtml = `
         <div class="tituloArticuloVta col-12"> 
             <h1 class="articulo">Tu carrito</h1>
         </div>
         `;
 
-        for (const producto of carrito) {
-            contenido += `
+        for (const producto of carritoCompras) {
+            contenidoHtml += `
                 <div class="columnaIzqCarrito col-sm-6 col-md-4 col-lg-4" id="ProductosCarrito">
                     <div class="itemCarrito">
                         <div class="ImgProducto_carrito">
@@ -128,7 +116,7 @@ function desplegarGraficosCarrito() {
             `;
         }
 
-        contenido += `
+        contenidoHtml += `
             <div class="columnaDerCompras col-sm-6 col-md-8 col-lg-8">
             <h2 class="resumen_articulovta">Resumen de tu compra</h2>
                 <div class="campoCodDescuento">
@@ -163,11 +151,13 @@ function desplegarGraficosCarrito() {
             </div>
         `;
     } else {
-        contenido = `<h1 class="textoCarritoVacio">Tu carrito de compras se encuentra vacío!</h1>`;
+        contenidoHtml = `<h1 class="textoCarritoVacio">Tu carrito de compras se encuentra vacío!</h1>`;
     }
     let contenidoCarrito = document.getElementById("contenidoGralCarrito") 
-    contenidoCarrito? contenidoCarrito.innerHTML = contenido: null;
+    contenidoCarrito? contenidoCarrito.innerHTML = contenidoHtml: null;
 }
+
+//Logica cupones de descuento "ganados" en la pag. InicioSesion:
 
 let codigoDescuentoAplicado = false;
 
@@ -237,16 +227,16 @@ const finalizarCompra = () => {
 
     Swal.fire(swalOptions).then((result) => {
         if (result.isConfirmed) {
-            localStorage.removeItem("carrito");
+            localStorage.removeItem("carritoCompras");
             Swal.fire({
                 title: "¡Listo!",
                 text: "Tu compra será enviada a la dirección registrada.",
                 icon: "success"
             });
         }
+        recargaPagTiempo();
     });
-    recargaPagTiempo();
 }
 
 desplegarGraficosCarrito();
-desplegarBotonCarrito();
+desplegarTotalCarrito();

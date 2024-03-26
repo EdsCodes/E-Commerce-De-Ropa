@@ -1,8 +1,8 @@
-function obtenerProductosFiltradosLS() {
+function obtenerProdsFiltLS() {
     return JSON.parse(localStorage.getItem("productosFiltrados")) || [];
 }
 
-const mostrarProdsFilt = obtenerProductosFiltradosLS();
+const mostrarProdsFilt = obtenerProdsFiltLS();
 
 function generarHTMLProductoDetalle(producto) { 
     const precioConAumento = Math.round(producto.precio * 1.10);
@@ -18,8 +18,8 @@ function generarHTMLProductoDetalle(producto) {
                     <p class="textoTachado">$${precioConAumento}</p>
                     <p class="card-textPrice">$${producto.precio}</p>
                 </div>
-                <a href="../pages/detalleProducto.html" class="btn btn-dark" onclick="encontrarIdProd(${producto.id});">Ver detalle</a>
-                <a class="btn btn-dark" onclick="encontrarIdProd(${producto.id}); agregarProdCarrito();">Añadir al carrito</a>
+                <a href="../pages/detalleProducto.html" class="btn btn-dark" onclick="SaveIdProd(${producto.id});">Ver detalle</a>
+                <a class="btn btn-dark" onclick="SaveIdProd(${producto.id}); agregarProdCarrito();">Añadir al carrito</a>
             </div>
         </div>
     `;
@@ -27,6 +27,6 @@ function generarHTMLProductoDetalle(producto) {
 
 mostrarProdsFilt.forEach(producto => {
     const productoHTML = generarHTMLProductoDetalle(producto); 
-    let contenidoDetallefiltrados = document.getElementById('prodsFiltrados');
-    contenidoDetallefiltrados ? contenidoDetallefiltrados.innerHTML += productoHTML : null;
+    let contenidoDetalleFiltrados = document.getElementById('prodsFiltrados');
+    contenidoDetalleFiltrados ? contenidoDetalleFiltrados.innerHTML += productoHTML : null;
 });
