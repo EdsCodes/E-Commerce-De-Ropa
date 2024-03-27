@@ -111,10 +111,10 @@
         resetFormulario();
     });
 
-    // Sistema de "login" provisional y muuuuy inseguro jajaja... para aplicar el método de búsqueda find (mientras aprendemos AJAX y fetch), consiste en buscar el dato entre los datos de clientes (objetos) registrados en el array [listaClientes], compararlos, y si son iguales salta alert de bienvenido.
+    // Sistema de "login" provisional y muuuuy inseguro jajaja... para aplicar el método de búsqueda find, consiste en buscar el dato entre los datos de clientes (objetos) registrados en el array [listaClientes], compararlos, y si son iguales salta SweetAlert de bienvenido.
 
-        document.getElementById('botonLogin').addEventListener('click', function (event) {
-        event.preventDefault();
+    document.getElementById('botonLogin').addEventListener('click', function (event) {
+    event.preventDefault();
 
         var emailUsuarioRegistrado = document.querySelector('[name="emailUsuarioRegistrado"]').value;
         var contrasena = document.querySelector('[class="password"]').value;
@@ -124,16 +124,37 @@
         });
 
         if (usuarioEncontrado) {
-            alert("Bienvenido de nuevo " + usuarioEncontrado.nombre);
-            return;
-        } else {
-            alert("Usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.");
-        }
-        
-        resetFormulario();
-    });
 
+            const swalOptions = {
+                title: "Bienvenido de nuevo",
+                text: usuarioEncontrado.nombre + ", Nos alegra tenerte aqui",
+                showCancelButton: false,
+                confirmButtonColor: "#ff4500",
+                confirmButtonText: "Ok",
+                icon: "success"
+            };
+        
+            Swal.fire(swalOptions).then((result) => {
+                if (result.isConfirmed) {
+                    resetFormInicioSesion();
+                }
+            });
+            return;
+
+        } else {
+            Swal.fire({
+                title: "¡Datos incorrectos!",
+                text: " Por favor, inténtalo de nuevo.",
+                icon: "warning"
+            });
+            resetFormInicioSesion();
+        }
+    });
     
     function resetFormulario() {
         document.querySelector('.formularioRegistro').reset();
+    }
+    
+    function resetFormInicioSesion() {
+        document.querySelector('.formularioInicioSesion').reset();
     }
